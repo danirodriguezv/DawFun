@@ -26,7 +26,7 @@ public class Controller implements CommandLineRunner {
 	private User user; //sesion de usuario por defecto admin es falso y cesta vacia
 	
 	@Autowired
-	private ServiceDawKine serviceDawKine;
+	private ServiceDawFun serviceDawFun;
 
 
 	
@@ -37,74 +37,123 @@ public class Controller implements CommandLineRunner {
 		/* QUITAR PARA AÑADIR PRODUCTOS POR DEFECTO EN LA BD
 		
 		*/
-		Movie peli = new Movie();
-		peli.setDirector("David Retamal");
-		peli.setDuration(120);
-		peli.setTitle("La Casta Susana y su putisima hermana");
 		
 		
-		Movie peli2 = new Movie();
-		peli2.setDirector("David");
-		peli2.setDuration(12);
-		peli2.setTitle("su putisima hermana");
-		
-		
-		CopyOnWriteArrayList<Movie> lista = new CopyOnWriteArrayList<Movie>();
-		lista.add(peli);
-		lista.add(peli2);
-		
-		Cinema cine1 = new Cinema();
-		cine1.setName("Yelmocines");
-		cine1.setMovies(lista);
-		
-		
-		Cinema cine2 = new Cinema();
-		cine2.setName("Kinepolis");		
-		
-	
-		serviceDawKine.setMovie(peli);
-		serviceDawKine.setMovie(peli2);
-		serviceDawKine.setCinema(cine1);
-		serviceDawKine.setCinema(cine2);
 	}
 	
-	//Metodos del controlador de peliculas
+	//Metodos del controlador de libros
 	
+	@RequestMapping(value = "/books", method = RequestMethod.POST)
+	public ResponseEntity<Book> addBook(@RequestBody Book book){
+		serviceDawFun.setBook(book);
+		return new ResponseEntity<>(book, HttpStatus.CREATED);
+	}
+	
+
+	@RequestMapping(value = "/books", method = RequestMethod.GET)
+	public List<Book> getBooks(){
+		return serviceDawFun.getBooks();
+	}
+	
+	@RequestMapping(value = "/book/{idBook}", method = RequestMethod.GET)
+	public Book getBook(@PathVariable long idBook){
+		return serviceDawFun.getBook(idBook);
+	}
+	
+	//Metodos del controlador de las peliculas
 	@RequestMapping(value = "/movies", method = RequestMethod.POST)
 	public ResponseEntity<Movie> addMovie(@RequestBody Movie movie){
-		serviceDawKine.setMovie(movie);
+		serviceDawFun.setMovie(movie);
 		return new ResponseEntity<>(movie, HttpStatus.CREATED);
 	}
 	
 
 	@RequestMapping(value = "/movies", method = RequestMethod.GET)
 	public List<Movie> getMovies(){
-		return serviceDawKine.getMovies();
+		return serviceDawFun.getMovies();
 	}
 	
 	@RequestMapping(value = "/movie/{idMovie}", method = RequestMethod.GET)
 	public Movie getMovie(@PathVariable long idMovie){
-		return serviceDawKine.getMovie(idMovie);
+		return serviceDawFun.getMovie(idMovie);
 	}
 	
-	//Metodos del controlador de cines
+	//Metodos del controlador de outdoors
+	@RequestMapping(value = "/outdoors", method = RequestMethod.POST)
+	public ResponseEntity<Outdoor_activity> addOutdoor(@RequestBody Outdoor_activity activity){
+		serviceDawFun.setOutdoor(activity);
+		return new ResponseEntity<>(activity, HttpStatus.CREATED);
+	}
+	
+
+	@RequestMapping(value = "/outdoors", method = RequestMethod.GET)
+	public List<Outdoor_activity> getOutdoors(){
+		return serviceDawFun.getOutdoors();
+	}
+	
+	@RequestMapping(value = "/outdoor/{idActivity}", method = RequestMethod.GET)
+	public Outdoor_activity getOutdoor(@PathVariable long idActivity){
+		return serviceDawFun.getOutdoor(idActivity);
+	}
+	
+	//Metodos del controlador de los parques tematicos
+	
+	@RequestMapping(value = "/parks", method = RequestMethod.POST)
+	public ResponseEntity<Theme_park> addPark(@RequestBody Theme_park park){
+		serviceDawFun.setPark(park);
+		return new ResponseEntity<>(park, HttpStatus.CREATED);
+	}
+	
+
+	@RequestMapping(value = "/parks", method = RequestMethod.GET)
+	public List<Theme_park> getParks(){
+		return serviceDawFun.getParks();
+	}
+	
+	@RequestMapping(value = "/park/{idPark}", method = RequestMethod.GET)
+	public Theme_park getPark(@PathVariable long idPark){
+		return serviceDawFun.getPark(idPark);
+	}
+	
+	//Metodos del controlador de los videojuegos
+	
+	@RequestMapping(value = "/videogames", method = RequestMethod.POST)
+	public ResponseEntity<Videogame> addVideogame(@RequestBody Videogame videogame){
+		serviceDawFun.setVideogame(videogame);
+		return new ResponseEntity<>(videogame, HttpStatus.CREATED);
+	}
+	
+
+	@RequestMapping(value = "/videogames", method = RequestMethod.GET)
+	public List<Videogame> getVideogames(){
+		return serviceDawFun.getVideogames();
+	}
+	
+	@RequestMapping(value = "/videogame/{idVideogame}", method = RequestMethod.GET)
+	public Videogame getVideogame(@PathVariable long idVideogame){
+		return serviceDawFun.getVideogame(idVideogame);
+	}
+	
+	
+	
+	
+	//Metodos del controlador de los locales
 
 	
-	@RequestMapping(value = "/cinemas", method = RequestMethod.POST)
-	public ResponseEntity<Cinema> addCinema(@RequestBody Cinema cinema){
-		serviceDawKine.setCinema(cinema);
-		return new ResponseEntity<>(cinema, HttpStatus.CREATED);
+	@RequestMapping(value = "/locals", method = RequestMethod.POST)
+	public ResponseEntity<Local> addLocal(@RequestBody Local local){
+		serviceDawFun.setLocal(local);
+		return new ResponseEntity<>(local, HttpStatus.CREATED);
 	}
 	
-	@RequestMapping(value = "/cinemas", method = RequestMethod.GET)
-	public List<Cinema> getCinemas(){
-		return serviceDawKine.getCinemas();
+	@RequestMapping(value = "/locals", method = RequestMethod.GET)
+	public List<Local> getLocals(){
+		return serviceDawFun.getLocals();
 	}
 	
-	@RequestMapping(value = "/cinemas/{idCinema}", method = RequestMethod.GET)
-	public Cinema getCinema(@PathVariable long idCinema){
-		System.out.println("entra");
-		return serviceDawKine.getCinema(idCinema);
+	@RequestMapping(value = "/local/{idLocal}", method = RequestMethod.GET)
+	public Local getCinema(@PathVariable long idLocal){
+		return serviceDawFun.getLocal(idLocal);
 	}
 	
 	//Metodos del controlador de usuarios
@@ -112,12 +161,12 @@ public class Controller implements CommandLineRunner {
 	
 	@RequestMapping(value = "/users", method = RequestMethod.GET)
 	public List<User> getUsers(){
-		return serviceDawKine.getUsers();
+		return serviceDawFun.getUsers();
 	}
 	
 	@RequestMapping(value = "/user/{idUser}", method = RequestMethod.GET)
 	public User getUser(@PathVariable long idUser){
-		return serviceDawKine.getUser(idUser);
+		return serviceDawFun.getUser(idUser);
 	}
 	
 	//Metodos del controlador de admin

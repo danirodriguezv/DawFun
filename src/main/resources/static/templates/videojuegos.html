@@ -27,18 +27,31 @@
 
 	<!-- BARRA INFERIOR -->
 	<div
-		style="box-shadow: 0px 4px 6px 1px rgba(119, 119, 119, 0.17); background-color: white;">
+		style="box-shadow: 0px 4px 6px 1px rgba(119, 119, 119, 0.17); background-color: white-silver;">
 		<lx-dropdown>
 		<button class="btn btn--m btn--black btn--flat" lx-ripple
-			lx-dropdown-toggle>Categoria</button>
+			lx-dropdown-toggle>PEGI</button>
 		<lx-dropdown-menu>
 		<ul>
-			<li><a class="dropdown-link" ng-click="dropdownAlert()">Terror</a></li>
 			<li><a class="dropdown-link">Pegi 3</a></li>
 			<li><a class="dropdown-link">Pegi 7</a></li>
 			<li><a class="dropdown-link">Pegi 12</a></li>
 			<li><a class="dropdown-link">Pegi 16</a></li>
 			<li><a class="dropdown-link">Pegi 18</a></li>
+			<li class="dropdown-divider"></li>
+		</ul>
+		</lx-dropdown-menu> </lx-dropdown>
+		
+		<lx-dropdown>
+		<button class="btn btn--m btn--black btn--flat" lx-ripple
+			lx-dropdown-toggle>Categoria</button>
+		<lx-dropdown-menu>
+		<ul>
+			<li><a class="dropdown-link">WAR</a></li>
+			<li><a class="dropdown-link">ROL</a></li>
+			<li><a class="dropdown-link">SHOOTER</a></li>
+			<li><a class="dropdown-link">ONE PERSON</a></li>
+			<li><a class="dropdown-link">THIRD PERSON</a></li>
 			<li class="dropdown-divider"></li>
 		</ul>
 		</lx-dropdown-menu> </lx-dropdown>

@@ -27,6 +27,9 @@ function bookController(bookService, $routeParams, $location, LxNotificationServ
 		vm.autorSelec=book.writer;
 		vm.imagenSelec=book.image;
 		vm.editorSelec=book.publisher;
+		vm.resumenSelec=book.synopsis;
+		vm.isbn=book.isbn;
+		vm.pageNumberSelec=book.pageNumber;
 	    LxDialogService.open(dialogId);
 	};
 

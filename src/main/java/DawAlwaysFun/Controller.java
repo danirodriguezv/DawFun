@@ -42,6 +42,10 @@ public class Controller implements CommandLineRunner {
 		libro.setWriter("David Retamal el puto amo");
 		libro.setGenre("Erotico");
 		libro.setImage("livro.jpg");
+		libro.setPublisher("Anaya");
+		libro.setPageNumber(230);
+		libro.setSynopsis("Un libro de misterio que contiene 1, dos , 3 o mas embarazos.");
+		libro.setIsbn("ISD-3123");
 		serviceDawFun.setBook(libro);
 		
 		Book libro2 = new Book();
@@ -49,6 +53,10 @@ public class Controller implements CommandLineRunner {
 		libro2.setWriter("Jesus al bajar de la cruz");
 		libro2.setGenre("Fantastico");
 		libro2.setImage("livro.jpg");
+		libro2.setPublisher("Suma de letras");
+		libro2.setPageNumber(130);
+		libro2.setSynopsis("Un libro de puta madre con gente que bebe vino, resucita peña muerta y es traicionado por un amigo.");
+		libro2.setIsbn("IVD-3413");
 		serviceDawFun.setBook(libro2);
 		
 		Videogame game = new Videogame();

@@ -4,7 +4,7 @@ cinemaService.$inject = [ "$resource", "$timeout" ];
 
 function cinemaService($resource, $timeout) {
 
-	var CinemaResource = $resource('/cinemas/:id', {
+	var CinemaResource = $resource('/books/:id', {
 		id : '@id'
 	}, {
 		update : {

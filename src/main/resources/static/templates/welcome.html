@@ -1,4 +1,8 @@
-<div ng-controller="cinemaController as vm" layout="column" layout-fill>
+<div ng-controller="bookController as vm" layout="column" layout-fill>
+
+
+
+
 
 	<!-- BARRA SUPERIOR -->
 	<div flex-item>
@@ -17,16 +21,16 @@
         </div>
     </div>
     <div class="card">
-    <lx-tabs>
-        <lx-tab heading="INDOOR">
-            <p class="p+">INDOOR</p>
-        </lx-tab>
-
-        <lx-tab heading="OUTDOOR">
-            <p class="p+">OUTDOOR</p>
-        </lx-tab>
-
+	    <lx-tabs>
+	        <lx-tab heading="INDOOR">
+	            <p class="p+">INDOOR</p>
+	        </lx-tab>
+	
+	        <lx-tab heading="OUTDOOR">
+	            <p class="p+">OUTDOOR</p>
+	        </lx-tab>
+		</lx-tabs>
 	</div>
-    </div>
+	{{vm.book}} 
 
 </div>

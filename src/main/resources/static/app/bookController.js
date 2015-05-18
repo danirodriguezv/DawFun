@@ -13,13 +13,14 @@ function bookController(bookService, $routeParams, $location, LxNotificationServ
 	//Controller logic
 	
 	vm.books= bookService.getBooks();
-	
+	vm.nombreSelec;
 	
 	
 	//Controller actions
 	
-	vm.opendDialog = function(dialogId)
+	vm.opendDialog = function(dialogId,book)
 	{
+		vm.nombreSelec=book.title;
 	    LxDialogService.open(dialogId);
 	};
 
@@ -27,6 +28,8 @@ function bookController(bookService, $routeParams, $location, LxNotificationServ
 	{
 	    LxNotificationService.info('Dialog cerrado!');
 	};
+	
+	
 	
 };
 

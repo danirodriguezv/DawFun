@@ -61,39 +61,23 @@
 
 	<!-- TABLA -->
 
-	<div class="data-table-container">
-		<table
-			class="data-table data-table--has-primary data-table--has-secondary">
-			<thead>
-				<tr>
-					<th></th>
-					<th>Lista de peliculas</th>
-					
-				</tr>
-				<tr>
-					<td></td>
-					<td colspan="3" class="divider divider--dark"></td>
-				</tr>
-			</thead>
+	<div flex-container="row" flex-gutter="24">
+    <div flex-item>
+        <div class="card">
+            <div class="card__img card__img--top">
+                <img src="/images/placeholder/2-horizontal.jpg">
+                <span class="fs-headline tc-white-1 display-block">Lorem Ipsum</span>
+            </div>
 
-			<tbody>
-				<tr class="data-table__clickable-row"
-					ng-repeat="movie in vm.movies"
-					ng-click="vm.opendDialog('test',movie)">
-					<td>
-						<!-- <i class="icon icon--l icon--grey icon--circled mdi mdi-android"></i> -->
-						<lx-thumbnail thumbnail-src="/images/{{movie.image}}"
-							thumbnail-width="60" thumbnail-height="60"></lx-thumbnail>
-					</td>
-					<td><span>{{game.name}}</span></td>
-					<td><span>{{game.platform}}</span></td>
-					<td><span>{{game.publisher}}</span></td>
+            <div class="p+">
+                <span class="fs-subhead tc-black-2 display-block">Lorem Ipsum</span>
 
-				</tr>
-
-			</tbody>
-		</table>
-	</div>
+                <div class="paragraph fs-body-1">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tristique orci a lacinia malesuada.
+                    </p>
+                </div>
+            </div>
 
 	<!-- DIALOG -->	
 	<lx-dialog class="dialog dialog--l" id="test" auto-close="true" onclose="vm.closingDialog()" onscrollend="scrollEndDialog()">

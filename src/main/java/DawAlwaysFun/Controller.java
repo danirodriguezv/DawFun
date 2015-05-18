@@ -80,6 +80,20 @@ public class Controller implements CommandLineRunner {
 		game2.setDevelopment("Equipo plantoso");
 		game2.setImage("plants.png");
 		serviceDawFun.setVideogame(game2);
+		
+		Movie movie = new Movie();
+		movie.setDescription("La ultima pelicula de los heroes mas heroicos, los autenticos Vengadores");
+		movie.setDirector("Michael doogleas");
+		movie.setDuration(122);
+		movie.setLeading_actor("Jason Stazam");
+		movie.setMovie_trailer("De momento sin trailer");
+		movie.setPhoto("vengadores.png");
+		movie.setProduction("WarnerBros");
+		movie.setTitle("Los vengadores, la era de ultron");
+		serviceDawFun.setMovie(movie);
+		
+			
+		
 	}
 	
 	//Metodos del controlador de libros

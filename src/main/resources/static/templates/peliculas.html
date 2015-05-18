@@ -80,11 +80,11 @@
 
 			<tbody>
 				<tr class="data-table__clickable-row"
-					ng-repeat="game in vm.videoclub"
+					ng-repeat="movie in vm.movies"
 					ng-click="vm.opendDialog('test',game)">
 					<td>
 						<!-- <i class="icon icon--l icon--grey icon--circled mdi mdi-android"></i> -->
-						<lx-thumbnail thumbnail-src="/images/{{game.image}}"
+						<lx-thumbnail thumbnail-src="/images/{{movie.image}}"
 							thumbnail-width="60" thumbnail-height="60"></lx-thumbnail>
 					</td>
 					<td><span>{{game.name}}</span></td>

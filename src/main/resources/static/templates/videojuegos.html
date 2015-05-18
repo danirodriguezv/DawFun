@@ -84,46 +84,7 @@
 		</table>
 	</div>
 
-	<!-- DIALOG -->
-
-	<lx-dialog class="dialog dialog--l" id="test" auto-close="true"
-		onclose="vm.closingDialog()" onscrollend="scrollEndDialog()">
-	<div class="dialog__header">
-		<div class="toolbar bgc-light-blue-500 pl++">
-			<span class="toolbar__label tc-white fs-title">
-				{{vm.namegame}} </span>
-
-			<div class="toolbar__right"></div>
-		</div>
-	</div>
-
-	<div class="dialog__content">
-
-
-		<div class="card mt++">
-			<lx-tabs indicator="green-200" active-tab="1" layout="inline">
-			<lx-tab heading="General">
-			<p class="p+">Nombre: {{vm.namegame}}</p>
-			</lx-tab> <lx-tab heading="Desarrolladores y plataforma">
-			<p class="p+">Desarrollado por: {{vm.develop}}</p>
-			<p class="p+">Platadorma disponible: {{vm.plat}}</p>
-			</lx-tab> <lx-tab heading="Categoria y otros intereses">
-			<p class="p+">Publish: {{vm.publish}}</p>
-			<p class="p+">PEGI: {{vm.pegi}}</p>
-			<p class="p+">Categoria: {{vm.categ}}</p>
-			<p class="p+">Online: {{vm.onl}}</p>
-			</lx-tab> </lx-tabs>
-		</div>
-	</div>
-
-	<div class="dialog__actions">
-		<button class="btn btn--m btn--black btn--flat" lx-ripple
-			lx-dialog-close>Cancel</button>
-		<button class="btn btn--m btn--black btn--flat" lx-ripple>Lorem
-			Ipsum</button>
-	</div>
-	</lx-dialog>
-	
+	<!-- DIALOG -->	
 	<lx-dialog class="dialog dialog--l" id="test" auto-close="true" onclose="vm.closingDialog()" onscrollend="scrollEndDialog()">
     <div class="dialog__header" >
         <div class="bgc-blue-grey-500 pl++ pt++ pb++">      	    

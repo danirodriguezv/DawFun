@@ -14,9 +14,7 @@ function bookController(bookService, $routeParams, $location, LxNotificationServ
 	
 	vm.books= bookService.getBooks();
 	
-	vm.tituloSelec;
-	vm.autorSelec;
-	vm.simagenSelec;
+	
 	
 	
 	//Controller actions

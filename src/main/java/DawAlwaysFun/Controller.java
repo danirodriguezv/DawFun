@@ -59,7 +59,7 @@ public class Controller implements CommandLineRunner {
 		game.setPlatform("Shooter");
 		game.setPublisher("EA");
 		game.setDevelopment("Equipo daw");
-		game.setImage("battle.jpg");
+		game.setImage("battle.png");
 		serviceDawFun.setVideogame(game);
 		
 		Videogame game2 = new Videogame();
@@ -70,7 +70,7 @@ public class Controller implements CommandLineRunner {
 		game2.setPlatform("Rol");
 		game2.setPublisher("IA");
 		game2.setDevelopment("Equipo plantoso");
-		game2.setImage("plants.jpg");
+		game2.setImage("plants.png");
 		serviceDawFun.setVideogame(game2);
 	}
 	

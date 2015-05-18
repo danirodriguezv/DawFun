@@ -13,13 +13,25 @@ function videogameController(videogameService, $routeParams, $location, LxNotifi
 	//Controller logic
 	
 	vm.videoclub = videogameService.getVideogames();
-	
-	
+	vm.namegame;
+	vm.develop;
+	vm.plat;
+	vm.publish;
+	vm.pegi;
+	vm.categ;
+	vm.onl;
 	
 	//Controller actions
 	
-	vm.opendDialog = function(dialogId)
+	vm.opendDialog = function(dialogId,game)
 	{
+		vm.namegame = game.name;
+		vm.develop = game.development;
+		vm.plat = game.platform;
+		vm.publish = game.publisher;
+		vm.pegi = game.pegi_age;
+		vm.categ = game.category;
+		vm.onl = game.online;
 	    LxDialogService.open(dialogId);
 	};
 
@@ -27,5 +39,6 @@ function videogameController(videogameService, $routeParams, $location, LxNotifi
 	{
 	    LxNotificationService.info('Dialog cerrado!');
 	};
+	
 	
 };

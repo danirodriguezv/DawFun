@@ -1,13 +1,13 @@
 angular.module("app").service("videogameService", videogameService);
 
-videogameService.$inject = [ "$resource"];
+videogameService.$inject = ["$resource"];
 
 function videogameService($resource) {
 
 		this.videoclub =[];
 		
 		
-		var videogameResource = $resource('videogame/:id',{id: '@id'},{update:{method:"PUT"}});
+		var videogameResource = $resource('videogames/:id',{id: '@id'},{update:{method:"PUT"}});
 		
 		//var BooResource = $resource('books/:id',{id: '@id'},{update:{method:"PUT"}});
 

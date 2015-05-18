@@ -8,11 +8,12 @@ function bookController(bookService, $routeParams, $location, LxNotificationServ
 	
 	//View model properties
 	vm.books=[];
-	vm.libro={};
+	
 		
 	//Controller logic
 	
 	vm.books= bookService.getBooks();
+	
 	
 	//Controller actions
 	

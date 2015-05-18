@@ -4,14 +4,14 @@
 
 
 
-	<!-- BARRA SUPERIOR -->
+<!-- BARRA SUPERIOR -->
 	<div flex-item>
         <div class="card bgc-indigo-500">
             <div class="toolbar">
                 <span class="toolbar__label fs-title tc-white-1 ml"><img src="/images/dawlogo.png" height=50></span>
 
                 <div class="toolbar__right">
-                    <lx-search-filter model="searchFilter.sixth" position="right" theme="dark" closed placeholder="Search"></lx-search-filter>
+                    <lx-search-filter model="searchFilter.sixth" position="right" theme="dark" closed placeholder="Busqueda"></lx-search-filter>
 
                     <button class="btn btn--l btn--white btn--icon" lx-ripple>
                         <i class="mdi mdi-apps"></i>
@@ -20,17 +20,45 @@
             </div>
         </div>
     </div>
-    <div class="card">
-	    <lx-tabs>
-	        <lx-tab heading="INDOOR">
-	            <p class="p+">INDOOR</p>
-	        </lx-tab>
-	
-	        <lx-tab heading="OUTDOOR">
-	            <p class="p+">OUTDOOR</p>
-	        </lx-tab>
-		</lx-tabs>
+    
+    <div class="tc-white-1" flex-container="row">
+	    <div flex-item="4" flex-item-order="1"><div class="p+++ bgc-blue-500" style="height:200px;background-image:url(../images/videoj.jpg);background-size:100% 100%;">Videojuegos</div></div>
+	    <div flex-item="4" flex-item-order="2"><div class="p+++ bgc-blue-400" style="height:200px;background-image:url(../images/libr.jpg);background-size:100% 100%;"">Libros</div></div>
+	    <div flex-item="4" flex-item-order="3"><div class="p+++ bgc-blue-500" style="height:200px;background-image:url(../images/peliculas.jpg);background-size:100% 100%;"">Peliculas</div></div>
 	</div>
-	{{vm.books}} 
+		
+    
+    <div class="tc-white-1" flex-container="row">
+	    <div flex-item="4" flex-item-order="1"><div class="p+++ bgc-grey-500" style="height:200px;background-image:url(../images/parques.jpg);background-size:100% 100%;">Parques</div></div>
+	    <div flex-item="4" flex-item-order="2"><div class="p+++ bgc-grey-400" style="height:200px;background-image:url(../images/local.jpg);background-size:100% 100%;"">Locales</div></div>
+	    <div flex-item="4" flex-item-order="3"><div class="p+++ bgc-grey-500" style="height:200px;background-image:url(../images/riesgo.jpg);background-size:100% 100%;"">Riesgo</div></div>
+	</div>
+    
+    
+   <!--   
+    <div class="card">
+    <lx-tabs>
+        <lx-tab heading="INDOOR">
+            <div>
+    <button class="btn btn--m btn--blue btn--raised" lx-ripple>Libros</button>
+    <button class="btn btn--m btn--green btn--raised" lx-ripple>Peliculas</button>
+    <button class="btn btn--m btn--orange btn--raised" lx-ripple>Videojuegos</button>
+    </div>
+        </lx-tab>
 
+        <lx-tab heading="OUTDOOR">
+                  <div>
+    <button class="btn btn--m btn--blue btn--raised" lx-ripple>Locales</button>
+    <button class="btn btn--m btn--green btn--raised" lx-ripple>Actividades al aire libre</button>
+    <button class="btn btn--m btn--orange btn--raised" lx-ripple>Parques tematicos</button>
+    </div>
+       </lx-tab>
+</lx-tabs>
 </div>
+{{vm.books}} 
+
+-->
+</div>
+
+	
+

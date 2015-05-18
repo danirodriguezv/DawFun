@@ -48,17 +48,20 @@ public class Controller implements CommandLineRunner {
 	@RequestMapping(value = "/books", method = RequestMethod.POST)
 	public ResponseEntity<Book> addBook(@RequestBody Book book){
 		serviceDawFun.setBook(book);
+		System.out.println("entra3");
 		return new ResponseEntity<>(book, HttpStatus.CREATED);
 	}
 	
 
-	@RequestMapping(value = "/books", method = RequestMethod.GET)
+	@RequestMapping(value = "/books", method = RequestMethod.GET) //entra aqui si pide getBooks
 	public List<Book> getBooks(){
+		System.out.println("entra2");
 		return serviceDawFun.getBooks();
 	}
 	
 	@RequestMapping(value = "/books/{idBook}", method = RequestMethod.GET)
 	public Book getBook(@PathVariable long idBook){
+		System.out.println("entra");
 		return serviceDawFun.getBook(idBook);
 	}
 	

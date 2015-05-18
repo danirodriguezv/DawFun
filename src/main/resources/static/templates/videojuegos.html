@@ -123,6 +123,60 @@
 			Ipsum</button>
 	</div>
 	</lx-dialog>
+	
+	<lx-dialog class="dialog dialog--l" id="test" auto-close="true" onclose="vm.closingDialog()" onscrollend="scrollEndDialog()">
+    <div class="dialog__header" >
+        <div class="bgc-blue-grey-500 pl++ pt++ pb++">      	    
+          	<span class="fs-display-2 display-block tc-white">{{vm.namegame}}</span>             
+        </div>         
+    </div>
+
+    <div class="dialog__content">
+    	<div class="tc-white-1" flex-container="row">
+		    <div flex-item="4" flex-item-order="1">
+		    	<div class="p+">
+		    		<img ng-src="/images/{{vm.gameimage}}" width=100% height=100%>
+		    	</div>
+		    </div>
+		    <div flex-item="8" flex-item-order="2">
+		    	<div class="p+ bgc-blue-grey-300">
+		    		<span class="fs-subhead display-block">Desarrollado por</span>
+		    		<span class="fs-display-0.5 display-block">{{vm.develop}}</span>
+		    	</div>
+		    	<div class="p+ bgc-blue-grey-300">
+		    		<span class="fs-subhead display-block">Platadorma disponible</span>
+		    		<span class="fs-display-0.5 display-block">{{vm.plat}}</span>
+		    	</div>
+		    	<div class="p+ bgc-blue-grey-300">
+		    		<span class="fs-subhead display-block">Publicacion</span>
+		    		<span class="fs-display-0.5 display-block">{{vm.publish}}</span>
+		    	</div>
+		    	<div class="p+ bgc-blue-grey-300">
+		    		<span class="fs-subhead display-block">Categoria</span>
+		    		<span class="fs-display-0.5 display-block"> {{vm.categ}}</span>
+		    	</div>
+		    	<div class="p+ bgc-blue-grey-300">
+		    		<span class="fs-subhead display-block">Online</span>
+		    		<span class="fs-display-0.5 display-block">{{vm.onl}}</span>
+		    	</div>
+		    	<div class="p+ bgc-red-300">
+		    		<span class="fs-subhead display-block">PEGI</span>
+		    		<span class="fs-display-0.5 display-block">{{vm.pegi}}</span>
+		    	</div>
+		    </div>		    
+		</div>
+    
+    
+    
+    	
+        
+    </div>
+
+    <div class="dialog__actions">
+        <button class="btn btn--m btn--black btn--flat" lx-ripple lx-dialog-close>Cancel</button>
+        <button class="btn btn--m btn--black btn--flat" lx-ripple>Lorem Ipsum</button>
+    </div>
+</lx-dialog>
 
 
 </div>

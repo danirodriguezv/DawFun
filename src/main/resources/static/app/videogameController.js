@@ -20,7 +20,7 @@ function videogameController(videogameService, $routeParams, $location, LxNotifi
 	vm.pegi;
 	vm.categ;
 	vm.onl;
-	
+	vm.gameimage;
 	//Controller actions
 	
 	vm.opendDialog = function(dialogId,game)
@@ -32,6 +32,7 @@ function videogameController(videogameService, $routeParams, $location, LxNotifi
 		vm.pegi = game.pegi_age;
 		vm.categ = game.category;
 		vm.onl = game.online;
+		vm.gameimage = game.image;
 	    LxDialogService.open(dialogId);
 	};
 

@@ -69,7 +69,8 @@
 		        <tbody>
 		            <tr class="data-table__clickable-row" ng-repeat="book in vm.books">
 		                <td>
-		                    <i class="icon icon--l icon--grey icon--circled mdi mdi-android"></i>
+		                    <!-- <i class="icon icon--l icon--grey icon--circled mdi mdi-android"></i> -->		                    
+		                    <lx-thumbnail thumbnail-src="/images/{{book.image}}" thumbnail-width="60" thumbnail-height="60"></lx-thumbnail>
 		                </td>
 		                <td>
 		                    <span>{{book.genre}}</span>
@@ -81,23 +82,8 @@
 		                    <span>{{book.writer}}</span>
 		                </td>
 		                
-		            </tr>
-		
-		            <tr class="data-table__clickable-row">
-		                <td>
-		                    <i class="icon icon--l icon--grey icon--circled mdi mdi-android"></i>
-		                </td>
-		                <td>
-		                    <span>Lorem Ipsum</span>
-		                </td>
-		                <td>
-		                    <span>Lorem Ipsum</span>
-		                </td>
-		                <td>
-		                    <span>Lorem Ipsum</span>
-		                </td>
-		                
-		            </tr>
+		            </tr>		
+		            
 		        </tbody>
 		    </table>
 		</div>

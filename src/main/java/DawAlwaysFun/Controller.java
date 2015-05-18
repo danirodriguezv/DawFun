@@ -44,6 +44,12 @@ public class Controller implements CommandLineRunner {
 		libro.setImage("livro.jpg");
 		serviceDawFun.setBook(libro);
 		
+		Book libro2 = new Book();
+		libro2.setTitle("La sagrada Biblia");
+		libro2.setWriter("Jesus al bajar de la cruz");
+		libro2.setGenre("Fantastico");
+		libro2.setImage("livro.jpg");
+		serviceDawFun.setBook(libro2);
 	}
 	
 	//Metodos del controlador de libros

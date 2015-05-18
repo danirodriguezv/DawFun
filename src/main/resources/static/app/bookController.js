@@ -13,14 +13,16 @@ function bookController(bookService, $routeParams, $location, LxNotificationServ
 	//Controller logic
 	
 	vm.books= bookService.getBooks();
-	vm.nombreSelec;
+	vm.tituloSelec;
+	vm.autorSelec;
 	
 	
 	//Controller actions
 	
 	vm.opendDialog = function(dialogId,book)
 	{
-		vm.nombreSelec=book.title;
+		vm.tituloSelec=book.title;
+		vm.autorSelec=book.writer;
 	    LxDialogService.open(dialogId);
 	};
 

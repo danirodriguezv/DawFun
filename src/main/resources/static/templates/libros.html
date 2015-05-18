@@ -1,0 +1,108 @@
+<div ng-controller="bookController as vm" layout="column" layout-fill>
+
+
+
+
+
+<!-- BARRA SUPERIOR -->
+	<div flex-item>
+        <div class="card bgc-indigo-500">
+            <div class="toolbar">
+                <span class="toolbar__label fs-title tc-white-1 ml"><img src="/images/dawlogo.png" height=50></span>
+
+                <div class="toolbar__right">
+                    <lx-search-filter model="searchFilter.sixth" position="right" theme="dark" closed placeholder="Busqueda"></lx-search-filter>
+
+                    <button class="btn btn--l btn--white btn--icon" lx-ripple>
+                        <i class="mdi mdi-apps"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+<!-- BARRA INFERIOR -->
+	<div style="box-shadow: 0px 4px 6px 1px rgba(119, 119, 119, 0.17);background-color:white;">	
+			<lx-dropdown>
+			    <button class="btn btn--m btn--black btn--flat" lx-ripple lx-dropdown-toggle>
+			        Categoria
+			    </button>		
+			    <lx-dropdown-menu>
+			        <ul>
+			            <li><a class="dropdown-link" ng-click="dropdownAlert()">Terror</a></li>
+			            <li><a class="dropdown-link">Misterio</a></li>
+			            <li><a class="dropdown-link">Novela Negra</a></li>
+			            <li><a class="dropdown-link">Humanistico</a></li>
+			            <li><a class="dropdown-link">Juvenil</a></li>
+			            <li><a class="dropdown-link">Romantica</a></li>
+			            <li><a class="dropdown-link">Poesia</a></li>
+			            <li><a class="dropdown-link">Fantastica</a></li> 
+			            <li class="dropdown-divider"></li>
+			            <li><span class="dropdown-link dropdown-link--is-header">Otros generos</span></li>
+			            <li><a class="dropdown-link">Otros</a></li>
+			        </ul>
+			    </lx-dropdown-menu>
+			</lx-dropdown>
+	
+	</div>
+	
+	
+	<!-- TABLA -->
+	
+	<div class="data-table-container">
+		    <table class="data-table data-table--has-primary data-table--has-secondary">
+		        <thead>
+		            <tr>
+		                <th></th>
+		                <th>Genero</th>
+		                <th>Titulo</th>
+		                <th>Autor</th>
+		                <th></th>
+		            </tr>
+		            <tr>
+		                <td></td>
+		                <td colspan="3" class="divider divider--dark"></td>
+		            </tr>
+		        </thead>
+		
+		        <tbody>
+		            <tr class="data-table__clickable-row" ng-repeat="book in vm.books">
+		                <td>
+		                    <i class="icon icon--l icon--grey icon--circled mdi mdi-android"></i>
+		                </td>
+		                <td>
+		                    <span>{{book.genre}}</span>
+		                </td>
+		                <td>
+		                    <span>{{book.title}}</span>
+		                </td>
+		                <td>
+		                    <span>{{book.writer}}</span>
+		                </td>
+		                
+		            </tr>
+		
+		            <tr class="data-table__clickable-row">
+		                <td>
+		                    <i class="icon icon--l icon--grey icon--circled mdi mdi-android"></i>
+		                </td>
+		                <td>
+		                    <span>Lorem Ipsum</span>
+		                </td>
+		                <td>
+		                    <span>Lorem Ipsum</span>
+		                </td>
+		                <td>
+		                    <span>Lorem Ipsum</span>
+		                </td>
+		                
+		            </tr>
+		        </tbody>
+		    </table>
+		</div>
+    
+   
+</div>
+
+	

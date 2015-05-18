@@ -39,6 +39,9 @@ public class Controller implements CommandLineRunner {
 		*/
 		Book libro = new Book();
 		libro.setTitle("Libro de la ostia");
+		libro.setWriter("David Retamal el puto amo");
+		libro.setGenre("Erotico");
+		libro.setImage("livro.jpg");
 		serviceDawFun.setBook(libro);
 		
 	}

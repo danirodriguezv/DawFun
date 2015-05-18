@@ -1,75 +1,32 @@
 <div ng-controller="cinemaController as vm" layout="column" layout-fill>
 
 	<!-- BARRA SUPERIOR -->
-	<div class="toolbar bgc-grey-800 tc-white-1">
-        <div class="toolbar__left mr+ ">            
-                <i class="icon icon--l icon--white icon--flat mdi mdi-ticket "></i>                     
-        </div>
+	<div flex-item>
+        <div class="card bgc-indigo-500">
+            <div class="toolbar">
+                <span class="toolbar__label fs-title tc-white-1 ml">DAW ALWAYS FUN</span>
 
-        <span class="toolbar__label fs-title"><h1>DawKine</h1></span>
-		<div class="toolbar__right mr+ " >            
-                <a ng-href="#/acceso"><i class="icon icon--l icon--white icon--flat mdi mdi-ticket-account " ></i> </a>                   
+                <div class="toolbar__right">
+                    <lx-search-filter model="searchFilter.sixth" position="right" theme="dark" closed placeholder="Search"></lx-search-filter>
+
+                    <button class="btn btn--l btn--white btn--icon" lx-ripple>
+                        <i class="mdi mdi-apps"></i>
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
+    <div class="card">
+    <lx-tabs>
+        <lx-tab heading="INDOOR">
+            <p class="p+">INDOOR</p>
+        </lx-tab>
 
-	<!-- CARD -->
-	<div flex-container="row" flex-gutter="24" id="welcomeCard">
-	    <div flex-item>
-	        <div class="card">
-	            <div class="card__img card__img--top">
-	                <img src="/images/cine.jpg" id="imageCinema">
-	                <span class="fs-headline tc-white-1 display-block">DawKine</span>
-	            </div>
-	
-	            <div class="p+">
-	                <span class="fs-subhead tc-black-2 display-block">Selecciona tu cine</span>
-	
-	                <div class="paragraph fs-body-1">
-				    	<div flex-item>
-					        <lx-select ng-model="vm.cinema_selected" placeholder="Elige tu cine" choices="vm.cinemas" floating-label>
-					            <lx-select-selected>
-					                {{ $selected.name}} 
-					            </lx-select-selected>
-					            
-					            <lx-select-choices>
-					                <span ng-repeat="cinema in vm.cinemas">
-										<span> {{cinema.name}} </span>				
-									</span>	
-					            </lx-select-choices>
-					        </lx-select>
-				    	</div>
-	                </div>
-	            </div>
-	
-	            <div class="card__actions bgc-black-1">	               
-	                <button class="btn btn--m btn--white btn--flat " ng-click="vm.acceder(vm.cinema_selected.id)" lx-ripple>Acceder</button>
-	            </div>	            
-	        </div>
-	    </div>
-    </div>   
-	
-	<!-- FIN CARD -->
-	
-	<!-- <h1>PROBANDO</h1>
-	<div flex-container="row" flex-gutter="24">
-	    <div flex-item>
-	        <lx-select ng-model="selects.selectedPerson" placeholder="Elige tu cine" choices="vm.cinemas" floating-label>
-	            <lx-select-selected>
-	                {{ $selected.name}} 
-	            </lx-select-selected>
-	            
-	            <lx-select-choices>
-	                <span ng-repeat="cinema in vm.cinemas">
-						<span> {{cinema.name}} </span>				
-					</span>	
-	            </lx-select-choices>
-	        </lx-select>
-	    </div>
-	    
+        <lx-tab heading="OUTDOOR">
+            <p class="p+">OUTDOOR</p>
+        </lx-tab>
+
 	</div>
-	<br>
-	<h1>PARTE DE REPEAT DE CINES</h1>
-	<p ng-repeat="cinema in vm.cinemas">
-		<br><span> Nombre cine: {{cinema.name}} </span><br>
-	</p>	 -->
+    </div>
+
 </div>

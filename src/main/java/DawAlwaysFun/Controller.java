@@ -37,7 +37,9 @@ public class Controller implements CommandLineRunner {
 		/* QUITAR PARA AÑADIR PRODUCTOS POR DEFECTO EN LA BD
 		
 		*/
-		
+		Book libro = new Book();
+		libro.setTitle("Libro de la ostia");
+		serviceDawFun.setBook(libro);
 		
 	}
 	

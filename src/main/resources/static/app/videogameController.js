@@ -19,7 +19,7 @@ function videogameController(videogameService, $routeParams, $location, LxNotifi
 	vm.publish;
 	vm.pegi;
 	vm.categ;
-	vm.onl;
+	vm.desc;
 	vm.gameimage;
 	//Controller actions
 	
@@ -31,14 +31,14 @@ function videogameController(videogameService, $routeParams, $location, LxNotifi
 		vm.publish = game.publisher;
 		vm.pegi = game.pegi_age;
 		vm.categ = game.category;
-		vm.onl = game.online;
+		vm.desc = game.description;
 		vm.gameimage = game.image;
 	    LxDialogService.open(dialogId);
 	};
 
 	vm.closingDialog = function()
 	{
-	    LxNotificationService.info('Dialog cerrado!');
+	    LxNotificationService.info('Cerrado PopUp');
 	};
 	
 	

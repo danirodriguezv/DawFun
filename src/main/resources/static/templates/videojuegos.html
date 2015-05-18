@@ -1,0 +1,129 @@
+<div ng-controller="videogameController as vm" layout="column" layout-fill>
+
+
+
+
+
+<!-- BARRA SUPERIOR -->
+	<div flex-item>
+        <div class="card bgc-indigo-500">
+            <div class="toolbar">
+                <span class="toolbar__label fs-title tc-white-1 ml"><img src="/images/dawlogo.png" height=50></span>
+
+                <div class="toolbar__right">
+                    <lx-search-filter model="searchFilter.sixth" position="right" theme="dark" closed placeholder="Busqueda"></lx-search-filter>
+
+                    <button class="btn btn--l btn--white btn--icon" lx-ripple>
+                        <i class="mdi mdi-apps"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+<!-- BARRA INFERIOR -->
+	<div style="box-shadow: 0px 4px 6px 1px rgba(119, 119, 119, 0.17);background-color:white;">	
+			<lx-dropdown>
+			    <button class="btn btn--m btn--black btn--flat" lx-ripple lx-dropdown-toggle>
+			        Categoria
+			    </button>		
+			    <lx-dropdown-menu>
+			        <ul>
+			            <li><a class="dropdown-link" ng-click="dropdownAlert()">Terror</a></li>
+			            <li><a class="dropdown-link">Pegi 3</a></li>
+			            <li><a class="dropdown-link">Pegi 7</a></li>
+			            <li><a class="dropdown-link">Pegi 12</a></li>
+			            <li><a class="dropdown-link">Pegi 16</a></li>
+			            <li><a class="dropdown-link">Pegi 18</a></li>
+			            <li class="dropdown-divider"></li>
+			        </ul>
+			    </lx-dropdown-menu>
+			</lx-dropdown>
+	
+	</div>
+	
+	
+	<!-- TABLA -->
+	
+	<div class="data-table-container">
+		    <table class="data-table data-table--has-primary data-table--has-secondary">
+		        <thead>
+		            <tr>
+		                <th></th>
+		                <th>Nombre videojuego</th>
+		                <th>Plataforma</th>
+		                <th>Editorial</th>
+		                <th></th>
+		            </tr>
+		            <tr>
+		                <td></td>
+		                <td colspan="3" class="divider divider--dark"></td>
+		            </tr>
+		        </thead>
+		
+		        <tbody>
+		            <tr class="data-table__clickable-row" ng-repeat="game in vm.videoclub" ng-click="vm.opendDialog('test',game)">
+		                <td>
+		                    <!-- <i class="icon icon--l icon--grey icon--circled mdi mdi-android"></i> -->		                    
+		                    <lx-thumbnail thumbnail-src="/images/{{game.image}}" thumbnail-width="60" thumbnail-height="60"></lx-thumbnail>
+		                </td>
+		                <td>
+		                    <span>{{game.name}}</span>
+		                </td>
+		                <td>
+		                    <span>{{game.platform}}</span>
+		                </td>
+		                <td>
+		                    <span>{{game.publisher}}</span>
+		                </td>
+		                
+		            </tr>		
+		            
+		        </tbody>
+		    </table>
+		</div>
+		
+<!-- DIALOG -->
+
+<lx-dialog class="dialog dialog--l" id="test" auto-close="true" onclose="vm.closingDialog()" onscrollend="scrollEndDialog()">
+    <div class="dialog__header">
+        <div class="toolbar bgc-light-blue-500 pl++">
+            <span class="toolbar__label tc-white fs-title">
+                {{vm.nombreSelec}}
+            </span>
+
+            <div class="toolbar__right">
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="dialog__content">
+        <lx-tabs links-tc="light" links-bgc="light-blue-500" indicator="yellow-500" no-divider="true" layout="inline">
+            <lx-tab heading="Lorem Ipsum 1">
+                <div class="p++">
+                    <div ng-repeat="person in videoclub">
+                        {{ person.name }} - {{ person.email }} - {{ person.age }}
+                    </div>
+                </div>
+            </lx-tab>
+
+            <lx-tab heading="Lorem Ipsum 2">
+                <p class="p++">Lorem Ipsum Content 2</p>
+            </lx-tab>
+
+            <lx-tab heading="Lorem Ipsum 3">
+                <p class="p++">Lorem Ipsum Content 3</p>
+            </lx-tab>
+        </lx-tabs>
+    </div>
+
+    <div class="dialog__actions">
+        <button class="btn btn--m btn--black btn--flat" lx-ripple lx-dialog-close>Cancel</button>
+        <button class="btn btn--m btn--black btn--flat" lx-ripple>Lorem Ipsum</button>
+    </div>
+</lx-dialog>
+    
+   
+</div>

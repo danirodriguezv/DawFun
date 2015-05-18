@@ -1,0 +1,156 @@
+<div ng-controller="movieController as vm" layout="column"
+	layout-fill>
+
+
+
+
+
+	<!-- BARRA SUPERIOR -->
+	<div flex-item>
+		<div class="card bgc-indigo-500">
+			<div class="toolbar">
+				<span class="toolbar__label fs-title tc-white-1 ml"><img
+					src="/images/dawlogo.png" height=50></span>
+
+				<div class="toolbar__right">
+					<lx-search-filter model="searchFilter.sixth" position="right"
+						theme="dark" closed placeholder="Busqueda"></lx-search-filter>
+
+					<button class="btn btn--l btn--white btn--icon" ng-click="vm.volver()"lx-ripple>
+                        <i class="mdi mdi-undo"></i>
+                    </button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- BARRA INFERIOR -->
+	<div
+		style="box-shadow: 0px 4px 6px 1px rgba(119, 119, 119, 0.17); background-color: white-silver;">
+		<lx-dropdown>
+		<button class="btn btn--m btn--black btn--flat" lx-ripple
+			lx-dropdown-toggle>PEGI</button>
+		<lx-dropdown-menu>
+		<ul>
+			<li><a class="dropdown-link">Pegi 3</a></li>
+			<li><a class="dropdown-link">Pegi 7</a></li>
+			<li><a class="dropdown-link">Pegi 12</a></li>
+			<li><a class="dropdown-link">Pegi 16</a></li>
+			<li><a class="dropdown-link">Pegi 18</a></li>
+			<li class="dropdown-divider"></li>
+		</ul>
+		</lx-dropdown-menu> </lx-dropdown>
+		
+		<lx-dropdown>
+		<button class="btn btn--m btn--black btn--flat" lx-ripple
+			lx-dropdown-toggle>Categoria</button>
+		<lx-dropdown-menu>
+		<ul>
+			<li><a class="dropdown-link">GUERRA</a></li>
+			<li><a class="dropdown-link">ROL</a></li>
+			<li><a class="dropdown-link">DISPAROS</a></li>
+			<li><a class="dropdown-link">PRIMERA PERSONA</a></li>
+			<li><a class="dropdown-link">TERCERA PERSONA</a></li>
+			<li class="dropdown-divider"></li>
+		</ul>
+		</lx-dropdown-menu> </lx-dropdown>
+
+	</div>
+
+
+	<!-- TABLA -->
+
+	<div class="data-table-container">
+		<table
+			class="data-table data-table--has-primary data-table--has-secondary">
+			<thead>
+				<tr>
+					<th></th>
+					<th>Nombre videojuego</th>
+					<th>Plataforma</th>
+					<th>Editorial</th>
+					<th></th>
+				</tr>
+				<tr>
+					<td></td>
+					<td colspan="3" class="divider divider--dark"></td>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr class="data-table__clickable-row"
+					ng-repeat="game in vm.videoclub"
+					ng-click="vm.opendDialog('test',game)">
+					<td>
+						<!-- <i class="icon icon--l icon--grey icon--circled mdi mdi-android"></i> -->
+						<lx-thumbnail thumbnail-src="/images/{{game.image}}"
+							thumbnail-width="60" thumbnail-height="60"></lx-thumbnail>
+					</td>
+					<td><span>{{game.name}}</span></td>
+					<td><span>{{game.platform}}</span></td>
+					<td><span>{{game.publisher}}</span></td>
+
+				</tr>
+
+			</tbody>
+		</table>
+	</div>
+
+	<!-- DIALOG -->	
+	<lx-dialog class="dialog dialog--l" id="test" auto-close="true" onclose="vm.closingDialog()" onscrollend="scrollEndDialog()">
+    <div class="dialog__header" >
+        <div class="bgc-blue-grey-500 pl pt pb">      	    
+          	<span class="fs-display-2 display-block tc-white">{{vm.namegame}}</span>             
+        </div>         
+    </div>
+
+    <div class="dialog__content">
+    	<div class="tc-white-1" flex-container="row">
+		    <div flex-item="4" flex-item-order="1">
+		    	<div class="p">
+		    		<img ng-src="/images/{{vm.gameimage}}" width=100% height=100%>
+		    	</div>
+		    </div>
+		    <div flex-item="8" flex-item-order="2">
+		    	<div class="p+ bgc-blue-grey-300">
+		    		<span class="fs-subhead display-block">Desarrollado por</span>
+		    		<span class="fs-display-0.5 display-block">{{vm.develop}}</span>
+		    	</div>
+		    	<div class="p+ bgc-blue-grey-300">
+		    		<span class="fs-subhead display-block">Platadorma disponible</span>
+		    		<span class="fs-display-0.5 display-block">{{vm.plat}}</span>
+		    	</div>
+		    	<div class="p+ bgc-blue-grey-300">
+		    		<span class="fs-subhead display-block">Publicacion</span>
+		    		<span class="fs-display-0.5 display-block">{{vm.publish}}</span>
+		    	</div>
+		    	<div class="p+ bgc-blue-grey-300">
+		    		<span class="fs-subhead display-block">Categoria</span>
+		    		<span class="fs-display-0.5 display-block"> {{vm.categ}}</span>
+		    	</div>
+		    	<div class="p+ bgc-blue-grey-300">
+		    		<span class="fs-subhead display-block">Descripcion</span>
+		    		<span class="fs-display-0.5 display-block">{{vm.desc}}</span>
+		    	</div>
+		    	<div class="p+ bgc-red-300">
+		    		<span class="fs-subhead display-block">PEGI</span>
+		    		<span class="fs-display-0.5 display-block">{{vm.pegi}}</span>
+		    	</div>
+		    </div>		    
+		</div>
+    
+    
+    
+    	
+        
+    </div>
+
+    <div class="dialog__actions">
+        <button class="btn btn--m btn--black btn--flat" lx-ripple lx-dialog-close>Cancel</button>
+        <button class="btn btn--m btn--black btn--flat" lx-ripple>Funcionalidad</button>
+    </div>
+</lx-dialog>
+
+
+</div>

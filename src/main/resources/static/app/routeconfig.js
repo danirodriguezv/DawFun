@@ -8,4 +8,5 @@ function RouteConfig($routeProvider){
 	$routeProvider.when('/cinemas/:id',{ templateUrl : "templates/cinema.html"});
 	$routeProvider.when('/videojuegos',{ templateUrl : "templates/videojuegos.html"});
 	$routeProvider.when('/libros',{ templateUrl : "templates/libros.html"});
+	$routeProvider.when('/movies',{ templateUrl : "templates/peliculas.html"});
 }

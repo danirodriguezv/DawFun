@@ -91,19 +91,12 @@
 <!-- DIALOG -->
 
 <lx-dialog class="dialog dialog--l" id="test" auto-close="true" onclose="vm.closingDialog()" onscrollend="scrollEndDialog()">
-    <div class="dialog__header">
-        <div class="toolbar bgc-light-blue-500 pl++">
-            <h1 class="toolbar__label tc-white fs-title">
-                {{vm.tituloSelec}}
-            </h1>
-            <h1 class="toolbar__label tc-white fs-title">
-            	{{vm.autorSelec}}
-            </h1>
-
-            <div class="toolbar__right">
-                
-            </div>
+    <div class="dialog__header" >
+        <div class="bgc-blue-grey-500 pl++ pt++ pb++">      	    
+          	<span class="fs-display-2 display-block tc-white">{{vm.tituloSelec}}</span>
+			<span class="fs-title display-block tc-grey-50">{{vm.autorSelec}}</span>               
         </div>
+         
     </div>
 
     <div class="dialog__content">

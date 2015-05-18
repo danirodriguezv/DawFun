@@ -62,9 +62,9 @@ public class Controller implements CommandLineRunner {
 		Videogame game = new Videogame();
 		game.setName("Battlefield 3");
 		game.setPegi_age(16);
-		game.setCategory("War");
-		game.setOnline(true);
-		game.setPlatform("Shooter");
+		game.setCategory("GUERRA");
+		game.setDescription("Juego ultramoderno basado en las guerras futuristas");
+		game.setPlatform("DISPAROS");
 		game.setPublisher("EA");
 		game.setDevelopment("Equipo daw");
 		game.setImage("battle.png");
@@ -73,9 +73,9 @@ public class Controller implements CommandLineRunner {
 		Videogame game2 = new Videogame();
 		game2.setName("Plats 3");
 		game2.setPegi_age(12);
-		game2.setCategory("Family");
-		game2.setOnline(true);
-		game2.setPlatform("Rol");
+		game2.setCategory("TERCERA PERSONA");
+		game2.setDescription("Lo mejor para pasar la vida en casa jugando con la familia");
+		game2.setPlatform("ROL");
 		game2.setPublisher("IA");
 		game2.setDevelopment("Equipo plantoso");
 		game2.setImage("plants.png");

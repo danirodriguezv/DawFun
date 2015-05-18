@@ -40,6 +40,8 @@ function videogameController(videogameService, $routeParams, $location, LxNotifi
 	{
 	    LxNotificationService.info('Cerrado PopUp');
 	};
-	
+	vm.volver= function(){
+		$location.path("/");
+	}
 	
 };

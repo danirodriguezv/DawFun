@@ -36,7 +36,9 @@ function bookController(bookService, $routeParams, $location, LxNotificationServ
 	    LxNotificationService.info('Dialog cerrado!');
 	};
 	
-	
+	vm.volver= function(){
+		$location.path("/");
+	}
 	
 };
 

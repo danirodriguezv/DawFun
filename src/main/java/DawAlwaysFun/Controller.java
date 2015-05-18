@@ -50,6 +50,28 @@ public class Controller implements CommandLineRunner {
 		libro2.setGenre("Fantastico");
 		libro2.setImage("livro.jpg");
 		serviceDawFun.setBook(libro2);
+		
+		Videogame game = new Videogame();
+		game.setName("Battlefield 3");
+		game.setPegi_age(16);
+		game.setCategory("War");
+		game.setOnline(true);
+		game.setPlatform("Shooter");
+		game.setPublisher("EA");
+		game.setDevelopment("Equipo daw");
+		game.setImage("battle.jpg");
+		serviceDawFun.setVideogame(game);
+		
+		Videogame game2 = new Videogame();
+		game2.setName("Plats 3");
+		game2.setPegi_age(12);
+		game2.setCategory("Family");
+		game2.setOnline(true);
+		game2.setPlatform("Rol");
+		game2.setPublisher("IA");
+		game2.setDevelopment("Equipo plantoso");
+		game2.setImage("plants.jpg");
+		serviceDawFun.setVideogame(game2);
 	}
 	
 	//Metodos del controlador de libros

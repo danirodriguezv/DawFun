@@ -20,3 +20,18 @@
 	min-width : 50%;
 	max-width : 50%;
 }
+
+.panelSeccion{
+	/*background-color: rgba(0, 0, 0, 0.11) !important;
+	background-blend-mode: multiply;*/
+  	
+}
+.panelSeccion:hover{
+	background-color: grey !important;
+    transition: background-color .25s;
+	background-blend-mode:hard-light;    
+}
+
+.toolbar{
+	
+}

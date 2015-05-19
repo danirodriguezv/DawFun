@@ -7,15 +7,11 @@ function promocionateController(bookService, $routeParams, $location, LxNotifica
 	var vm = this;
 	
 	//View model properties
-	vm.books=[];
-	
+		
 		
 	//Controller logic
 	
-	vm.books= bookService.getBooks();
 	
-	vm.objetivoBusqueda='Todos';
-	vm.ordenadoPor="title";
 	
 	
 	
@@ -43,13 +39,8 @@ function promocionateController(bookService, $routeParams, $location, LxNotifica
 	vm.volver= function(){
 		$location.path("/");
 	}
-	
-	vm.busqueda = function(categoria){
-		
-		vm.objetivoBusqueda=categoria;
+	vm.ir= function(sitio){
+		$location.path("/"+sitio);
 	}
 	
-	vm.indicarOrden = function(orden){
-		vm.ordenadoPor=orden;
-	}
 };

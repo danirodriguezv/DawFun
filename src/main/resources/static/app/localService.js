@@ -1,19 +1,19 @@
 angular.module("app").service("localService", localService);
 
-movieService.$inject = ["$resource"];
+localService.$inject = ["$resource"];
 
-function movieService($resource) {
+function localService($resource) {
 
-		this.movies = [];
+		this.locals = [];
 		
 		
-		var moviesResource = $resource('movies/:id',{id: '@id'},{update:{method:"PUT"}});
+		var localResource = $resource('locals/:id',{id: '@id'},{update:{method:"PUT"}});
 		
 		//var BooResource = $resource('books/:id',{id: '@id'},{update:{method:"PUT"}});
 
 	
-		this.getMovies = function(){
-			movies = moviesResource.query();
-			return movies;
+		this.getLocals = function(){
+			locals = localResource.query();
+			return locals;
 		}
 }

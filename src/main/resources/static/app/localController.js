@@ -1,6 +1,6 @@
-angular.module("app").controller("movieController", movieController);
+angular.module("app").controller("localController", localController);
 
-movieController.$inject = ["movieService", "$routeParams", "$location", "LxNotificationService","LxDialogService"];
+localController.$inject = ["localService", "$routeParams", "$location", "LxNotificationService","LxDialogService"];
 
 function movieController(movieService, $routeParams, $location, LxNotificationService,LxDialogService) {
 
@@ -29,20 +29,23 @@ function movieController(movieService, $routeParams, $location, LxNotificationSe
 	
 	vm.opendDialog = function(dialogId,local)
 	{
-		vm.namemovie = movie.title;
-		vm.direct = movie.director;
-		vm.actor = movie.leading_actor;
-		vm.product = movie.production;
-		vm.dur = movie.duration;
-		vm.description = movie.description;
-		vm.trailer = movie.movie_trailer;
-		vm.movieimage = movie.photo;
+		vm.namelocal = local.name;
+		vm.star = local.star;
+		vm.price = local.price_medium;
+		vm.direc = local.address;
+		vm.food = local.food_type;
+		vm.prov = local.province;
+		vm.image = local.photo;
+		vm.open = local.open_time;
+		vm.close = local.close_time;
+		vm.capac = local.capacity;
+		vm.type = local.local_type;
 	    LxDialogService.open(dialogId);
 	};
 
 	vm.closingDialog = function()
 	{
-	    LxNotificationService.info('Cerrado PopUp');
+	    LxNotificationService.info('Ficha cerrada');
 	};
 	vm.volver= function(){
 		$location.path("/");

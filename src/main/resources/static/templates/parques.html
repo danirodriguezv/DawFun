@@ -1,4 +1,4 @@
-<div ng-controller="bookController as vm" layout="column" layout-fill>
+<div ng-controller="parkController as vm" layout="column" layout-fill>
 
 
 
@@ -12,7 +12,7 @@
 
                 <div class="toolbar__right">
                     <lx-search-filter class="sobreIcono" model="searchFilter.sixth" position="right" theme="dark" closed placeholder="Busqueda"></lx-search-filter>
-					<button class="btn btn--l btn--white btn--icon" ng-click="vm.abrirDialogSugerencia('sugerencia')"lx-ripple>
+					<button class="btn btn--l btn--white btn--icon" lx-ripple>
                         <i class="mdi mdi-lightbulb sobreIcono"></i>
                     </button>
 					
@@ -35,10 +35,10 @@
 			        <ul>
 			        	<li><a class="dropdown-link" ng-click="vm.busqueda('Todos')">TODOS</a></li> 
 			        	<li class="dropdown-divider"></li>
-			            <li><a class="dropdown-link" ng-click="vm.busqueda('Terror')">Acuáticos</a></li>
-			            <li><a class="dropdown-link" ng-click="vm.busqueda('Misterio')">Temáticos</a></li> 
+			            <li><a class="dropdown-link" ng-click="vm.busqueda('Terror')">Acuaticos</a></li>
+			            <li><a class="dropdown-link" ng-click="vm.busqueda('Misterio')">Tematicos</a></li> 
 			            <li class="dropdown-divider"></li>
-			            <li><span class="dropdown-link dropdown-link--is-header">Otros generos</span></li>
+			            <li><span class="dropdown-link dropdown-link--is-header">Otras categorias</span></li>
 			            <li><a class="dropdown-link" ng-click="vm.busqueda('Otros')">Otros</a></li>
 			        </ul>
 			    </lx-dropdown-menu>
@@ -55,7 +55,7 @@
 		            <tr>
 		                <th></th>
 		                <th class="orden" ng-click="vm.indicarOrden('name')"><span class="fs-headline display-block">Nombre</span></th>
-		                <th class="orden" ng-click="vm.indicarOrden('description')"><span class="fs-headline display-block">Descripción</span></th>
+		                <th class="orden" ng-click="vm.indicarOrden('description')"><span class="fs-headline display-block">Descripcion</span></th>
 		                <th class="orden" ng-click="vm.indicarOrden('province')"><span class="fs-headline display-block">Provincia</span></th>
 		                
 		            </tr>

@@ -8,6 +8,9 @@ function videogameController(videogameService, $routeParams, $location, LxNotifi
 	
 	//View model properties
 	vm.videoclub = [];
+	vm.objetivoBusqueda = 'Todos';
+	vm.ordenadoPor = "name";
+	vm.pegi = ["Pegi 3","Pegi 7","Pegi 12","Pegi 16","Pegi 18"];
 	
 		
 	//Controller logic
@@ -22,6 +25,15 @@ function videogameController(videogameService, $routeParams, $location, LxNotifi
 	vm.desc;
 	vm.gameimage;
 	//Controller actions
+	
+	vm.busqueda = function(pegi){
+		vm.objetivoBusqueda = pegi;
+	}
+	
+	vm.indicarOrden = function(orden){
+		vm.ordenadoPor = orden;
+	}
+	
 	
 	vm.opendDialog = function(dialogId,game)
 	{

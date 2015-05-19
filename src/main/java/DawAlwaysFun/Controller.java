@@ -125,6 +125,34 @@ public class Controller implements CommandLineRunner {
 		movie4.setTitle("Novita y el gato cosmico");
 		serviceDawFun.setMovie(movie4);
 		
+		Local local = new Local();
+		local.setAddress("Calle arcipreste de Hita");
+		local.setCapacity(100);
+		local.setClose_time("2:00");
+		local.setFood_type("Comida rica");
+		local.setLocal_type("RESTAURANTE");
+		local.setName("La castellaneda");
+		local.setOpen_time("8:00");
+		local.setPhoto("castellano.png");
+		local.setPrice_medium(50);
+		local.setProvice("Madrid");
+		local.setStar(10);
+		serviceDawFun.setLocal(local);
+		
+		Local local2 = new Local();
+		local2.setAddress("Calle mostoles");
+		local2.setCapacity(250);
+		local2.setClose_time("2:00");
+		local2.setFood_type("Comida sana");
+		local2.setLocal_type("PUB");
+		local2.setName("El pato mojao");
+		local2.setOpen_time("8:00");
+		local2.setPhoto("patomojao.png");
+		local2.setPrice_medium(25);
+		local2.setProvice("Madrid");
+		local2.setStar(15);
+		serviceDawFun.setLocal(local2);
+		
 			
 		
 	}

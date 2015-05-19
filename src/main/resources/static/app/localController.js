@@ -2,7 +2,7 @@ angular.module("app").controller("localController", localController);
 
 localController.$inject = ["localService", "$routeParams", "$location", "LxNotificationService","LxDialogService"];
 
-function movieController(movieService, $routeParams, $location, LxNotificationService,LxDialogService) {
+function localController(localService, $routeParams, $location, LxNotificationService,LxDialogService) {
 
 	var vm = this;
 	

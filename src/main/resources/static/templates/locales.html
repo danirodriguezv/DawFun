@@ -1,4 +1,4 @@
-<div ng-controller="movieController as vm" layout="column"
+<div ng-controller="localController as vm" layout="column"
 	layout-fill>
 
 
@@ -45,9 +45,9 @@
 
 	<div flex-container="row" flex-gutter="24">
 	
-     <div flex-item>
-        <div class="card" ng-repeat="local in vm.locals"
+     <div flex-item   ng-repeat="local in vm.locals"
 					ng-click="vm.opendDialog('test',local)">
+        <div class="card">
             <div flex-container="row">
                 <div class="card__img card__img--left" style="height: 160px">
                     <img src="/images/{{vm.image}}">
@@ -55,15 +55,9 @@
 
                 <div flex-item flex-container="column">
                     <div flex-item>
-                        <div class="p++-">
-                            <strong class="fs-headline display-block">Lorem Ipsum</strong>
-                            <span class="fs-subhead tc-black-2 display-block">Lorem Ipsum</span>
+                        <div class="p++">
+                            <strong class="fs-headline display-block">{{vm.namelocal}}</strong>
                         </div>
-                    </div>
-
-                    <div class="card__actions">
-                        <button class="btn btn--m btn--black btn--flat" lx-ripple>Free sample</button>
-                        <button class="btn btn--m btn--orange btn--flat" lx-ripple>Review</button>
                     </div>
                 </div>
             </div>

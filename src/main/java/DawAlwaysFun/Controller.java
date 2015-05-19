@@ -103,6 +103,28 @@ public class Controller implements CommandLineRunner {
 		movie2.setTitle("El maestro de agua");
 		serviceDawFun.setMovie(movie2);
 		
+		Movie movie3 = new Movie();
+		movie3.setDescription("Una precisa y emocionante carrera de coches");
+		movie3.setDirector("Gamsta");
+		movie3.setDuration(95);
+		movie3.setLeading_actor("Mulatillo");
+		movie3.setMovie_trailer("De momento sin trailer");
+		movie3.setPhoto("atodogas.png");
+		movie3.setProduction("WarnerBros");
+		movie3.setTitle("A todo gas, el mañana");
+		serviceDawFun.setMovie(movie3);
+		
+		Movie movie4 = new Movie();
+		movie4.setDescription("Historia de novita y doraemon");
+		movie4.setDirector("Hulito");
+		movie4.setDuration(88);
+		movie4.setLeading_actor("PapaJoe");
+		movie4.setMovie_trailer("De momento sin trailer");
+		movie4.setPhoto("novita.png");
+		movie4.setProduction("WarnerBros");
+		movie4.setTitle("Novita y el gato cosmico");
+		serviceDawFun.setMovie(movie4);
+		
 			
 		
 	}

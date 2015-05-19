@@ -38,7 +38,7 @@ function movieController(movieService, $routeParams, $location, LxNotificationSe
 
 	vm.closingDialog = function()
 	{
-	    LxNotificationService.info('Cerrado PopUp');
+	    LxNotificationService.info('Cerrada ficha');
 	};
 	vm.volver= function(){
 		$location.path("/");

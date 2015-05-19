@@ -15,5 +15,6 @@ function RouteConfig($routeProvider){
 	$routeProvider.when('/locales',{ templateUrl : "templates/locales.html"});
 	$routeProvider.when('/riesgo',{ templateUrl : "templates/riesgo.html"});
 
-	$routeProvider.when('/access/:nom/:pass',{ templateUrl : "templates/welcome.html"});
+	$routeProvider.when('/panelAdmin',{ templateUrl : "templates/panelAdministracion.html"});
+	
 }

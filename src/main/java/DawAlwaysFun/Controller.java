@@ -337,13 +337,13 @@ public class Controller implements CommandLineRunner {
 	
 	//Metodos del controlador de admin
 	
-	@RequestMapping(value = "/access", method = RequestMethod.GET)
-	public boolean validateAdmin(@RequestParam String	nom, @RequestParam String	pass){
-		
+	@RequestMapping(value = "/access/{nom}/{pass}", method = RequestMethod.GET)
+	public boolean validateAdmin(@PathVariable String	nom, @PathVariable String	pass){
+		System.out.println("dasd"+nom+pass);
 		if(nom.equals("admin")&&pass.equals("1234")){			
 			user.setAdmin(true);			
 		}
-		
+		System.out.println(user.isAdmin());
 		return user.isAdmin();
 		
 		//return serviceDawKine.getMovie(idMovie);

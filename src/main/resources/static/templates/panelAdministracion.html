@@ -1,0 +1,47 @@
+<div ng-controller="panelAdministracionController as vm" layout="column" layout-fill>
+
+<!-- BARRA SUPERIOR -->
+	<div flex-item style="box-shadow: 0px 4px 6px 1px rgba(119, 119, 119, 0.17);">
+        <div class="card bgc-indigo-500">
+            <div class="toolbar">
+                <span class="toolbar__label fs-title tc-white-1 ml"><img src="/images/dawlogo.png" height=50> Administracion</span>
+				
+                <div class="toolbar__right">					
+                    <button class="btn btn--l btn--white btn--icon" ng-click="vm.volver()"lx-ripple>
+                        <i class="mdi mdi-undo sobreIcono"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+<!-- BARRA INFERIOR -->
+	<div style="box-shadow: 0px 4px 6px 1px rgba(119, 119, 119, 0.07);background-color:white;">	
+			
+			    <button class="btn btn--m btn--black btn--flat botonCategoria" lx-ripple lx-dropdown-toggle>
+			        <span style="font-weight:bold">Videojuegos</span>
+			    </button>	
+			    <button class="btn btn--m btn--black btn--flat botonCategoria" lx-ripple lx-dropdown-toggle>
+			        <span style="font-weight:bold">Libros</span>
+			    </button>	
+			    <button class="btn btn--m btn--black btn--flat botonCategoria" lx-ripple lx-dropdown-toggle>
+			        <span style="font-weight:bold">Peliculas</span>
+			    </button>	
+				<button class="btn btn--m btn--black btn--flat botonCategoria" lx-ripple lx-dropdown-toggle>
+			        <span style="font-weight:bold">Parques Tematicos</span>
+			    </button>
+			    <button class="btn btn--m btn--black btn--flat botonCategoria" lx-ripple lx-dropdown-toggle>
+			        <span style="font-weight:bold">Ocio Locales</span>
+			    </button>	
+			    <button class="btn btn--m btn--black btn--flat botonCategoria" lx-ripple lx-dropdown-toggle>
+			        <span style="font-weight:bold">Aventura</span>
+			    </button>	
+	</div>	
+	
+
+	
+   
+</div>
+
+	

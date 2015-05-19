@@ -1,5 +1,6 @@
 package DawAlwaysFun;
 
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 
+
 @RestController
 public class Controller implements CommandLineRunner {
 
@@ -23,8 +25,6 @@ public class Controller implements CommandLineRunner {
 	
 	@Autowired
 	private ServiceDawFun serviceDawFun;
-
-	private static final String FILES_FOLDER = "files";
 
 	
 	
@@ -335,4 +335,9 @@ public class Controller implements CommandLineRunner {
 		
 		//return serviceDawKine.getMovie(idMovie);
 	}
+	
+	
+	
+	
+	
 }

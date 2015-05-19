@@ -54,6 +54,36 @@
 	background-blend-mode:hard-light;    
 }
 
-.toolbar{
-	
+.botonCategoria{
+	background-color:orange;
+	-webkit-box-shadow: inset 0px 1px 16px -3px rgba(0,0,0,0.31);
+	-moz-box-shadow: inset 0px 1px 16px -3px rgba(0,0,0,0.31);
+	box-shadow: inset 0px 1px 16px -3px rgba(0,0,0,0.31);	
+	text-shadow:  1px 1px 1px #FFF;
+	border:1px solid #b46800;
+	border-radius:0px !important;
+}
+
+.botonCategoria:hover{
+	background-color:#ffbe48;	
+	text-shadow:  1px 1px 1px #FFF;	
+	border:1px solid #b46800;
+	border-radius:0px !important;
+}
+.botonCategoria:active{
+	background-color:#ba7900;	
+	color:white;
+	text-shadow:  1px 1px 1px #000;	
+}
+
+.orden{
+	color:#3e3e3e;
+	-webkit-transition:all 0.1s ;
+	-moz-transition:all 0.1s ;
+	-o-transition:all 0.1s ;
+	transition:all 0.1s ; 
+}
+.orden:hover{
+	color:white;
+	text-shadow: -1px -1px 0.5px grey, 1px 1px 0.5px grey, -1px 1px 0.5px grey, 1px -1px 0.5px grey;	
 }

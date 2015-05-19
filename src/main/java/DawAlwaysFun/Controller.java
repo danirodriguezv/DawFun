@@ -111,6 +111,7 @@ public class Controller implements CommandLineRunner {
 		movie3.setPhoto("atodogas.png");
 		movie3.setProduction("WarnerBros");
 		movie3.setTitle("A todo gas, el mañana");
+		movie3.setType("ACCION");
 		serviceDawFun.setMovie(movie3);
 		
 		Movie movie4 = new Movie();
@@ -122,6 +123,7 @@ public class Controller implements CommandLineRunner {
 		movie4.setPhoto("novita.png");
 		movie4.setProduction("WarnerBros");
 		movie4.setTitle("Novita y el gato cosmico");
+		movie4.setType("COMEDIA");
 		serviceDawFun.setMovie(movie4);
 		
 		

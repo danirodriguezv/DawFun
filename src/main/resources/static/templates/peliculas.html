@@ -59,6 +59,7 @@
                         <span class="fs-headline tc-silver-1 display-block">{{movie.title}}</span>
                              <span class="fs-subhead tc-black-2 display-block">Dirigida por {{movie.director}}</span>
                              <span class="fs-subhead tc-black-2 display-block">Duracion: {{movie.duration}} minutos</span>
+                             <span class="fs-subhead tc-black-2 display-block">Tipo: {{movie.type}}</span>
           
                         </div>
                     </div>
@@ -87,6 +88,10 @@
 		    	</div>
 		    </div>
 		    <div flex-item="8" flex-item-order="2">
+		    	<div class="p+ bgc-blue-grey-300">
+		    		<span class="fs-subhead display-block">Tipo</span>
+		    		<span class="fs-display-0.5 display-block">{{vm.type_movie}}</span>
+		    	</div>
 		    	<div class="p+ bgc-blue-grey-300">
 		    		<span class="fs-subhead display-block">Dirigida por</span>
 		    		<span class="fs-display-0.5 display-block">{{vm.direct}}</span>

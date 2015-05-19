@@ -53,29 +53,32 @@
 	<!-- TABLA -->
 	
 	
-	
-	<div flex-container="row" flex-gutter="24">
-	
-     <div flex-item   ng-repeat="park in vm.parks"
-					ng-click="vm.opendDialog('test',park)" class="cards">
-        <div class="card">
-            <div flex-container="row">
-                <div class="card__img card__img--left" style="height: 160px">
-                    <img src="/images/{{park.image_park}}">
-                </div>
+		<div flex-container="row" flex-gutter="24">
+		
+		
+			<div class="card" ng-repeat="park in vm.parks | orderBy: vm.ordenadoPor"  ng-click="vm.opendDialog('test',park)" ng-show="park.kind_park==vm.objetivoBusqueda || vm.objetivoBusqueda=='Todos'">
+		
 
-                <div flex-item flex-container="column">
-                    <div flex-item>
-                        <div class="p++">
-                            <strong class="fs-headline display-block">{{park.name_park}}</strong>
-                            <strong class="fs-headline display-block">Direccion: {{park.address_park}}</strong>
-                            <strong class="fs-headline display-block">Province: {{park.province_park}}</strong>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>	
+			        <div class="card">
+			            <div flex-container="row">
+			                <div class="card__img card__img--left" style="height: 160px">
+			                    <img src="/images/{{park.image_park}}">
+			                </div>
+			
+			                <div flex-item flex-container="column">
+			                    <div flex-item>
+			                        <div class="p++">
+			                            <strong class="fs-headline display-block">{{park.name_park}}</strong>
+			                            <strong class="fs-headline display-block">Direccion: {{park.address_park}}</strong>
+			                            <strong class="fs-headline display-block">Provincia: {{park.province_park}}</strong>
+			                        </div>
+			                    </div>
+			                </div>
+			            </div>
+			        </div>
+			    </div>	
+		    </div>
+    </div>
     
 <!-- DIALOG -->	
 	<lx-dialog class="dialog dialog--l" id="test" auto-close="true" onclose="vm.closingDialog()" onscrollend="scrollEndDialog()">

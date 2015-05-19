@@ -8,11 +8,11 @@
 				<span class="toolbar__label fs-title tc-white-1 ml"><img
 					src="/images/dawlogo.png" height=50></span>
 				<div class="toolbar__right mr+ ">
-					<i class="icon icon--l icon--white icon--flat mdi mdi-undo ">
-						<a ng-href="#/"></a>
-					</i>
-					<button class="btn btn--l btn--white btn--icon" lx-ripple>
-						<a href="#/admin"><i class="mdi mdi-account"></i></a>
+					<button class="btn btn--l btn--white btn--icon" ng-click="vm.volver()" lx-ripple>
+						<i class="icon icon--l icon--white icon--flat mdi mdi-undo sobreIcono "></i>
+					</button>
+					<button class="btn btn--l btn--white btn--icon" ng-click="vm.ir('admin')"lx-ripple>
+						<i class="mdi mdi-account sobreIcono"></i>
 					</button>
 				</div>
 			</div>

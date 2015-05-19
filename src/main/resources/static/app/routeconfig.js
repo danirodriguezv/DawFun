@@ -12,4 +12,5 @@ function RouteConfig($routeProvider){
 	$routeProvider.when('/admin',{ templateUrl : "templates/adminAccess.html"});
 	$routeProvider.when('/promocionate',{ templateUrl : "templates/promocionate.html"});
 	$routeProvider.when('/locales',{ templateUrl : "templates/locales.html"});
+	$routeProvider.when('/riesgo',{ templateUrl : "templates/riesgo.html"});
 }

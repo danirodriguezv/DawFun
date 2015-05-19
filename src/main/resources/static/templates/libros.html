@@ -30,14 +30,16 @@
 			    </button>		
 			    <lx-dropdown-menu>
 			        <ul>
-			            <li><a class="dropdown-link" ng-click="dropdownAlert()">Terror</a></li>
+			        	<li><a class="dropdown-link" ng-click="vm.busqueda('Todos')">TODOS</a></li> 
+			        	<li class="dropdown-divider"></li>
+			            <li><a class="dropdown-link" >Terror</a></li>
 			            <li><a class="dropdown-link">Misterio</a></li>
 			            <li><a class="dropdown-link">Novela Negra</a></li>
 			            <li><a class="dropdown-link">Humanistico</a></li>
 			            <li><a class="dropdown-link">Juvenil</a></li>
 			            <li><a class="dropdown-link">Romantica</a></li>
 			            <li><a class="dropdown-link">Poesia</a></li>
-			            <li><a class="dropdown-link">Fantastica</a></li> 
+			            <li><a class="dropdown-link" ng-click="vm.busqueda('Fantastico')">Fantastica</a></li> 
 			            <li class="dropdown-divider"></li>
 			            <li><span class="dropdown-link dropdown-link--is-header">Otros generos</span></li>
 			            <li><a class="dropdown-link">Otros</a></li>
@@ -46,7 +48,7 @@
 			</lx-dropdown>
 	
 	</div>
-	
+	{{vm.objetivoBusqueda}}
 	
 	<!-- TABLA -->
 	
@@ -55,9 +57,9 @@
 		        <thead>
 		            <tr>
 		                <th></th>
-		                <th>Genero</th>
-		                <th>Titulo</th>
-		                <th>Autor</th>
+		                <th><span class="fs-headline display-block">Genero</span></th>
+		                <th><span class="fs-headline display-block">Titulo</span></th>
+		                <th><span class="fs-headline display-block">Autor</span></th>
 		                <th></th>
 		            </tr>
 		            <tr>
@@ -67,7 +69,18 @@
 		        </thead>
 		
 		        <tbody>
+		        
+		        	
+		        	
 		            <tr class="data-table__clickable-row" ng-repeat="book in vm.books" ng-click="vm.opendDialog('test',book)">
+		               
+		                <div ng-switch="book.genre">
+			        		<div ng-switch-when="vm.objetivoBusqueda">
+			        		
+			        		</div>
+		        		</div>
+		               	
+		               			                
 		                <td>
 		                    <!-- <i class="icon icon--l icon--grey icon--circled mdi mdi-android"></i> -->		                    
 		                    <lx-thumbnail thumbnail-src="/images/{{book.image}}" thumbnail-width="60" thumbnail-height="60"></lx-thumbnail>
@@ -113,17 +126,11 @@
 		    		<span class="fs-title display-block">{{vm.resumenSelec}}</span>		    		
 		    	</div>
 		    </div>		    
-		</div>
-    
-    
-    
-    	
-        
+		</div>        
     </div>
 
     <div class="dialog__actions">
-        <button class="btn btn--m btn--black btn--flat" lx-ripple lx-dialog-close>Cancel</button>
-        <button class="btn btn--m btn--black btn--flat" lx-ripple>Lorem Ipsum</button>
+        <button class="btn btn--m btn--black btn--flat" lx-ripple lx-dialog-close>Cerrar</button>       
     </div>
 </lx-dialog>
     

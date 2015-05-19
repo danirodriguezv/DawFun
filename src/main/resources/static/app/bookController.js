@@ -14,6 +14,8 @@ function bookController(bookService, $routeParams, $location, LxNotificationServ
 	
 	vm.books= bookService.getBooks();
 	
+	vm.objetivoBusqueda='Todos';
+	
 	
 	
 	
@@ -33,12 +35,20 @@ function bookController(bookService, $routeParams, $location, LxNotificationServ
 
 	vm.closingDialog = function()
 	{
-	    LxNotificationService.info('Dialog cerrado!');
+	   
+	    LxNotificationService.notify('Visto!', 'emoticon', false, 'yellow');
 	};
 	
 	vm.volver= function(){
 		$location.path("/");
 	}
 	
+	vm.busqueda = function(categoria){
+		if (categoria === 'Fantastico'){
+			vm.objetivoBusqueda='Fantastico';
+		}else if(categoria === 'Todos'){
+			vm.objetivoBusqueda='Todos';
+		}
+	}
 };
 

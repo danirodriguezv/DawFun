@@ -45,18 +45,18 @@
 
 	<div flex-container="row" flex-gutter="24">
 	
-     <div flex-item   ng-repeat="risk in vm.riesgos"
-					ng-click="vm.opendDialog('test',risk)">
+     <div flex-item   ng-repeat="riesgo in vm.riesgos"
+					ng-click="vm.opendDialog('test',riesgo)">
         <div class="card">
             <div flex-container="row">
                 <div class="card__img card__img--left" style="height: 160px">
-                    <img src="/images/{{risk.image}}">
+                    <img src="/images/{{riesgo.image}}">
                 </div>
 
                 <div flex-item flex-container="column">
                     <div flex-item>
                         <div class="p++">
-                            <strong class="fs-headline display-block">{{risk.name}}</strong>
+                            <strong class="fs-headline display-block">{{riesgo.name}}</strong>
                         </div>
                     </div>
                 </div>

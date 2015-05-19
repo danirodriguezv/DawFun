@@ -12,7 +12,7 @@ function riesgoController(riesgoService, $routeParams, $location, LxNotification
 		
 	//Controller logic
 	
-	vm.riesgos = riesgoService.getRisks();
+	vm.riesgos = riesgoService.getRiesgos();
 	vm.name;
 	vm.descrip;
 	vm.price;

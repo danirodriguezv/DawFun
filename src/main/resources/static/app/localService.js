@@ -1,19 +1,19 @@
-angular.module("app").service("riesgoService", riesgoService);
+angular.module("app").service("localService", localService);
 
-riesgoService.$inject = ["$resource"];
+localService.$inject = ["$resource"];
 
-function riesgoService($resource) {
+function localService($resource) {
 
-		this.riesgos = [];
+		this.locals = [];
 		
 		
-		var riesgoResource = $resource('risks/:id',{id: '@id'},{update:{method:"PUT"}});
+		var localResource = $resource('locals/:id',{id: '@id'},{update:{method:"PUT"}});
 		
 		//var BooResource = $resource('books/:id',{id: '@id'},{update:{method:"PUT"}});
 
 	
-		this.getRisks = function(){
-			riesgos = riesgoResource.query();
-			return riesgos;
+		this.getLocals = function(){
+			locals = localResource.query();
+			return locals;
 		}
 }

@@ -186,7 +186,7 @@ public class Controller implements CommandLineRunner {
 		actividad.setName("Viaje en globo");
 		actividad.setPrice(250);
 		actividad.setRisk(false);
-		actividad.setSite("Pradera de san isidro");
+		actividad.setAddress("Pradera de san isidro");
 		serviceDawFun.setOutdoor(actividad);
 		
 		Outdoor_activity actividad2 = new Outdoor_activity();
@@ -197,7 +197,7 @@ public class Controller implements CommandLineRunner {
 		actividad2.setName("Paracaidismo");
 		actividad2.setPrice(500);
 		actividad2.setRisk(true);
-		actividad2.setSite("Alto de Alcorcon");
+		actividad2.setAddress("Alto de Alcorcon");
 		serviceDawFun.setOutdoor(actividad2);
 		
 			

@@ -1,50 +1,98 @@
-<div ng-controller="promocionateController as vm" layout="column" layout-fill>
+<div ng-controller="promocionateController as vm" layout="column"
+	layout-fill>
 
-<!-- BARRA SUPERIOR -->
+	<!-- BARRA SUPERIOR -->
 	<div flex-item>
-        <div class="card bgc-indigo-500">
-            <div class="toolbar">
-                <span class="toolbar__label fs-title tc-white-1 ml"><img src="/images/dawlogo.png" height=50></span>
-                <div class="toolbar__right mr+ " > 
-                	<button class="btn btn--l btn--white btn--icon" ng-click="vm.ir('')" lx-ripple>           
-               			<i class="icon icon--l icon--white icon--flat mdi mdi-undo " ></i>  
-               		</button>                   
-                    <button class="btn btn--l btn--white btn--icon" ng-click="vm.ir('admin')" lx-ripple>
-                        <i class="mdi mdi-account"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-<!-- Formulario de promoción -->
-<div flex-container="row">
-    <div flex-item>
-        <lx-text-field label="Company" disabled="true">
-            <input type="text" ng-model="textFields.disabled" ng-disabled="true">
-        </lx-text-field>
-    </div>
+		<div class="card bgc-indigo-500">
+			<div class="toolbar">
+				<span class="toolbar__label fs-title tc-white-1 ml"><img
+					src="/images/dawlogo.png" height=50></span>
+				<div class="toolbar__right mr+ ">
+					<i class="icon icon--l icon--white icon--flat mdi mdi-undo ">
+						<a ng-href="#/"></a>
+					</i>
+					<button class="btn btn--l btn--white btn--icon" lx-ripple>
+						<a href="#/admin"><i class="mdi mdi-account"></i></a>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Formulario de promoción -->
+	<div flex-container="row">
+		<div flex-item>
+			<lx-text-field label="Contacto" disabled="true"> <input
+				type="text" ng-model="textFields.disabled" ng-disabled="true">
+			</lx-text-field>
+		</div>
+	</div>
+
+
+	<div flex-container="row" flex-gutter="24">
+
+		<div flex-item>
+			<lx-text-field label="Email"
+				error="!emailValidation(textFields.secondEmail)"> <input
+				type="email" ng-model="textFields.secondEmail"> </lx-text-field>
+		</div>
+
+		<div flex-item>
+			<lx-text-field label="Repeat previous email"
+				valid="emailValidation(textFields.secondEmail) && textFields.secondEmail === textFields.thirdEmail"
+				error="!emailValidation(textFields.secondEmail) || textFields.secondEmail !== textFields.thirdEmail">
+			<input type="email" ng-model="textFields.thirdEmail"> </lx-text-field>
+		</div>
+	</div>
+	<div flex-container="row">
+		<div flex-item>
+			<lx-text-field label="Datos promoción" disabled="true">
+			<input type="text" ng-model="textFields.disabled" ng-disabled="true">
+			</lx-text-field>
+		</div>
 </div>
+		<div class="card mt++">
+			<lx-tabs indicator="green-200" active-tab="1" layout="inline">
+			<lx-tab heading="Libro">
+			<form action="/nuevoLibro">
+				<div flex-item>
+					<lx-text-field label="Título"> <input
+						type="text" ng-model="textFields.title"> </lx-text-field>
+				</div>
+				
+				<div flex-item>
+					<lx-text-field label="Escritor"> <input
+						type="text" ng-model="textFields.writter"> </lx-text-field>
+				</div>
+				
+				<div flex-item>
+					<lx-text-field label="Editorial"> <input
+						type="text" ng-model="textFields.publisher"> </lx-text-field>
+				</div>
+				
+				<div flex-item>
+					<lx-text-field label="Sinopsis"> <input
+						type="text" ng-model="textFields.synopsis"> </lx-text-field>
+				</div>	
+				
+				<div flex-item>
+					<lx-text-field label="isbn"> <input
+						type="text" ng-model="textFields.isbn"> </lx-text-field>
+				</div>	
+	<button class="btn btn--m btn--blue btn--raised" lx-ripple type="submit">Enviar Petición</button>
+			
+			</form>
+			</lx-tab> <lx-tab heading="Película">
+			<p class="p+">Lorem Ipsum Content 2</p>
+			</lx-tab> <lx-tab heading="VideoJuego">
+			<p class="p+">Lorem Ipsum Content 3</p>
+			</lx-tab> <lx-tab heading="Parques temáticos">
+			<p class="p+">Lorem Ipsum Content 3</p>
+			</lx-tab> <lx-tab heading="Local">
+			<p class="p+">Lorem Ipsum Content 3</p>
+			</lx-tab> <lx-tab heading="Aventura y riesgo">
+			<p class="p+">Lorem Ipsum Content 3</p>
+			</lx-tab> </lx-tabs>
+		</div>
 
-
-<div flex-container="row" flex-gutter="24">
-    <div flex-item>
-        <lx-text-field label="Email" error="!emailValidation(textFields.firstEmail)">
-            <input type="email" ng-model="textFields.firstEmail">
-        </lx-text-field>
-    </div>
-
-    <div flex-item>
-        <lx-text-field label="Email" error="!emailValidation(textFields.secondEmail)">
-            <input type="email" ng-model="textFields.secondEmail">
-        </lx-text-field>
-    </div>
-
-    <div flex-item>
-        <lx-text-field label="Repeat previous email"
-                       valid="emailValidation(textFields.secondEmail) && textFields.secondEmail === textFields.thirdEmail"
-                       error="!emailValidation(textFields.secondEmail) || textFields.secondEmail !== textFields.thirdEmail">
-            <input type="email" ng-model="textFields.thirdEmail">
-        </lx-text-field>
-    </div>
-</div>
+	</div>

@@ -135,7 +135,7 @@ public class Controller implements CommandLineRunner {
 		local.setOpen_time("8:00");
 		local.setPhoto("castellano.png");
 		local.setPrice_medium(50);
-		local.setProvice("Madrid");
+		local.setProvince("Madrid");
 		local.setStar(10);
 		serviceDawFun.setLocal(local);
 		
@@ -149,7 +149,7 @@ public class Controller implements CommandLineRunner {
 		local2.setOpen_time("8:00");
 		local2.setPhoto("patomojao.png");
 		local2.setPrice_medium(25);
-		local2.setProvice("Madrid");
+		local2.setProvince("Madrid");
 		local2.setStar(15);
 		serviceDawFun.setLocal(local2);
 		

@@ -17,7 +17,7 @@ public class Local{
 	private long price_medium;
 	private String address;
 	private String food_type;
-	private String provice;
+	private String province;
 	private String photo;
 	private String open_time;
 	private String close_time;
@@ -66,11 +66,11 @@ public class Local{
 	public void setFood_type(String food_type) {
 		this.food_type = food_type;
 	}
-	public String getProvice() {
-		return provice;
+	public String getProvince() {
+		return province;
 	}
-	public void setProvice(String provice) {
-		this.provice = provice;
+	public void setProvince(String provice) {
+		this.province = provice;
 	}
 	public String getPhoto() {
 		return photo;

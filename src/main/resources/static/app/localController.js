@@ -7,23 +7,27 @@ function movieController(movieService, $routeParams, $location, LxNotificationSe
 	var vm = this;
 	
 	//View model properties
-	vm.movies = [];
+	vm.locals = [];
 	
 		
 	//Controller logic
 	
-	vm.movies = movieService.getMovies();
-	vm.namemovie;
-	vm.direct;
-	vm.actor;
-	vm.product;
-	vm.dur;
-	vm.description;
-	vm.trailer;
-	vm.movieimage;
+	vm.locals = localService.getLocals();
+	vm.namelocal;
+	vm.star;
+	vm.price;
+	vm.direc;
+	vm.food;
+	vm.prov;
+	vm.image;
+	vm.open;
+	vm.close;
+	vm.capac;
+	vm.type;
+	
 	//Controller actions
 	
-	vm.opendDialog = function(dialogId,movie)
+	vm.opendDialog = function(dialogId,local)
 	{
 		vm.namemovie = movie.title;
 		vm.direct = movie.director;

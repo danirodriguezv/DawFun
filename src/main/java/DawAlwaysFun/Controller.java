@@ -2,10 +2,6 @@ package DawAlwaysFun;
 
 import java.util.List;
 
-
-
-import java.util.concurrent.CopyOnWriteArrayList;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.http.HttpStatus;
@@ -127,7 +123,7 @@ public class Controller implements CommandLineRunner {
 		serviceDawFun.setMovie(movie4);
 		
 		
-		Theme_park park = new Theme_park();
+		Thepark park = new Thepark();
 		park.setAddress("Casa de campo");
 		park.setCheck(true);
 		park.setClose_time("1:00");
@@ -256,19 +252,19 @@ public class Controller implements CommandLineRunner {
 	//Metodos del controlador de los parques tematicos
 	
 	@RequestMapping(value = "/parks", method = RequestMethod.POST)
-	public ResponseEntity<Theme_park> addPark(@RequestBody Theme_park park){
+	public ResponseEntity<Thepark> addPark(@RequestBody Thepark park){
 		serviceDawFun.setPark(park);
 		return new ResponseEntity<>(park, HttpStatus.CREATED);
 	}
 	
 
 	@RequestMapping(value = "/parks", method = RequestMethod.GET)
-	public List<Theme_park> getParks(){
+	public List<Thepark> getParks(){
 		return serviceDawFun.getParks();
 	}
 	
 	@RequestMapping(value = "/park/{idPark}", method = RequestMethod.GET)
-	public Theme_park getPark(@PathVariable long idPark){
+	public Thepark getPark(@PathVariable long idPark){
 		return serviceDawFun.getPark(idPark);
 	}
 	

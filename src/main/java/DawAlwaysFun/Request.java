@@ -13,40 +13,38 @@ public class Request{
 	private long id;
 	
 
-	private String writer;
-	private int pageNumber;
-	private String synopsis;
-	private String genre;
-	private String isbn;
-	private int star;
-	private long price_medium;
-	private String provice;
-	private int capacity;
-	private String local_type;
-	private String title;
-	private String director;
-	private String leading_actor;
-	private String production;
-	private String movie_trailer;
-	private String photo;
-	private int age_recomended;
-	private String site;
-	private boolean risk;
-	private int duration;
-	private String address;
-	private String province;
-	private String open_time;
-	private String close_time;
-	private long price;
-	private boolean check;
-	private String name;
-	private String development;
-	private String platform;
-	private String publisher;
-	private int pegi_age;
-	private String category;
-	private String image;
-	private String description;
+	private String writer_request;
+	private int pageNumber_request;
+	private String synopsis_request;
+	private String genre_request;
+	private String isbn_request;
+	private int star_request;
+	private long price_medium_request;
+	private String province_request;
+	private int capacity_request;
+	private String local_type_request;
+	private String title_request;
+	private String director_request;
+	private String leading_actor_request;
+	private String production_request;
+	private String movie_trailer_request;
+	private String photo_request;
+	private int age_recomended_request;
+	private String address_request;
+	private boolean risk_request;
+	private int duration_request;
+	private String open_time_request;
+	private String close_time_request;
+	private long price_request;
+	private boolean check_request;
+	private String name_request;
+	private String development_request;
+	private String platform_request;
+	private String publisher_request;
+	private int pegi_age_request;
+	private String category_request;
+	private String image_request;
+	private String description_request;
 	
 	public long getId() {
 		return id;
@@ -55,208 +53,202 @@ public class Request{
 		this.id = id;
 	}
 	public String getWriter() {
-		return writer;
+		return writer_request;
 	}
 	public void setWriter(String writer) {
-		this.writer = writer;
+		this.writer_request = writer;
 	}
 	public int getPageNumber() {
-		return pageNumber;
+		return pageNumber_request;
 	}
 	public void setPageNumber(int pageNumber) {
-		this.pageNumber = pageNumber;
+		this.pageNumber_request = pageNumber;
 	}
 	public String getSynopsis() {
-		return synopsis;
+		return synopsis_request;
 	}
 	public void setSynopsis(String synopsis) {
-		this.synopsis = synopsis;
+		this.synopsis_request = synopsis;
 	}
 	public String getGenre() {
-		return genre;
+		return genre_request;
 	}
 	public void setGenre(String genre) {
-		this.genre = genre;
+		this.genre_request = genre;
 	}
 	public String getIsbn() {
-		return isbn;
+		return isbn_request;
 	}
 	public void setIsbn(String isbn) {
-		this.isbn = isbn;
+		this.isbn_request = isbn;
 	}
 	public int getStar() {
-		return star;
+		return star_request;
 	}
 	public void setStar(int star) {
-		this.star = star;
+		this.star_request = star;
 	}
 	public long getPrice_medium() {
-		return price_medium;
+		return price_medium_request;
 	}
 	public void setPrice_medium(long price_medium) {
-		this.price_medium = price_medium;
+		this.price_medium_request = price_medium;
 	}
 	public String getProvice() {
-		return provice;
+		return province_request;
 	}
 	public void setProvice(String provice) {
-		this.provice = provice;
+		this.province_request = provice;
 	}
 	public int getCapacity() {
-		return capacity;
+		return capacity_request;
 	}
 	public void setCapacity(int capacity) {
-		this.capacity = capacity;
+		this.capacity_request = capacity;
 	}
 	public String getLocal_type() {
-		return local_type;
+		return local_type_request;
 	}
 	public void setLocal_type(String local_type) {
-		this.local_type = local_type;
+		this.local_type_request = local_type;
 	}
 	public String getTitle() {
-		return title;
+		return title_request;
 	}
 	public void setTitle(String title) {
-		this.title = title;
+		this.title_request = title;
 	}
 	public String getDirector() {
-		return director;
+		return director_request;
 	}
 	public void setDirector(String director) {
-		this.director = director;
+		this.director_request = director;
 	}
 	public String getLeading_actor() {
-		return leading_actor;
+		return leading_actor_request;
 	}
 	public void setLeading_actor(String leading_actor) {
-		this.leading_actor = leading_actor;
+		this.leading_actor_request = leading_actor;
 	}
 	public String getProduction() {
-		return production;
+		return production_request;
 	}
 	public void setProduction(String production) {
-		this.production = production;
+		this.production_request = production;
 	}
 	public String getMovie_trailer() {
-		return movie_trailer;
+		return movie_trailer_request;
 	}
 	public void setMovie_trailer(String movie_trailer) {
-		this.movie_trailer = movie_trailer;
+		this.movie_trailer_request = movie_trailer;
 	}
 	public String getPhoto() {
-		return photo;
+		return photo_request;
 	}
 	public void setPhoto(String photo) {
-		this.photo = photo;
+		this.photo_request = photo;
 	}
 	public int getAge_recomended() {
-		return age_recomended;
+		return age_recomended_request;
 	}
 	public void setAge_recomended(int age_recomended) {
-		this.age_recomended = age_recomended;
+		this.age_recomended_request = age_recomended;
 	}
 	public String getSite() {
-		return site;
+		return address_request;
 	}
 	public void setSite(String site) {
-		this.site = site;
+		this.address_request = site;
 	}
 	public boolean isRisk() {
-		return risk;
+		return risk_request;
 	}
 	public void setRisk(boolean risk) {
-		this.risk = risk;
+		this.risk_request = risk;
 	}
 	public int getDuration() {
-		return duration;
+		return duration_request;
 	}
 	public void setDuration(int duration) {
-		this.duration = duration;
+		this.duration_request = duration;
 	}
 	public String getAddress() {
-		return address;
+		return address_request;
 	}
 	public void setAddress(String address) {
-		this.address = address;
-	}
-	public String getProvince() {
-		return province;
-	}
-	public void setProvince(String province) {
-		this.province = province;
+		this.address_request = address;
 	}
 	public String getOpen_time() {
-		return open_time;
+		return open_time_request;
 	}
 	public void setOpen_time(String open_time) {
-		this.open_time = open_time;
+		this.open_time_request = open_time;
 	}
 	public String getClose_time() {
-		return close_time;
+		return close_time_request;
 	}
 	public void setClose_time(String close_time) {
-		this.close_time = close_time;
+		this.close_time_request = close_time;
 	}
 	public long getPrice() {
-		return price;
+		return price_request;
 	}
 	public void setPrice(long price) {
-		this.price = price;
+		this.price_request = price;
 	}
 	public boolean isCheck() {
-		return check;
+		return check_request;
 	}
 	public void setCheck(boolean check) {
-		this.check = check;
+		this.check_request = check;
 	}
 	public String getName() {
-		return name;
+		return name_request;
 	}
 	public void setName(String name) {
-		this.name = name;
+		this.name_request = name;
 	}
 	public String getDevelopment() {
-		return development;
+		return development_request;
 	}
 	public void setDevelopment(String development) {
-		this.development = development;
+		this.development_request = development;
 	}
 	public String getPlatform() {
-		return platform;
+		return platform_request;
 	}
 	public void setPlatform(String platform) {
-		this.platform = platform;
+		this.platform_request = platform;
 	}
 	public String getPublisher() {
-		return publisher;
+		return publisher_request;
 	}
 	public void setPublisher(String publisher) {
-		this.publisher = publisher;
+		this.publisher_request = publisher;
 	}
 	public int getPegi_age() {
-		return pegi_age;
+		return pegi_age_request;
 	}
 	public void setPegi_age(int pegi_age) {
-		this.pegi_age = pegi_age;
+		this.pegi_age_request = pegi_age;
 	}
 	public String getCategory() {
-		return category;
+		return category_request;
 	}
 	public void setCategory(String category) {
-		this.category = category;
+		this.category_request = category;
 	}
 	public String getImage() {
-		return image;
+		return image_request;
 	}
 	public void setImage(String image) {
-		this.image = image;
+		this.image_request = image;
 	}
 	public String getDescription() {
-		return description;
+		return description_request;
 	}
 	public void setDescription(String description) {
-		this.description = description;
+		this.description_request = description;
 	}
 	
 	

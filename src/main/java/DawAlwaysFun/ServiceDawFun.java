@@ -24,7 +24,7 @@ public class ServiceDawFun {
 	private OutdoorRepository repoOutdoors;
 	
 	@Autowired
-	private ThemeParkRepository repoParks;
+	private TheParkRepository repoParks;
 	
 	@Autowired
 	private VideogameRepository repoVideogames;
@@ -51,8 +51,8 @@ public class ServiceDawFun {
 		return (List<Outdoor_activity>) repoOutdoors.findAll();
 	}
 	
-	public List<Theme_park> getParks(){
-		return (List<Theme_park>) repoParks.findAll();
+	public List<Thepark> getParks(){
+		return (List<Thepark>) repoParks.findAll();
 	}
 	
 	public List<Videogame> getVideogames(){
@@ -81,7 +81,7 @@ public class ServiceDawFun {
 		return repoOutdoors.findOne(idOutdoor);
 	}
 	
-	public Theme_park getPark(long idPark){
+	public Thepark getPark(long idPark){
 		return repoParks.findOne(idPark);
 	}
 	
@@ -111,7 +111,7 @@ public class ServiceDawFun {
 		repoOutdoors.save(activity);
 	}
 	
-	public void setPark(Theme_park park){
+	public void setPark(Thepark park){
 		repoParks.save(park);
 	}
 

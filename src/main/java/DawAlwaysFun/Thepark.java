@@ -6,28 +6,28 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Theme_park{
+public class Thepark{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 
-	private String name;
-	private String description;
-	private String address;
-	private String province;
-	private String open_time;
-	private String close_time;
-	private long price;
-	private boolean check;
-	private String image;
-	private String kind;
+	private String name_park;
+	private String description_park;
+	private String address_park;
+	private String province_park;
+	private String open;
+	private String close;
+	private long price_park;
+	private boolean check_park;
+	private String image_park;
+	private String kind_park;
 	
 	public String getImage() {
-		return image;
+		return image_park;
 	}
 	public void setImage(String image) {
-		this.image = image;
+		this.image_park = image;
 	}
 	public long getId() {
 		return id;
@@ -36,58 +36,58 @@ public class Theme_park{
 		this.id = id;
 	}
 	public String getName() {
-		return name;
+		return name_park;
 	}
 	public void setName(String name) {
-		this.name = name;
+		this.name_park = name;
 	}
 	public String getDescription() {
-		return description;
+		return description_park;
 	}
 	public void setDescription(String description) {
-		this.description = description;
+		this.description_park = description;
 	}
 	public String getAddress() {
-		return address;
+		return address_park;
 	}
 	public void setAddress(String address) {
-		this.address = address;
+		this.address_park = address;
 	}
 	public String getProvince() {
-		return province;
+		return province_park;
 	}
 	public void setProvince(String province) {
-		this.province = province;
+		this.province_park = province;
 	}
 	public String getOpen_time() {
-		return open_time;
+		return open;
 	}
 	public void setOpen_time(String open_time) {
-		this.open_time = open_time;
+		this.open = open_time;
 	}
 	public String getClose_time() {
-		return close_time;
+		return close;
 	}
 	public void setClose_time(String close_time) {
-		this.close_time = close_time;
+		this.close = close_time;
 	}
 	public long getPrice() {
-		return price;
+		return price_park;
 	}
 	public void setPrice(long price) {
-		this.price = price;
+		this.price_park = price;
 	}
 	public boolean isCheck() {
-		return check;
+		return check_park;
 	}
 	public void setCheck(boolean check) {
-		this.check = check;
+		this.check_park = check;
 	}
 	public String getKind() {
-		return kind;
+		return kind_park;
 	}
 	public void setKind(String kind) {
-		this.kind = kind;
+		this.kind_park = kind;
 	}
 	
 }

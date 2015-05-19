@@ -82,7 +82,7 @@
 			<tbody>
 				<tr class="data-table__clickable-row"
 					ng-repeat="game in vm.videoclub | orderBy:vm.ordenadoPor"
-					ng-click="vm.opendDialog('test',game)" ng-show="game.pegi == vm.objetivoBusqueda || vm.objetivoBusqueda == 'Todos'">
+					ng-click="vm.opendDialog('test',game)" ng-show="game.pegi_age == vm.objetivoBusqueda || vm.objetivoBusqueda == 'Todos'">
 					<td>
 						<!-- <i class="icon icon--l icon--grey icon--circled mdi mdi-android"></i> -->
 						<lx-thumbnail thumbnail-src="/images/{{game.image}}"

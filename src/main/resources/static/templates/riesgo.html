@@ -1,5 +1,4 @@
-<div ng-controller="riesgoController as vm" layout="column"
-	layout-fill>
+<div ng-controller="riesgoController as vm" layout="column" layout-fill>
 
 
 
@@ -30,11 +29,11 @@
 		style="box-shadow: 0px 4px 6px 1px rgba(119, 119, 119, 0.17); background-color: white-silver;">
 		<lx-dropdown>
 		<button class="btn btn--m btn--black btn--flat botonCategoria" lx-ripple
-			lx-dropdown-toggle>Categoria NO SE QUE PONER</button>
+			lx-dropdown-toggle>Nu se </button>
 		<lx-dropdown-menu>
 		<ul>
-			<li><a class="dropdown-link">NO SE QUE PONER</a></li>
-			
+			<li><a class="dropdown-link">PUBS</a></li>
+			<li><a class="dropdown-link">RESTAURANTES</a></li>
 		</ul>
 		</lx-dropdown-menu> </lx-dropdown>
 
@@ -57,6 +56,7 @@
                     <div flex-item>
                         <div class="p++">
                             <strong class="fs-headline display-block">{{riesgo.name}}</strong>
+                            <strong class="fs-headline display-block">Edad minima: {{riesgo.age_recomended}}</strong>
                         </div>
                     </div>
                 </div>
@@ -68,7 +68,7 @@
 	<lx-dialog class="dialog dialog--l" id="test" auto-close="true" onclose="vm.closingDialog()" onscrollend="scrollEndDialog()">
     <div class="dialog__header" >
         <div class="bgc-blue-grey-500 pl pt pb">      	    
-          	<span class="fs-display-2 display-block tc-white">{{vm.name}}</span>             
+          	<span class="fs-display-2 display-block tc-white">{{vm.name}}</span>               
         </div>         
     </div>
 
@@ -86,23 +86,23 @@
 		    	</div>
 		    	<div class="p+ bgc-blue-grey-300">
 		    		<span class="fs-subhead display-block">Direccion</span>
-		    		<span class="fs-display-0.2 display-block">{{vm.direc}}</span>
+		    		<span class="fs-display-0.2 display-block">{{vm.site}}</span>
 		    	</div>
 		    	<div class="p+ bgc-blue-grey-300">
-		    		<span class="fs-subhead display-block">Edad minima</span>
-		    		<span class="fs-display-0.2 display-block">{{vm.age}}</span>
+		    		<span class="fs-subhead display-block">Riesgo</span>
+		    		<span class="fs-display-0.5 display-block">{{vm.risk}}</span>
 		    	</div>
 		    	<div class="p+ bgc-blue-grey-300">
-		    		<span class="fs-subhead display-block">Ubicacion</span>
-		    		<span class="fs-display-0.5 display-block">{{vm.site}}</span>
-		    	</div>
-		    	<div class="p+ bgc-blue-grey-300">
-		    		<span class="fs-subhead display-block">Duracion del servicio</span>
-		    		<span class="fs-display-0.5 display-block">{{vm.dur}} minutos</span>
+		    		<span class="fs-subhead display-block">Duracion de la actividad</span>
+		    		<span class="fs-display-0.5 display-block">{{vm.dur}}</span>
 		    	</div>
 		    	<div class="p+ bgc-red-300">
 		    		<span class="fs-subhead display-block">Precio del servicio</span>
-		    		<span class="fs-display-0.5 display-block">{{vm.price}}</span>
+		    		<span class="fs-display-0.5 display-block">{{vm.price}} euros</span>
+		    	</div>
+		    	<div class="p+ bgc-red-400">
+		    		<span class="fs-subhead display-block">Edad minima</span>
+		    		<span class="fs-display-0.2 display-block">{{vm.age}}</span>
 		    	</div>
 		    </div>		    
 		</div>

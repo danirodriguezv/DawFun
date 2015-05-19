@@ -7,7 +7,7 @@ function riesgoService($resource) {
 		this.riesgos = [];
 		
 		
-		var riesgoResource = $resource('riesgos/:id',{id: '@id'},{update:{method:"PUT"}});
+		var riesgoResource = $resource('outdoors/:id',{id: '@id'},{update:{method:"PUT"}});
 		
 		//var BooResource = $resource('books/:id',{id: '@id'},{update:{method:"PUT"}});
 

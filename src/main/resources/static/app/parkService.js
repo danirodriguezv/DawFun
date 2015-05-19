@@ -14,11 +14,4 @@ function parkService($resource) {
 			parks = ParkResource.query();
 			return parks;
 		}
-		
-		this.getParks = function(id){
-			park = ParkResource.query(id);
-			return park;
-		}
-			
-	
 }

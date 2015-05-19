@@ -47,8 +47,7 @@ function parkController(parkService, $routeParams, $location, LxNotificationServ
 		$location.path("/");
 	}
 	
-	//Aquí podríamos hacer una especie de filtro de parques temáticos acuáticos o no, en plan aquopolis, parque de atracciones, Warner...
-	 	vm.busqueda = function(categoria){
+	vm.busqueda = function(categoria){
 		
 		vm.objetivoBusqueda=categoria;
 	}

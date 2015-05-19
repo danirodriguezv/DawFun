@@ -33,7 +33,7 @@ function riesgoController(riesgoService, $routeParams, $location, LxNotification
 		vm.site = riesgo.site;
 		vm.risk = riesgo.risk;
 		vm.image = riesgo.image;
-		vm.dur = riesgo.dureation;
+		vm.dur = riesgo.duration;
 	    LxDialogService.open(dialogId);
 	};
 

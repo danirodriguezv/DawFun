@@ -46,11 +46,10 @@
 	<!-- TABLA -->
 
 	<div flex-container="row" flex-gutter="24">
-    <div flex-item ng-repeat="movie in vm.movies"
+    <div  class="card" flex-item ng-repeat="movie in vm.movies"
 					ng-click="vm.opendDialog('test',movie)">
-        <div class="card" >
-					<td>
-            <div class="card__img card__img--top">
+        <div  >
+            <div class="photocard card__img card__img--top">
                 <img src="/images/{{movie.photo}}">
                 <span class="fs-headline tc-white-1 display-block">{{movie.title}}</span>
             </div>

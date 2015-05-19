@@ -137,7 +137,7 @@ public class Controller implements CommandLineRunner {
 		park.setOpen_time("12:00");
 		park.setPrice(31);
 		park.setProvince("Madrid");
-		serviceDawFun.setPark(park);
+		//serviceDawFun.setPark(park);
 		
 		
 		Local local = new Local();

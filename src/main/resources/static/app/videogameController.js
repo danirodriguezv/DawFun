@@ -11,6 +11,7 @@ function videogameController(videogameService, $routeParams, $location, LxNotifi
 	vm.objetivoBusqueda = 'Todos';
 	vm.ordenadoPor = "name";
 	vm.pegi = [3,7,12,16,18];
+	vm.categorias = ["ROL","PRIMERA PERSONA","TERCERA PERSONA","SHOOTER"]
 	
 		
 	//Controller logic
@@ -25,6 +26,9 @@ function videogameController(videogameService, $routeParams, $location, LxNotifi
 	vm.desc;
 	vm.gameimage;
 	//Controller actions
+	vm.busquedaCat = function(categoria){
+		
+	}
 	
 	vm.busqueda = function(pegi){
 		vm.objetivoBusqueda = pegi;

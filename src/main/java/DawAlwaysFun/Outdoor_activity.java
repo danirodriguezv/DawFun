@@ -15,13 +15,10 @@ public class Outdoor_activity{
 	private String description;
 	private String name;
 	private int age_recomended;
-<<<<<<< HEAD
+
 	private String adress;
-	private boolean risk;
-=======
-	private String site;
 	private String risk;
->>>>>>> origin/master
+
 	private long price;
 	private String image;
 	private int duration;

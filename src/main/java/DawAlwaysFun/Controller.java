@@ -92,6 +92,17 @@ public class Controller implements CommandLineRunner {
 		movie.setTitle("Los vengadores, la era de ultron");
 		serviceDawFun.setMovie(movie);
 		
+		Movie movie2 = new Movie();
+		movie2.setDescription("Una historia increible sobre el señor el cual llamaron el maestro del agua");
+		movie2.setDirector("Doroti");
+		movie2.setDuration(100);
+		movie2.setLeading_actor("Rousel Crowel");
+		movie2.setMovie_trailer("De momento sin trailer");
+		movie2.setPhoto("magua.png");
+		movie2.setProduction("WarnerBros");
+		movie2.setTitle("El maestro de agua");
+		serviceDawFun.setMovie(movie2);
+		
 			
 		
 	}

@@ -62,19 +62,21 @@
 	<!-- TABLA -->
 
 	<div flex-container="row" flex-gutter="24">
-    <div flex-item>
-        <div class="card">
+    <div flex-item id="cardIdentity" ng-repeat="movie in vm.movies"
+					ng-click="vm.opendDialog('test',movie)">
+        <div class="card" >
+					<td>
             <div class="card__img card__img--top">
-                <img src="/images/placeholder/2-horizontal.jpg">
-                <span class="fs-headline tc-white-1 display-block">Lorem Ipsum</span>
+                <img src="/images/{{movie.photo}}">
+                <span class="fs-headline tc-white-1 display-block">{{movie.title}}</span>
             </div>
 
             <div class="p+">
-                <span class="fs-subhead tc-black-2 display-block">Lorem Ipsum</span>
+                <span class="fs-subhead tc-black-2 display-block">Dirigida por {{movie.director}}</span>
 
                 <div class="paragraph fs-body-1">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tristique orci a lacinia malesuada.
+                        {{movie.description}}
                     </p>
                 </div>
             </div>
@@ -83,7 +85,7 @@
 	<lx-dialog class="dialog dialog--l" id="test" auto-close="true" onclose="vm.closingDialog()" onscrollend="scrollEndDialog()">
     <div class="dialog__header" >
         <div class="bgc-blue-grey-500 pl pt pb">      	    
-          	<span class="fs-display-2 display-block tc-white">{{vm.namegame}}</span>             
+          	<span class="fs-display-2 display-block tc-white">{{vm.namemovie}}</span>             
         </div>         
     </div>
 
@@ -91,33 +93,33 @@
     	<div class="tc-white-1" flex-container="row">
 		    <div flex-item="4" flex-item-order="1">
 		    	<div class="p">
-		    		<img ng-src="/images/{{vm.gameimage}}" width=100% height=100%>
+		    		<img ng-src="/images/{{vm.movieimage}}" width=100% height=100%>
 		    	</div>
 		    </div>
 		    <div flex-item="8" flex-item-order="2">
 		    	<div class="p+ bgc-blue-grey-300">
-		    		<span class="fs-subhead display-block">Desarrollado por</span>
-		    		<span class="fs-display-0.5 display-block">{{vm.develop}}</span>
+		    		<span class="fs-subhead display-block">Dirigida por</span>
+		    		<span class="fs-display-0.5 display-block">{{vm.direct}}</span>
 		    	</div>
 		    	<div class="p+ bgc-blue-grey-300">
-		    		<span class="fs-subhead display-block">Platadorma disponible</span>
-		    		<span class="fs-display-0.5 display-block">{{vm.plat}}</span>
+		    		<span class="fs-subhead display-block">Actor principal</span>
+		    		<span class="fs-display-0.5 display-block">{{vm.actor}}</span>
 		    	</div>
 		    	<div class="p+ bgc-blue-grey-300">
-		    		<span class="fs-subhead display-block">Publicacion</span>
-		    		<span class="fs-display-0.5 display-block">{{vm.publish}}</span>
+		    		<span class="fs-subhead display-block">Produccion</span>
+		    		<span class="fs-display-0.5 display-block">{{vm.product}}</span>
 		    	</div>
 		    	<div class="p+ bgc-blue-grey-300">
-		    		<span class="fs-subhead display-block">Categoria</span>
-		    		<span class="fs-display-0.5 display-block"> {{vm.categ}}</span>
+		    		<span class="fs-subhead display-block">Duracion</span>
+		    		<span class="fs-display-0.5 display-block"> {{vm.dur}} minutos</span>
 		    	</div>
 		    	<div class="p+ bgc-blue-grey-300">
 		    		<span class="fs-subhead display-block">Descripcion</span>
-		    		<span class="fs-display-0.5 display-block">{{vm.desc}}</span>
+		    		<span class="fs-display-0.5 display-block">{{vm.description}}</span>
 		    	</div>
 		    	<div class="p+ bgc-red-300">
-		    		<span class="fs-subhead display-block">PEGI</span>
-		    		<span class="fs-display-0.5 display-block">{{vm.pegi}}</span>
+		    		<span class="fs-subhead display-block">Trailer</span>
+		    		<span class="fs-display-0.5 display-block">{{vm.trailer}}</span>
 		    	</div>
 		    </div>		    
 		</div>

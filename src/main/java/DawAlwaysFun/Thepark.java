@@ -23,70 +23,70 @@ public class Thepark{
 	private String image_park;
 	private String kind_park;
 	
-	public String getImage() {
+	public String getImage_park() {
 		return image_park;
 	}
-	public void setImage(String image) {
+	public void setImage_park(String image) {
 		this.image_park = image;
 	}
-	public long getId() {
+	public long getId_park() {
 		return id;
 	}
-	public void setId(long id) {
+	public void setId_park(long id) {
 		this.id = id;
 	}
-	public String getName() {
+	public String getName_park() {
 		return name_park;
 	}
-	public void setName(String name) {
+	public void setName_park(String name) {
 		this.name_park = name;
 	}
-	public String getDescription() {
+	public String getDescription_park() {
 		return description_park;
 	}
-	public void setDescription(String description) {
+	public void setDescription_park(String description) {
 		this.description_park = description;
 	}
-	public String getAddress() {
+	public String getAddress_park() {
 		return address_park;
 	}
-	public void setAddress(String address) {
+	public void setAddress_park(String address) {
 		this.address_park = address;
 	}
-	public String getProvince() {
+	public String getProvince_park() {
 		return province_park;
 	}
-	public void setProvince(String province) {
+	public void setProvince_park(String province) {
 		this.province_park = province;
 	}
-	public String getOpen_time() {
+	public String getOpen_park() {
 		return open_park;
 	}
-	public void setOpen_time(String open_time) {
+	public void setOpen_park(String open_time) {
 		this.open_park = open_time;
 	}
-	public String getClose_time() {
+	public String getClose_park() {
 		return close_park;
 	}
-	public void setClose_time(String close_time) {
+	public void setClose_park(String close_time) {
 		this.close_park = close_time;
 	}
-	public long getPrice() {
+	public long getPrice_park() {
 		return price_park;
 	}
-	public void setPrice(long price) {
+	public void setPrice_park(long price) {
 		this.price_park = price;
 	}
-	public boolean isCheck() {
+	public boolean isCheck_park() {
 		return check_park;
 	}
-	public void setCheck(boolean check) {
+	public void setCheck_park(boolean check) {
 		this.check_park = check;
 	}
-	public String getKind() {
+	public String getKind_park() {
 		return kind_park;
 	}
-	public void setKind(String kind) {
+	public void setKind_park(String kind) {
 		this.kind_park = kind;
 	}
 	

@@ -124,29 +124,29 @@ public class Controller implements CommandLineRunner {
 		
 		
 		Thepark park = new Thepark();
-		park.setAddress("Casa de campo");
-		park.setCheck(true);
-		park.setClose_time("1:00");
-		park.setDescription("El Parque de Atracciones de Madrid es el parque de atracciones de la ciudad de Madrid, situado en el parque de la Casa de Campo, concretamente en la zona de Batán. El parque cuenta con dos puertas de acceso: la principal y la de la zona infantil");
-		park.setImage("parqueAtracciones.jpg");
-		park.setKind("Atracciones");
-		park.setName("Parque de Atracciones");
-		park.setOpen_time("12:00");
-		park.setPrice(31);
-		park.setProvince("Madrid");
+		park.setAddress_park("Casa de campo");
+		park.setCheck_park(true);
+		park.setClose_park("1:00");
+		park.setDescription_park("El Parque de Atracciones de Madrid es el parque de atracciones de la ciudad de Madrid, situado en el parque de la Casa de Campo, concretamente en la zona de Batán. El parque cuenta con dos puertas de acceso: la principal y la de la zona infantil");
+		park.setImage_park("parqueAtracciones.jpg");
+		park.setKind_park("Atracciones");
+		park.setName_park("Parque de Atracciones");
+		park.setOpen_park("12:00");
+		park.setPrice_park(31);
+		park.setProvince_park("Madrid");
 		serviceDawFun.setPark(park);
 		
 		Thepark park2 = new Thepark();
-		park2.setAddress("Torrejon de Ardoz");
-		park2.setCheck(true);
-		park2.setClose_time("1:00");
-		park2.setDescription("La warner es el mejor de los parques tematicos para pasarlo en familia");
-		park2.setImage("warner.png");
-		park2.setKind("Atracciones");
-		park2.setName("Parque Warner");
-		park2.setOpen_time("12:00");
-		park2.setPrice(31);
-		park2.setProvince("Madrid");
+		park2.setAddress_park("Torrejon de Ardoz");
+		park2.setCheck_park(true);
+		park2.setClose_park("1:00");
+		park2.setDescription_park("La warner es el mejor de los parques tematicos para pasarlo en familia");
+		park2.setImage_park("warner.png");
+		park2.setKind_park("Atracciones");
+		park2.setName_park("Parque Warner");
+		park2.setOpen_park("12:00");
+		park2.setPrice_park(31);
+		park2.setProvince_park("Madrid");
 		serviceDawFun.setPark(park2);
 		
 		

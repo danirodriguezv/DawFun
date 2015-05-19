@@ -153,6 +153,18 @@ public class Controller implements CommandLineRunner {
 		park2.setProvince_park("Madrid");
 		serviceDawFun.setPark(park2);
 		
+		Thepark park3 = new Thepark();
+		park3.setAddress_park("Villanueva de la Cañada");
+		park3.setCheck_park(true);
+		park3.setClose_park("20:00");
+		park3.setDescription_park("El mejor lugar para ir con los amigos y disfrutar de las mejores atracciones acuaticas");
+		park3.setImage_park("aquopolis.jpg");
+		park3.setKind_park("Acuaticos");
+		park3.setName_park("Aquopolis");
+		park3.setOpen_park("12:00");
+		park3.setPrice_park(25);
+		park3.setProvince_park("Madrid");
+		serviceDawFun.setPark(park3);
 		
 		Local local = new Local();
 		local.setAddress("Calle arcipreste de Hita");

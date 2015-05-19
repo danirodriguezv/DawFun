@@ -4,10 +4,10 @@ parkService.$inject = [ "$resource"];
 
 function parkService($resource) {
 
-		this.parks =[];
+		this.parks = [];
 		
 		
-		var ParkResource = $resource('park/:id',{id: '@id'},{update:{method:"PUT"}});
+		var ParkResource = $resource('parks/:id',{id: '@id'},{update:{method:"PUT"}});
 		
 	
 		this.getParks = function(){

@@ -16,8 +16,8 @@ public class Thepark{
 	private String description_park;
 	private String address_park;
 	private String province_park;
-	private String open;
-	private String close;
+	private String open_park;
+	private String close_park;
 	private long price_park;
 	private boolean check_park;
 	private String image_park;
@@ -60,16 +60,16 @@ public class Thepark{
 		this.province_park = province;
 	}
 	public String getOpen_time() {
-		return open;
+		return open_park;
 	}
 	public void setOpen_time(String open_time) {
-		this.open = open_time;
+		this.open_park = open_time;
 	}
 	public String getClose_time() {
-		return close;
+		return close_park;
 	}
 	public void setClose_time(String close_time) {
-		this.close = close_time;
+		this.close_park = close_time;
 	}
 	public long getPrice() {
 		return price_park;

@@ -9,4 +9,6 @@ function RouteConfig($routeProvider){
 	$routeProvider.when('/videojuegos',{ templateUrl : "templates/videojuegos.html"});
 	$routeProvider.when('/libros',{ templateUrl : "templates/libros.html"});
 	$routeProvider.when('/movies',{ templateUrl : "templates/peliculas.html"});
+	$routeProvider.when('/admin',{ templateUrl : "templates/adminAccess.html"});
+	$routeProvider.when('/promocionate',{ templateUrl : "templates/promocionate.html"});
 }

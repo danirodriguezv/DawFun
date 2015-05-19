@@ -1,6 +1,6 @@
 angular.module("app").controller("parkController", parkController);
 
-bookController.$inject = ["parkService", "$routeParams", "$location", "LxNotificationService","LxDialogService"];
+parkController.$inject = ["parkService", "$routeParams", "$location", "LxNotificationService","LxDialogService"];
 
 function parkController(parkService, $routeParams, $location, LxNotificationService,LxDialogService) {
 	

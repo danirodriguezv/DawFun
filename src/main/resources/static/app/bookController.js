@@ -1,6 +1,11 @@
 angular.module("app").controller("bookController", bookController);
 
-bookController.$inject = ["bookService", "$routeParams", "$location", "LxNotificationService","LxDialogService","$http"];
+bookController.$inject = ["bookService", "$routeParams", "$location", "LxNotificationService","LxDialogService"];
+
+
+
+
+
 
 function bookController(bookService, $routeParams, $location, LxNotificationService,LxDialogService) {
 
@@ -57,7 +62,13 @@ function bookController(bookService, $routeParams, $location, LxNotificationServ
 		LxDialogService.open(dialogId);
 	}
 	
-	
+	vm.uploadFile = function(){
+		var name = vm.name;
+		var file = vm.file;
+		console.log(name);
+		console.log(file);
+		
+	}
 	
 	
 	

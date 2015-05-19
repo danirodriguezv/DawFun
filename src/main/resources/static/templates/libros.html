@@ -192,12 +192,19 @@
 		    <!-- 
 		    
 		     -->
-		     
-		     
-		     
-		    <input type="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)"/>
-		     
-		     
+		 
+		 
+		 	<form name="upload" ng-submit="uploadFile()">
+		 		<input type="file" name="file" uploader-model="file"/>
+		 		<input type="submit" value="Enviar">		 	
+		 	</form>
+		 
+		 
+		 
+		 
+		 
+		 
+		 
 		      <!--    <lx-file-input label="Subir imagen"></lx-file-input>  -->
 		      <!--  <input type="file" ng-file-select="onFileSelect($files)" multiple>-->
 		    </div>

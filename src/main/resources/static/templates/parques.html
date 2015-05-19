@@ -56,8 +56,7 @@
 	
 	<div flex-container="row" flex-gutter="24">
 	
-     <div flex-item   ng-repeat="park in vm.parks"
-					ng-click="vm.opendDialog('test',park)">
+     <div flex-item   ">
         <div class="card">
             <div flex-container="row">
                 <div class="card__img card__img--left" style="height: 160px">
@@ -73,43 +72,7 @@
                 </div>
             </div>
         </div>
-    </div>
-	
-	<!-- <div class="data-table-container">
-		    <table class="data-table data-table--has-primary ">
-		        <thead>
-		            <tr>
-		                <th></th>
-		                <th class="orden" ng-click="vm.indicarOrden('name')"><span class="fs-headline display-block">Nombre</span></th>
-		                <th class="orden" ng-click="vm.indicarOrden('description')"><span class="fs-headline display-block">Descripcion</span></th>
-		                <th class="orden" ng-click="vm.indicarOrden('province')"><span class="fs-headline display-block">Provincia</span></th>		                
-		            </tr>
-		            <tr>
-		                <td></td>
-		                <td colspan="3" class="divider divider--dark"></td>
-		            </tr>
-		        </thead>		
-		        <tbody>		        	    
-		            <tr  class="data-table__clickable-row" ng-repeat="park in vm.parks | orderBy: vm.ordenadoPor"  ng-click="vm.opendDialog('test',park)" ng-show="park.name==vm.objetivoBusqueda || vm.objetivoBusqueda=='Todos'">		              	
-			                <td>			                   	                    
-			                    <lx-thumbnail thumbnail-src="/images/{{park.image}}" thumbnail-width="60" thumbnail-height="60"></lx-thumbnail>
-			                </td>
-			                <td>
-			                    <span>{{park.name}}</span>
-			                </td>
-			                <td>
-			                    <span>{{park.description}}</span>
-			                </td>
-			                <td>
-			                    <span>{{park.province}}</span>
-			                </td>		                
-		            </tr>		       
-		        </tbody>
-		    </table>
-		</div> -->
-		
-		
-		
+    </div>	
 <!-- DIALOG -->	
 	<lx-dialog class="dialog dialog--l" id="test" auto-close="true" onclose="vm.closingDialog()" onscrollend="scrollEndDialog()">
     <div class="dialog__header" >

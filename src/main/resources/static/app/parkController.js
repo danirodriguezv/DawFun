@@ -12,7 +12,7 @@ function parkController(parkService, $routeParams, $location, LxNotificationServ
 		
 	//Controller logic
 	
-	vm.parks= parkService.getParks();
+	vm.parks = parkService.getParks();
 	
 	vm.objetivoBusqueda='Todos';
 	vm.categorias=["Acuatico","Tematico","Atracciones","Safari","Zoologico"];

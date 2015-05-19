@@ -10,7 +10,7 @@
 		<div class="card bgc-indigo-500">
 			<div class="toolbar">
 				<span class="toolbar__label fs-title tc-white-1 ml"><img
-					src="/images/dawlogo.png"></span>
+					src="/images/dawlogo.png" height=50></span>
 
 				<div class="toolbar__right">
 					<lx-search-filter model="searchFilter.sixth" position="right"
@@ -46,7 +46,7 @@
 	<!-- TABLA -->
 
 	<div flex-container="row" flex-gutter="24">
-    <div flex-item ng-repeat="movie in vm.movies"
+    <div flex-item id="cardIdentity" ng-repeat="movie in vm.movies"
 					ng-click="vm.opendDialog('test',movie)">
         <div class="card" >
 					<td>

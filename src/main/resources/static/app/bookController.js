@@ -16,7 +16,8 @@ function bookController(bookService, $routeParams, $location, LxNotificationServ
 	
 	vm.objetivoBusqueda='Todos';
 	vm.ordenadoPor="title";
-	
+	vm.categorias=["Terror","Fantastico"];
+	vm.sugerencia;
 	
 	
 	
@@ -35,8 +36,7 @@ function bookController(bookService, $routeParams, $location, LxNotificationServ
 	};
 
 	vm.closingDialog = function()
-	{
-	   
+	{		
 	    LxNotificationService.notify('Visto!', 'emoticon', false, 'yellow');
 	};
 	
@@ -51,6 +51,10 @@ function bookController(bookService, $routeParams, $location, LxNotificationServ
 	
 	vm.indicarOrden = function(orden){
 		vm.ordenadoPor=orden;
+	}
+	
+	vm.abrirDialogSugerencia = function(dialogId){
+		LxDialogService.open(dialogId);
 	}
 };
 

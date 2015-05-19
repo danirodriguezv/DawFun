@@ -68,35 +68,25 @@
 		            </tr>
 		        </thead>
 		
-		        <tbody>
-		        
-		        	
-		        	
-		            <tr class="data-table__clickable-row" ng-repeat="book in vm.books" ng-click="vm.opendDialog('test',book)">
-		               
-		                <div ng-switch="book.genre">
-			        		<div ng-switch-when="vm.objetivoBusqueda">
-			        		
-			        		</div>
-		        		</div>
-		               	
-		               			                
-		                <td>
-		                    <!-- <i class="icon icon--l icon--grey icon--circled mdi mdi-android"></i> -->		                    
-		                    <lx-thumbnail thumbnail-src="/images/{{book.image}}" thumbnail-width="60" thumbnail-height="60"></lx-thumbnail>
-		                </td>
-		                <td>
-		                    <span>{{book.genre}}</span>
-		                </td>
-		                <td>
-		                    <span>{{book.title}}</span>
-		                </td>
-		                <td>
-		                    <span>{{book.writer}}</span>
-		                </td>
-		                
+		        <tbody>		        	    
+		            <tr  class="data-table__clickable-row" ng-repeat="book in vm.books" ng-click="vm.opendDialog('test',book)" ng-show="book.genre==vm.objetivoBusqueda || vm.objetivoBusqueda=='Todos'">
+		              	
+			                <td>			                   	                    
+			                    <lx-thumbnail thumbnail-src="/images/{{book.image}}" thumbnail-width="60" thumbnail-height="60"></lx-thumbnail>
+			                </td>
+			                <td>
+			                    <span>{{book.genre}}</span>
+			                </td>
+			                <td>
+			                    <span>{{book.title}}</span>
+			                </td>
+			                <td>
+			                    <span>{{book.writer}}</span>
+			                </td>		                
 		            </tr>		
 		            
+		            
+		           
 		        </tbody>
 		    </table>
 		</div>

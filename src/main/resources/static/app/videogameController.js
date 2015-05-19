@@ -10,7 +10,7 @@ function videogameController(videogameService, $routeParams, $location, LxNotifi
 	vm.videoclub = [];
 	vm.objetivoBusqueda = 'Todos';
 	vm.ordenadoPor = "name";
-	vm.pegi = ["Pegi 3","Pegi 7","Pegi 12","Pegi 16","Pegi 18"];
+	vm.pegi = [3,7,12,16,18];
 	
 		
 	//Controller logic

@@ -15,7 +15,7 @@ function parkController(parkService, $routeParams, $location, LxNotificationServ
 	vm.parks= parkService.getParks();
 	
 	vm.objetivoBusqueda='Todos';
-	vm.categorias=["Acuático","Temático"];
+	vm.categorias=["Acuatico","Tematico","Atracciones","Safari","Zoologico"];
 	vm.ordenadoPor="price";
 	
 	
@@ -34,6 +34,7 @@ function parkController(parkService, $routeParams, $location, LxNotificationServ
 		vm.priceSelec=park.price;
 		vm.checkSelec=park.check;		
 		vm.imagenSelec=park.image;
+		vm.kindSelec=park.kind;
 	    LxDialogService.open(dialogId);
 	};
 

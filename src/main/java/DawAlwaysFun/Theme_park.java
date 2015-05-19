@@ -21,6 +21,7 @@ public class Theme_park{
 	private long price;
 	private boolean check;
 	private String image;
+	private String kind;
 	
 	public String getImage() {
 		return image;
@@ -82,4 +83,11 @@ public class Theme_park{
 	public void setCheck(boolean check) {
 		this.check = check;
 	}
+	public String getKind() {
+		return kind;
+	}
+	public void setKind(String kind) {
+		this.kind = kind;
+	}
+	
 }

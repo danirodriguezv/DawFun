@@ -125,6 +125,21 @@ public class Controller implements CommandLineRunner {
 		movie4.setTitle("Novita y el gato cosmico");
 		serviceDawFun.setMovie(movie4);
 		
+		
+		Theme_park park = new Theme_park();
+		park.setAddress("Casa de campo");
+		park.setCheck(true);
+		park.setClose_time("1:00");
+		park.setDescription("El Parque de Atracciones de Madrid es el parque de atracciones de la ciudad de Madrid, situado en el parque de la Casa de Campo, concretamente en la zona de Batán. El parque cuenta con dos puertas de acceso: la principal y la de la zona infantil");
+		park.setImage("parqueAtracciones.jpg");
+		park.setKind("Atracciones");
+		park.setName("Parque de Atracciones");
+		park.setOpen_time("12:00");
+		park.setPrice(31);
+		park.setProvince("Madrid");
+		serviceDawFun.setPark(park);
+		
+		
 		Local local = new Local();
 		local.setAddress("Calle arcipreste de Hita");
 		local.setCapacity(100);

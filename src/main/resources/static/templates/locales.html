@@ -1,5 +1,4 @@
-<div ng-controller="localController as vm" layout="column"
-	layout-fill>
+<div ng-controller="localController as vm" layout="column" layout-fill>
 
 
 
@@ -9,12 +8,10 @@
 	<div flex-item>
 		<div class="card bgc-indigo-500">
 			<div class="toolbar">
-				<span class="toolbar__label fs-title tc-white-1 ml"><img
-					src="/images/dawlogo.png" height=50></span>
+				<span class="toolbar__label fs-title tc-white-1 ml"><img src="/images/dawlogo.png" height=50></span>
 
 				<div class="toolbar__right">
-					<lx-search-filter class="sobreIcono" model="searchFilter.sixth" position="right"
-						theme="dark" closed placeholder="Busqueda"></lx-search-filter>
+					<lx-search-filter class="sobreIcono" model="searchFilter.sixth" position="right" theme="dark" closed placeholder="Busqueda"></lx-search-filter>
 
 					<button class="btn btn--l btn--white btn--icon" ng-click="vm.volver()"lx-ripple>
                         <i class="mdi mdi-undo sobreIcono"></i>
@@ -25,18 +22,24 @@
 	</div>
 
 
-	<!-- BARRA INFERIOR -->
-	<div
-		style="box-shadow: 0px 4px 6px 1px rgba(119, 119, 119, 0.17); background-color: white-silver;">
-		<lx-dropdown>
-		<button class="btn btn--m btn--black btn--flat botonCategoria" lx-ripple
-			lx-dropdown-toggle>Categoria</button>
-		<lx-dropdown-menu>
-		<ul>
-			<li><a class="dropdown-link">PUBS</a></li>
-			<li><a class="dropdown-link">RESTAURANTES</a></li>
-		</ul>
-		</lx-dropdown-menu> </lx-dropdown>
+<!-- BARRA INFERIOR -->
+	<div style="box-shadow: 0px 4px 6px 1px rgba(119, 119, 119, 0.07);background-color:white;">	
+			<lx-dropdown>
+			    <button class="btn btn--m btn--black btn--flat botonCategoria" lx-ripple lx-dropdown-toggle>
+			        <span style="font-weight:bold">Categoria: </span>{{vm.objetivoBusqueda}}
+			    </button>		
+			    <lx-dropdown-menu>
+					<ul>
+						<li><a class="dropdown-link" ng-click="vm.busqueda('Todos')">TODOS</a></li> 
+			        	<li class="dropdown-divider"></li>
+			            <li><a class="dropdown-link" ng-click="vm.busqueda('Pubs')">PUBS</a></li>
+			            <li><a class="dropdown-link" ng-click="vm.busqueda('Restaurantes')">RESTAURANTES</a></li> 
+			            <li class="dropdown-divider"></li>
+			            <li><span class="dropdown-link dropdown-link--is-header">Otras categorias</span></li>
+			            <li><a class="dropdown-link" ng-click="vm.busqueda('Otros')">Otros</a></li>
+					</ul>
+				</lx-dropdown-menu> 
+			</lx-dropdown>
 
 	</div>
 
@@ -114,11 +117,6 @@
 		    	</div>
 		    </div>		    
 		</div>
-    
-    
-    
-    	
-        
     </div>
 
     <div class="dialog__actions">

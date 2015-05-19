@@ -17,7 +17,7 @@ public class Outdoor_activity{
 	private int age_recomended;
 
 	private String adress;
-	private String risk;
+	private Boolean risk;
 
 	private long price;
 	private String image;
@@ -54,10 +54,10 @@ public class Outdoor_activity{
 	public void setSite(String adress) {
 		this.adress = adress;
 	}
-	public String isRisk() {
+	public Boolean isRisk() {
 		return risk;
 	}
-	public void setRisk(String risk) {
+	public void setRisk(Boolean risk) {
 		this.risk = risk;
 	}
 	public long getPrice() {

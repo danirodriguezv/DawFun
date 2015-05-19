@@ -160,7 +160,7 @@ public class Controller implements CommandLineRunner {
 		actividad.setImage("globo.png");
 		actividad.setName("Viaje en globo");
 		actividad.setPrice(250);
-		actividad.setRisk("BAJO");
+		actividad.setRisk(false);
 		actividad.setSite("Pradera de san isidro");
 		serviceDawFun.setOutdoor(actividad);
 		
@@ -171,7 +171,7 @@ public class Controller implements CommandLineRunner {
 		actividad2.setImage("paraca.png");
 		actividad2.setName("Paracaidismo");
 		actividad2.setPrice(500);
-		actividad2.setRisk("ALTO");
+		actividad2.setRisk(true);
 		actividad2.setSite("Alto de Alcorcon");
 		serviceDawFun.setOutdoor(actividad2);
 		

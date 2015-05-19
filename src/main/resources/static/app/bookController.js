@@ -15,6 +15,7 @@ function bookController(bookService, $routeParams, $location, LxNotificationServ
 	vm.books= bookService.getBooks();
 	
 	vm.objetivoBusqueda='Todos';
+	vm.ordenadoPor="title";
 	
 	
 	
@@ -44,11 +45,12 @@ function bookController(bookService, $routeParams, $location, LxNotificationServ
 	}
 	
 	vm.busqueda = function(categoria){
-		if (categoria === 'Fantastico'){
-			vm.objetivoBusqueda='Fantastico';
-		}else if(categoria === 'Todos'){
-			vm.objetivoBusqueda='Todos';
-		}
+		
+		vm.objetivoBusqueda=categoria;
+	}
+	
+	vm.indicarOrden = function(orden){
+		vm.ordenadoPor=orden;
 	}
 };
 

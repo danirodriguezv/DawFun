@@ -30,7 +30,7 @@
 		style="box-shadow: 0px 4px 6px 1px rgba(119, 119, 119, 0.17); background-color: white-silver;">
 		<lx-dropdown>
 		<button class="btn btn--m btn--black btn--flat botonCategoria" lx-ripple lx-dropdown-toggle>
-			        <span style="font-weight:bold">Pegi </span>{{vm.objetivoBusqueda}}
+			        <span style="font-weight:bold">Pegi </span>
 			    </button>
 		<lx-dropdown-menu>
 		<ul>
@@ -49,11 +49,11 @@
 			lx-dropdown-toggle>Categoria</button>
 		<lx-dropdown-menu>
 		<ul>
-			<li><a class="dropdown-link">GUERRA</a></li>
-			<li><a class="dropdown-link">ROL</a></li>
-			<li><a class="dropdown-link">DISPAROS</a></li>
-			<li><a class="dropdown-link">PRIMERA PERSONA</a></li>
-			<li><a class="dropdown-link">TERCERA PERSONA</a></li>
+			<li><a class="dropdown-link" ng-click = "vm.busquedaCat('Todos')">Todos</a></li>
+			<li><a class="dropdown-link" ng-click = "vm.busquedaCat('ROL')">ROL</a></li>
+			<li><a class="dropdown-link" ng-click = "vm.busquedaCat('SHOOTER')">SHOOTER</a></li>
+			<li><a class="dropdown-link" ng-click = "vm.busquedaCat('PRIMERA PERSONA')">PRIMERA PERSONA</a></li>
+			<li><a class="dropdown-link" ng-click = "vm.busquedaCat('TERCERA PERSONA')">TERCERA PERSONA</a></li>
 			<li class="dropdown-divider"></li>
 		</ul>
 		</lx-dropdown-menu> </lx-dropdown>
@@ -82,7 +82,7 @@
 			<tbody>
 				<tr class="data-table__clickable-row"
 					ng-repeat="game in vm.videoclub | orderBy:vm.ordenadoPor"
-					ng-click="vm.opendDialog('test',game)" ng-show="game.pegi_age == vm.objetivoBusqueda || vm.objetivoBusqueda == 'Todos'">
+					ng-click="vm.opendDialog('test',game)" ng-show="game.category == vm.objetivoBusqueda||game.pegi_age == vm.objetivoBusqueda || vm.objetivoBusqueda == 'Todos'">
 					<td>
 						<!-- <i class="icon icon--l icon--grey icon--circled mdi mdi-android"></i> -->
 						<lx-thumbnail thumbnail-src="/images/{{game.image}}"

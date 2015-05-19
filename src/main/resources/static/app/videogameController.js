@@ -9,6 +9,7 @@ function videogameController(videogameService, $routeParams, $location, LxNotifi
 	//View model properties
 	vm.videoclub = [];
 	vm.objetivoBusqueda = 'Todos';
+	
 	vm.ordenadoPor = "name";
 	vm.pegi = [3,7,12,16,18];
 	vm.categorias = ["ROL","PRIMERA PERSONA","TERCERA PERSONA","SHOOTER"]
@@ -27,7 +28,7 @@ function videogameController(videogameService, $routeParams, $location, LxNotifi
 	vm.gameimage;
 	//Controller actions
 	vm.busquedaCat = function(categoria){
-		
+		vm.objetivoBusqueda = categoria;
 	}
 	
 	vm.busqueda = function(pegi){

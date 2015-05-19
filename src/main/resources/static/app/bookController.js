@@ -1,6 +1,6 @@
 angular.module("app").controller("bookController", bookController);
 
-bookController.$inject = ["bookService", "$routeParams", "$location", "LxNotificationService","LxDialogService"];
+bookController.$inject = ["bookService", "$routeParams", "$location", "LxNotificationService","LxDialogService","$http"];
 
 function bookController(bookService, $routeParams, $location, LxNotificationService,LxDialogService) {
 
@@ -56,5 +56,15 @@ function bookController(bookService, $routeParams, $location, LxNotificationServ
 	vm.abrirDialogSugerencia = function(dialogId){
 		LxDialogService.open(dialogId);
 	}
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
 };
 

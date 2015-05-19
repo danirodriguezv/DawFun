@@ -25,16 +25,16 @@ function parkController(parkService, $routeParams, $location, LxNotificationServ
 	vm.opendDialog = function(dialogId,park)
 	{
 		
-		vm.nombreSelec = park.name_park;
-		vm.descripcionSelec = park.description_park;		
-		vm.direccionSelec =park.address_park;
-		vm.provinceSelec = park.province_park;		
-		vm.horaAperturaSelec = park.open_park;
-		vm.horaCierreSelec = park.close_park;		
-		vm.priceSelec = park.price_park;
-		vm.checkSelec = park.check_park;		
-		vm.imagenSelec = park.image_park;
-		vm.kindSelec = park.kind_park;
+		vm.nombreSelec = park.name;
+		vm.descripcionSelec = park.description;		
+		vm.direccionSelec =park.address;
+		vm.provinceSelec = park.province;		
+		vm.horaAperturaSelec = park.open_time;
+		vm.horaCierreSelec = park.close_time;		
+		vm.priceSelec = park.price;
+		vm.checkSelec = park.check;		
+		vm.imagenSelec = park.image;
+		vm.kindSelec = park.kind;
 	    LxDialogService.open(dialogId);
 	};
 

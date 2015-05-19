@@ -56,7 +56,8 @@
 	
 	<div flex-container="row" flex-gutter="24">
 	
-     <div flex-item   ">
+     <div flex-item   ng-repeat="park in vm.parks"
+					ng-click="vm.opendDialog('test',park)">
         <div class="card">
             <div flex-container="row">
                 <div class="card__img card__img--left" style="height: 160px">
@@ -73,6 +74,7 @@
             </div>
         </div>
     </div>	
+    
 <!-- DIALOG -->	
 	<lx-dialog class="dialog dialog--l" id="test" auto-close="true" onclose="vm.closingDialog()" onscrollend="scrollEndDialog()">
     <div class="dialog__header" >
@@ -120,40 +122,6 @@
 		    </div>		    
 		</div>
     </div>
-		
-		
-		
-		
-<!-- 		
-DIALOG
-
-<lx-dialog class="dialog dialog--l" id="test" auto-close="true" onclose="vm.closingDialog()" onscrollend="scrollEndDialog()">
-    <div class="dialog__header" >
-        <div class="bgc-blue-grey-500 pl++ pt++ pb++">      	    
-          	<span class="fs-display-2 display-block tc-white">{{vm.nombreSelec}}</span>
-			<span class="fs-title display-block tc-grey-50">Descripción: {{vm.descripcionSelec}}</span>               
-        </div>         
-    </div>
-
-    <div class="dialog__content">
-    	<div class="tc-white-1" flex-container="row">
-		    <div flex-item="4" flex-item-order="1">
-		    	<div class="p+">
-		    		<img ng-src="/images/{{vm.imagenSelec}}" width=100% height=100%>
-		    	</div>
-		    </div>
-		    <div flex-item="8" flex-item-order="2">
-		    	<div class="p+ tc-black">
-		    		<span class="fs-subhead display-block">Dirección: {{vm.direccionSelec}}</span>
-		    		<span class="fs-subhead display-block">Provincia: {{vm.provinciaSelec}}</span>
-		    		<span class="fs-subhead display-block">Hora de apertura: {{vm.horaAperturaSelec}}</span>
-		    		<span class="fs-subhead display-block">Hora de cierre: {{vm.horaCierreSelec}}</span>
-		    		<span class="fs-subhead display-block">Precio: {{vm.priceSelec}}</span>
-		    		<span class="fs-subhead display-block">Cheque descuento: {{vm.checkSelec}}</span>	    		
-		    	</div>
-		    </div>		    
-		</div>        
-    </div> -->
 
     <div class="dialog__actions">
         <button class="btn btn--m btn--black btn--flat" lx-ripple lx-dialog-close>Cerrar</button>       

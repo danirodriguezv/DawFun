@@ -87,6 +87,7 @@ public class Controller implements CommandLineRunner {
 		movie.setPhoto("vengadores.png");
 		movie.setProduction("WarnerBros");
 		movie.setTitle("Los vengadores, la era de ultron");
+		movie.setType("ACCION");
 		serviceDawFun.setMovie(movie);
 		
 		Movie movie2 = new Movie();
@@ -98,6 +99,7 @@ public class Controller implements CommandLineRunner {
 		movie2.setPhoto("magua.png");
 		movie2.setProduction("WarnerBros");
 		movie2.setTitle("El maestro de agua");
+		movie2.setType("DRAMA");
 		serviceDawFun.setMovie(movie2);
 		
 		Movie movie3 = new Movie();

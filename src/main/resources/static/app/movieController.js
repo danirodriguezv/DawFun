@@ -21,10 +21,12 @@ function movieController(movieService, $routeParams, $location, LxNotificationSe
 	vm.description;
 	vm.trailer;
 	vm.movieimage;
+	vm.type_movie;
 	//Controller actions
 	
 	vm.opendDialog = function(dialogId,movie)
 	{
+		vm.type_movie = movie.type;
 		vm.namemovie = movie.title;
 		vm.direct = movie.director;
 		vm.actor = movie.leading_actor;

@@ -21,7 +21,14 @@ public class Movie{
 	private String description;
 	private String movie_trailer;
 	private String photo;
+	private String type;
 	
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
+	}
 	public long getId() {
 		return id;
 	}

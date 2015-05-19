@@ -28,6 +28,7 @@ public class Controller implements CommandLineRunner {
 	@Autowired
 	private ServiceDawFun serviceDawFun;
 
+	private static final String FILES_FOLDER = "files";
 
 	
 	

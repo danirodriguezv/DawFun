@@ -136,6 +136,19 @@ public class Controller implements CommandLineRunner {
 		park.setProvince("Madrid");
 		serviceDawFun.setPark(park);
 		
+		Thepark park2 = new Thepark();
+		park2.setAddress("Torrejon de Ardoz");
+		park2.setCheck(true);
+		park2.setClose_time("1:00");
+		park2.setDescription("La warner es el mejor de los parques tematicos para pasarlo en familia");
+		park2.setImage("warner.png");
+		park2.setKind("Atracciones");
+		park2.setName("Parque Warner");
+		park2.setOpen_time("12:00");
+		park2.setPrice(31);
+		park2.setProvince("Madrid");
+		serviceDawFun.setPark(park2);
+		
 		
 		Local local = new Local();
 		local.setAddress("Calle arcipreste de Hita");

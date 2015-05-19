@@ -36,14 +36,13 @@
 			        	<li><a class="dropdown-link" ng-click="vm.busqueda('Todos')">TODOS</a></li> 
 			        	<li class="dropdown-divider"></li>
 			            <li><a class="dropdown-link" ng-click="vm.busqueda('Terror')">Terror</a></li>
-			            <li><a class="dropdown-link" ng-click="vm.busqueda('Misterio')">Misterio</a></li>
-			            <li><a class="dropdown-link" ng-click="vm.busqueda('Negra')">Novela Negra</a></li>
+			            <li><a class="dropdown-link" ng-click="vm.busqueda('Ciencia Ficcion')">Ciencia Ficcion</a></li>
+			            <li><a class="dropdown-link" ng-click="vm.busqueda('Novela Negra')">Novela Negra</a></li>
 			            <li><a class="dropdown-link" ng-click="vm.busqueda('Humanistico')">Humanistico</a></li>
 			            <li><a class="dropdown-link" ng-click="vm.busqueda('Juvenil')">Juvenil</a></li>
 			            <li><a class="dropdown-link" ng-click="vm.busqueda('Romantica')">Romantica</a></li>
 			            <li><a class="dropdown-link" ng-click="vm.busqueda('Poesia')">Poesia</a></li>
-			            <li><a class="dropdown-link" ng-click="vm.busqueda('Fantastico')">Fantastica</a></li> 
-			            <li><a class="dropdown-link" ng-click="vm.busqueda('Erotico')">Erotico</a></li>
+			            <li><a class="dropdown-link" ng-click="vm.busqueda('Fantastico')">Fantastico</a></li>			            
 			            <li class="dropdown-divider"></li>
 			            <li><span class="dropdown-link dropdown-link--is-header">Otros generos</span></li>
 			            <li><a class="dropdown-link" ng-click="vm.busqueda('Otros')">Otros</a></li>
@@ -124,7 +123,7 @@
     </div>
 
     <div class="dialog__actions">
-        <button class="btn btn--m btn--black btn--flat" lx-ripple lx-dialog-close>Cerrar</button>       
+        <button class="btn btn--m btn--black btn--flat botonCategoria bgc-red-300" lx-ripple lx-dialog-close>Cerrar</button>       
     </div>
 </lx-dialog>
 
@@ -177,12 +176,12 @@
         <div class="mt++" flex-container="row" flex-gutter="24">
         	<div flex-item>
         		<lx-text-field label="ISBN" fixed-label="true" icon="web">
-                	<input type="text" ng-model="vm.sugerencia.editorial">
+                	<input type="text" ng-model="vm.sugerencia.isbn">
             	</lx-text-field>
         	</div>
         	<div flex-item>
         		<lx-text-field label="Num paginas" fixed-label="true" icon="format-list-numbers">
-                	<input type="text" ng-model="vm.sugerencia.editorial">
+                	<input type="text" ng-model="vm.sugerencia.paginas">
             	</lx-text-field>
         	</div>
         </div>

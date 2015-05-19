@@ -14,4 +14,6 @@ function RouteConfig($routeProvider){
 	$routeProvider.when('/parques',{ templateUrl : "templates/parques.html"});
 	$routeProvider.when('/locales',{ templateUrl : "templates/locales.html"});
 	$routeProvider.when('/riesgo',{ templateUrl : "templates/riesgo.html"});
+
+	$routeProvider.when('/access/:nom/:pass',{ templateUrl : "templates/welcome.html"});
 }

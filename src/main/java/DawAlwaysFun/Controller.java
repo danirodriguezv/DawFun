@@ -129,7 +129,7 @@ public class Controller implements CommandLineRunner {
 		local.setAddress("Calle arcipreste de Hita");
 		local.setCapacity(100);
 		local.setClose_time("2:00");
-		local.setFood_type("Comida rica");
+		local.setDescripcion("Comida rica");
 		local.setLocal_type("RESTAURANTE");
 		local.setName("La castellaneda");
 		local.setOpen_time("8:00");
@@ -143,7 +143,7 @@ public class Controller implements CommandLineRunner {
 		local2.setAddress("Calle mostoles");
 		local2.setCapacity(250);
 		local2.setClose_time("2:00");
-		local2.setFood_type("Comida sana");
+		local2.setDescripcion("Comida sana");
 		local2.setLocal_type("PUB");
 		local2.setName("El pato mojao");
 		local2.setOpen_time("8:00");

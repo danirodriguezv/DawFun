@@ -15,11 +15,12 @@ public class Outdoor_activity{
 	private String description;
 	private String name;
 	private int age_recomended;
-	private String site;
+	private String adress;
 	private boolean risk;
 	private long price;
 	private String image;
 	private int duration;
+	private String province;
 	
 	public long getId() {
 		return id;
@@ -45,11 +46,11 @@ public class Outdoor_activity{
 	public void setAge_recomended(int age_recomended) {
 		this.age_recomended = age_recomended;
 	}
-	public String getSite() {
-		return site;
+	public String getAdress() {
+		return adress;
 	}
-	public void setSite(String site) {
-		this.site = site;
+	public void setSite(String adress) {
+		this.adress = adress;
 	}
 	public boolean isRisk() {
 		return risk;
@@ -74,6 +75,12 @@ public class Outdoor_activity{
 	}
 	public void setDuration(int duration) {
 		this.duration = duration;
+	}
+	public String getProvince() {
+		return province;
+	}
+	public void setProvince(String province) {
+		this.province = province;
 	}
 	
 	

@@ -1,22 +1,35 @@
 angular.module("app").controller("promocionateController", promocionateController);
 
-promocionateController.$inject = ["bookService", "$routeParams", "$location", "LxNotificationService","LxDialogService"];
+promocionateController.$inject = ["bookService", "promocionateService", "$routeParams", "$location", "LxNotificationService","LxDialogService"];
 
 function promocionateController(bookService, $routeParams, $location, LxNotificationService,LxDialogService) {
 
 	var vm = this;
 	
 	//View model properties
-		
+	vm.books=[];
+	vm.provinces=["madrid","albacete"];
 		
 	//Controller logic
 	
+	vm.books= bookService.getBooks();
 	
+	vm.objetivoBusqueda='Todos';
+	vm.ordenadoPor="title";
 	
 	
 	
 	
 	//Controller actions
+	
+vm.addRequest = function(newRequest) {
+		
+		promocionateService.newRequest(newRequest);
+		
+		vm.newRequest = {};
+		
+		$location.path("/");
+	};
 	
 	vm.opendDialog = function(dialogId,book)
 	{
@@ -39,8 +52,13 @@ function promocionateController(bookService, $routeParams, $location, LxNotifica
 	vm.volver= function(){
 		$location.path("/");
 	}
-	vm.ir= function(sitio){
-		$location.path("/"+sitio);
+	
+	vm.busqueda = function(categoria){
+		
+		vm.objetivoBusqueda=categoria;
 	}
 	
+	vm.indicarOrden = function(orden){
+		vm.ordenadoPor=orden;
+	}
 };

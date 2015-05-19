@@ -1,11 +1,11 @@
 angular.module("app").controller("adminController", adminController);
 
-adminController.$inject = ["bookService","LxNotificationService","$location"];
+adminController.$inject = ["adminService","LxNotificationService","$location"];
 
 // libreria->  LxNotificationService
 
 
-function adminController(bookService,LxNotificationService,$location) {
+function adminController(adminService,LxNotificationService,$location) {
 
 	var vm = this;
 	vm.tupla={};

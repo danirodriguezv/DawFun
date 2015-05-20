@@ -21,6 +21,8 @@ function panelAdministracionController(adminService,bookService,movieService,loc
 	
 	vm.tipos = ["VIDEOGAME","LIBRO","PELICULA","PARQUE TEMATICO","LOCAL","ACTIVIDAD"];
 	vm.categorias=["Terror","Fantastico","Ciencia Ficcion","Juvenil","Humanistico","Romantica","Poesia","Novela Negra","Otros"];
+	vm.generogame = ["ROL","PRIMERA PERSONA","TERCERA PERSONA","SHOOTER"];
+	vm.pegi = [3,7,12,16,18];
 	
 	vm.books = bookService.getBooks();
 	vm.movies = movieService.getMovies();

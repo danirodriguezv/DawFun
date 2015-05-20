@@ -270,6 +270,32 @@
 		    </div>
 
 			</div>
+			<div class="mt++" flex-container="row" flex-gutter="24">
+        	<div flex-item>		    
+		        <lx-select class="ml+" ng-model="vm.genero_game" placeholder="Genero" choices="vm.generogame" floating-label>		            
+		            <lx-select-selected>		            
+		                {{ $selected}}
+		            </lx-select-selected>			            	
+		            <lx-select-choices>
+		                {{ $choice }}
+		            </lx-select-choices>
+		        </lx-select>
+		        
+		    </div>
+        </div>
+        <div class="mt++" flex-container="row" flex-gutter="24">
+        	<div flex-item>		    
+		        <lx-select class="ml+" ng-model="vm.pegis_game" placeholder="Pegi" choices="vm.pegi" floating-label>		            
+		            <lx-select-selected>		            
+		                {{ $selected}}
+		            </lx-select-selected>			            	
+		            <lx-select-choices>
+		                {{ $choice }}
+		            </lx-select-choices>
+		        </lx-select>
+		        
+		    </div>
+        </div>
 			
 			</p>
 			</lx-tab> <lx-tab heading="{{vm.libro}}">
@@ -310,7 +336,7 @@
         </div>
         	<div class="mt++" flex-container="row" flex-gutter="24">
         	<div flex-item>		    
-		        <lx-select class="ml+" ng-model="vm.sugerencia.categoria" placeholder="Genero" choices="vm.categorias" floating-label>		            
+		        <lx-select class="ml+" ng-model="vm.genero" placeholder="Genero" choices="vm.categorias" floating-label>		            
 		            <lx-select-selected>		            
 		                {{ $selected}}
 		            </lx-select-selected>			            	

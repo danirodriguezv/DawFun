@@ -11,18 +11,29 @@ function riesgoController(riesgoService, $routeParams, $location, LxNotification
 	
 		
 	//Controller logic
+	vm.objetivoBusqueda = 'Todos';
+	vm.ordenadoPor = 'name';
+	vm.categorias = ["ALTO","MEDIO","BAJO"];
 	
 	vm.riesgos = riesgoService.getRiesgos();
 	vm.name;
 	vm.descrip;
 	vm.price;
 	vm.age;
-	vm.site;
+	vm.direc;
 	vm.risk;
 	vm.image;
 	vm.dur;
 	
 	//Controller actions
+	vm.busqueda = function(categoria){
+		vm.objetivoBusqueda = categoria;
+	}
+	
+	vm.indicarOrden = function(orden){
+		vm.ordenadoPor = orden;
+	}
+	
 	
 	vm.opendDialog = function(dialogId,riesgo)
 	{
@@ -30,7 +41,7 @@ function riesgoController(riesgoService, $routeParams, $location, LxNotification
 		vm.descrip = riesgo.description;
 		vm.price = riesgo.price;
 		vm.age = riesgo.age_recomended;
-		vm.site = riesgo.site;
+		vm.direc = riesgo.address;
 		vm.risk = riesgo.risk;
 		vm.image = riesgo.image;
 		vm.dur = riesgo.duration;

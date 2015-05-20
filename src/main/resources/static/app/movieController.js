@@ -12,11 +12,12 @@ function movieController(movieService, $routeParams, $location, LxNotificationSe
 		
 	//Controller logic
 	
-	vm.movies = movieService.getMovies();
+	
 	vm.objetivoBusqueda = 'Todos';
 	vm.ordenadoPor = 'title';
 	vm.categorias = ["DRAMA","COMEDIA","ACCION","TERROR"];
 		
+	vm.movies = movieService.getMovies();
 	vm.namemovie;
 	vm.direct;
 	vm.actor;

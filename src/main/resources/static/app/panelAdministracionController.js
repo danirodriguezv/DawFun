@@ -39,14 +39,14 @@ function panelAdministracionController(adminService,bookService,movieService,loc
 		var posicion = vm.videogames.indexOf(game);
 		
 		videogameService.deleteVideogame(game);
-<<<<<<< HEAD
+
 		
 		vm.videogames.splice(posicion, 1); 		
 		
-	}
-=======
+
+
 	};
->>>>>>> origin/master
+
 	
 	vm.opendDialog = function(dialogId)
 	{

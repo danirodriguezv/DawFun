@@ -50,14 +50,15 @@
 			                <td>			                   	                    
 			                    <lx-thumbnail thumbnail-src="/images/{{book.image}}" thumbnail-width="60" thumbnail-height="60"></lx-thumbnail>
 			                </td>
+			                
 			                <td>
-			                    <span>{{book.genre}}</span>
+			                    <span>Titulo: {{book.title}}</span>
 			                </td>
 			                <td>
-			                    <span>{{book.title}}</span>
+			                    <span>Genero: {{book.genre}}</span>
 			                </td>
 			                <td>
-			                    <span>{{book.writer}}</span>
+			                    <span>Escritor: {{book.writer}}</span>
 			                </td>		                
 		            </tr>	
 		            
@@ -79,18 +80,116 @@
 			                    <lx-thumbnail thumbnail-src="/images/{{movie.photo}}" thumbnail-width="60" thumbnail-height="60"></lx-thumbnail>
 			                </td>
 			                <td>
-			                    <span>{{movie.title}}</span>
+			                    <span>Titulo: {{movie.title}}</span>
 			                </td>
 			                <td>
-			                    <span>{{movie.director}}</span>
+			                    <span>Director: {{movie.director}}</span>
 			                </td>
 			                <td>
-			                    <span>{{movie.duration}} minutos</span>
+			                    <span>Duracion: {{movie.duration}} minutos</span>
 			                </td>		                
 		            </tr>		
 		        </tbody>
 		        
 		    </table>
+		    
+		    <table class="data-table data-table--has-primary ">
+
+		
+		        <tbody> 
+		        		<h2>Locales</h2>  
+		        	<tr  class="data-table__clickable-row" ng-repeat="local in vm.locals ">
+		              	
+			                <td>			                   	                    
+			                    <lx-thumbnail thumbnail-src="/images/{{local.photo}}" thumbnail-width="60" thumbnail-height="60"></lx-thumbnail>
+			                </td>
+			                <td>
+			                    <span>Nombre: {{local.name}}</span>
+			                </td>
+			                <td>
+			                    <span>Tipo local: {{local.local_type}}</span>
+			                </td>
+			                <td>
+			                    <span>Precio medio: {{local.price_medium}} euros</span>
+			                </td>		                
+		            </tr>		
+		        </tbody>
+		        
+		    </table>
+		    
+		    <table class="data-table data-table--has-primary ">
+
+		
+		        <tbody> 
+		        		<h2>Parques tematicos</h2>  
+		        	<tr  class="data-table__clickable-row" ng-repeat="park in vm.parks ">
+		              	
+			                <td>			                   	                    
+			                    <lx-thumbnail thumbnail-src="/images/{{park.image_park}}" thumbnail-width="60" thumbnail-height="60"></lx-thumbnail>
+			                </td>
+			                <td>
+			                    <span>Nombre: {{park.name_park}}</span>
+			                </td>
+			                <td>
+			                    <span>Tipo: {{park.kind_park}}</span>
+			                </td>
+			                <td>
+			                    <span>Precio: {{park.price_park}} euros</span>
+			                </td>		                
+		            </tr>		
+		        </tbody>
+		        
+		    </table>
+		    
+		    <table class="data-table data-table--has-primary ">
+
+		
+		        <tbody> 
+		        		<h2>Actividades</h2>  
+		        	<tr  class="data-table__clickable-row" ng-repeat="actividad in vm.actividades ">
+		              	
+			                <td>			                   	                    
+			                    <lx-thumbnail thumbnail-src="/images/{{actividad.image_activity}}" thumbnail-width="60" thumbnail-height="60"></lx-thumbnail>
+			                </td>
+			                <td>
+			                    <span>Nombre: {{actividad.name}}</span>
+			                </td>
+			                <td>
+			                    <span>Riesgo de la actividad: {{actividad.risk}}</span>
+			                </td>
+			                <td>
+			                    <span>Precio: {{actividad.price}} euros</span>
+			                </td>		                
+		            </tr>		
+		        </tbody>
+		        
+		    </table>
+		    
+		    <table class="data-table data-table--has-primary ">
+
+		
+		        <tbody> 
+		        		<h2>Videojuegos</h2>  
+		        	<tr  class="data-table__clickable-row" ng-repeat="game in vm.videogames ">
+		              	
+			                <td>			                   	                    
+			                    <lx-thumbnail thumbnail-src="/images/{{game.image}}" thumbnail-width="60" thumbnail-height="60"></lx-thumbnail>
+			                </td>
+			                <td>
+			                    <span>Nombre: {{game.name}}</span>
+			                </td>
+			                <td>
+			                    <span>Plataforma: {{game.platform}}</span>
+			                </td>
+			                <td>
+			                    <span>Pegi: {{game.pegi_age}} </span>
+			                </td>		                
+		            </tr>		
+		        </tbody>
+		        
+		    </table>
+		    
+		    
 	</div>
 	
 

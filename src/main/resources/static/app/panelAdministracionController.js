@@ -29,8 +29,8 @@ function panelAdministracionController(adminService,bookService,movieService,loc
 		
 	//Controller logic
 	
-	vm.busqueda = function(categoria){
-		vm.objetivoBusqueda = categoria;
+	vm.busqueda = function(tipo){
+		vm.objetivoBusqueda = tipo;
 	}
 
 	

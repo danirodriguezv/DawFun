@@ -66,6 +66,6 @@ function panelAdministracionController(adminService,bookService,movieService,loc
 	
 	vm.volver= function(){
 		$location.path("/");
-	}
+	};
 	
 };

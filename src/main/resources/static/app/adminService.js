@@ -20,6 +20,14 @@ function adminService($resource,$http,$location,LxNotificationService) {
 		
 		var AdminResource = $resource('/access/:usuario/:pass',{usuario:'admin',pass:'1234'});
 		
+		this.desconect = function(){
+			$http.post('/disconect').success(function (d) { 					
+				if(d===false){
+					LxNotificationService.notify('Desconexion correcta', 'emoticon', false, 'green');
+					$location.path("/"); //si el login es correcto
+				}});			
+		}
+		
 		this.logAdmin = function(usuario,pass){	
 			
 			var cadena="nom="+usuario+"&pass="+pass;

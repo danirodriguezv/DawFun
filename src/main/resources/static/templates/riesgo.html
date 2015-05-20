@@ -32,6 +32,8 @@
 			lx-ripple lx-dropdown-toggle>RIESGO {{vm.objetivoBusqueda}}</button>
 		<lx-dropdown-menu>
 		<ul>
+			<li><a class="dropdown-link" ng-click="vm.busqueda('Todos')">Todos</a></li>
+			<li class="dropdown-divider"></li>
 			<li><a class="dropdown-link" ng-click="vm.busqueda('ALTO')">ALTO RIESGO</a></li>
 			<li><a class="dropdown-link" ng-click="vm.busqueda('MEDIO')">RIESGO MEDIO</a></li>
 			<li><a class="dropdown-link" ng-click="vm.busqueda('BAJO')">RIESGO BAJO</a></li>

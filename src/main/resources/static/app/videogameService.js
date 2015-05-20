@@ -1,8 +1,8 @@
 angular.module("app").service("videogameService", videogameService);
 
-videogameService.$inject = ["$resource","$http"];
+videogameService.$inject = ["$resource","$http","LxNotificationService"];
 
-function videogameService($resource,$http) {
+function videogameService($resource,$http,LxNotificationService) {
 
 		this.videoclub =[];
 		
@@ -17,21 +17,15 @@ function videogameService($resource,$http) {
 			return videoclub;
 		}
 		
-		/*this.getBooks = function(id){
-			book = BookResource.query(id);
-			return book;
-		}*/
-			
+		
 		this.deleteVideogame=function(video) {				
 			//$http.delete('/videogames/'+ video.id);
 			
 			$http.delete('/videogames/'+ video.id).success(function (d) { 					
 				if(d===true){
-					alert("borrado correctamente");
-					return d;
+					LxNotificationService.notify('Borrado Correctamente', 'emoticon', false, 'green');
 				}else{
-					alert("no lo ha borrado");
-					return d;
+					LxNotificationService.notify('Error al borrar, actualizar pagina', 'emoticon', false, 'red');
 				}
 				
 			});	

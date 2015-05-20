@@ -23,8 +23,22 @@ function videogameService($resource,$http) {
 		}*/
 			
 		this.deleteVideogame=function(video) {				
-			$http.delete('/videogames/'+ video.id);
+			//$http.delete('/videogames/'+ video.id);
+			
+			$http.delete('/videogames/'+ video.id).success(function (d) { 					
+				if(d===true){
+					alert("borrado correctamente");
+					return d;
+				}else{
+					alert("no lo ha borrado");
+					return d;
+				}
+				
+			});	
+				
 		}
+		
+		
 		
 		
 		

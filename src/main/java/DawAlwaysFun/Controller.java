@@ -333,10 +333,13 @@ public class Controller implements CommandLineRunner {
 	}
 	
 	@RequestMapping(value = "/videogames/{id}", method = RequestMethod.DELETE)
-	public void deleteItem(@PathVariable long id) {
-		
-		System.out.println("entra: "+id);
-		serviceDawFun.getRepoVideogames().delete(id);		
+	public @ResponseBody boolean deleteItem(@PathVariable long id) {
+		boolean borrado= false;
+		if(user.isAdmin()){
+			serviceDawFun.getRepoVideogames().delete(id);	
+			borrado=true;
+		}
+		return borrado;
 	}
 	
 	

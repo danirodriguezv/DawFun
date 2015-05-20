@@ -38,8 +38,14 @@ function panelAdministracionController(adminService,bookService,movieService,loc
 		
 		var posicion = vm.videogames.indexOf(game);
 		
-		videogameService.deleteVideogame(game);
+		var borrado=videogameService.deleteVideogame(game);
 
+		if(borrado){
+			alert("borrado!");
+		}else{
+			alert("no borrado");
+		}
+		
 		
 		vm.videogames.splice(posicion, 1); 		
 		

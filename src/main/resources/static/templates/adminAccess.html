@@ -1,23 +1,30 @@
 <div ng-controller="adminController as vm" layout="column" layout-fill>
 
-	<!-- BARRA SUPERIOR -->
-	<div class="toolbar bgc-grey-800 tc-white-1">
-        <div class="toolbar__left mr+ ">            
-                <i class="icon icon--l icon--white icon--flat mdi mdi-ticket "></i>                     
-        </div>
+	<!-- BARRA SUPERIOR -->	
+	
+	<div flex-item style="box-shadow: 0px 4px 6px 1px rgba(119, 119, 119, 0.17);">
+        <div class="card bgc-indigo-500">
+            <div class="toolbar">
+                <span class="toolbar__label fs-title tc-white-1 ml"><img src="/images/dawlogo.png" height=50></span>
 
-        <span class="toolbar__label fs-title"><h1>Acceso</h1></span>
-		<div class="toolbar__right mr+ " >            
-               <button class="btn btn--xl btn--white btn--icon" ng-click="vm.ir('')" lx-ripple >
+                <div class="toolbar__right">      
+					
+					
+                    <button class="btn btn--l btn--white btn--icon" ng-click="vm.ir('')" lx-ripple>
                         <i class="mdi mdi-undo sobreIcono"></i>
-               </button>                     
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 
+
+
+
 	<!-- CARD -->
-	<div flex-container="row" flex-gutter="24" id="cardIdentity">
-	    <div flex-item>
-	        <div class="card">
+	<div flex-container="row" flex-gutter="24"  style="margin:auto;max-width:800px;">
+	    <div flex-item >
+	        <div class="card mt++" >
 	            <div class="card__img card__img--top">
 	                <img src="/images/identificacion.jpg" id="identification">
 	                <span class="fs-headline tc-white-1 display-block"></span>
@@ -32,26 +39,14 @@
 	
 	            <div class="card__actions bgc-black-1">
 	                
-	                <button class="btn btn--m btn--orange btn--flat" ng-click="vm.loguear()" lx-ripple>LOGIN</button>
+	                <button class="btn btn--m btn--orange btn--flat botonLogin" ng-click="vm.loguear()" lx-ripple>LOGIN</button>
 	            </div>
 	        </div>
 	    </div>
     </div>   
     
-    <h1>Prueba de que recoge bien</h1>
-    {{vm.nombreUsuario}}<br>
-    {{vm.tupla.nombreUsuario}} <br>
-    {{vm.tupla.contrasena}}<br>
-    <br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br>
-    {{vm.esAdmin}}
+    
+   
    
 	
 </div>

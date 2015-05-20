@@ -98,3 +98,16 @@
 	color:yellow;
 	text-shadow: -1px -2px 1px black, 1px 2px 1px black, -1px 2px 1px black, 1px -2px 1px black;	
 }
+
+.botonLogin{
+	font-weight:bold;
+	-webkit-transition:all 0.1s ;
+	-moz-transition:all 0.1s ;
+	-o-transition:all 0.1s ;
+	transition:all 0.1s ; 
+}
+
+.botonLogin:hover{
+	text-shadow: -1px -1px 1px black;
+	color:#ffd474;
+	}

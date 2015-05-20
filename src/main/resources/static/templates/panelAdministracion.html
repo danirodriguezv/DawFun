@@ -39,6 +39,33 @@
 			    </button>	
 	</div>	
 	
+	<div class="data-table-container">
+		    <table class="data-table data-table--has-primary ">
+
+		
+		        <tbody>		        	    
+		            <tr  class="data-table__clickable-row" ng-repeat="book in vm.books ">
+		              	
+			                <td>			                   	                    
+			                    <lx-thumbnail thumbnail-src="/images/{{book.image}}" thumbnail-width="60" thumbnail-height="60"></lx-thumbnail>
+			                </td>
+			                <td>
+			                    <span>{{book.genre}}</span>
+			                </td>
+			                <td>
+			                    <span>{{book.title}}</span>
+			                </td>
+			                <td>
+			                    <span>{{book.writer}}</span>
+			                </td>		                
+		            </tr>		
+		            
+		            
+		           
+		        </tbody>
+		    </table>
+		</div>
+	
 
 	
    

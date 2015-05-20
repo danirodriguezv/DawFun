@@ -34,6 +34,7 @@ function adminService($resource,$http,$location,LxNotificationService) {
 			$http.post('/access/', cadena).success(function (d) { 					
 				if(d===true){
 					LxNotificationService.notify('Logueado Correctamente', 'emoticon', false, 'green');
+					LxNotificationService.notify('Mostrando listado de base de datos', 'emoticon', false, 'green');
 					$location.path("/panelAdmin"); //si el login es correcto
 				}else{
 					LxNotificationService.notify('Error acceso', 'emoticon', false, 'red');

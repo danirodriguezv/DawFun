@@ -19,23 +19,26 @@
 <!-- BARRA INFERIOR -->
 	<div style="box-shadow: 0px 4px 6px 1px rgba(119, 119, 119, 0.07);background-color:white-silver;">	
 			
-			    <button class="btn btn--m btn--black btn--flat botonCategoria" lx-ripple lx-dropdown-toggle>
-			        <span style="font-weight:bold">Videojuegos</span>
+				<button class="btn btn--m btn--black btn--flat botonCategoria" lx-ripple lx-dropdown-toggle>
+			        <span style="font-weight:bold" ng-click ="vm.busqueda('Todos')">Todos</span>
 			    </button>	
 			    <button class="btn btn--m btn--black btn--flat botonCategoria" lx-ripple lx-dropdown-toggle>
-			        <span style="font-weight:bold">Libros</span>
+			        <span style="font-weight:bold" ng-click ="vm.busqueda('VIDEOJUEGOS')">Videojuegos</span>
 			    </button>	
 			    <button class="btn btn--m btn--black btn--flat botonCategoria" lx-ripple lx-dropdown-toggle>
-			        <span style="font-weight:bold">Peliculas</span>
+			        <span style="font-weight:bold" ng-click ="vm.busqueda('LIBROS')">Libros</span>
+			    </button>	
+			    <button class="btn btn--m btn--black btn--flat botonCategoria" lx-ripple lx-dropdown-toggle>
+			        <span style="font-weight:bold" ng-click ="vm.busqueda('PELICULAS')">Peliculas</span>
 			    </button>	
 				<button class="btn btn--m btn--black btn--flat botonCategoria" lx-ripple lx-dropdown-toggle>
-			        <span style="font-weight:bold">Parques Tematicos</span>
+			        <span style="font-weight:bold" ng-click ="vm.busqueda('PARQUES TEMATICOS')">Parques Tematicos</span>
 			    </button>
 			    <button class="btn btn--m btn--black btn--flat botonCategoria" lx-ripple lx-dropdown-toggle>
-			        <span style="font-weight:bold">Ocio Locales</span>
+			        <span style="font-weight:bold" ng-click ="vm.busqueda('OCIO LOCALES')">Ocio Locales</span>
 			    </button>	
 			    <button class="btn btn--m btn--black btn--flat botonCategoria" lx-ripple lx-dropdown-toggle>
-			        <span style="font-weight:bold">Aventura</span>
+			        <span style="font-weight:bold" ng-click ="vm.busqueda('AVENTURA')">Aventura</span>
 			    </button>	
 	</div>	
 	
@@ -44,8 +47,8 @@
 
 		
 		        <tbody>   
-		        	<h2>Libros</h2>     	    
-		            <tr  class="data-table__clickable-row" ng-repeat="book in vm.books ">
+		        	<h2>Libros {{vm.objetivoBusqueda}}</h2>     	    
+		            <tr  class="data-table__clickable-row" ng-repeat="book in vm.books">
 		              	
 			                <td>			                   	                    
 			                    <lx-thumbnail thumbnail-src="/images/{{book.image}}" thumbnail-width="60" thumbnail-height="60"></lx-thumbnail>

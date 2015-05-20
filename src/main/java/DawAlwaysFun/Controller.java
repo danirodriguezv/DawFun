@@ -44,6 +44,7 @@ public class Controller implements CommandLineRunner {
 		libro.setPageNumber(230);
 		libro.setSynopsis("Un libro de misterio que contiene 1, dos , 3 o mas embarazos.");
 		libro.setIsbn("ISD-3123");
+		libro.setClass_type("LIBRO");
 		serviceDawFun.setBook(libro);
 		
 		Book libro2 = new Book();
@@ -55,6 +56,7 @@ public class Controller implements CommandLineRunner {
 		libro2.setPageNumber(130);
 		libro2.setSynopsis("Un libro de puta madre con gente que bebe vino, resucita peña muerta y es traicionado por un amigo.");
 		libro2.setIsbn("IVD-3413");
+		libro2.setClass_type("LIBRO");
 		serviceDawFun.setBook(libro2);
 		
 		Videogame game = new Videogame();
@@ -66,6 +68,7 @@ public class Controller implements CommandLineRunner {
 		game.setPublisher("EA");
 		game.setDevelopment("Equipo daw");
 		game.setImage("battle.png");
+		game.setClass_type("VIDEOGAME");
 		serviceDawFun.setVideogame(game);
 		
 		Videogame game2 = new Videogame();
@@ -77,6 +80,7 @@ public class Controller implements CommandLineRunner {
 		game2.setPublisher("IA");
 		game2.setDevelopment("Equipo plantoso");
 		game2.setImage("plants.png");
+		game2.setClass_type("VIDEOGAME");
 		serviceDawFun.setVideogame(game2);
 		
 		Movie movie = new Movie();
@@ -89,6 +93,7 @@ public class Controller implements CommandLineRunner {
 		movie.setProduction("WarnerBros");
 		movie.setTitle("Los vengadores, la era de ultron");
 		movie.setType("ACCION");
+		movie.setClass_type("PELICULA");
 		serviceDawFun.setMovie(movie);
 		
 		Movie movie2 = new Movie();
@@ -101,6 +106,7 @@ public class Controller implements CommandLineRunner {
 		movie2.setProduction("WarnerBros");
 		movie2.setTitle("El maestro de agua");
 		movie2.setType("DRAMA");
+		movie2.setClass_type("PELICULA");
 		serviceDawFun.setMovie(movie2);
 		
 		Movie movie3 = new Movie();
@@ -113,6 +119,7 @@ public class Controller implements CommandLineRunner {
 		movie3.setProduction("WarnerBros");
 		movie3.setTitle("A todo gas, el mañana");
 		movie3.setType("ACCION");
+		movie3.setClass_type("PELICULA");
 		serviceDawFun.setMovie(movie3);
 		
 		Movie movie4 = new Movie();
@@ -125,6 +132,7 @@ public class Controller implements CommandLineRunner {
 		movie4.setProduction("WarnerBros");
 		movie4.setTitle("Novita y el gato cosmico");
 		movie4.setType("COMEDIA");
+		movie4.setClass_type("PELICULA");
 		serviceDawFun.setMovie(movie4);
 		
 		
@@ -139,6 +147,7 @@ public class Controller implements CommandLineRunner {
 		park.setOpen_park("12:00");
 		park.setPrice_park(31);
 		park.setProvince_park("Madrid");
+		park.setClass_type("PARQUE TEMATICO");
 		serviceDawFun.setPark(park);
 		
 		Thepark park2 = new Thepark();
@@ -152,6 +161,7 @@ public class Controller implements CommandLineRunner {
 		park2.setOpen_park("12:00");
 		park2.setPrice_park(31);
 		park2.setProvince_park("Madrid");
+		park2.setClass_type("PARQUE TEMATICO");
 		serviceDawFun.setPark(park2);
 		
 		Thepark park3 = new Thepark();
@@ -165,6 +175,7 @@ public class Controller implements CommandLineRunner {
 		park3.setOpen_park("12:00");
 		park3.setPrice_park(25);
 		park3.setProvince_park("Madrid");
+		park3.setClass_type("PARQUE TEMATICO");
 		serviceDawFun.setPark(park3);
 		
 		Local local = new Local();
@@ -179,6 +190,7 @@ public class Controller implements CommandLineRunner {
 		local.setPrice_medium(50);
 		local.setProvince("Madrid");
 		local.setStar(10);
+		local.setClass_type("LOCAL");
 		serviceDawFun.setLocal(local);
 		
 		Local local2 = new Local();
@@ -193,6 +205,7 @@ public class Controller implements CommandLineRunner {
 		local2.setPrice_medium(25);
 		local2.setProvince("Madrid");
 		local2.setStar(15);
+		local2.setClass_type("LOCAL");
 		serviceDawFun.setLocal(local2);
 		
 		Outdoor_activity actividad = new Outdoor_activity();
@@ -204,6 +217,7 @@ public class Controller implements CommandLineRunner {
 		actividad.setPrice(250);
 		actividad.setRisk("BAJO");
 		actividad.setAddress("Pradera de san isidro");
+		actividad.setClass_type("ACTIVIDAD");
 		serviceDawFun.setOutdoor(actividad);
 		
 		Outdoor_activity actividad2 = new Outdoor_activity();
@@ -215,6 +229,7 @@ public class Controller implements CommandLineRunner {
 		actividad2.setPrice(500);
 		actividad2.setRisk("ALTO");
 		actividad2.setAddress("Alto de Alcorcon");
+		actividad2.setClass_type("ACTIVIDAD");
 		serviceDawFun.setOutdoor(actividad2);
 		
 			

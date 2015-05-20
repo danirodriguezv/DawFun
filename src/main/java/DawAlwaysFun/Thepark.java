@@ -22,18 +22,25 @@ public class Thepark{
 	private boolean check_park;
 	private String image_park;
 	private String kind_park;
+	private String class_type;
 	
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	public String getClass_type() {
+		return class_type;
+	}
+	public void setClass_type(String class_type) {
+		this.class_type = class_type;
+	}
 	public String getImage_park() {
 		return image_park;
 	}
 	public void setImage_park(String image) {
 		this.image_park = image;
-	}
-	public long getId_park() {
-		return id;
-	}
-	public void setId_park(long id) {
-		this.id = id;
 	}
 	public String getName_park() {
 		return name_park;

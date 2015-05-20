@@ -20,7 +20,14 @@ public class Videogame{
 	private String category;
 	private String image;
 	private String description;
+	private String class_type;
 	
+	public String getClass_type() {
+		return class_type;
+	}
+	public void setClass_type(String class_type) {
+		this.class_type = class_type;
+	}
 	public String getDescription() {
 		return description;
 	}

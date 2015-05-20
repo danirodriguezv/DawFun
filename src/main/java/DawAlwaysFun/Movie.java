@@ -22,7 +22,14 @@ public class Movie{
 	private String movie_trailer;
 	private String photo;
 	private String type;
+	private String class_type;
 	
+	public String getClass_type() {
+		return class_type;
+	}
+	public void setClass_type(String class_type) {
+		this.class_type = class_type;
+	}
 	public String getType() {
 		return type;
 	}

@@ -20,7 +20,14 @@ public class Book{
 	private String genre;
 	private String image;
 	private String isbn;
+	private String class_type;
 	
+	public String getClass_type() {
+		return class_type;
+	}
+	public void setClass_type(String class_type) {
+		this.class_type = class_type;
+	}
 	public long getId() {
 		return id;
 	}

@@ -23,12 +23,19 @@ public class Local{
 	private String close_time;
 	private int capacity;
 	private String local_type;
+	private String class_type;
 	
 	public String getLocal_type() {
 		return local_type;
 	}
 	public void setLocal_type(String local_type) {
 		this.local_type = local_type;
+	}
+	public String getClass_type() {
+		return class_type;
+	}
+	public void setClass_type(String class_type) {
+		this.class_type = class_type;
 	}
 	public long getId() {
 		return id;

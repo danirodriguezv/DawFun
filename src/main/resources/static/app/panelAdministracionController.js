@@ -18,7 +18,6 @@ function panelAdministracionController(adminService,bookService,movieService,loc
 	}
 	
 	vm.objetivoBusqueda = 'Todos';
-	vm.categorias = ["VIDEOGAME","PELICULAS","AVENTURA","LIBROS","PARQUES TEMATICOS","OCIO LOCALES"];
 	
 	vm.books = bookService.getBooks();
 	vm.movies = movieService.getMovies();

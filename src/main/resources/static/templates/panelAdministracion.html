@@ -69,8 +69,10 @@
 			                </td>	
 			                <td>
 			                	<button class="btn btn--m btn--red btn--raised" ng-click="" lx-ripple>Eliminar</button>
-			                </td>	                
-		            </tr>		
+			                </td>	
+			                        
+		            </tr>
+		           <tr><td colspan="100%" class="divider divider--dark"></td></tr>
 		        </tbody>
 		        
 		    </table>
@@ -78,9 +80,9 @@
 		    <table class="data-table data-table--has-primary " >
 
 				 	
-		        <tbody class="data-table__clickable-row" ng-repeat="book in vm.books" ng-show="book.class_type == vm.objetivoBusqueda || vm.objetivoBusqueda == 'Todos'">   
+		        <tbody >   
 		           	   
-		            <tr>
+		            <tr class="data-table__clickable-row" ng-repeat="book in vm.books" ng-show="book.class_type == vm.objetivoBusqueda || vm.objetivoBusqueda == 'Todos'">
 			                <td>	           	                    
 			                    <lx-thumbnail thumbnail-src="/images/{{book.image}}" thumbnail-width="60" thumbnail-height="60"></lx-thumbnail>
 			                </td>
@@ -101,6 +103,7 @@
 			                	<button class="btn btn--m btn--red btn--raised" ng-click="" lx-ripple>Eliminar</button>
 			                </td>			                
 		            </tr>	
+		            <tr><td colspan="100%" class="divider divider--dark"></td></tr>
 		            
 		             
 		            
@@ -134,7 +137,8 @@
 			                <td>
 			                	<button class="btn btn--m btn--red btn--raised" ng-click="" lx-ripple>Eliminar</button>
 			                </td>		                
-		            </tr>		
+		            </tr>
+		            <tr><td colspan="100%" class="divider divider--dark"></td></tr>		
 		        </tbody>
 		        
 		    </table>
@@ -164,7 +168,8 @@
 			                <td>
 			                	<button class="btn btn--m btn--red btn--raised" ng-click="" lx-ripple>Eliminar</button>
 			                </td>			                
-		            </tr>		
+		            </tr>	
+		            <tr><td colspan="100%" class="divider divider--dark"></td></tr>	
 		        </tbody>
 		        
 		    </table>
@@ -194,7 +199,8 @@
 			                <td>
 			                	<button class="btn btn--m btn--red btn--raised" ng-click="" lx-ripple>Eliminar</button>
 			                </td>		                
-		            </tr>		
+		            </tr>	
+		            <tr><td colspan="100%" class="divider divider--dark"></td></tr>	
 		        </tbody>
 		        
 		    </table>
@@ -225,7 +231,8 @@
 			                <td>
 			                	<button class="btn btn--m btn--red btn--raised" ng-click="" lx-ripple>Eliminar</button>
 			                </td>			                
-		            </tr>		
+		            </tr>	
+		            <tr><td colspan="100%" class="divider divider--dark"></td></tr>	
 		        </tbody>
 		        
 		    </table>

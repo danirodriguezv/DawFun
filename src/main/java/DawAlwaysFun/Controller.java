@@ -35,14 +35,14 @@ public class Controller implements CommandLineRunner {
 		
 		*/
 		Book libro = new Book();
-		libro.setTitle("Libro de la ostia");
-		libro.setWriter("David Retamal el puto amo");
-		libro.setGenre("Erotico");
-		libro.setImage("livro.jpg");
-		libro.setPublisher("Anaya");
-		libro.setPageNumber(230);
-		libro.setSynopsis("Un libro de misterio que contiene 1, dos , 3 o mas embarazos.");
-		libro.setIsbn("ISD-3123");
+		libro.setTitle("El ingenioso hidalgo Don Quijote de la Mancha");
+		libro.setWriter("Miguel de Cervantes");
+		libro.setGenre("Fantastico");
+		libro.setImage("quijote.jpg");
+		libro.setPublisher("ESPASA LIBROS");
+		libro.setPageNumber(1560);
+		libro.setSynopsis("Es la historia de un hidalgo de la Mancha de unos 50 años que tras leer muchos libros de caballería, un género popular en siglo XVI, decide disfrazarse de caballero andante y embarcarse en una serie de aventuras con su viejo caballo Rocinante");
+		libro.setIsbn("9788467035704");
 		libro.setClass_type("LIBRO");
 		serviceDawFun.setBook(libro);
 		

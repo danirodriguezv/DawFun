@@ -23,7 +23,7 @@
 			        <span style="font-weight:bold" >Todos</span>
 			    </button>	
 			    <button class="btn btn--m btn--black btn--flat botonCategoria"  ng-click ="vm.busqueda('VIDEOGAME')" lx-ripple lx-dropdown-toggle>
-			        <span style="font-weight:bold" >Videogame</span>
+			        <span style="font-weight:bold" >Videogames</span>
 			    </button>	
 			    <button class="btn btn--m btn--black btn--flat botonCategoria" ng-click ="vm.busqueda('LIBRO')" lx-ripple lx-dropdown-toggle>
 			        <span style="font-weight:bold" >Libros</span>
@@ -35,17 +35,43 @@
 			        <span style="font-weight:bold" >Parques Tematicos</span>
 			    </button>
 			    <button class="btn btn--m btn--black btn--flat botonCategoria" ng-click ="vm.busqueda('LOCAL')" lx-ripple lx-dropdown-toggle>
-			        <span style="font-weight:bold" >Ocio Locales</span>
+			        <span style="font-weight:bold" >Locales de ocio</span>
 			    </button>	
 			    <button class="btn btn--m btn--black btn--flat botonCategoria"  ng-click ="vm.busqueda('ACTIVIDAD')" lx-ripple lx-dropdown-toggle>
-			        <span style="font-weight:bold" >Actividad</span>
+			        <span style="font-weight:bold" >Actividades</span>
 			    </button>	
 	</div>	
 	
 	<div class="data-table-container">
+	
+	
+			<table class="data-table data-table--has-primary ">
+
+				<h2>{{vm.objetivoBusqueda}}</h2>
+		        <tbody> 
+		        		  
+		        	<tr  class="data-table__clickable-row" ng-repeat="game in vm.videogames " ng-show="game.class_type == vm.objetivoBusqueda || vm.objetivoBusqueda == 'Todos'">
+		              		
+			                <td>			                   	                    
+			                    <lx-thumbnail thumbnail-src="/images/{{game.image}}" thumbnail-width="60" thumbnail-height="60"></lx-thumbnail>
+			                </td>
+			                <td>
+			                    <span>Nombre: {{game.name}}</span>
+			                </td>
+			                <td>
+			                    <span>Plataforma: {{game.platform}}</span>
+			                </td>
+			                <td>
+			                    <span>Pegi: {{game.pegi_age}} </span>
+			                </td>		                
+		            </tr>		
+		        </tbody>
+		        
+		    </table>
+			
 		    <table class="data-table data-table--has-primary " >
 
-				 <h2>{{vm.objetivoBusqueda}}</h2>	
+				 	
 		        <tbody class="data-table__clickable-row" ng-repeat="book in vm.books" ng-show="book.class_type == vm.objetivoBusqueda || vm.objetivoBusqueda == 'Todos'">   
 		           	   
 		            <tr>
@@ -99,30 +125,6 @@
 
 		
 		        <tbody> 
-		        		
-		        	<tr  class="data-table__clickable-row" ng-repeat="local in vm.locals "  ng-show="local.class_type == vm.objetivoBusqueda || vm.objetivoBusqueda == 'Todos'">
-		              		
-			                <td>			                   	                    
-			                    <lx-thumbnail thumbnail-src="/images/{{local.photo}}" thumbnail-width="60" thumbnail-height="60"></lx-thumbnail>
-			                </td>
-			                <td>
-			                    <span>Nombre: {{local.name}}</span>
-			                </td>
-			                <td>
-			                    <span>Tipo local: {{local.local_type}}</span>
-			                </td>
-			                <td>
-			                    <span>Precio medio: {{local.price_medium}} euros</span>
-			                </td>		                
-		            </tr>		
-		        </tbody>
-		        
-		    </table>
-		    
-		    <table class="data-table data-table--has-primary ">
-
-		
-		        <tbody> 
 		        		  
 		        	<tr  class="data-table__clickable-row" ng-repeat="park in vm.parks "  ng-show="park.class_type == vm.objetivoBusqueda || vm.objetivoBusqueda == 'Todos'">
 		              		
@@ -147,6 +149,31 @@
 
 		
 		        <tbody> 
+		        		
+		        	<tr  class="data-table__clickable-row" ng-repeat="local in vm.locals "  ng-show="local.class_type == vm.objetivoBusqueda || vm.objetivoBusqueda == 'Todos'">
+		              		
+			                <td>			                   	                    
+			                    <lx-thumbnail thumbnail-src="/images/{{local.photo}}" thumbnail-width="60" thumbnail-height="60"></lx-thumbnail>
+			                </td>
+			                <td>
+			                    <span>Nombre: {{local.name}}</span>
+			                </td>
+			                <td>
+			                    <span>Tipo local: {{local.local_type}}</span>
+			                </td>
+			                <td>
+			                    <span>Precio medio: {{local.price_medium}} euros</span>
+			                </td>		                
+		            </tr>		
+		        </tbody>
+		        
+		    </table>
+		    
+		    		    
+		    <table class="data-table data-table--has-primary ">
+
+		
+		        <tbody> 
 		        		 
 		        	<tr  class="data-table__clickable-row" ng-repeat="actividad in vm.actividades "  ng-show="actividad.class_type == vm.objetivoBusqueda || vm.objetivoBusqueda == 'Todos'">
 		              		
@@ -166,31 +193,7 @@
 		        </tbody>
 		        
 		    </table>
-		    
-		    <table class="data-table data-table--has-primary ">
-
-		
-		        <tbody> 
-		        		  
-		        	<tr  class="data-table__clickable-row" ng-repeat="game in vm.videogames " ng-show="game.class_type == vm.objetivoBusqueda || vm.objetivoBusqueda == 'Todos'">
-		              		
-			                <td>			                   	                    
-			                    <lx-thumbnail thumbnail-src="/images/{{game.image}}" thumbnail-width="60" thumbnail-height="60"></lx-thumbnail>
-			                </td>
-			                <td>
-			                    <span>Nombre: {{game.name}}</span>
-			                </td>
-			                <td>
-			                    <span>Plataforma: {{game.platform}}</span>
-			                </td>
-			                <td>
-			                    <span>Pegi: {{game.pegi_age}} </span>
-			                </td>		                
-		            </tr>		
-		        </tbody>
-		        
-		    </table>
-		    
+    
 		    
 	</div>
 	

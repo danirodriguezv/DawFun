@@ -29,7 +29,7 @@
 		style="box-shadow: 0px 4px 6px 1px rgba(119, 119, 119, 0.17); background-color: white-silver;">
 		<lx-dropdown>
 		<button class="btn btn--m btn--black btn--flat botonCategoria"
-			lx-ripple lx-dropdown-toggle>RIESGO {{vm.objetivoBusqueda}}{{riesgo.risk}}</button>
+			lx-ripple lx-dropdown-toggle>RIESGO {{vm.objetivoBusqueda}} + {{riesgo.risk}}</button>
 		<lx-dropdown-menu>
 		<ul>
 			<li><a class="dropdown-link" ng-click="vm.busqueda('Todos')">Todos</a></li>
@@ -73,7 +73,7 @@
 			onclose="vm.closingDialog()" onscrollend="scrollEndDialog()">
 		<div class="dialog__header">
 			<div class="bgc-blue-grey-500 pl pt pb">
-				<span class="fs-display-2 display-block tc-white">{{vm.name}}</span>
+				<span class="fs-display-2 display-block tc-white">{{vm.name_activity}}</span>
 			</div>
 		</div>
 
@@ -87,28 +87,28 @@
 				<div flex-item="8" flex-item-order="2">
 					<div class="p+ bgc-blue-grey-300">
 						<span class="fs-subhead display-block">Descripcion</span> <span
-							class="fs-display-0.2 display-block">{{vm.descrip2}}</span>
+							class="fs-display-0.2 display-block">{{vm.descrip_activity}}</span>
 					</div>
 					<div class="p+ bgc-blue-grey-300">
 						<span class="fs-subhead display-block">Direccion</span> <span
-							class="fs-display-0.2 display-block">{{vm.direc}}</span>
+							class="fs-display-0.2 display-block">{{vm.direc_activity}}</span>
 					</div>
 					<div class="p+ bgc-blue-grey-300">
 						<span class="fs-subhead display-block">Riesgo</span> <span
-							class="fs-display-0.5 display-block">{{vm.show}}</span>
+							class="fs-display-0.5 display-block">{{vm.show_activity}}</span>
 					</div>
 					<div class="p+ bgc-blue-grey-300">
 						<span class="fs-subhead display-block">Duracion de la
-							actividad</span> <span class="fs-display-0.5 display-block">{{vm.dur}}</span>
+							actividad</span> <span class="fs-display-0.5 display-block">{{vm.dur_activity}}</span>
 					</div>
 					<div class="p+ bgc-red-300">
 						<span class="fs-subhead display-block">Precio del servicio</span>
-						<span class="fs-display-0.5 display-block">{{vm.price}}
+						<span class="fs-display-0.5 display-block">{{vm.price_activity}}
 							euros</span>
 					</div>
 					<div class="p+ bgc-red-400">
 						<span class="fs-subhead display-block">Edad minima</span> <span
-							class="fs-display-0.2 display-block">{{vm.age}}</span>
+							class="fs-display-0.2 display-block">{{vm.age_activity}}</span>
 					</div>
 				</div>
 			</div>
@@ -122,7 +122,6 @@
 		<div class="dialog__actions">
 			<button class="btn btn--m btn--black btn--flat" lx-ripple
 				lx-dialog-close>Cancel</button>
-			<button class="btn btn--m btn--black btn--flat" lx-ripple>Funcionalidad</button>
 		</div>
 		</lx-dialog>
 

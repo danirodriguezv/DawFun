@@ -54,7 +54,7 @@ public class Outdoor_activity{
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	public String isRisk() {
+	public String getRisk() {
 		return risk;
 	}
 	public void setRisk(String risk) {

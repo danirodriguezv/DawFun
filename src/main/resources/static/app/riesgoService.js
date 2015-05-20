@@ -12,7 +12,7 @@ function riesgoService($resource) {
 		//var BooResource = $resource('books/:id',{id: '@id'},{update:{method:"PUT"}});
 
 	
-		this.getRiesgos = function(){
+		this.getActividades = function(){
 			riesgos = RiesgoResource.query();
 			return riesgos;
 		}

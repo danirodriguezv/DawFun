@@ -1,13 +1,13 @@
 angular.module("app").controller("panelAdministracionController", panelAdministracionController);
 
-panelAdministracionController.$inject = ["adminService","bookService", "$routeParams", "$location", "LxNotificationService","LxDialogService"];
+panelAdministracionController.$inject = ["adminService","bookService","movieService","localService","parkService","riesgoService","videogameService", "$routeParams", "$location", "LxNotificationService","LxDialogService"];
 
 
 
 
 
 
-function panelAdministracionController(adminService,bookService, $routeParams, $location, LxNotificationService,LxDialogService) {
+function panelAdministracionController(adminService,bookService,movieService,localService,parkService,riesgoService,videogameService, $routeParams, $location, LxNotificationService,LxDialogService) {
 
 	var vm = this;
 	
@@ -19,6 +19,10 @@ function panelAdministracionController(adminService,bookService, $routeParams, $
 	
 	vm.books = bookService.getBooks();
 	vm.movies = movieService.getMovies();
+	vm.locals = localService.getLocals();
+	vm.parks = parkService.getParks();
+	vm.actividades = riesgoService.getActividades();
+	vm.videogames = videogameService.getVideogames();
 		
 	//Controller logic
 	

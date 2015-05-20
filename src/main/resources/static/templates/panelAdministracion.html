@@ -43,7 +43,8 @@
 		    <table class="data-table data-table--has-primary ">
 
 		
-		        <tbody>		        	    
+		        <tbody>   
+		        	<h2>Libros</h2>     	    
 		            <tr  class="data-table__clickable-row" ng-repeat="book in vm.books ">
 		              	
 			                <td>			                   	                    
@@ -58,13 +59,39 @@
 			                <td>
 			                    <span>{{book.writer}}</span>
 			                </td>		                
-		            </tr>		
+		            </tr>	
 		            
+		             
 		            
 		           
 		        </tbody>
+		        
 		    </table>
-		</div>
+		    
+		    <table class="data-table data-table--has-primary ">
+
+		
+		        <tbody> 
+		        		<h2>Peliculas</h2>  
+		        	<tr  class="data-table__clickable-row" ng-repeat="movie in vm.movies ">
+		              	
+			                <td>			                   	                    
+			                    <lx-thumbnail thumbnail-src="/images/{{movie.photo}}" thumbnail-width="60" thumbnail-height="60"></lx-thumbnail>
+			                </td>
+			                <td>
+			                    <span>{{movie.title}}</span>
+			                </td>
+			                <td>
+			                    <span>{{movie.director}}</span>
+			                </td>
+			                <td>
+			                    <span>{{movie.duration}} minutos</span>
+			                </td>		                
+		            </tr>		
+		        </tbody>
+		        
+		    </table>
+	</div>
 	
 
 	

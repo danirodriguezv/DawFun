@@ -114,8 +114,8 @@
 							lx-ripple>Editar</button>
 					</td>
 					<td>
-						<button class="btn btn--m btn--red btn--raised" ng-click="vm.borrarLibro(book)"
-							lx-ripple>Eliminar</button>
+						<button class="btn btn--m btn--red btn--raised"
+							ng-click="vm.borrarLibro(book)" lx-ripple>Eliminar</button>
 					</td>
 				</tr>
 
@@ -250,299 +250,287 @@
 					<input type="text" ng-model="vm.game_name"> </lx-text-field>
 				</div>
 				<div flex-item>
-					<lx-text-field class="mr+" label="Desarrollador">
-					<input type="text" ng-model="vm.game_development"> </lx-text-field>
+					<lx-text-field class="mr+" label="Desarrollador"> <input
+						type="text" ng-model="vm.game_development"> </lx-text-field>
 				</div>
 				<div flex-item>
-		        <lx-text-field  class="mr+" label="Plataforma">
-		            <input type="text" ng-model="vm.game_platform">
-		        </lx-text-field>
-		    </div>
-		    <div flex-item>
-		        <lx-text-field  class="mr+" label="Editor">
-		            <input type="text" ng-model="vm.game_editor">
-		        </lx-text-field>
-		    </div>
-		    <div flex-item>
-		        <lx-text-field  class="mr+" label="Descripcion">
-		            <input type="text" ng-model="vm.game_description">
-		        </lx-text-field>
-		    </div>
+					<lx-text-field class="mr+" label="Plataforma"> <input
+						type="text" ng-model="vm.game_platform"> </lx-text-field>
+				</div>
+				<div flex-item>
+					<lx-text-field class="mr+" label="Editor"> <input
+						type="text" ng-model="vm.game_editor"> </lx-text-field>
+				</div>
+				<div flex-item>
+					<lx-text-field class="mr+" label="Descripcion"> <input
+						type="text" ng-model="vm.game_description"> </lx-text-field>
+				</div>
 
 			</div>
 			<div class="mt++" flex-container="row" flex-gutter="24">
-        	<div flex-item>		    
-		        <lx-select class="ml+" ng-model="vm.genero_game" placeholder="Genero" choices="vm.generogame" floating-label>		            
-		            <lx-select-selected>		            
-		                {{ $selected}}
-		            </lx-select-selected>			            	
-		            <lx-select-choices>
-		                {{ $choice }}
-		            </lx-select-choices>
-		        </lx-select>
-		        
-		    </div>
-        </div>
-        <div class="mt++" flex-container="row" flex-gutter="24">
-        	<div flex-item>		    
-		        <lx-select class="ml+" ng-model="vm.pegis_game" placeholder="Pegi" choices="vm.pegi" floating-label>		            
-		            <lx-select-selected>		            
-		                {{ $selected}}
-		            </lx-select-selected>			            	
-		            <lx-select-choices>
-		                {{ $choice }}
-		            </lx-select-choices>
-		        </lx-select>
-		        
-		    </div>
-        </div>
-			
+				<div flex-item>
+					<lx-select class="ml+" ng-model="vm.genero_game"
+						placeholder="Genero" choices="vm.generogame" floating-label>
+					<lx-select-selected> {{ $selected}} </lx-select-selected> <lx-select-choices>
+					{{ $choice }} </lx-select-choices> </lx-select>
+
+				</div>
+			</div>
+			<div class="mt++" flex-container="row" flex-gutter="24">
+				<div flex-item>
+					<lx-select class="ml+" ng-model="vm.pegis_game" placeholder="Pegi"
+						choices="vm.pegi" floating-label> <lx-select-selected>
+					{{ $selected}} </lx-select-selected> <lx-select-choices> {{ $choice
+					}} </lx-select-choices> </lx-select>
+
+				</div>
+			</div>
+
 			</p>
 			</lx-tab> <lx-tab heading="{{vm.libro}}">
 			<p class="p+">
-				<div flex-container="row" flex-gutter="24">
+			<div flex-container="row" flex-gutter="24">
 				<div flex-item>
 					<lx-text-field class="mr+" label="Titulo del libro ">
 					<input type="text" ng-model="vm.libro_title"> </lx-text-field>
 				</div>
 				<div flex-item>
-					<lx-text-field class="mr+" label="Escritor">
-					<input type="text" ng-model="vm.libro_escritor"> </lx-text-field>
+					<lx-text-field class="mr+" label="Escritor"> <input
+						type="text" ng-model="vm.libro_escritor"> </lx-text-field>
 				</div>
 				<div flex-item>
-		        <lx-text-field  class="mr+" label="Editorial">
-		            <input type="text" ng-model="vm.libro_editorial">
-		        </lx-text-field>
-		    </div>
-		    <div flex-item>
-		        <lx-text-field  class="mr+" label="Sinopsis">
-		            <input type="text" ng-model="vm.libro_sinopsis">
-		        </lx-text-field>
-		    </div>
+					<lx-text-field class="mr+" label="Editorial"> <input
+						type="text" ng-model="vm.libro_editorial"> </lx-text-field>
+				</div>
+				<div flex-item>
+					<lx-text-field class="mr+" label="Sinopsis"> <input
+						type="text" ng-model="vm.libro_sinopsis"> </lx-text-field>
+				</div>
 
 			</div>
-			
+
 			<div class="mt++" flex-container="row" flex-gutter="24">
-        	<div flex-item>
-        		<lx-text-field label="ISBN" fixed-label="true" icon="web">
-                	<input type="text" ng-model="vm.libro_isbn">
-            	</lx-text-field>
-        	</div>
-        	<div flex-item>
-        		<lx-text-field label="Num paginas" fixed-label="true" icon="format-list-numbers">
-                	<input type="text" ng-model="vm.libro_paginas">
-            	</lx-text-field>
-        	</div>
-        </div>
-        	<div class="mt++" flex-container="row" flex-gutter="24">
-        	<div flex-item>		    
-		        <lx-select class="ml+" ng-model="vm.genero" placeholder="Genero" choices="vm.categorias" floating-label>		            
-		            <lx-select-selected>		            
-		                {{ $selected}}
-		            </lx-select-selected>			            	
-		            <lx-select-choices>
-		                {{ $choice }}
-		            </lx-select-choices>
-		        </lx-select>
-		        
-		    </div>
-        </div>
-			
+				<div flex-item>
+					<lx-text-field label="ISBN" fixed-label="true" icon="web">
+					<input type="text" ng-model="vm.libro_isbn"> </lx-text-field>
+				</div>
+				<div flex-item>
+					<lx-text-field label="Num paginas" fixed-label="true"
+						icon="format-list-numbers"> <input type="text"
+						ng-model="vm.libro_paginas"> </lx-text-field>
+				</div>
+			</div>
+			<div class="mt++" flex-container="row" flex-gutter="24">
+				<div flex-item>
+					<lx-select class="ml+" ng-model="vm.genero" placeholder="Genero"
+						choices="vm.categorias" floating-label> <lx-select-selected>
+					{{ $selected}} </lx-select-selected> <lx-select-choices> {{ $choice
+					}} </lx-select-choices> </lx-select>
+
+				</div>
+			</div>
 			</p>
+
 			</lx-tab> <lx-tab heading="{{vm.pelicula}}">
 			<p class="p+">
-				<div flex-container="row" flex-gutter="24">
+			<div flex-container="row" flex-gutter="24">
 				<div flex-item>
-					<lx-text-field class="mr+" label="Titulo">
-					<input type="text" ng-model="vm.peli_title"> </lx-text-field>
+					<lx-text-field class="mr+" label="Titulo"> <input
+						type="text" ng-model="vm.peli_title"> </lx-text-field>
 				</div>
 				<div flex-item>
-					<lx-text-field class="mr+" label="Director">
-					<input type="text" ng-model="vm.peli_director"> </lx-text-field>
+					<lx-text-field class="mr+" label="Director"> <input
+						type="text" ng-model="vm.peli_director"> </lx-text-field>
 				</div>
 				<div flex-item>
-		        <lx-text-field  class="mr+" label="Actor principal">
-		            <input type="text" ng-model="vm.peli_actor">
-		        </lx-text-field>
-		    </div>
-		    <div flex-item>
-		        <lx-text-field  class="mr+" label="Productora">
-		            <input type="text" ng-model="vm.peli_productora">
-		        </lx-text-field>
-		    </div>
-		    <div flex-item>
-		        <lx-text-field  class="mr+" label="Duracion (min)">
-		            <input type="text" ng-model="vm.peli_duracion">
-		        </lx-text-field>
-		    </div>
+					<lx-text-field class="mr+" label="Actor principal">
+					<input type="text" ng-model="vm.peli_actor"> </lx-text-field>
+				</div>
+				<div flex-item>
+					<lx-text-field class="mr+" label="Productora"> <input
+						type="text" ng-model="vm.peli_productora"> </lx-text-field>
+				</div>
+				<div flex-item>
+					<lx-text-field class="mr+" label="Duracion (min)">
+					<input type="text" ng-model="vm.peli_duracion"> </lx-text-field>
+				</div>
 
 			</div>
-			
+
 			<div class="mt++" flex-container="row" flex-gutter="24">
-        	<div flex-item>
-        		<lx-text-field label="Descripcion" fixed-label="true" icon="web">
-                	<input type="text" ng-model="vm.peli_descripcion">
-            	</lx-text-field>
-        	</div>
-        	<div flex-item>
-        		<lx-text-field label="Falta tipo de peli y clase" fixed-label="true" icon="format-list-numbers">
-                	<input type="text" ng-model="vm.libro_paginas">
-            	</lx-text-field>
-        	</div>
-        </div>
+				<div flex-item>
+					<lx-text-field label="Descripcion" fixed-label="true" icon="web">
+					<input type="text" ng-model="vm.peli_descripcion"> </lx-text-field>
+				</div>
+			</div>
+			<div class="mt++" flex-container="row" flex-gutter="24">
+				<div flex-item>
+					<lx-select class="ml+" ng-model="vm.pelis_tipos"
+						placeholder="Tipo" choices="vm.tipo_pelis" floating-label>
+					<lx-select-selected> {{ $selected}} </lx-select-selected> <lx-select-choices>
+					{{ $choice }} </lx-select-choices> </lx-select>
+
+				</div>
+			</div>
+			
 			</p>
+
 			</lx-tab> <lx-tab heading="{{vm.parque}}">
 			<p class="p+">
-				<div flex-container="row" flex-gutter="24">
+			<div flex-container="row" flex-gutter="24">
 				<div flex-item>
-					<lx-text-field class="mr+" label="Nombre">
-					<input type="text" ng-model="vm.parque_nombre"> </lx-text-field>
+					<lx-text-field class="mr+" label="Nombre"> <input
+						type="text" ng-model="vm.parque_nombre"> </lx-text-field>
 				</div>
 				<div flex-item>
-					<lx-text-field class="mr+" label="Direccion">
-					<input type="text" ng-model="vm.parque_direccion"> </lx-text-field>
+					<lx-text-field class="mr+" label="Direccion"> <input
+						type="text" ng-model="vm.parque_direccion"> </lx-text-field>
 				</div>
 				<div flex-item>
-		        <lx-text-field  class="mr+" label="_______Apertura">
-		            <input type="time" ng-model="vm.parque_apertura" />
-		        </lx-text-field>
-		        </div>
-		        <div flex-item>
-		        <lx-text-field  class="mr+" label="_______Cierre">
-		            <input type="time" ng-model="vm.parque_cierre" />
-		        </lx-text-field>
-		    	</div>
-		    <div flex-item>
-		        <lx-text-field  class="mr+" label="Provincia">
-		            <input type="text" ng-model="vm.parque_provincia">
-		        </lx-text-field>
-		    </div>
-		    <div flex-item>
-		        <lx-text-field  class="mr+" label="Precio">
-		            <input type="text" ng-model="vm.parque_precio">
-		        </lx-text-field>
-		    </div>
+					<lx-text-field class="mr+" label="_______Apertura">
+					<input type="time" ng-model="vm.parque_apertura" /> </lx-text-field>
+				</div>
+				<div flex-item>
+					<lx-text-field class="mr+" label="_______Cierre"> <input
+						type="time" ng-model="vm.parque_cierre" /> </lx-text-field>
+				</div>
+				<div flex-item>
+					<lx-text-field class="mr+" label="Provincia"> <input
+						type="text" ng-model="vm.parque_provincia"> </lx-text-field>
+				</div>
+				<div flex-item>
+					<lx-text-field class="mr+" label="Precio"> <input
+						type="text" ng-model="vm.parque_precio"> </lx-text-field>
+				</div>
 
 			</div>
-			
+
 			<div class="mt++" flex-container="row" flex-gutter="24">
-        	<div flex-item>
-        		<lx-text-field label="Descripcion" fixed-label="true" icon="web">
-                	<input type="text" ng-model="vm.parque_descripcion">
-            	</lx-text-field>
-        	</div>
-        	<div flex-item>
-        		<lx-text-field label="Falta tipo ,kind,cheques" fixed-label="true" icon="format-list-numbers">
-                	<input type="text" ng-model="vm.libro_paginas">
-            	</lx-text-field>
-        	</div>
-        </div>
+				<div flex-item>
+					<lx-text-field label="Descripcion" fixed-label="true" icon="web">
+					<input type="text" ng-model="vm.parque_descripcion"> </lx-text-field>
+				</div>
+			</div>
+			<div class="mt++" flex-container="row" flex-gutter="24">
+				<div flex-item>
+					<lx-select class="ml+" ng-model="vm.cheque" placeholder="Permite cheque"
+						choices="vm.permite" floating-label> <lx-select-selected>
+					{{ $selected}} </lx-select-selected> <lx-select-choices> {{ $choice
+					}} </lx-select-choices> </lx-select>
+
+				</div>
+			</div>
+			<div class="mt++" flex-container="row" flex-gutter="24">
+				<div flex-item>
+					<lx-select class="ml+" ng-model="vm.parque_tipo" placeholder="Tipo"
+						choices="vm.tipo_parque" floating-label> <lx-select-selected>
+					{{ $selected}} </lx-select-selected> <lx-select-choices> {{ $choice
+					}} </lx-select-choices> </lx-select>
+
+				</div>
+			</div>
 			</p>
 			</lx-tab> <lx-tab heading="{{vm.local}}">
 			<p class="p+">
-				<div flex-container="row" flex-gutter="24">
+			<div flex-container="row" flex-gutter="24">
 				<div flex-item>
-					<lx-text-field class="mr+" label="Nombre">
-					<input type="text" ng-model="vm.local_nombre"> </lx-text-field>
+					<lx-text-field class="mr+" label="Nombre"> <input
+						type="text" ng-model="vm.local_nombre"> </lx-text-field>
 				</div>
 				<div flex-item>
-					<lx-text-field class="mr+" label="Estrellas">
-					<input type="text" ng-model="vm.local_estrellas"> </lx-text-field>
+					<lx-text-field class="mr+" label="Estrellas"> <input
+						type="text" ng-model="vm.local_estrellas"> </lx-text-field>
 				</div>
 				<div flex-item>
-		        <lx-text-field  class="mr+" label="_______Apertura">
-		            <input type="time" ng-model="vm.local_apertura" />
-		        </lx-text-field>
-		        </div>
-		        <div flex-item>
-		        <lx-text-field  class="mr+" label="_______Cierre">
-		            <input type="time" ng-model="vm.local_cierre" />
-		        </lx-text-field>
-		    	</div>
-		    <div flex-item>
-		        <lx-text-field  class="mr+" label="Provincia">
-		            <input type="text" ng-model="vm.local_provincia">
-		        </lx-text-field>
-		    </div>
-		    <div flex-item>
-		        <lx-text-field  class="mr+" label="Precio medio">
-		            <input type="text" ng-model="vm.local_precio">
-		        </lx-text-field>
-		    </div>
-		    <div flex-item>
-		        <lx-text-field  class="mr+" label="Capacidad">
-		            <input type="text" ng-model="vm.local_capacidad">
-		        </lx-text-field>
-		    </div>
-		    
+					<lx-text-field class="mr+" label="_______Apertura">
+					<input type="time" ng-model="vm.local_apertura" /> </lx-text-field>
+				</div>
+				<div flex-item>
+					<lx-text-field class="mr+" label="_______Cierre"> <input
+						type="time" ng-model="vm.local_cierre" /> </lx-text-field>
+				</div>
+				<div flex-item>
+					<lx-text-field class="mr+" label="Provincia"> <input
+						type="text" ng-model="vm.local_provincia"> </lx-text-field>
+				</div>
+				<div flex-item>
+					<lx-text-field class="mr+" label="Precio medio"> <input
+						type="text" ng-model="vm.local_precio"> </lx-text-field>
+				</div>
+				<div flex-item>
+					<lx-text-field class="mr+" label="Capacidad"> <input
+						type="text" ng-model="vm.local_capacidad"> </lx-text-field>
+				</div>
+
 
 			</div>
-			
+
 			<div class="mt++" flex-container="row" flex-gutter="24">
-        	<div flex-item>
-        		<lx-text-field label="Descripcion" fixed-label="true" icon="web">
-                	<input type="text" ng-model="vm.local_descripcion">
-            	</lx-text-field>
-        	</div>
-        	<div flex-item>
-        		<lx-text-field label="Direccion" fixed-label="true" icon="web">
-                	<input type="text" ng-model="vm.local_direccion">
-            	</lx-text-field>
-        	</div>
-        	<div flex-item>
-        		<lx-text-field label="Falta tipo" fixed-label="true" icon="format-list-numbers">
-                	<input type="text" ng-model="vm.libro_paginas">
-            	</lx-text-field>
-        	</div>
-        </div>
+				<div flex-item>
+					<lx-text-field label="Descripcion" fixed-label="true" icon="web">
+					<input type="text" ng-model="vm.local_descripcion"> </lx-text-field>
+				</div>
+				<div flex-item>
+					<lx-text-field label="Direccion" fixed-label="true" icon="web">
+					<input type="text" ng-model="vm.local_direccion"> </lx-text-field>
+				</div>
+			</div>
+			<div class="mt++" flex-container="row" flex-gutter="24">
+				<div flex-item>
+					<lx-select class="ml+" ng-model="vm.local_tipo" placeholder="Tipo"
+						choices="vm.tipo_local" floating-label> <lx-select-selected>
+					{{ $selected}} </lx-select-selected> <lx-select-choices> {{ $choice
+					}} </lx-select-choices> </lx-select>
+
+				</div>
+			</div>
 			</p>
 			</lx-tab> <lx-tab heading="{{vm.actividad}}">
 			<p class="p+">
-				<div flex-container="row" flex-gutter="24">
+			<div flex-container="row" flex-gutter="24">
 				<div flex-item>
-					<lx-text-field class="mr+" label="Nombre">
-					<input type="text" ng-model="vm.actividad_nombre"> </lx-text-field>
+					<lx-text-field class="mr+" label="Nombre"> <input
+						type="text" ng-model="vm.actividad_nombre"> </lx-text-field>
 				</div>
 				<div flex-item>
-					<lx-text-field class="mr+" label="Edad">
-					<input type="text" ng-model="vm.actividad_edad"> </lx-text-field>
+					<lx-text-field class="mr+" label="Edad"> <input
+						type="text" ng-model="vm.actividad_edad"> </lx-text-field>
 				</div>
-		    <div flex-item>
-		        <lx-text-field  class="mr+" label="Provincia">
-		            <input type="text" ng-model="vm.actividad_provincia">
-		        </lx-text-field>
-		    </div>
-		    <div flex-item>
-		        <lx-text-field  class="mr+" label="Precio">
-		            <input type="text" ng-model="vm.actividad_precio">
-		        </lx-text-field>
-		    </div>
-		    <div flex-item>
-		        <lx-text-field  class="mr+" label="Duracion(min)">
-		            <input type="text" ng-model="vm.actividad_duracion">
-		        </lx-text-field>
-		    </div>
-		    
+				<div flex-item>
+					<lx-text-field class="mr+" label="Provincia"> <input
+						type="text" ng-model="vm.actividad_provincia"> </lx-text-field>
+				</div>
+				<div flex-item>
+					<lx-text-field class="mr+" label="Precio"> <input
+						type="text" ng-model="vm.actividad_precio"> </lx-text-field>
+				</div>
+				<div flex-item>
+					<lx-text-field class="mr+" label="Duracion(min)"> <input
+						type="text" ng-model="vm.actividad_duracion"> </lx-text-field>
+				</div>
+
 
 			</div>
-			
+
 			<div class="mt++" flex-container="row" flex-gutter="24">
-        	<div flex-item>
-        		<lx-text-field label="Descripcion" fixed-label="true" icon="web">
-                	<input type="text" ng-model="vm.actividad_descripcion">
-            	</lx-text-field>
-        	</div>
-        	<div flex-item>
-        		<lx-text-field label="Direccion" fixed-label="true" icon="web">
-                	<input type="text" ng-model="vm.actividad_direccion">
-            	</lx-text-field>
-        	</div>
-        	<div flex-item>
-        		<lx-text-field label="Falta clase, riesgo" fixed-label="true" icon="format-list-numbers">
-                	<input type="text" ng-model="vm.libro_paginas">
-            	</lx-text-field>
-        	</div>
-        </div>
+				<div flex-item>
+					<lx-text-field label="Descripcion" fixed-label="true" icon="web">
+					<input type="text" ng-model="vm.actividad_descripcion"> </lx-text-field>
+				</div>
+				<div flex-item>
+					<lx-text-field label="Direccion" fixed-label="true" icon="web">
+					<input type="text" ng-model="vm.actividad_direccion"> </lx-text-field>
+				</div>
+			</div>
+			<div class="mt++" flex-container="row" flex-gutter="24">
+				<div flex-item>
+					<lx-select class="ml+" ng-model="vm.riesgo_tipo" placeholder="Tipo de riesgo"
+						choices="vm.tipo_riesgo" floating-label> <lx-select-selected>
+					{{ $selected}} </lx-select-selected> <lx-select-choices> {{ $choice
+					}} </lx-select-choices> </lx-select>
+
+				</div>
+			</div>
 			</p>
 			</lx-tab> </lx-tabs>
 		</div>

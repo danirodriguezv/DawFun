@@ -23,6 +23,11 @@ function panelAdministracionController(adminService,bookService,movieService,loc
 	vm.categorias=["Terror","Fantastico","Ciencia Ficcion","Juvenil","Humanistico","Romantica","Poesia","Novela Negra","Otros"];
 	vm.generogame = ["ROL","PRIMERA PERSONA","TERCERA PERSONA","SHOOTER"];
 	vm.pegi = [3,7,12,16,18];
+	vm.tipo_pelis = ["DRAMA","COMEDIA","ACCION","TERROR"];
+	vm.permite = [true,false];
+	vm.tipo_parque=["Acuatico","Tematico","Atracciones","Safari","Zoologico"];
+	vm.tipo_local = ["PUB","RESTAURANTE"];
+	vm.tipo_riesgo = ["ALTO","MEDIO","BAJO"];
 	
 	vm.books = bookService.getBooks();
 	vm.movies = movieService.getMovies();

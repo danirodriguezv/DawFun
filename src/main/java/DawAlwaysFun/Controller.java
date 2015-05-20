@@ -380,7 +380,8 @@ public class Controller implements CommandLineRunner {
 	@RequestMapping(value = "/disconect", method = RequestMethod.POST) 
 	public @ResponseBody boolean disconectAdmin(){
 				
-		user.setAdmin(false);		
+		user.setAdmin(false);	
+		System.out.println(user.isAdmin());
 		
 		return user.isAdmin();		
 		

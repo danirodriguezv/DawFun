@@ -293,11 +293,6 @@
 		            <input type="text" ng-model="vm.libro_sinopsis">
 		        </lx-text-field>
 		    </div>
-		    <div flex-item>
-		        <lx-text-field  class="mr+" label="Genero">
-		            <input type="text" ng-model="vm.libro_genero">
-		        </lx-text-field>
-		    </div>
 
 			</div>
 			
@@ -312,6 +307,19 @@
                 	<input type="text" ng-model="vm.libro_paginas">
             	</lx-text-field>
         	</div>
+        </div>
+        	<div class="mt++" flex-container="row" flex-gutter="24">
+        	<div flex-item>		    
+		        <lx-select class="ml+" ng-model="vm.sugerencia.categoria" placeholder="Genero" choices="vm.categorias" floating-label>		            
+		            <lx-select-selected>		            
+		                {{ $selected}}
+		            </lx-select-selected>			            	
+		            <lx-select-choices>
+		                {{ $choice }}
+		            </lx-select-choices>
+		        </lx-select>
+		        
+		    </div>
         </div>
 			
 			</p>

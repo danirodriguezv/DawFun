@@ -44,7 +44,7 @@ function riesgoController(riesgoService, $routeParams, $location, LxNotification
 		vm.age_activity = riesgo.age_recomended;
 		vm.direc_activity = riesgo.address;
 		vm.show_activity = riesgo.risk;
-		vm.image_activity = riesgo.image;
+		vm.image_activity = riesgo.image_activity;
 		vm.dur_activity = riesgo.duration;
 		vm.province_activity = riesgo.province;
 	    LxDialogService.open(dialogId);

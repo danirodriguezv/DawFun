@@ -198,7 +198,7 @@ public class Controller implements CommandLineRunner {
 		actividad.setAge_recomended(18);
 		actividad.setDescription("Un viaje en globo apasionante");
 		actividad.setDuration(180);
-		actividad.setImage("globo.png");
+		actividad.setImage_activity("globo.png");
 		actividad.setName("Viaje en globo");
 		actividad.setPrice(250);
 		actividad.setRisk("BAJO");
@@ -209,7 +209,7 @@ public class Controller implements CommandLineRunner {
 		actividad2.setAge_recomended(18);
 		actividad2.setDescription("Una caida libre desde el cielo");
 		actividad2.setDuration(50);
-		actividad2.setImage("paraca.png");
+		actividad2.setImage_activity("paraca.png");
 		actividad2.setName("Paracaidismo");
 		actividad2.setPrice(500);
 		actividad2.setRisk("ALTO");

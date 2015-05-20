@@ -15,12 +15,10 @@ function adminController(adminService,LxNotificationService,$location) {
 	
 	vm.loguear = function(){		
 		//location.href="/access?nom="+vm.tupla.nombreUsuario+"&pass="+vm.tupla.contrasena;
-		vm.esAdmin=adminService.isAdmin(vm.nombreUsuario,vm.contrasena);
+		adminService.logAdmin(vm.nombreUsuario,vm.contrasena);
 		
 		
-		if (vm.esAdmin){
-			$location.path("/"+sitio);
-		}
+		
 		
 	};
 	

@@ -20,17 +20,19 @@ function adminService($resource,$http) {
 		
 		this.isAdmin = function(cuerpo,pass){	
 			
-			//$http.post('/access/', cuerpo);
+			var guarro="nom=admin&pass=1234";
+			$http.post('/access/', guarro).success(function (d) { alert("hola"+d); });
+
 			
 			
-			var cosa=$http({
+			/*$http({
 			    method: 'POST',
 			    url: '/access/',
 			    data: cuerpo,
 			    headers: {'Content-Type': 'application/x-www-form-urlencoded'}
-			})
+			})*/
 			
-			alert(cosa);
+			
 			
 			/*this.user=use;
 			this.pass=pass;

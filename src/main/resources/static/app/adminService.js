@@ -1,8 +1,8 @@
 angular.module("app").service("adminService", adminService);
 
-adminService.$inject = [ "$resource","$http","$location"];
+adminService.$inject = [ "$resource","$http","$location","LxNotificationService"];
 
-function adminService($resource,$http,$location) {
+function adminService($resource,$http,$location,LxNotificationService) {
 
 		this.log ;
 		
@@ -23,12 +23,13 @@ function adminService($resource,$http,$location) {
 		this.logAdmin = function(usuario,pass){	
 			
 			var cadena="nom="+usuario+"&pass="+pass;
-			$http.post('/access/', cadena).success(function (d) { 				
-				alert("es:"+d);
+			$http.post('/access/', cadena).success(function (d) { 					
 				if(d===true){
-					$location.path("/libros"); //si el login es correcto
+					LxNotificationService.notify('Logueado Correctamente', 'emoticon', false, 'green');
+					$location.path("/panelAdmin"); //si el login es correcto
 				}else{
-					$location.path("/parques"); //si el login falla
+					LxNotificationService.notify('Error acceso', 'emoticon', false, 'red');
+					$location.path("/"); //si el login falla
 				}});			
 			/*$http({
 			    method: 'POST',

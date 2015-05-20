@@ -39,7 +39,12 @@
 			    </button>	
 			    <button class="btn btn--m btn--black btn--flat botonCategoria"  ng-click ="vm.busqueda('ACTIVIDAD')" >
 			        <span style="font-weight:bold" >Actividades</span>
-			    </button>	
+			    </button>
+			    
+			    <button class="btn btn--m btn--black btn--flat botonCategoria"  ng-click="vm.opendDialog('test')" >
+			        <span style="font-weight:bold" >Anadir producto</span>
+			    </button>
+			    	
 	</div>
 	<div class="barraMostrando">
 			Mostrando: <span>{{vm.objetivoBusqueda}}</span>
@@ -210,7 +215,46 @@
 		    
 	</div>
 	
+	<lx-dialog class="dialog dialog--l" id="test" auto-close="true" onclose="vm.closingDialog()" onscrollend="scrollEndDialog()">
+    <div class="dialog__header" >
+        <div class="bgc-blue-grey-500 pl++ pt++ pb++">      	    
+          	<span class="fs-display-2 display-block tc-white">{{vm.game}}</span>
+			<span class="fs-title display-block tc-grey-50">Autor: {{vm.autorSelec}}</span>               
+        </div>         
+    </div>
 
+    <div class="dialog__content">
+    	<div class="card">
+    <lx-tabs>
+        <lx-tab heading="{{vm.game}}">
+            <p class="p+">formulario juegos</p>
+        </lx-tab>
+
+        <lx-tab heading="{{vm.libro}}">
+            <p class="p+">Formularios libros</p>
+        </lx-tab>
+
+        <lx-tab heading="{{vm.pelicula}}">
+            <p class="p+">formulario peliculas</p>
+        </lx-tab>
+        <lx-tab heading="{{vm.parque}}">
+            <p class="p+">formulario parque</p>
+        </lx-tab>
+        <lx-tab heading="{{vm.local}}">
+            <p class="p+">formulario local</p>
+        </lx-tab>
+        <lx-tab heading="{{vm.actividad}}">
+            <p class="p+">formulario actividad</p>
+        </lx-tab>
+    </lx-tabs>
+	</div>       
+    </div>
+
+    <div class="dialog__actions">
+        <button class="btn btn--m btn--black btn--flat botonCategoria bgc-red-300" lx-ripple lx-dialog-close>Cerrar</button>       
+    </div>
+</lx-dialog>
+	
 	
    
 </div>

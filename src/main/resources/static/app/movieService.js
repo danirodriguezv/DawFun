@@ -1,8 +1,8 @@
 angular.module("app").service("movieService", movieService);
 
-movieService.$inject = ["$resource"];
+movieService.$inject = ["$resource","$http","LxNotificationService"];
 
-function movieService($resource) {
+function movieService($resource,$http,LxNotificationService) {
 
 		this.movies = [];
 		
@@ -15,5 +15,19 @@ function movieService($resource) {
 		this.getMovies = function(){
 			movies = moviesResource.query();
 			return movies;
+		}
+		
+		this.deleteMovie=function(movie) {				
+			
+			
+			$http.delete('/movies/'+ movie.id).success(function (d) { 					
+				if(d===true){
+					LxNotificationService.notify('Borrado Correctamente', 'emoticon', false, 'green');
+				}else{
+					LxNotificationService.notify('Error al borrar, actualizar pagina', 'emoticon', false, 'red');
+				}
+				
+			});	
+				
 		}
 }

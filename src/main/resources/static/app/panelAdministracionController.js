@@ -50,6 +50,12 @@ function panelAdministracionController(adminService,bookService,movieService,loc
 		vm.books.splice(posicion, 1);
 	};
 	
+	vm.borrarPelicula = function(peli){		
+		var posicion = vm.movies.indexOf(peli);		
+		movieService.deleteMovie(peli);	
+		vm.movies.splice(posicion, 1);
+	};
+	
 	
 	vm.opendDialog = function(dialogId)
 	{

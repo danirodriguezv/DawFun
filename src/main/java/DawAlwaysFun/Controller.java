@@ -290,6 +290,17 @@ public class Controller implements CommandLineRunner {
 		return serviceDawFun.getMovie(idMovie);
 	}
 	
+	@RequestMapping(value = "/movies/{id}", method = RequestMethod.DELETE)
+	public @ResponseBody boolean deleteMovie(@PathVariable long id) {
+		boolean borrado= false;
+		if(user.isAdmin()){
+			serviceDawFun.getRepoMovies().delete(id);	
+			borrado=true;
+		}
+		return borrado;
+	}
+	
+	
 	//Metodos del controlador de outdoors
 	@RequestMapping(value = "/outdoors", method = RequestMethod.POST)
 	public ResponseEntity<Outdoor_activity> addOutdoor(@RequestBody Outdoor_activity activity){

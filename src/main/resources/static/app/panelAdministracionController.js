@@ -32,6 +32,10 @@ function panelAdministracionController(adminService,bookService,movieService,loc
 		vm.objetivoBusqueda = tipo;
 	}
 
+	vm.borrarVideojuego = function(game){
+		alert("alemnos");
+		videogameService.deleteVideogame(game);
+	}
 	
 	
 };

@@ -1,8 +1,8 @@
 angular.module("app").service("videogameService", videogameService);
 
-videogameService.$inject = ["$resource"];
+videogameService.$inject = ["$resource","$http"];
 
-function videogameService($resource) {
+function videogameService($resource,$http) {
 
 		this.videoclub =[];
 		
@@ -22,7 +22,12 @@ function videogameService($resource) {
 			return book;
 		}*/
 			
-
+		this.deleteVideogame=function(video) {
+			
+			$http.delete('/videogames/'+ video.id);	
+			
+			
+		}
 		
 		
 		

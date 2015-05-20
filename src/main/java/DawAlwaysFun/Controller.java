@@ -332,6 +332,12 @@ public class Controller implements CommandLineRunner {
 		return serviceDawFun.getVideogame(idVideogame);
 	}
 	
+	@RequestMapping(value = "/videogames/{id}", method = RequestMethod.DELETE)
+	public void deleteItem(@PathVariable long id) {
+		
+		System.out.println("entra: "+id);
+		serviceDawFun.getRepoVideogames().delete(id);		
+	}
 	
 	
 	

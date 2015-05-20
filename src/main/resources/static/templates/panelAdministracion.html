@@ -19,25 +19,25 @@
 <!-- BARRA INFERIOR -->
 	<div style=";background-color:white-silver;">	
 			
-				<button class="btn btn--m btn--black btn--flat botonCategoria" ng-click ="vm.busqueda('Todos')" lx-ripple lx-dropdown-toggle>
+				<button class="btn btn--m btn--black btn--flat botonCategoria" ng-click ="vm.busqueda('Todos')" >
 			        <span style="font-weight:bold" >Todos</span>
 			    </button>	
-			    <button class="btn btn--m btn--black btn--flat botonCategoria"  ng-click ="vm.busqueda('VIDEOGAME')" lx-ripple lx-dropdown-toggle>
+			    <button class="btn btn--m btn--black btn--flat botonCategoria"  ng-click ="vm.busqueda('VIDEOGAME')" >
 			        <span style="font-weight:bold" >Videogames</span>
 			    </button>	
-			    <button class="btn btn--m btn--black btn--flat botonCategoria" ng-click ="vm.busqueda('LIBRO')" lx-ripple lx-dropdown-toggle>
+			    <button class="btn btn--m btn--black btn--flat botonCategoria" ng-click ="vm.busqueda('LIBRO')" >
 			        <span style="font-weight:bold" >Libros</span>
 			    </button>	
-			    <button class="btn btn--m btn--black btn--flat botonCategoria" ng-click ="vm.busqueda('PELICULA')" lx-ripple lx-dropdown-toggle>
+			    <button class="btn btn--m btn--black btn--flat botonCategoria" ng-click ="vm.busqueda('PELICULA')" >
 			        <span style="font-weight:bold" >Peliculas</span>
 			    </button>	
-				<button class="btn btn--m btn--black btn--flat botonCategoria" ng-click ="vm.busqueda('PARQUE TEMATICO')"lx-ripple lx-dropdown-toggle>
+				<button class="btn btn--m btn--black btn--flat botonCategoria" ng-click ="vm.busqueda('PARQUE TEMATICO')">
 			        <span style="font-weight:bold" >Parques Tematicos</span>
 			    </button>
-			    <button class="btn btn--m btn--black btn--flat botonCategoria" ng-click ="vm.busqueda('LOCAL')" lx-ripple lx-dropdown-toggle>
+			    <button class="btn btn--m btn--black btn--flat botonCategoria" ng-click ="vm.busqueda('LOCAL')" >
 			        <span style="font-weight:bold" >Locales de ocio</span>
 			    </button>	
-			    <button class="btn btn--m btn--black btn--flat botonCategoria"  ng-click ="vm.busqueda('ACTIVIDAD')" lx-ripple lx-dropdown-toggle>
+			    <button class="btn btn--m btn--black btn--flat botonCategoria"  ng-click ="vm.busqueda('ACTIVIDAD')" >
 			        <span style="font-weight:bold" >Actividades</span>
 			    </button>	
 	</div>
@@ -71,7 +71,7 @@
 			                	<button class="btn btn--m btn--blue btn--raised" ng-click="" lx-ripple>Editar</button>
 			                </td>	
 			                <td>
-			                	<button class="btn btn--m btn--red btn--raised" ng-click="" lx-ripple>Eliminar</button>
+			                	<button class="btn btn--m btn--red btn--raised" ng-click="vm.borrarVideojuego(game)" lx-ripple>Eliminar</button>
 			                </td>	
 			                        
 		            </tr>	

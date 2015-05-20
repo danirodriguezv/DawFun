@@ -118,6 +118,18 @@ public class ServiceDawFun {
 	public void setVideogame(Videogame videogame){
 		repoVideogames.save(videogame);
 	}
+
+	public VideogameRepository getRepoVideogames() {
+		return repoVideogames;
+	}
+
+	public void setRepoVideogames(VideogameRepository repoVideogames) {
+		this.repoVideogames = repoVideogames;
+	}
+	
+	
+	/**/
+	
 }
 	
 	

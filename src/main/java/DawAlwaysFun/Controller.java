@@ -47,17 +47,53 @@ public class Controller implements CommandLineRunner {
 		serviceDawFun.setBook(libro);
 		
 		Book libro2 = new Book();
-		libro2.setTitle("La sagrada Biblia");
-		libro2.setWriter("Jesus al bajar de la cruz");
-		libro2.setGenre("Fantastico");
-		libro2.setImage("livro.jpg");
-		libro2.setPublisher("Suma de letras");
-		libro2.setPageNumber(130);
-		libro2.setSynopsis("Un libro de puta madre con gente que bebe vino, resucita peña muerta y es traicionado por un amigo.");
-		libro2.setIsbn("IVD-3413");
+		libro2.setTitle("1984");
+		libro2.setWriter("George Orwell");
+		libro2.setGenre("Ciencia Ficcion");
+		libro2.setImage("1984.jpg");
+		libro2.setPublisher("AUSTRAL");
+		libro2.setPageNumber(326);
+		libro2.setSynopsis("Inquietante interpretacion futurista basada en la critica a los totalitarismos y a la opresion del poder, situada en 1984 en la sociedad inglesa");
+		libro2.setIsbn("9788423342310");
 		libro2.setClass_type("LIBRO");
 		serviceDawFun.setBook(libro2);
 		
+		Book libro3 = new Book();
+		libro3.setTitle("Cien años de soledad");
+		libro3.setWriter("Gabriel Garcia Marquez");
+		libro3.setGenre("Humanistico");
+		libro3.setImage("cien.jpg");
+		libro3.setPublisher("ALFAGUARA");
+		libro3.setPageNumber(471);
+		libro3.setSynopsis("Una de las aventuras literarias mas fascinantes de nuestro siglo");
+		libro3.setIsbn("9788420471839");
+		libro3.setClass_type("LIBRO");
+		serviceDawFun.setBook(libro3);
+
+		Book libro4 = new Book();
+		libro4.setTitle("Dracula");
+		libro4.setWriter("Bram Stoker");
+		libro4.setGenre("Terror");
+		libro4.setImage("dracula.jpg");
+		libro4.setPublisher("DEBOLSILLO");
+		libro4.setPageNumber(688);
+		libro4.setSynopsis("La novela presenta las anotaciones del diario personal de Jonathan Harker. Un conde de Transilvania llamado Dracula solicita sus servicios como asesor y gestor para la compra de una mansion en Londres");
+		libro4.setIsbn("9788483461846");
+		libro4.setClass_type("LIBRO");
+		serviceDawFun.setBook(libro4);
+		
+		Book libro5 = new Book();
+		libro5.setTitle("El Padrino");
+		libro5.setWriter("Mario Puzo");
+		libro5.setGenre("Novela negra");
+		libro5.setImage("padrino.jpg");
+		libro5.setPublisher("EDICIONES B");
+		libro5.setPageNumber(477);
+		libro5.setSynopsis("El Padrino narra la historia de un hombre: Vito Corleone, el capo mas respetado de Nueva York");
+		libro5.setIsbn("9788466639040");
+		libro5.setClass_type("LIBRO");
+		serviceDawFun.setBook(libro5);
+				
 		Videogame game = new Videogame();
 		game.setName("Battlefield 3");
 		game.setPegi_age(16);

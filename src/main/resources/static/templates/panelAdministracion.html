@@ -1,262 +1,301 @@
-<div ng-controller="panelAdministracionController as vm" layout="column" layout-fill>
+<div ng-controller="panelAdministracionController as vm" layout="column"
+	layout-fill>
 
-<!-- BARRA SUPERIOR -->
-	<div flex-item style="box-shadow: 0px 4px 6px 1px rgba(119, 119, 119, 0.17);">
-        <div class="card bgc-indigo-500">
-            <div class="toolbar">
-                <span class="toolbar__label fs-title tc-white-1 ml"><img src="/images/dawlogo.png" height=50> Administracion</span>
-				
-                <div class="toolbar__right">					
-                    <button class="btn btn--l btn--white btn--icon sobreIconoRojo" ng-click="vm.desconectar()"lx-ripple>
-                        <i class="mdi mdi-close-circle-outline sobreIconoRojo"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    
-<!-- BARRA INFERIOR -->
-	<div style=";background-color:white-silver;">	
-			
-				<button class="btn btn--m btn--black btn--flat botonCategoria" ng-click ="vm.busqueda('Todos')" >
-			        <span style="font-weight:bold" >Todos</span>
-			    </button>	
-			    <button class="btn btn--m btn--black btn--flat botonCategoria"  ng-click ="vm.busqueda('VIDEOGAME')" >
-			        <span style="font-weight:bold" >Videogames</span>
-			    </button>	
-			    <button class="btn btn--m btn--black btn--flat botonCategoria" ng-click ="vm.busqueda('LIBRO')" >
-			        <span style="font-weight:bold" >Libros</span>
-			    </button>	
-			    <button class="btn btn--m btn--black btn--flat botonCategoria" ng-click ="vm.busqueda('PELICULA')" >
-			        <span style="font-weight:bold" >Peliculas</span>
-			    </button>	
-				<button class="btn btn--m btn--black btn--flat botonCategoria" ng-click ="vm.busqueda('PARQUE TEMATICO')">
-			        <span style="font-weight:bold" >Parques Tematicos</span>
-			    </button>
-			    <button class="btn btn--m btn--black btn--flat botonCategoria" ng-click ="vm.busqueda('LOCAL')" >
-			        <span style="font-weight:bold" >Locales de ocio</span>
-			    </button>	
-			    <button class="btn btn--m btn--black btn--flat botonCategoria"  ng-click ="vm.busqueda('ACTIVIDAD')" >
-			        <span style="font-weight:bold" >Actividades</span>
-			    </button>
-			    
-			    <button class="btn btn--m btn--black btn--flat botonCategoria"  ng-click="vm.opendDialog('test')" >
-			        <span style="font-weight:bold" >Anadir producto</span>
-			    </button>
-			    	
+	<!-- BARRA SUPERIOR -->
+	<div flex-item
+		style="box-shadow: 0px 4px 6px 1px rgba(119, 119, 119, 0.17);">
+		<div class="card bgc-indigo-500">
+			<div class="toolbar">
+				<span class="toolbar__label fs-title tc-white-1 ml"><img
+					src="/images/dawlogo.png" height=50> Administracion</span>
+
+				<div class="toolbar__right">
+					<button class="btn btn--l btn--white btn--icon sobreIconoRojo"
+						ng-click="vm.desconectar()" lx-ripple>
+						<i class="mdi mdi-close-circle-outline sobreIconoRojo"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- BARRA INFERIOR -->
+	<div style="background-color: white-silver;">
+
+		<button class="btn btn--m btn--black btn--flat botonCategoria"
+			ng-click="vm.busqueda('Todos')">
+			<span style="font-weight: bold">Todos</span>
+		</button>
+		<button class="btn btn--m btn--black btn--flat botonCategoria"
+			ng-click="vm.busqueda('VIDEOGAME')">
+			<span style="font-weight: bold">Videogames</span>
+		</button>
+		<button class="btn btn--m btn--black btn--flat botonCategoria"
+			ng-click="vm.busqueda('LIBRO')">
+			<span style="font-weight: bold">Libros</span>
+		</button>
+		<button class="btn btn--m btn--black btn--flat botonCategoria"
+			ng-click="vm.busqueda('PELICULA')">
+			<span style="font-weight: bold">Peliculas</span>
+		</button>
+		<button class="btn btn--m btn--black btn--flat botonCategoria"
+			ng-click="vm.busqueda('PARQUE TEMATICO')">
+			<span style="font-weight: bold">Parques Tematicos</span>
+		</button>
+		<button class="btn btn--m btn--black btn--flat botonCategoria"
+			ng-click="vm.busqueda('LOCAL')">
+			<span style="font-weight: bold">Locales de ocio</span>
+		</button>
+		<button class="btn btn--m btn--black btn--flat botonCategoria"
+			ng-click="vm.busqueda('ACTIVIDAD')">
+			<span style="font-weight: bold">Actividades</span>
+		</button>
+
+		<button class="btn btn--m btn--black btn--flat botonCategoria"
+			ng-click="vm.opendDialog('test')">
+			<span style="font-weight: bold">Anadir producto</span>
+		</button>
+
 	</div>
 	<div class="barraMostrando">
-			Mostrando: <span>{{vm.objetivoBusqueda}}</span>
-	</div>	
-	
-	<div class="data-table-container">
-	
-	
-			<table class="data-table data-table--has-primary ">
-
-				
-		        <tbody> 
-		        	<tr class="fondoTablaAdmin"><td colspan="100%" class="divider divider--dark"  ng-show="vm.objetivoBusqueda == 'Todos'"><span class="tituloTablaAdmin">Videojuegos</span></td></tr>		  
-		        	<tr  class="data-table__clickable-row" ng-repeat="game in vm.videogames " ng-show="game.class_type == vm.objetivoBusqueda || vm.objetivoBusqueda == 'Todos'">
-		              		
-			                <td>			                   	                    
-			                    <lx-thumbnail thumbnail-src="/images/{{game.image}}" thumbnail-width="60" thumbnail-height="60"></lx-thumbnail>
-			                </td>
-			                <td>
-			                    <span>Nombre: {{game.name}}</span>
-			                </td>
-			                <td>
-			                    <span>Plataforma: {{game.platform}}</span>
-			                </td>
-			                <td>
-			                    <span>Pegi: {{game.pegi_age}} </span>
-			                </td>
-			                <td>
-			                	<button class="btn btn--m btn--blue btn--raised" ng-click="" lx-ripple>Editar</button>
-			                </td>	
-			                <td>
-			                	<button class="btn btn--m btn--red btn--raised" ng-click="vm.borrarVideojuego(game)" lx-ripple>Eliminar</button>
-			                </td>	
-			                        
-		            </tr>	
-		            
-		            <!-- Siguiente categoria -->	
-		            
-		            	<tr class="fondoTablaAdmin"><td colspan="100%" class="divider divider--dark"  ng-show="vm.objetivoBusqueda == 'Todos'"><span class="tituloTablaAdmin">Libros</span></td></tr>	   
-		            <tr class="data-table__clickable-row" ng-repeat="book in vm.books" ng-show="book.class_type == vm.objetivoBusqueda || vm.objetivoBusqueda == 'Todos'">
-			                <td>	           	                    
-			                    <lx-thumbnail thumbnail-src="/images/{{book.image}}" thumbnail-width="60" thumbnail-height="60"></lx-thumbnail>
-			                </td>
-			                
-			                <td>
-			                    <span>Titulo: {{book.title}}</span>
-			                </td>
-			                <td>
-			                    <span>Genero: {{book.genre}}</span>
-			                </td>
-			                <td>
-			                    <span>Escritor: {{book.writer}}</span>
-			                </td>
-			                <td>
-			                	<button class="btn btn--m btn--blue btn--raised" ng-click="" lx-ripple>Editar</button>
-			                </td>	
-			                <td>
-			                	<button class="btn btn--m btn--red btn--raised" ng-click="" lx-ripple>Eliminar</button>
-			                </td>			                
-		            </tr>	
-		            
-		             <!-- Siguiente categoria -->
-		             	
-		            <tr class="fondoTablaAdmin"><td colspan="100%" class="divider divider--dark"  ng-show="vm.objetivoBusqueda == 'Todos'"><span class="tituloTablaAdmin">Peliculas</span></td></tr>		
-		        	<tr  class="data-table__clickable-row" ng-repeat="movie in vm.movies " ng-show="movie.class_type == vm.objetivoBusqueda || vm.objetivoBusqueda == 'Todos'">
-		              	
-			                <td>			                   	                    
-			                    <lx-thumbnail thumbnail-src="/images/{{movie.photo}}" thumbnail-width="60" thumbnail-height="60"></lx-thumbnail>
-			                </td>
-			                <td>
-			                    <span>Titulo: {{movie.title}}</span>
-			                </td>
-			                <td>
-			                    <span>Director: {{movie.director}}</span>
-			                </td>
-			                <td>
-			                    <span>Duracion: {{movie.duration}} minutos</span>
-			                </td>	
-			                <td>
-			                	<button class="btn btn--m btn--blue btn--raised" ng-click="" lx-ripple>Editar</button>
-			                </td>	
-			                <td>
-			                	<button class="btn btn--m btn--red btn--raised" ng-click="" lx-ripple>Eliminar</button>
-			                </td>		                
-		            </tr>
-		            
-		             <!-- Siguiente categoria -->
-		             
-		            <tr class="fondoTablaAdmin"><td colspan="100%" class="divider divider--dark"  ng-show="vm.objetivoBusqueda == 'Todos'"><span class="tituloTablaAdmin">Parques tematicos</span></td></tr>		  
-		        	<tr  class="data-table__clickable-row" ng-repeat="park in vm.parks "  ng-show="park.class_type == vm.objetivoBusqueda || vm.objetivoBusqueda == 'Todos'">
-		              		
-			                <td>			                   	                    
-			                    <lx-thumbnail thumbnail-src="/images/{{park.image_park}}" thumbnail-width="60" thumbnail-height="60"></lx-thumbnail>
-			                </td>
-			                <td>
-			                    <span>Nombre: {{park.name_park}}</span>
-			                </td>
-			                <td>
-			                    <span>Tipo: {{park.kind_park}}</span>
-			                </td>
-			                <td>
-			                    <span>Precio: {{park.price_park}} euros</span>
-			                </td>
-			                <td>
-			                	<button class="btn btn--m btn--blue btn--raised" ng-click="" lx-ripple>Editar</button>
-			                </td>	
-			                <td>
-			                	<button class="btn btn--m btn--red btn--raised" ng-click="" lx-ripple>Eliminar</button>
-			                </td>			                
-		            </tr>	
-		            
-		             <!-- Siguiente categoria -->
-		             
-		            <tr class="fondoTablaAdmin"><td colspan="100%" class="divider divider--dark"  ng-show="vm.objetivoBusqueda == 'Todos'"><span class="tituloTablaAdmin">Ocio en locales</span></td></tr>		
-		        	<tr  class="data-table__clickable-row" ng-repeat="local in vm.locals "  ng-show="local.class_type == vm.objetivoBusqueda || vm.objetivoBusqueda == 'Todos'">
-		              		
-			                <td>			                   	                    
-			                    <lx-thumbnail thumbnail-src="/images/{{local.photo}}" thumbnail-width="60" thumbnail-height="60"></lx-thumbnail>
-			                </td>
-			                <td>
-			                    <span>Nombre: {{local.name}}</span>
-			                </td>
-			                <td>
-			                    <span>Tipo local: {{local.local_type}}</span>
-			                </td>
-			                <td>
-			                    <span>Precio medio: {{local.price_medium}} euros</span>
-			                </td>	
-			                <td>
-			                	<button class="btn btn--m btn--blue btn--raised" ng-click="" lx-ripple>Editar</button>
-			                </td>	
-			                <td>
-			                	<button class="btn btn--m btn--red btn--raised" ng-click="" lx-ripple>Eliminar</button>
-			                </td>		                
-		            </tr>	
-		            
-		             <!-- Siguiente categoria -->
-		             
-		             <tr class="fondoTablaAdmin"><td colspan="100%" class="divider divider--dark"  ng-show="vm.objetivoBusqueda == 'Todos'"><span class="tituloTablaAdmin">Actividades al aire libre</span></td></tr>	 
-		        	<tr  class="data-table__clickable-row" ng-repeat="actividad in vm.actividades "  ng-show="actividad.class_type == vm.objetivoBusqueda || vm.objetivoBusqueda == 'Todos'">
-		              		
-			                <td>			                   	                    
-			                    <lx-thumbnail thumbnail-src="/images/{{actividad.image_activity}}" thumbnail-width="60" thumbnail-height="60"></lx-thumbnail>
-			                </td>
-			                <td>
-			                    <span>Nombre: {{actividad.name}}</span>
-			                </td>
-			                <td>
-			                    <span>Riesgo de la actividad: {{actividad.risk}}</span>
-			                </td>
-			                <td>
-			                    <span>Precio: {{actividad.price}} euros</span>
-			                </td>
-			                <td>
-			                	<button class="btn btn--m btn--blue btn--raised" ng-click="" lx-ripple>Editar</button>
-			                </td>	
-			                <td>
-			                	<button class="btn btn--m btn--red btn--raised" ng-click="" lx-ripple>Eliminar</button>
-			                </td>			                
-		            </tr>	
-		                       
-		        </tbody>
-		        
-		    </table>
-			
-		   
-    
-		    
+		Mostrando: <span>{{vm.objetivoBusqueda}}</span>
 	</div>
-	
-	<lx-dialog class="dialog dialog--l" id="test" auto-close="true" onclose="vm.closingDialog()" onscrollend="scrollEndDialog()">
-    <div class="dialog__header" >
-        <div class="bgc-blue-grey-500 pl++ pt++ pb++">      	    
-          	<span class="fs-display-2 display-block tc-white">{{vm.game}}</span>
-			<span class="fs-title display-block tc-grey-50">Autor: {{vm.autorSelec}}</span>               
-        </div>         
-    </div>
 
-    <div class="dialog__content">
-    	<div class="card">
-    <lx-tabs>
-        <lx-tab heading="{{vm.game}}">
-            <p class="p+">formulario juegos</p>
-        </lx-tab>
+	<div class="data-table-container">
 
-        <lx-tab heading="{{vm.libro}}">
-            <p class="p+">Formularios libros</p>
-        </lx-tab>
 
-        <lx-tab heading="{{vm.pelicula}}">
-            <p class="p+">formulario peliculas</p>
-        </lx-tab>
-        <lx-tab heading="{{vm.parque}}">
-            <p class="p+">formulario parque</p>
-        </lx-tab>
-        <lx-tab heading="{{vm.local}}">
-            <p class="p+">formulario local</p>
-        </lx-tab>
-        <lx-tab heading="{{vm.actividad}}">
-            <p class="p+">formulario actividad</p>
-        </lx-tab>
-    </lx-tabs>
-	</div>       
-    </div>
+		<table class="data-table data-table--has-primary ">
 
-    <div class="dialog__actions">
-        <button class="btn btn--m btn--black btn--flat botonCategoria bgc-red-300" lx-ripple lx-dialog-close>Cerrar</button>       
-    </div>
-</lx-dialog>
-	
-	
-   
+
+			<tbody>
+				<tr class="fondoTablaAdmin">
+					<td colspan="100%" class="divider divider--dark"
+						ng-show="vm.objetivoBusqueda == 'Todos'"><span
+						class="tituloTablaAdmin">Videojuegos</span></td>
+				</tr>
+				<tr class="data-table__clickable-row"
+					ng-repeat="game in vm.videogames "
+					ng-show="game.class_type == vm.objetivoBusqueda || vm.objetivoBusqueda == 'Todos'">
+
+					<td><lx-thumbnail thumbnail-src="/images/{{game.image}}"
+							thumbnail-width="60" thumbnail-height="60"></lx-thumbnail></td>
+					<td><span>Nombre: {{game.name}}</span></td>
+					<td><span>Plataforma: {{game.platform}}</span></td>
+					<td><span>Pegi: {{game.pegi_age}} </span></td>
+					<td>
+						<button class="btn btn--m btn--blue btn--raised" ng-click=""
+							lx-ripple>Editar</button>
+					</td>
+					<td>
+						<button class="btn btn--m btn--red btn--raised"
+							ng-click="vm.borrarVideojuego(game)" lx-ripple>Eliminar</button>
+					</td>
+
+				</tr>
+
+				<!-- Siguiente categoria -->
+
+				<tr class="fondoTablaAdmin">
+					<td colspan="100%" class="divider divider--dark"
+						ng-show="vm.objetivoBusqueda == 'Todos'"><span
+						class="tituloTablaAdmin">Libros</span></td>
+				</tr>
+				<tr class="data-table__clickable-row" ng-repeat="book in vm.books"
+					ng-show="book.class_type == vm.objetivoBusqueda || vm.objetivoBusqueda == 'Todos'">
+					<td><lx-thumbnail thumbnail-src="/images/{{book.image}}"
+							thumbnail-width="60" thumbnail-height="60"></lx-thumbnail></td>
+
+					<td><span>Titulo: {{book.title}}</span></td>
+					<td><span>Genero: {{book.genre}}</span></td>
+					<td><span>Escritor: {{book.writer}}</span></td>
+					<td>
+						<button class="btn btn--m btn--blue btn--raised" ng-click=""
+							lx-ripple>Editar</button>
+					</td>
+					<td>
+						<button class="btn btn--m btn--red btn--raised" ng-click=""
+							lx-ripple>Eliminar</button>
+					</td>
+				</tr>
+
+				<!-- Siguiente categoria -->
+
+				<tr class="fondoTablaAdmin">
+					<td colspan="100%" class="divider divider--dark"
+						ng-show="vm.objetivoBusqueda == 'Todos'"><span
+						class="tituloTablaAdmin">Peliculas</span></td>
+				</tr>
+				<tr class="data-table__clickable-row"
+					ng-repeat="movie in vm.movies "
+					ng-show="movie.class_type == vm.objetivoBusqueda || vm.objetivoBusqueda == 'Todos'">
+
+					<td><lx-thumbnail thumbnail-src="/images/{{movie.photo}}"
+							thumbnail-width="60" thumbnail-height="60"></lx-thumbnail></td>
+					<td><span>Titulo: {{movie.title}}</span></td>
+					<td><span>Director: {{movie.director}}</span></td>
+					<td><span>Duracion: {{movie.duration}} minutos</span></td>
+					<td>
+						<button class="btn btn--m btn--blue btn--raised" ng-click=""
+							lx-ripple>Editar</button>
+					</td>
+					<td>
+						<button class="btn btn--m btn--red btn--raised" ng-click=""
+							lx-ripple>Eliminar</button>
+					</td>
+				</tr>
+
+				<!-- Siguiente categoria -->
+
+				<tr class="fondoTablaAdmin">
+					<td colspan="100%" class="divider divider--dark"
+						ng-show="vm.objetivoBusqueda == 'Todos'"><span
+						class="tituloTablaAdmin">Parques tematicos</span></td>
+				</tr>
+				<tr class="data-table__clickable-row" ng-repeat="park in vm.parks "
+					ng-show="park.class_type == vm.objetivoBusqueda || vm.objetivoBusqueda == 'Todos'">
+
+					<td><lx-thumbnail thumbnail-src="/images/{{park.image_park}}"
+							thumbnail-width="60" thumbnail-height="60"></lx-thumbnail></td>
+					<td><span>Nombre: {{park.name_park}}</span></td>
+					<td><span>Tipo: {{park.kind_park}}</span></td>
+					<td><span>Precio: {{park.price_park}} euros</span></td>
+					<td>
+						<button class="btn btn--m btn--blue btn--raised" ng-click=""
+							lx-ripple>Editar</button>
+					</td>
+					<td>
+						<button class="btn btn--m btn--red btn--raised" ng-click=""
+							lx-ripple>Eliminar</button>
+					</td>
+				</tr>
+
+				<!-- Siguiente categoria -->
+
+				<tr class="fondoTablaAdmin">
+					<td colspan="100%" class="divider divider--dark"
+						ng-show="vm.objetivoBusqueda == 'Todos'"><span
+						class="tituloTablaAdmin">Ocio en locales</span></td>
+				</tr>
+				<tr class="data-table__clickable-row"
+					ng-repeat="local in vm.locals "
+					ng-show="local.class_type == vm.objetivoBusqueda || vm.objetivoBusqueda == 'Todos'">
+
+					<td><lx-thumbnail thumbnail-src="/images/{{local.photo}}"
+							thumbnail-width="60" thumbnail-height="60"></lx-thumbnail></td>
+					<td><span>Nombre: {{local.name}}</span></td>
+					<td><span>Tipo local: {{local.local_type}}</span></td>
+					<td><span>Precio medio: {{local.price_medium}} euros</span></td>
+					<td>
+						<button class="btn btn--m btn--blue btn--raised" ng-click=""
+							lx-ripple>Editar</button>
+					</td>
+					<td>
+						<button class="btn btn--m btn--red btn--raised" ng-click=""
+							lx-ripple>Eliminar</button>
+					</td>
+				</tr>
+
+				<!-- Siguiente categoria -->
+
+				<tr class="fondoTablaAdmin">
+					<td colspan="100%" class="divider divider--dark"
+						ng-show="vm.objetivoBusqueda == 'Todos'"><span
+						class="tituloTablaAdmin">Actividades al aire libre</span></td>
+				</tr>
+				<tr class="data-table__clickable-row"
+					ng-repeat="actividad in vm.actividades "
+					ng-show="actividad.class_type == vm.objetivoBusqueda || vm.objetivoBusqueda == 'Todos'">
+
+					<td><lx-thumbnail
+							thumbnail-src="/images/{{actividad.image_activity}}"
+							thumbnail-width="60" thumbnail-height="60"></lx-thumbnail></td>
+					<td><span>Nombre: {{actividad.name}}</span></td>
+					<td><span>Riesgo de la actividad: {{actividad.risk}}</span></td>
+					<td><span>Precio: {{actividad.price}} euros</span></td>
+					<td>
+						<button class="btn btn--m btn--blue btn--raised" ng-click=""
+							lx-ripple>Editar</button>
+					</td>
+					<td>
+						<button class="btn btn--m btn--red btn--raised" ng-click=""
+							lx-ripple>Eliminar</button>
+					</td>
+				</tr>
+
+			</tbody>
+
+		</table>
+
+
+
+
+	</div>
+
+	<lx-dialog class="dialog dialog--l" id="test" auto-close="true"
+		onclose="vm.closingDialog()" onscrollend="scrollEndDialog()">
+	<div class="dialog__header">
+		<div class="bgc-blue-grey-500 pl++ pt++ pb++">
+			<span class="fs-display-2 display-block tc-white">{{vm.game}}</span>
+			<span class="fs-title display-block tc-grey-50">Autor:
+				{{vm.autorSelec}}</span>
+		</div>
+	</div>
+
+	<div class="dialog__content">
+		<div class="card">
+			<lx-tabs> <lx-tab heading="{{vm.game}}">
+			<p class="p+">formulario juegos
+			<div flex-container="row" flex-gutter="24">
+				<div flex-item>
+					<lx-text-field class="mr+" label="Nombre del juego ">
+					<input type="text" ng-model="vm.game_name"> </lx-text-field>
+				</div>
+				<div flex-item>
+					<lx-text-field class="mr+" label="Desarrollador">
+					<input type="text" ng-model="vm.game_development"> </lx-text-field>
+				</div>
+				<div flex-item>
+		        <lx-text-field  class="mr+" label="Plataforma">
+		            <input type="text" ng-model="vm.game_platform">
+		        </lx-text-field>
+		    </div>
+		    <div flex-item>
+		        <lx-text-field  class="mr+" label="Editor">
+		            <input type="text" ng-model="vm.game_editor">
+		        </lx-text-field>
+		    </div>
+		    <div flex-item>
+		        <lx-text-field  class="mr+" label="Descripcion">
+		            <input type="text" ng-model="vm.game_description">
+		        </lx-text-field>
+		    </div>
+
+			</div>
+			
+			</p>
+			</lx-tab> <lx-tab heading="{{vm.libro}}">
+			<p class="p+">Formularios libros</p>
+			</lx-tab> <lx-tab heading="{{vm.pelicula}}">
+			<p class="p+">formulario peliculas</p>
+			</lx-tab> <lx-tab heading="{{vm.parque}}">
+			<p class="p+">formulario parque</p>
+			</lx-tab> <lx-tab heading="{{vm.local}}">
+			<p class="p+">formulario local</p>
+			</lx-tab> <lx-tab heading="{{vm.actividad}}">
+			<p class="p+">formulario actividad</p>
+			</lx-tab> </lx-tabs>
+		</div>
+	</div>
+
+	<div class="dialog__actions">
+		<button
+			class="btn btn--m btn--black btn--flat botonCategoria bgc-red-300"
+			lx-ripple lx-dialog-close>Cerrar</button>
+	</div>
+	</lx-dialog>
+
+
+
 </div>
 
-	

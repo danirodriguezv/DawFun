@@ -32,10 +32,12 @@
 			lx-dropdown-toggle>Categoria</button>
 		<lx-dropdown-menu>
 		<ul>
-			<li><a class="dropdown-link">DRAMA</a></li>
-			<li><a class="dropdown-link">ACCION</a></li>
-			<li><a class="dropdown-link">TERROR</a></li>
-			<li><a class="dropdown-link">COMEDIA</a></li>
+			<li><a class="dropdown-link" ng-click="vm.busqueda('Todos')">Todos</a></li>
+			<li class="dropdown-divider"></li>
+			<li><a class="dropdown-link" ng-click="vm.busqueda('DRAMA')">DRAMA</a></li>
+			<li><a class="dropdown-link" ng-click="vm.busqueda('ACCION')">ACCION</a></li>
+			<li><a class="dropdown-link" ng-click="vm.busqueda('TERROR')">TERROR</a></li>
+			<li><a class="dropdown-link" ng-click="vm.busqueda('COMEDIA')">COMEDIA</a></li>
 		</ul>
 		</lx-dropdown-menu> </lx-dropdown>
 
@@ -44,8 +46,8 @@
 
 	<!-- TABLA -->
 	<div flex-item>
-        <div class="card cards" ng-repeat="movie in vm.movies"
-					ng-click="vm.opendDialog('test',movie)">
+        <div class="card cards" ng-repeat="movie in vm.movies | orderBy:vm.ordenadoPor"
+					ng-click="vm.opendDialog('test',movie)" ng-show="movie.type == vm.objetivoBusqueda || vm.objetivoBusqueda == 'Todos'">
 			<div class="card__img card__img--left photocard" style="height: 160px;width:100%">
                     <img src="/images/{{movie.photo}}">
                     

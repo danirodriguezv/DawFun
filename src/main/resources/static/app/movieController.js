@@ -13,6 +13,10 @@ function movieController(movieService, $routeParams, $location, LxNotificationSe
 	//Controller logic
 	
 	vm.movies = movieService.getMovies();
+	vm.objetivoBusqueda = 'Todos';
+	vm.ordenadoPor = 'title';
+	vm.categorias = ["DRAMA","COMEDIA","ACCION","TERROR"];
+		
 	vm.namemovie;
 	vm.direct;
 	vm.actor;
@@ -23,6 +27,14 @@ function movieController(movieService, $routeParams, $location, LxNotificationSe
 	vm.movieimage;
 	vm.type_movie;
 	//Controller actions
+	vm.busqueda = function(categoria){
+		vm.objetivoBusqueda = categoria;
+	}
+	
+	vm.indicarOrden = function(orden){
+		vm.ordenadoPor = orden;
+	}
+	
 	
 	vm.opendDialog = function(dialogId,movie)
 	{

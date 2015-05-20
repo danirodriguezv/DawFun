@@ -7,13 +7,13 @@ function riesgoService($resource) {
 		this.riesgos = [];
 		
 		
-		var riesgoResource = $resource('outdoors/:id',{id: '@id'},{update:{method:"PUT"}});
+		var RiesgoResource = $resource('outdoors/:id',{id: '@id'},{update:{method:"PUT"}});
 		
 		//var BooResource = $resource('books/:id',{id: '@id'},{update:{method:"PUT"}});
 
 	
 		this.getRiesgos = function(){
-			riesgos = riesgoResource.query();
+			riesgos = RiesgoResource.query();
 			return riesgos;
 		}
 }

@@ -29,7 +29,7 @@
 		style="box-shadow: 0px 4px 6px 1px rgba(119, 119, 119, 0.17); background-color: white-silver;">
 		<lx-dropdown>
 		<button class="btn btn--m btn--black btn--flat botonCategoria"
-			lx-ripple lx-dropdown-toggle>RIESGO {{vm.objetivoBusqueda}}</button>
+			lx-ripple lx-dropdown-toggle>RIESGO {{vm.objetivoBusqueda}}{{riesgo.risk}}</button>
 		<lx-dropdown-menu>
 		<ul>
 			<li><a class="dropdown-link" ng-click="vm.busqueda('Todos')">Todos</a></li>
@@ -95,7 +95,7 @@
 					</div>
 					<div class="p+ bgc-blue-grey-300">
 						<span class="fs-subhead display-block">Riesgo</span> <span
-							class="fs-display-0.5 display-block">{{vm.risk2}}</span>
+							class="fs-display-0.5 display-block">{{vm.show}}</span>
 					</div>
 					<div class="p+ bgc-blue-grey-300">
 						<span class="fs-subhead display-block">Duracion de la

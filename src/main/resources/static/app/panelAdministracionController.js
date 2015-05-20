@@ -57,6 +57,12 @@ function panelAdministracionController(adminService,bookService,movieService,loc
 	};
 	
 	
+	vm.borrarParque = function(park){		
+		var posicion = vm.parks.indexOf(park);		
+		parkService.deletePark(park);	
+		vm.parks.splice(posicion, 1);
+	};
+	
 	vm.opendDialog = function(dialogId)
 	{
 		vm.game = vm.tipos[0];

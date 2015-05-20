@@ -338,6 +338,18 @@ public class Controller implements CommandLineRunner {
 		return serviceDawFun.getPark(idPark);
 	}
 	
+	
+	@RequestMapping(value = "/parks/{id}", method = RequestMethod.DELETE)
+	public @ResponseBody boolean deletePark(@PathVariable long id) {
+		boolean borrado= false;
+		if(user.isAdmin()){
+			serviceDawFun.getRepoParks().delete(id);	
+			borrado=true;
+		}
+		return borrado;
+	}
+	
+	
 	//Metodos del controlador de los videojuegos
 	
 	@RequestMapping(value = "/videogames", method = RequestMethod.POST)

@@ -439,6 +439,17 @@ public class Controller implements CommandLineRunner {
 		return serviceDawFun.getLocal(idLocal);
 	}
 	
+	@RequestMapping(value = "/locals/{id}", method = RequestMethod.DELETE)
+	public @ResponseBody boolean deleteLocal(@PathVariable long id) {
+		boolean borrado= false;
+		if(user.isAdmin()){
+			serviceDawFun.getRepoLocals().delete(id);	
+			borrado=true;
+		}
+		return borrado;
+	}
+	
+	
 	//Metodos del controlador de usuarios
 
 	

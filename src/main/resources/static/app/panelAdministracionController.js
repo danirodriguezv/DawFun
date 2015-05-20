@@ -63,6 +63,14 @@ function panelAdministracionController(adminService,bookService,movieService,loc
 		vm.parks.splice(posicion, 1);
 	};
 	
+	vm.borrarLocal = function(local){		
+		var posicion = vm.locals.indexOf(local);		
+		localService.deleteLocal(local);	
+		vm.locals.splice(posicion, 1);
+	};
+	
+	
+	
 	vm.opendDialog = function(dialogId)
 	{
 		vm.game = vm.tipos[0];

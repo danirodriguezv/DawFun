@@ -1,8 +1,8 @@
 angular.module("app").service("localService", localService);
 
-localService.$inject = ["$resource"];
+localService.$inject = ["$resource","$http","LxNotificationService"];
 
-function localService($resource) {
+function localService($resource,$http,LxNotificationService) {
 
 		this.locals = [];
 		
@@ -15,5 +15,17 @@ function localService($resource) {
 		this.getLocals = function(){
 			locals = localResource.query();
 			return locals;
+		}
+		
+		this.deleteLocal=function(local) {				
+			$http.delete('/locals/'+ local.id).success(function (d) { 					
+				if(d===true){
+					LxNotificationService.notify('Borrado Correctamente', 'emoticon', false, 'green');
+				}else{
+					LxNotificationService.notify('Error al borrar, actualizar pagina', 'emoticon', false, 'red');
+				}
+				
+			});	
+				
 		}
 }

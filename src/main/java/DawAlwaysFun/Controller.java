@@ -258,6 +258,20 @@ public class Controller implements CommandLineRunner {
 		return serviceDawFun.getBook(idBook);
 	}
 	
+	@RequestMapping(value = "/books/{id}", method = RequestMethod.DELETE)
+	public @ResponseBody boolean deleteBook(@PathVariable long id) {
+		boolean borrado= false;
+		if(user.isAdmin()){
+			serviceDawFun.getRepoBooks().delete(id);	
+			borrado=true;
+		}
+		return borrado;
+	}
+	
+	
+	
+	
+	
 	//Metodos del controlador de las peliculas
 	@RequestMapping(value = "/movies", method = RequestMethod.POST)
 	public ResponseEntity<Movie> addMovie(@RequestBody Movie movie){

@@ -34,19 +34,19 @@ function panelAdministracionController(adminService,bookService,movieService,loc
 		vm.objetivoBusqueda = tipo;
 	};
 
-	vm.borrarVideojuego = function(game){
-		
-		var posicion = vm.videogames.indexOf(game);
-		
+	vm.borrarVideojuego = function(game){		
+		var posicion = vm.videogames.indexOf(game);		
 		videogameService.deleteVideogame(game);	
+		vm.videogames.splice(posicion, 1);
+		};
 		
-		
-		vm.videogames.splice(posicion, 1); 		
-		
-
-
+		//
+	vm.borrarLibro = function(libro){		
+		var posicion = vm.books.indexOf(libro);		
+		bookService.deleteBook(libro);	
+		vm.books.splice(posicion, 1);
 	};
-
+	
 	
 	vm.opendDialog = function(dialogId)
 	{

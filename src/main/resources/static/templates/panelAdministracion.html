@@ -236,16 +236,14 @@
 		onclose="vm.closingDialog()" onscrollend="scrollEndDialog()">
 	<div class="dialog__header">
 		<div class="bgc-blue-grey-500 pl++ pt++ pb++">
-			<span class="fs-display-2 display-block tc-white">{{vm.game}}</span>
-			<span class="fs-title display-block tc-grey-50">Autor:
-				{{vm.autorSelec}}</span>
+			<span class="fs-display-2 display-block tc-white">Categorias</span>
 		</div>
 	</div>
 
 	<div class="dialog__content">
 		<div class="card">
 			<lx-tabs> <lx-tab heading="{{vm.game}}">
-			<p class="p+">formulario juegos
+			<p class="p+">
 			<div flex-container="row" flex-gutter="24">
 				<div flex-item>
 					<lx-text-field class="mr+" label="Nombre del juego ">
@@ -275,7 +273,48 @@
 			
 			</p>
 			</lx-tab> <lx-tab heading="{{vm.libro}}">
-			<p class="p+">Formularios libros</p>
+			<p class="p+">
+				<div flex-container="row" flex-gutter="24">
+				<div flex-item>
+					<lx-text-field class="mr+" label="Titulo del libro ">
+					<input type="text" ng-model="vm.libro_title"> </lx-text-field>
+				</div>
+				<div flex-item>
+					<lx-text-field class="mr+" label="Escritor">
+					<input type="text" ng-model="vm.libro_escritor"> </lx-text-field>
+				</div>
+				<div flex-item>
+		        <lx-text-field  class="mr+" label="Editorial">
+		            <input type="text" ng-model="vm.libro_editorial">
+		        </lx-text-field>
+		    </div>
+		    <div flex-item>
+		        <lx-text-field  class="mr+" label="Sinopsis">
+		            <input type="text" ng-model="vm.libro_sinopsis">
+		        </lx-text-field>
+		    </div>
+		    <div flex-item>
+		        <lx-text-field  class="mr+" label="Genero">
+		            <input type="text" ng-model="vm.libro_genero">
+		        </lx-text-field>
+		    </div>
+
+			</div>
+			
+			<div class="mt++" flex-container="row" flex-gutter="24">
+        	<div flex-item>
+        		<lx-text-field label="ISBN" fixed-label="true" icon="web">
+                	<input type="text" ng-model="vm.libro_isbn">
+            	</lx-text-field>
+        	</div>
+        	<div flex-item>
+        		<lx-text-field label="Num paginas" fixed-label="true" icon="format-list-numbers">
+                	<input type="text" ng-model="vm.libro_paginas">
+            	</lx-text-field>
+        	</div>
+        </div>
+			
+			</p>
 			</lx-tab> <lx-tab heading="{{vm.pelicula}}">
 			<p class="p+">formulario peliculas</p>
 			</lx-tab> <lx-tab heading="{{vm.parque}}">

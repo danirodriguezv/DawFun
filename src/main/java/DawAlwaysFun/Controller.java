@@ -86,7 +86,7 @@ public class Controller implements CommandLineRunner {
 		Book libro5 = new Book();
 		libro5.setTitle("El Padrino");
 		libro5.setWriter("Mario Puzo");
-		libro5.setGenre("Novela negra");
+		libro5.setGenre("Novela Negra");
 		libro5.setImage("padrino.jpg");
 		libro5.setPublisher("EDICIONES B");
 		libro5.setPageNumber(477);

@@ -9,6 +9,10 @@ function localController(localService, $routeParams, $location, LxNotificationSe
 	//View model properties
 	vm.locals = [];
 	
+	vm.objetivoBusqueda = 'Todos';
+	
+	vm.ordenadoPor = "name";
+	vm.categorias = ["PUB","RESTAURANTE"];
 		
 	//Controller logic
 	

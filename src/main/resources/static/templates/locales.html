@@ -32,8 +32,8 @@
 					<ul>
 						<li><a class="dropdown-link" ng-click="vm.busqueda('Todos')">TODOS</a></li> 
 			        	<li class="dropdown-divider"></li>
-			            <li><a class="dropdown-link" ng-click="vm.busqueda('Pubs')">PUBS</a></li>
-			            <li><a class="dropdown-link" ng-click="vm.busqueda('Restaurantes')">RESTAURANTES</a></li> 
+			            <li><a class="dropdown-link" ng-click="vm.busqueda('PUB')">PUBS</a></li>
+			            <li><a class="dropdown-link" ng-click="vm.busqueda('RESTAURANTE')">RESTAURANTES</a></li> 
 			            <li class="dropdown-divider"></li>
 			            <li><span class="dropdown-link dropdown-link--is-header">Otras categorias</span></li>
 			            <li><a class="dropdown-link" ng-click="vm.busqueda('Otros')">Otros</a></li>
@@ -48,24 +48,24 @@
 
 	<div flex-container="row" flex-gutter="24">
 	
-     <div flex-item   ng-repeat="local in vm.locals"
-					ng-click="vm.opendDialog('test',local)">
-        <div class="card">
-            <div flex-container="row">
-                <div class="card__img card__img--left" style="height: 160px">
-                    <img src="/images/{{local.photo}}">
-                </div>
-
-                <div flex-item flex-container="column">
-                    <div flex-item>
-                        <div class="p++">
-                            <strong class="fs-headline display-block">{{local.name}}</strong>
-                             <strong class="fs-headline display-block">Direccion: {{local.address}}</strong>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+		<div flex-item   ng-repeat="local in vm.locals | orderBy: vm.ordenadoPor"  ng-click="vm.opendDialog('test',local)" ng-show="local.local_type==vm.objetivoBusqueda || vm.objetivoBusqueda=='Todos'" class="cards">        
+	        <div class="card">
+	            <div flex-container="row">
+	                <div class="card__img card__img--left" style="height: 160px">
+	                    <img src="/images/{{local.photo}}">
+	                </div>
+	
+	                <div flex-item flex-container="column">
+	                    <div flex-item>
+	                        <div class="p++">
+	                            <strong class="fs-headline display-block">{{local.name}}</strong>
+	                             <strong class="fs-headline display-block">Direccion: {{local.address}}</strong>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
     </div>
 
 	<!-- DIALOG -->	

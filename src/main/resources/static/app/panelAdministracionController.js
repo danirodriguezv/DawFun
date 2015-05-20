@@ -19,6 +19,8 @@ function panelAdministracionController(adminService,bookService,movieService,loc
 	
 	vm.objetivoBusqueda = 'Todos';
 	
+	vm.tipos = ["VIDEOGAME","LIBRO","PELICULA","PARQUE TEMATICO","LOCAL","ACTIVIDAD"];
+	
 	vm.books = bookService.getBooks();
 	vm.movies = movieService.getMovies();
 	vm.locals = localService.getLocals();
@@ -30,17 +32,40 @@ function panelAdministracionController(adminService,bookService,movieService,loc
 	
 	vm.busqueda = function(tipo){
 		vm.objetivoBusqueda = tipo;
-	}
+	};
 
 	vm.borrarVideojuego = function(game){
 		
 		var posicion = vm.videogames.indexOf(game);
 		
 		videogameService.deleteVideogame(game);
+<<<<<<< HEAD
 		
 		vm.videogames.splice(posicion, 1); 		
 		
 	}
+=======
+	};
+>>>>>>> origin/master
 	
+	vm.opendDialog = function(dialogId)
+	{
+		vm.game = vm.tipos[0];
+		vm.libro = vm.tipos[1];
+		vm.pelicula = vm.tipos[2];
+		vm.parque = vm.tipos[3];
+		vm.local = vm.tipos[4];
+		vm.actividad = vm.tipos[5];
+	    LxDialogService.open(dialogId);
+	};
+	
+	vm.closingDialog = function()
+	{
+	    LxNotificationService.info('Ficha cerrada');
+	};
+	
+	vm.volver= function(){
+		$location.path("/");
+	}
 	
 };

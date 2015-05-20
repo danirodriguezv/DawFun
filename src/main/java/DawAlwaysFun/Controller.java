@@ -316,14 +316,14 @@ public class Controller implements CommandLineRunner {
 	@RequestMapping(value = "/books", method = RequestMethod.POST)
 	public ResponseEntity<Book> addBook(@RequestBody Book book){
 		serviceDawFun.setBook(book);
-		System.out.println("entra3");
+	
 		return new ResponseEntity<>(book, HttpStatus.CREATED);
 	}
 	
 
-	@RequestMapping(value = "/books", method = RequestMethod.GET) //entra aqui si pide getBooks
+	@RequestMapping(value = "/books", method = RequestMethod.GET) 
 	public List<Book> getBooks(){
-		System.out.println("entra2");
+	
 		return serviceDawFun.getBooks();
 	}
 	
@@ -513,16 +513,16 @@ public class Controller implements CommandLineRunner {
 	
 	@RequestMapping(value = "/access/{nom}/{pass}", method = RequestMethod.GET)
 	public boolean validateAdmin(@PathVariable String	nom, @PathVariable String	pass){
-		System.out.println("dasd"+nom+pass);
+		
 		if(nom.equals("admin")&&pass.equals("1234")){			
 			user.setAdmin(true);			
 		}
-		System.out.println(user.isAdmin());
+
 		return user.isAdmin();		
 		
 	}
 	
-	@RequestMapping(value = "/access/", method = RequestMethod.POST) //FUNCIONA SIIIIIIIII
+	@RequestMapping(value = "/access/", method = RequestMethod.POST) 
 	public @ResponseBody boolean validateAdmin2(@RequestBody String cuerpo){
 		
 		
@@ -538,7 +538,7 @@ public class Controller implements CommandLineRunner {
 	public @ResponseBody boolean disconectAdmin(){
 				
 		user.setAdmin(false);	
-		System.out.println(user.isAdmin());
+		
 		
 		return user.isAdmin();		
 		

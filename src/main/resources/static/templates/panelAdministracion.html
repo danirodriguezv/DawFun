@@ -40,6 +40,9 @@
 			    <button class="btn btn--m btn--black btn--flat botonCategoria"  ng-click ="vm.busqueda('ACTIVIDAD')" lx-ripple lx-dropdown-toggle>
 			        <span style="font-weight:bold" >Actividades</span>
 			    </button>	
+	</div>
+	<div class="barraMostrando">
+			Mostrando: <span>{{vm.objetivoBusqueda}}</span>
 	</div>	
 	
 	<div class="data-table-container">
@@ -47,9 +50,9 @@
 	
 			<table class="data-table data-table--has-primary ">
 
-				<h2>{{vm.objetivoBusqueda}}</h2>
+				
 		        <tbody> 
-		        		  
+		        	<tr class="fondoTablaAdmin"><td colspan="100%" class="divider divider--dark"  ng-show="vm.objetivoBusqueda == 'Todos'"><span class="tituloTablaAdmin">Videojuegos</span></td></tr>		  
 		        	<tr  class="data-table__clickable-row" ng-repeat="game in vm.videogames " ng-show="game.class_type == vm.objetivoBusqueda || vm.objetivoBusqueda == 'Todos'">
 		              		
 			                <td>			                   	                    
@@ -71,8 +74,7 @@
 			                	<button class="btn btn--m btn--red btn--raised" ng-click="" lx-ripple>Eliminar</button>
 			                </td>	
 			                        
-		            </tr>
-		           <tr><td colspan="100%" class="divider divider--dark"></td></tr>
+		            </tr>		          
 		        </tbody>
 		        
 		    </table>
@@ -81,7 +83,7 @@
 
 				 	
 		        <tbody >   
-		           	   
+		           	<tr class="fondoTablaAdmin"><td colspan="100%" class="divider divider--dark"  ng-show="vm.objetivoBusqueda == 'Todos'"><span class="tituloTablaAdmin">Libros</span></td></tr>	   
 		            <tr class="data-table__clickable-row" ng-repeat="book in vm.books" ng-show="book.class_type == vm.objetivoBusqueda || vm.objetivoBusqueda == 'Todos'">
 			                <td>	           	                    
 			                    <lx-thumbnail thumbnail-src="/images/{{book.image}}" thumbnail-width="60" thumbnail-height="60"></lx-thumbnail>
@@ -103,7 +105,7 @@
 			                	<button class="btn btn--m btn--red btn--raised" ng-click="" lx-ripple>Eliminar</button>
 			                </td>			                
 		            </tr>	
-		            <tr><td colspan="100%" class="divider divider--dark"></td></tr>
+		          
 		            
 		             
 		            
@@ -116,7 +118,7 @@
 
 		
 		        <tbody> 
-		        		
+		        	<tr class="fondoTablaAdmin"><td colspan="100%" class="divider divider--dark"  ng-show="vm.objetivoBusqueda == 'Todos'"><span class="tituloTablaAdmin">Peliculas</span></td></tr>		
 		        	<tr  class="data-table__clickable-row" ng-repeat="movie in vm.movies " ng-show="movie.class_type == vm.objetivoBusqueda || vm.objetivoBusqueda == 'Todos'">
 		              	
 			                <td>			                   	                    
@@ -138,7 +140,7 @@
 			                	<button class="btn btn--m btn--red btn--raised" ng-click="" lx-ripple>Eliminar</button>
 			                </td>		                
 		            </tr>
-		            <tr><td colspan="100%" class="divider divider--dark"></td></tr>		
+		            		
 		        </tbody>
 		        
 		    </table>
@@ -147,7 +149,7 @@
 
 		
 		        <tbody> 
-		        		  
+		        	<tr class="fondoTablaAdmin"><td colspan="100%" class="divider divider--dark"  ng-show="vm.objetivoBusqueda == 'Todos'"><span class="tituloTablaAdmin">Parques tematicos</span></td></tr>		  
 		        	<tr  class="data-table__clickable-row" ng-repeat="park in vm.parks "  ng-show="park.class_type == vm.objetivoBusqueda || vm.objetivoBusqueda == 'Todos'">
 		              		
 			                <td>			                   	                    
@@ -169,7 +171,7 @@
 			                	<button class="btn btn--m btn--red btn--raised" ng-click="" lx-ripple>Eliminar</button>
 			                </td>			                
 		            </tr>	
-		            <tr><td colspan="100%" class="divider divider--dark"></td></tr>	
+		           
 		        </tbody>
 		        
 		    </table>
@@ -178,7 +180,7 @@
 
 		
 		        <tbody> 
-		        		
+		        	<tr class="fondoTablaAdmin"><td colspan="100%" class="divider divider--dark"  ng-show="vm.objetivoBusqueda == 'Todos'"><span class="tituloTablaAdmin">Ocio en locales</span></td></tr>		
 		        	<tr  class="data-table__clickable-row" ng-repeat="local in vm.locals "  ng-show="local.class_type == vm.objetivoBusqueda || vm.objetivoBusqueda == 'Todos'">
 		              		
 			                <td>			                   	                    
@@ -200,7 +202,7 @@
 			                	<button class="btn btn--m btn--red btn--raised" ng-click="" lx-ripple>Eliminar</button>
 			                </td>		                
 		            </tr>	
-		            <tr><td colspan="100%" class="divider divider--dark"></td></tr>	
+		          
 		        </tbody>
 		        
 		    </table>
@@ -210,7 +212,7 @@
 
 		
 		        <tbody> 
-		        		 
+		        	<tr class="fondoTablaAdmin"><td colspan="100%" class="divider divider--dark"  ng-show="vm.objetivoBusqueda == 'Todos'"><span class="tituloTablaAdmin">Actividades al aire libre</span></td></tr>	 
 		        	<tr  class="data-table__clickable-row" ng-repeat="actividad in vm.actividades "  ng-show="actividad.class_type == vm.objetivoBusqueda || vm.objetivoBusqueda == 'Todos'">
 		              		
 			                <td>			                   	                    
@@ -232,7 +234,7 @@
 			                	<button class="btn btn--m btn--red btn--raised" ng-click="" lx-ripple>Eliminar</button>
 			                </td>			                
 		            </tr>	
-		            <tr><td colspan="100%" class="divider divider--dark"></td></tr>	
+		            	
 		        </tbody>
 		        
 		    </table>

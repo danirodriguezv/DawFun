@@ -247,29 +247,29 @@
 			<div flex-container="row" flex-gutter="24">
 				<div flex-item>
 					<lx-text-field class="mr+" label="Nombre del juego ">
-					<input type="text" ng-model="vm.game_name"> </lx-text-field>
+					<input type="text" ng-model="vm.nuevoVideojuego.name"> </lx-text-field>
 				</div>
 				<div flex-item>
 					<lx-text-field class="mr+" label="Desarrollador"> <input
-						type="text" ng-model="vm.game_development"> </lx-text-field>
+						type="text" ng-model="vm.nuevoVideojuego.development"> </lx-text-field>
 				</div>
 				<div flex-item>
 					<lx-text-field class="mr+" label="Plataforma"> <input
-						type="text" ng-model="vm.game_platform"> </lx-text-field>
+						type="text" ng-model="vm.nuevoVideojuego.platform"> </lx-text-field>
 				</div>
 				<div flex-item>
 					<lx-text-field class="mr+" label="Editor"> <input
-						type="text" ng-model="vm.game_editor"> </lx-text-field>
+						type="text" ng-model="vm.nuevoVideojuego.publisher"> </lx-text-field>
 				</div>
 				<div flex-item>
 					<lx-text-field class="mr+" label="Descripcion"> <input
-						type="text" ng-model="vm.game_description"> </lx-text-field>
+						type="text" ng-model="vm.nuevoVideojuego.description"> </lx-text-field>
 				</div>
 
 			</div>
 			<div class="mt++" flex-container="row" flex-gutter="24">
 				<div flex-item>
-					<lx-select class="ml+" ng-model="vm.genero_game"
+					<lx-select class="ml+" ng-model="vm.nuevoVideojuego.category"
 						placeholder="Genero" choices="vm.generogame" floating-label>
 					<lx-select-selected> {{ $selected}} </lx-select-selected> <lx-select-choices>
 					{{ $choice }} </lx-select-choices> </lx-select>
@@ -278,7 +278,7 @@
 			</div>
 			<div class="mt++" flex-container="row" flex-gutter="24">
 				<div flex-item>
-					<lx-select class="ml+" ng-model="vm.pegis_game" placeholder="Pegi"
+					<lx-select class="ml+" ng-model="vm.nuevoVideojuego.pegi_age" placeholder="Pegi"
 						choices="vm.pegi" floating-label> <lx-select-selected>
 					{{ $selected}} </lx-select-selected> <lx-select-choices> {{ $choice
 					}} </lx-select-choices> </lx-select>
@@ -288,7 +288,7 @@
 			<div class="mt++" flex-container="row" flex-gutter="24">
 				<div flex-item>
 					<button
-			class="btn btn--m btn--black btn--flat botonCategoria bgc-blue-300"
+			class="btn btn--m btn--black btn--flat botonCategoria bgc-blue-300" ng-click="vm.aniadirVideojuego()"
 			lx-ripple>Aceptar datos</button>
 
 				</div>

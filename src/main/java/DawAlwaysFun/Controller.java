@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 
+
 @RestController
 public class Controller implements CommandLineRunner {
 
@@ -488,9 +489,11 @@ public class Controller implements CommandLineRunner {
 	
 	@RequestMapping(value = "/videogames", method = RequestMethod.POST)
 	public ResponseEntity<Videogame> addVideogame(@RequestBody Videogame videogame){
+		System.out.println("entra");
 		serviceDawFun.setVideogame(videogame);
 		return new ResponseEntity<>(videogame, HttpStatus.CREATED);
 	}
+		
 	
 
 	@RequestMapping(value = "/videogames", method = RequestMethod.GET)

@@ -32,6 +32,14 @@ function videogameService($resource,$http,LxNotificationService) {
 				
 		}
 		
+		this.addVideogame=function(video) {			
+			new videogameResource(video).$save(function(post) {
+				this.videoclub.push(post);
+				LxNotificationService.notify('Añadido Correctamente', 'emoticon', false, 'green');
+			});
+			
+		}
+		
 		
 		
 		

@@ -136,6 +136,45 @@ public class Controller implements CommandLineRunner {
 		serviceDawFun.setMovie(movie4);
 		
 		
+		Movie movie5 = new Movie();
+		movie5.setDescription("La accion transcurre en Judea, el año 30. El imperio romano, dueño y señor del mundo conocido, gobierna con mano de hierro sus vastos territorios, entre ellos Judea, sometiendo con dureza a sus moradores");
+		movie5.setDirector("William Wyler");
+		movie5.setDuration(212);
+		movie5.setLeading_actor("Charlton Heston");
+		movie5.setMovie_trailer("De momento sin trailer");
+		movie5.setPhoto("benHur.jpg");
+		movie5.setProduction("Metro-Goldwyn-Mayer");
+		movie5.setTitle("Ben-Hur");
+		movie5.setType("DRAMA");
+		movie5.setClass_type("PELICULA");
+		serviceDawFun.setMovie(movie5);
+			
+		Movie movie6 = new Movie();
+		movie6.setDescription("Ambientada en la Inglaterra del futuro (el año 1995, pero visto desde 1965) la pelicula sigue la vida de un carismatico joven de 17 años llamado Alex DeLarge cuyos placeres son escuchar la musica de Beethoven, el sexo y la ultraviolencia");
+		movie6.setDirector("Stanley Kubrick");
+		movie6.setDuration(136);
+		movie6.setLeading_actor("Malcolm McDowell");
+		movie6.setMovie_trailer("De momento sin trailer");
+		movie6.setPhoto("narMecanica.jpg");
+		movie6.setProduction("WarnerBros");
+		movie6.setTitle("La naranja mecanica");
+		movie6.setType("DRAMA");
+		movie6.setClass_type("PELICULA");
+		serviceDawFun.setMovie(movie6);
+		
+		Movie movie7 = new Movie();
+		movie7.setDescription("Año 2018. Torrente sale de la carcel, y se encuentra aturdido ante una España convulsa y dividida. Debe encontrar respuestas en su interior para despejar su confusion, y por ello decide convertirse en un 'fuera de la ley'");
+		movie7.setDirector("Santiago Segura");
+		movie7.setDuration(105);
+		movie7.setLeading_actor("Santiago Segura");
+		movie7.setMovie_trailer("De momento sin trailer");
+		movie7.setPhoto("torrenteV.jpg");
+		movie7.setProduction("Amiguetes Entertainment");
+		movie7.setTitle("Torrente V: Operacion Eurovegas");
+		movie7.setType("COMEDIA");
+		movie7.setClass_type("PELICULA");
+		serviceDawFun.setMovie(movie7);
+		
 		Thepark park = new Thepark();
 		park.setAddress_park("Casa de campo");
 		park.setCheck_park(true);

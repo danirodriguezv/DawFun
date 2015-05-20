@@ -75,6 +75,13 @@ function panelAdministracionController(adminService,bookService,movieService,loc
 	};
 	
 	
+	vm.borrarActividad = function(actividad){		
+		var posicion = vm.actividades.indexOf(actividad);		
+		riesgoService.deleteActividad(actividad);	
+		vm.actividades.splice(posicion, 1);
+	};
+	
+	
 	
 	vm.opendDialog = function(dialogId)
 	{

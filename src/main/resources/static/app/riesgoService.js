@@ -1,8 +1,8 @@
 angular.module("app").service("riesgoService", riesgoService);
 
-riesgoService.$inject = ["$resource"];
+riesgoService.$inject = ["$resource","$http","LxNotificationService"];
 
-function riesgoService($resource) {
+function riesgoService($resource,$http,LxNotificationService) {
 
 		this.riesgos = [];
 		
@@ -15,5 +15,17 @@ function riesgoService($resource) {
 		this.getActividades = function(){
 			riesgos = RiesgoResource.query();
 			return riesgos;
+		}
+		
+		this.deleteActividad=function(actividad) {				
+			$http.delete('/outdoors/'+ actividad.id).success(function (d) { 					
+				if(d===true){
+					LxNotificationService.notify('Borrado Correctamente', 'emoticon', false, 'green');
+				}else{
+					LxNotificationService.notify('Error al borrar, actualizar pagina', 'emoticon', false, 'red');
+				}
+				
+			});	
+				
 		}
 }

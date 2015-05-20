@@ -394,6 +394,16 @@ public class Controller implements CommandLineRunner {
 		return serviceDawFun.getOutdoor(idActivity);
 	}
 	
+	@RequestMapping(value = "/outdoors/{id}", method = RequestMethod.DELETE)
+	public @ResponseBody boolean deleteOutdoor(@PathVariable long id) {
+		boolean borrado= false;
+		if(user.isAdmin()){
+			serviceDawFun.getRepoOutdoors().delete(id);	
+			borrado=true;
+		}
+		return borrado;
+	}
+	
 	//Metodos del controlador de los parques tematicos
 	
 	@RequestMapping(value = "/parks", method = RequestMethod.POST)

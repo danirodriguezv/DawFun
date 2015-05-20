@@ -83,6 +83,42 @@ public class Controller implements CommandLineRunner {
 		game2.setClass_type("VIDEOGAME");
 		serviceDawFun.setVideogame(game2);
 		
+		Videogame game3 = new Videogame();
+		game3.setName("FIFA 15");
+		game3.setPegi_age(3);
+		game3.setCategory("TERCERA PERSONA");
+		game3.setDescription("FIFA 15 recrea con todo detalle el futbol para que los aficionados sientan la emocion del deporte rey como nunca antes");
+		game3.setPlatform("XBOX ONE");
+		game3.setPublisher("EA");
+		game3.setDevelopment("EA SPORTS");
+		game3.setImage("fifa15.jpg");
+		game3.setClass_type("VIDEOGAME");
+		serviceDawFun.setVideogame(game3);
+		
+		Videogame game4 = new Videogame();
+		game4.setName("World of Warcraft: Warlords of Draenor");
+		game4.setPegi_age(12);
+		game4.setCategory("ROL");
+		game4.setDescription("La Horda de Hierro debe ser detenida. Garrosh Grito Infernal ha escapado al pasado y se ha reunido con su padre, Grommash, feroz lider del clan Grito de Guerra. Juntos, convertiran a los clanes orcos de Draenor en una brutal maquina belica");
+		game4.setPlatform("PC");
+		game4.setPublisher("BLIZZARD ");
+		game4.setDevelopment("BLIZZARD ENTERTAINMENT");
+		game4.setImage("wow.jpg");
+		game4.setClass_type("VIDEOGAME");
+		serviceDawFun.setVideogame(game4);
+		
+		Videogame game5 = new Videogame();
+		game5.setName("Star Wars: Battlefront");
+		game5.setPegi_age(16);
+		game5.setCategory("SHOOTER");
+		game5.setDescription("Sumérgete en tus fantasías de combate de Star Wars con Star Wars: Battlefront");
+		game5.setPlatform("PC");
+		game5.setPublisher("EA");
+		game5.setDevelopment("EA GAMES");
+		game5.setImage("battlefront.jpg");
+		game5.setClass_type("VIDEOGAME");
+		serviceDawFun.setVideogame(game5);
+		
 		Movie movie = new Movie();
 		movie.setDescription("La ultima pelicula de los heroes mas heroicos, los autenticos Vengadores");
 		movie.setDirector("Michael doogleas");

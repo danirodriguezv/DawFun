@@ -17,11 +17,11 @@ function riesgoController(riesgoService, $routeParams, $location, LxNotification
 	
 	vm.riesgos = riesgoService.getRiesgos();
 	vm.name;
-	vm.descrip;
+	vm.descrip2;
 	vm.price;
 	vm.age;
 	vm.direc;
-	vm.risk;
+	vm.riesg2;
 	vm.image;
 	vm.dur;
 	
@@ -38,11 +38,11 @@ function riesgoController(riesgoService, $routeParams, $location, LxNotification
 	vm.opendDialog = function(dialogId,riesgo)
 	{
 		vm.name = riesgo.name;
-		vm.descrip = riesgo.description;
+		vm.descrip2 = riesgo.description;
 		vm.price = riesgo.price;
 		vm.age = riesgo.age_recomended;
 		vm.direc = riesgo.address;
-		vm.risk = riesgo.risk;
+		vm.riesg2 = riesgo.risk;
 		vm.image = riesgo.image;
 		vm.dur = riesgo.duration;
 	    LxDialogService.open(dialogId);

@@ -64,18 +64,18 @@
 		<table
 			class="data-table data-table--has-primary data-table--has-secondary">
 			<thead>
-				<tr>
-					<th></th>
-					<th>Nombre videojuego</th>
-					<th>Plataforma</th>
-					<th>Editorial</th>
-					<th></th>
-				</tr>
-				<tr>
-					<td></td>
-					<td colspan="3" class="divider divider--dark"></td>
-				</tr>
-			</thead>
+		            <tr>
+		                <th></th>
+		                <th class="orden" ng-click="vm.indicarOrden('name')"><span class="fs-headline display-block">Nombre</span></th>
+		                <th class="orden" ng-click="vm.indicarOrden('platform')"><span class="fs-headline display-block">Plataforma</span></th>
+		                <th class="orden" ng-click="vm.indicarOrden('publisher')"><span class="fs-headline display-block">Editorial</span></th>
+		                
+		            </tr>
+		            <tr>
+		                <td></td>
+		                <td colspan="3" class="divider divider--dark"></td>
+		            </tr>
+		    </thead>
 
 			<tbody>
 				<tr class="data-table__clickable-row"

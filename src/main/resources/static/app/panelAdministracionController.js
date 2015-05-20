@@ -33,8 +33,13 @@ function panelAdministracionController(adminService,bookService,movieService,loc
 	}
 
 	vm.borrarVideojuego = function(game){
-		alert("alemnos");
+		
+		var posicion = vm.videogames.indexOf(game);
+		
 		videogameService.deleteVideogame(game);
+		
+		vm.videogames.splice(posicion, 1); 		
+		
 	}
 	
 	

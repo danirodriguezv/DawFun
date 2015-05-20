@@ -22,11 +22,8 @@ function videogameService($resource,$http) {
 			return book;
 		}*/
 			
-		this.deleteVideogame=function(video) {
-			
-			$http.delete('/videogames/'+ video.id);	
-			
-			
+		this.deleteVideogame=function(video) {				
+			$http.delete('/videogames/'+ video.id);
 		}
 		
 		

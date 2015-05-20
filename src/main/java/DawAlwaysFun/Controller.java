@@ -360,9 +360,22 @@ public class Controller implements CommandLineRunner {
 			user.setAdmin(true);			
 		}
 		System.out.println(user.isAdmin());
-		return user.isAdmin();
+		return user.isAdmin();		
 		
-		//return serviceDawKine.getMovie(idMovie);
+	}
+	
+	@RequestMapping(value = "/access/", method = RequestMethod.POST)
+	public boolean validateAdmin2(@RequestBody String cuerpo){
+		
+		System.out.println(cuerpo);
+		boolean esAdmin = cuerpo.contentEquals("nom=admin&pass=1234");
+		System.out.println(esAdmin);
+		
+		user.setAdmin(esAdmin);
+		
+		System.out.println("La sesion es: "+user.isAdmin());
+		return user.isAdmin();		
+		
 	}
 	
 	

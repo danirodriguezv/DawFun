@@ -1,8 +1,8 @@
 angular.module("app").service("adminService", adminService);
 
-adminService.$inject = [ "$resource"];
+adminService.$inject = [ "$resource","$http"];
 
-function adminService($resource) {
+function adminService($resource,$http) {
 
 		this.log ;
 		
@@ -19,6 +19,15 @@ function adminService($resource) {
 		var AdminResource = $resource('/access/:usuario/:pass',{usuario:'admin',pass:'1234'});
 		
 		this.isAdmin = function(use,pass){	
+			
+			alert("hola");
+			$http.get('/access/'+use+'/'pass)
+		    .success(function (data,status) {
+		       // $scope.info_show = data
+		        this.resultado=data
+		    });
+			
+			
 			/*this.user=use;
 			this.pass=pass;
 			var log = AdminResource.get();	

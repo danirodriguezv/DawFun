@@ -109,7 +109,14 @@
 		    <div flex-item="4" flex-item-order="1">
 		    	<div class="p">
 		    		<img ng-src="/images/{{vm.gameimage}}" width=100% height=100%>
+		    	</div>	
+		    	<div class="p+ bgc-green-300" ng-show="{{vm.recomendado}} >= 0">
+		    		<span class="fs-subhead display-block">RECOMENDADO</span>		    		
 		    	</div>
+		    	<div class="p+ bgc-red-300" ng-show="{{vm.recomendado}} < 0">
+		    		<span class="fs-subhead display-block">NO RECOMENDADO</span>		    		
+		    	</div>		    	
+		    	
 		    </div>
 		    <div flex-item="8" flex-item-order="2">
 		    	<div class="p+ bgc-blue-grey-300">
@@ -136,6 +143,8 @@
 		    		<span class="fs-subhead display-block">PEGI</span>
 		    		<span class="fs-display-0.5 display-block">{{vm.pegi}}</span>
 		    	</div>
+		    	
+		    	    	
 		    </div>		    
 		</div>
     

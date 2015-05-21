@@ -51,6 +51,7 @@ function videogameController(videogameService, $routeParams, $location, LxNotifi
 		vm.categ = game.category;
 		vm.desc = game.description;
 		vm.gameimage = game.image;
+		vm.recomendado= game.recomendado;
 	    LxDialogService.open(dialogId);
 	};
 

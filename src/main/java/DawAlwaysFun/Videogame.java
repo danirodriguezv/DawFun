@@ -21,6 +21,7 @@ public class Videogame{
 	private String image;
 	private String description;
 	private String class_type;
+	private int recomendado;
 	
 	public String getClass_type() {
 		return class_type;
@@ -81,5 +82,11 @@ public class Videogame{
 	}
 	public void setImage(String image) {
 		this.image = image;
+	}
+	public int getRecomendado() {
+		return recomendado;
+	}
+	public void setRecomendado(int recomendado) {
+		this.recomendado = recomendado;
 	}
 }

@@ -185,13 +185,22 @@ function panelAdministracionController(adminService,bookService,movieService,loc
 	
 /****** EDITAR PELICULA*****/
 	
-	vm.editarPelicula = function(cosa){		
-		vm.peliculaEditada=cosa;
+	vm.editarPelicula = function(peli){		
+		vm.peliculaEditada=peli;
 		LxDialogService.open("editarPelicula");
 	}
 	
 	vm.aniadirPeliculaEditada=function(){			
 		movieService.updatePelicula(vm.peliculaEditada);		
+	}
+	
+/****** EDITAR LOCAL*****/
+	
+	vm.editarLocal = function(loc){		
+		vm.localEditado=loc;
+		LxDialogService.open("editarLocal");
+	}
+	
 	}
 	
 	

@@ -36,4 +36,10 @@ function localService($resource,$http,LxNotificationService) {
 			});
 			
 		};
+		
+		this.updateLocal=function(loc){			
+			$http.put('/locals/', loc);
+			LxNotificationService.notify('Actualizado Correctamente', 'emoticon', false, 'green');			
+			
+		};
 }

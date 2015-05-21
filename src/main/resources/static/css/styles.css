@@ -31,7 +31,8 @@
 
 .fotoPersonal:hover{
 	-webkit-transform: scale(1.5);
-	transition: background-color .50s;
+	-webkit-transition-duration: 300ms;
+    -webkit-transition-timing-function: ease-out;
     transform: scale(1.5);
     
 }

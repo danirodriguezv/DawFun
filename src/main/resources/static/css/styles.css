@@ -279,8 +279,9 @@
 
 .footer{
 	background: #f9f8ba;
-  min-height: 5em;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+  	min-height: 5em;
+ 	position: absolute;
+  	margin-top: 150px;
+  	width: 100%;
+  	clear: both;
 }

@@ -14,5 +14,6 @@ function RouteConfig($routeProvider){
 	$routeProvider.when('/locales',{ templateUrl : "templates/locales.html"});
 	$routeProvider.when('/outdoors',{ templateUrl : "templates/actividadesR.html"});
 	$routeProvider.when('/panelAdmin',{ templateUrl : "templates/panelAdministracion.html"});
+	$routeProvider.when('/acercaDe',{ templateUrl : "templates/acercaDe.html"});
 	
 }

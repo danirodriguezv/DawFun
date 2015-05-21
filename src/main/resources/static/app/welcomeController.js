@@ -26,5 +26,9 @@ function welcomeController($routeParams, $location, LxNotificationService,LxDial
 		$location.path("/"+sitio);
 	}
 	
+	vm.acerca = function(sitio){
+		$location.path("/"+sitio);
+	}
+	
 	
 };

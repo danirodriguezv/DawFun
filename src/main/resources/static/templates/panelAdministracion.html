@@ -353,23 +353,23 @@
 			<div flex-container="row" flex-gutter="24">
 				<div flex-item>
 					<lx-text-field class="mr+" label="Titulo"> <input
-						type="text" ng-model="vm.peli_title"> </lx-text-field>
+						type="text" ng-model="vm.nuevaPeli.title"> </lx-text-field>
 				</div>
 				<div flex-item>
 					<lx-text-field class="mr+" label="Director"> <input
-						type="text" ng-model="vm.peli_director"> </lx-text-field>
+						type="text" ng-model="vm.nuevaPeli.director"> </lx-text-field>
 				</div>
 				<div flex-item>
 					<lx-text-field class="mr+" label="Actor principal">
-					<input type="text" ng-model="vm.peli_actor"> </lx-text-field>
+					<input type="text" ng-model="vm.nuevaPeli.leading_actor"> </lx-text-field>
 				</div>
 				<div flex-item>
 					<lx-text-field class="mr+" label="Productora"> <input
-						type="text" ng-model="vm.peli_productora"> </lx-text-field>
+						type="text" ng-model="vm.nuevaPeli.production"> </lx-text-field>
 				</div>
 				<div flex-item>
 					<lx-text-field class="mr+" label="Duracion (min)">
-					<input type="text" ng-model="vm.peli_duracion"> </lx-text-field>
+					<input type="text" ng-model="vm.nuevaPeli.duration"> </lx-text-field>
 				</div>
 
 			</div>
@@ -377,12 +377,12 @@
 			<div class="mt++" flex-container="row" flex-gutter="24">
 				<div flex-item>
 					<lx-text-field label="Descripcion" fixed-label="true" icon="web">
-					<input type="text" ng-model="vm.peli_descripcion"> </lx-text-field>
+					<input type="text" ng-model="vm.nuevaPeli.description"> </lx-text-field>
 				</div>
 			</div>
 			<div class="mt++" flex-container="row" flex-gutter="24">
 				<div flex-item>
-					<lx-select class="ml+" ng-model="vm.pelis_tipos"
+					<lx-select class="ml+" ng-model="vm.nuevaPeli.type"
 						placeholder="Tipo" choices="vm.tipo_pelis" floating-label>
 					<lx-select-selected> {{ $selected}} </lx-select-selected> <lx-select-choices>
 					{{ $choice }} </lx-select-choices> </lx-select>
@@ -393,7 +393,7 @@
 				<div flex-item>
 					<button
 			class="btn btn--m btn--black btn--flat botonCategoria bgc-blue-300"
-			lx-ripple lx-dialog-close>Aceptar datos</button>
+			lx-ripple lx-dialog-close ng-click="vm.aniadirPelicula()">Aceptar datos</button>
 
 				</div>
 			</div>

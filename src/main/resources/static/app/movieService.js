@@ -30,4 +30,12 @@ function movieService($resource,$http,LxNotificationService) {
 			});	
 				
 		}
+		
+		this.addPelicula=function(peli) {			
+			new moviesResource(peli).$save(function(post) {
+				this.movies.push(post);
+				LxNotificationService.notify('Añadido Correctamente', 'emoticon', false, 'green');
+			});
+			
+		};
 }

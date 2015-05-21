@@ -38,7 +38,7 @@ function bookService($resource,$http,LxNotificationService) {
 		
 		this.addLibro=function(libro) {			
 			new BookResource(libro).$save(function(post) {
-				this.videoclub.push(post);
+				this.books.push(post);
 				LxNotificationService.notify('Añadido Correctamente', 'emoticon', false, 'green');
 			});
 			

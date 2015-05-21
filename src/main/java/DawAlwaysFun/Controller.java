@@ -38,7 +38,7 @@ public class Controller implements CommandLineRunner {
 		Book libro = new Book();
 		libro.setTitle("El ingenioso hidalgo Don Quijote de la Mancha");
 		libro.setWriter("Miguel de Cervantes");
-		libro.setGenre("Fantastico");
+		libro.setGenre("Otros");
 		libro.setImage("quijote.jpg");
 		libro.setPublisher("ESPASA LIBROS");
 		libro.setPageNumber(1560);
@@ -62,7 +62,7 @@ public class Controller implements CommandLineRunner {
 		Book libro3 = new Book();
 		libro3.setTitle("Cien años de soledad");
 		libro3.setWriter("Gabriel Garcia Marquez");
-		libro3.setGenre("Humanistico");
+		libro3.setGenre("Otros");
 		libro3.setImage("cien.jpg");
 		libro3.setPublisher("ALFAGUARA");
 		libro3.setPageNumber(471);

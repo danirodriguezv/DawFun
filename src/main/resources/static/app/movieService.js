@@ -44,5 +44,11 @@ function movieService($resource,$http,LxNotificationService) {
 			LxNotificationService.notify('Actualizado Correctamente', 'emoticon', false, 'green');			
 			
 		};
+		
+		this.valorarMovie=function(movie){			
+			$http.put('/movies/valorar', movie);
+			LxNotificationService.notify('Voto realizado', 'emoticon', false, 'green');			
+			
+		}
 
 }

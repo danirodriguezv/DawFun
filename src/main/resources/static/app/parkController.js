@@ -35,8 +35,26 @@ function parkController(parkService, $routeParams, $location, LxNotificationServ
 		vm.checkSelec = park.check_park;		
 		vm.imagenSelec = park.image_park;
 		vm.kindSelec = park.kind_park;
+		
+		vm.recomendado= park.recomendado;
+		vm.parkAvotar=park;
+		
 	    LxDialogService.open(dialogId);
 	};
+	
+	vm.votarPositivo=function(){
+		
+		vm.parkAvotar.recomendado=vm.parkAvotar.recomendado+1;
+		parkService.valorarPark(vm.parkAvotar);
+		
+	}
+	
+	vm.votarNegativo=function(){	
+		
+		vm.parkAvotar.recomendado=vm.parkAvotar.recomendado-1;
+		parkService.valorarPark(vm.parkAvotar);
+		
+	}
 
 	vm.closingDialog = function()
 	{		

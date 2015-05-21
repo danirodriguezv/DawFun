@@ -24,7 +24,16 @@ public class Local{
 	private int capacity;
 	private String local_type;
 	private String class_type;
+	private int recomendado;
 	
+	
+	
+	public int getRecomendado() {
+		return recomendado;
+	}
+	public void setRecomendado(int recomendado) {
+		this.recomendado = recomendado;
+	}
 	public String getLocal_type() {
 		return local_type;
 	}

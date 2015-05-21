@@ -43,6 +43,12 @@ function bookService($resource,$http,LxNotificationService) {
 			});
 			
 		}
+		
+		this.updateLibro=function(libro){			
+			$http.put('/books/', libro);
+			LxNotificationService.notify('Actualizado Correctamente', 'emoticon', false, 'green');			
+			
+		}
 
 		
 		

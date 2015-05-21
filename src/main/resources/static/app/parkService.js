@@ -26,4 +26,12 @@ function parkService($resource,$http,LxNotificationService) {
 			});	
 				
 		}
+		
+		this.addParque=function(parque) {			
+			new ParkResource(parque).$save(function(post) {
+				this.parks.push(post);
+				LxNotificationService.notify('Añadido Correctamente', 'emoticon', false, 'green');
+			});
+			
+		};
 }

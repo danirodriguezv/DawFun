@@ -404,27 +404,27 @@
 			<div flex-container="row" flex-gutter="24">
 				<div flex-item>
 					<lx-text-field class="mr+" label="Nombre"> <input
-						type="text" ng-model="vm.parque_nombre"> </lx-text-field>
+						type="text" ng-model="vm.nuevoParque.name_park"> </lx-text-field>
 				</div>
 				<div flex-item>
 					<lx-text-field class="mr+" label="Direccion"> <input
-						type="text" ng-model="vm.parque_direccion"> </lx-text-field>
+						type="text" ng-model="vm.nuevoParque.address_park"> </lx-text-field>
 				</div>
 				<div flex-item>
 					<lx-text-field class="mr+" label="_______Apertura">
-					<input type="time" ng-model="vm.parque_apertura" /> </lx-text-field>
+					<input type="time" ng-model="vm.nuevoParque.open_park" /> </lx-text-field>
 				</div>
 				<div flex-item>
 					<lx-text-field class="mr+" label="_______Cierre"> <input
-						type="time" ng-model="vm.parque_cierre" /> </lx-text-field>
+						type="time" ng-model="vm.nuevoParque.close_park" /> </lx-text-field>
 				</div>
 				<div flex-item>
 					<lx-text-field class="mr+" label="Provincia"> <input
-						type="text" ng-model="vm.parque_provincia"> </lx-text-field>
+						type="text" ng-model="vm.nuevoParque.province_park"> </lx-text-field>
 				</div>
 				<div flex-item>
 					<lx-text-field class="mr+" label="Precio"> <input
-						type="text" ng-model="vm.parque_precio"> </lx-text-field>
+						type="text" ng-model="vm.nuevoParque.price_park"> </lx-text-field>
 				</div>
 
 			</div>
@@ -432,12 +432,12 @@
 			<div class="mt++" flex-container="row" flex-gutter="24">
 				<div flex-item>
 					<lx-text-field label="Descripcion" fixed-label="true" icon="web">
-					<input type="text" ng-model="vm.parque_descripcion"> </lx-text-field>
+					<input type="text" ng-model="vm.nuevoParque.description_park"> </lx-text-field>
 				</div>
 			</div>
 			<div class="mt++" flex-container="row" flex-gutter="24">
 				<div flex-item>
-					<lx-select class="ml+" ng-model="vm.cheque" placeholder="Permite cheque"
+					<lx-select class="ml+" ng-model="vm.nuevoParque.check_park" placeholder="Permite cheque"
 						choices="vm.permite" floating-label> <lx-select-selected>
 					{{ $selected}} </lx-select-selected> <lx-select-choices> {{ $choice
 					}} </lx-select-choices> </lx-select>
@@ -446,7 +446,7 @@
 			</div>
 			<div class="mt++" flex-container="row" flex-gutter="24">
 				<div flex-item>
-					<lx-select class="ml+" ng-model="vm.parque_tipo" placeholder="Tipo"
+					<lx-select class="ml+" ng-model="vm.nuevoParque.kind_park" placeholder="Tipo"
 						choices="vm.tipo_parque" floating-label> <lx-select-selected>
 					{{ $selected}} </lx-select-selected> <lx-select-choices> {{ $choice
 					}} </lx-select-choices> </lx-select>
@@ -457,7 +457,7 @@
 				<div flex-item>
 					<button
 			class="btn btn--m btn--black btn--flat botonCategoria bgc-blue-300"
-			lx-ripple lx-dialog-close>Aceptar datos</button>
+			lx-ripple lx-dialog-close ng-click="aniadirParque()">Aceptar datos</button>
 
 				</div>
 			</div>

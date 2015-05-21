@@ -141,7 +141,7 @@
 					<td><span>Director: {{movie.director}}</span></td>
 					<td><span>Duracion: {{movie.duration}} minutos</span></td>
 					<td>
-						<button class="btn btn--m btn--blue btn--raised" ng-click=""
+						<button class="btn btn--m btn--blue btn--raised" ng-click="vm.editarPelicula()"
 							lx-ripple>Editar</button>
 					</td>
 					<td>
@@ -166,7 +166,7 @@
 					<td><span>Tipo: {{park.kind_park}}</span></td>
 					<td><span>Precio: {{park.price_park}} euros</span></td>
 					<td>
-						<button class="btn btn--m btn--blue btn--raised" ng-click=""
+						<button class="btn btn--m btn--blue btn--raised" ng-click="vm.editarParque()"
 							lx-ripple>Editar</button>
 					</td>
 					<td>
@@ -192,7 +192,7 @@
 					<td><span>Tipo local: {{local.local_type}}</span></td>
 					<td><span>Precio medio: {{local.price_medium}} euros</span></td>
 					<td>
-						<button class="btn btn--m btn--blue btn--raised" ng-click=""
+						<button class="btn btn--m btn--blue btn--raised" ng-click="vm.editarLocal()"
 							lx-ripple>Editar</button>
 					</td>
 					<td>
@@ -219,7 +219,7 @@
 					<td><span>Riesgo de la actividad: {{actividad.risk}}</span></td>
 					<td><span>Precio: {{actividad.price}} euros</span></td>
 					<td>
-						<button class="btn btn--m btn--blue btn--raised" ng-click=""
+						<button class="btn btn--m btn--blue btn--raised" ng-click="vm.editarActividad()"
 							lx-ripple>Editar</button>
 					</td>
 					<td>
@@ -670,10 +670,14 @@
 					<lx-text-field class="mr+" label="Editorial"> <input
 						type="text" ng-model="vm.libroEditado.publisher"> </lx-text-field>
 				</div>
+				</div>
+				<div flex-container="row" flex-gutter="24">
 				<div flex-item>
 					<lx-text-field class="mr+" label="Sinopsis"> <input
 						type="text" ng-model="vm.libroEditado.synopsis"> </lx-text-field>
 				</div>
+				</div>
+				<div flex-container="row" flex-gutter="24">
 			<div flex-item>
 					<lx-text-field class="mr+" label="ISBN" fixed-label="true" icon="web">
 					<input type="text" ng-model="vm.libroEditado.isbn"> </lx-text-field>
@@ -684,20 +688,316 @@
 						ng-model="vm.libroEditado.pageNumber"> </lx-text-field>
 				</div>
 
+				<div flex-item>
+					<lx-select class="ml+" ng-model="vm.libroEditado.genre" placeholder="Genero"
+						choices="vm.categorias" floating-label> <lx-select-selected>
+					{{ $selected}} </lx-select-selected> <lx-select-choices> {{ $choice
+					}} </lx-select-choices> </lx-select>
+
+				</div>
 			</div>
-	
-			
 			<div class="mt++" flex-container="row" flex-gutter="24">				
 				<div class="dialog__actions">				
 					<button	class="ml+ btn btn--m btn--black btn--flat botonCategoria bgc-green-300" ng-click="vm.aniadirLibroEditado()" lx-ripple lx-dialog-close>Aceptar datos</button>
 					<button	class="btn btn--m btn--black btn--flat botonCategoria bgc-red-300" lx-ripple lx-dialog-close>Cerrar</button>
 				</div>				
 			</div>
+			</p>
+			</lx-tab> 
+		</lx-tabs>
+	
+	</div>
+	</div>
+	</lx-dialog>
+
+<!-- Siguente categoria editar -->
+<lx-dialog class="dialog dialog--l" id="editarPelicula" auto-close="true"
+		onclose="vm.closingDialog()" onscrollend="scrollEndDialog()">
+	<div class="dialog__header">
+		<div class="bgc-blue-grey-500 pl++ pt++ pb++">
+			<span class="fs-display-2 display-block tc-white">EDITAR</span>
+		</div>
+	</div>
+<div class="dialog__content">
+		<div class="card">
+			<lx-tabs> <lx-tab heading="{{vm.peliculaEditada.title}}">
+			<p class="p+">
+			
+			<div flex-container="row" flex-gutter="24">
+				<div flex-item>
+					<lx-text-field class="mr+" label="Titulo"> <input
+						type="text" ng-model="vm.peliculaEditada.title"> </lx-text-field>
+				</div>
+				<div flex-item>
+					<lx-text-field class="mr+" label="Director"> <input
+						type="text" ng-model="vm.peliculaEditada.director"> </lx-text-field>
+				</div>
+				<div flex-item>
+					<lx-text-field class="mr+" label="Actor principal">
+					<input type="text" ng-model="vm.peliculaEditada.leading_actor"> </lx-text-field>
+				</div>
+				<div flex-item>
+					<lx-text-field class="mr+" label="Productora"> <input
+						type="text" ng-model="vm.peliculaEditada.production"> </lx-text-field>
+				</div>
+				<div flex-item>
+					<lx-text-field class="mr+" label="Duracion (min)">
+					<input type="text" ng-model="vm.peliculaEditada.duration"> </lx-text-field>
+				</div>
+
+			</div>
+
+			<div class="mt++" flex-container="row" flex-gutter="24">
+				<div flex-item>
+					<lx-text-field label="Descripcion" fixed-label="true" icon="web">
+					<input type="text" ng-model="vm.peliculaEditada.description"> </lx-text-field>
+				</div>
+				<div flex-item>
+					<lx-text-field label="Link trailer (meter el final)" fixed-label="true" icon="web">
+					<input type="text" ng-model="vm.peliculaEditada.movie_trailer"> </lx-text-field>
+				</div>
+			</div>
+			
+			<div class="mt++" flex-container="row" flex-gutter="24">				
+				<div class="dialog__actions">				
+					<button	class="ml+ btn btn--m btn--black btn--flat botonCategoria bgc-green-300" ng-click="vm.editarPelicula()" lx-ripple lx-dialog-close>Aceptar datos</button>
+					<button	class="btn btn--m btn--black btn--flat botonCategoria bgc-red-300" lx-ripple lx-dialog-close>Cerrar</button>
+				</div>				
+			</div>	
+			</p>
 			</lx-tab> 
 		</lx-tabs>
 	</div>
-	
+	</div>
 	</lx-dialog>
 
-</div>
 
+<!-- Siguente categoria editar -->
+<lx-dialog class="dialog dialog--l" id="editarParque" auto-close="true"
+		onclose="vm.closingDialog()" onscrollend="scrollEndDialog()">
+	<div class="dialog__header">
+		<div class="bgc-blue-grey-500 pl++ pt++ pb++">
+			<span class="fs-display-2 display-block tc-white">EDITAR</span>
+		</div>
+	</div>
+<div class="dialog__content">
+		<div class="card">
+			<lx-tabs> <lx-tab heading="{{vm.parqueEditado.name_park}}">
+			<p class="p+">
+			<div flex-container="row" flex-gutter="24">
+				<div flex-item>
+					<lx-text-field class="mr+" label="Nombre"> <input
+						type="text" ng-model="vm.parqueEditado.name_park"> </lx-text-field>
+				</div>
+				<div flex-item>
+					<lx-text-field class="mr+" label="Direccion"> <input
+						type="text" ng-model="vm.parqueEditado.address_park"> </lx-text-field>
+				</div>
+				<div flex-item>
+					<lx-text-field class="mr+" label="_______Apertura">
+					<input type="time" ng-model="vm.parqueEditado.open_park" /> </lx-text-field>
+				</div>
+				<div flex-item>
+					<lx-text-field class="mr+" label="_______Cierre"> <input
+						type="time" ng-model="vm.parqueEditado.close_park" /> </lx-text-field>
+				</div>
+				<div flex-item>
+					<lx-text-field class="mr+" label="Provincia"> <input
+						type="text" ng-model="vm.parqueEditado.province_park"> </lx-text-field>
+				</div>
+				<div flex-item>
+					<lx-text-field class="mr+" label="Precio"> <input
+						type="text" ng-model="vm.parqueEditado.price_park"> </lx-text-field>
+				</div>
+
+			</div>
+
+			<div class="mt++" flex-container="row" flex-gutter="24">
+				<div flex-item>
+					<lx-text-field label="Descripcion" fixed-label="true" icon="web">
+					<input type="text" ng-model="vm.parqueEditado.description_park"> </lx-text-field>
+				</div>
+			</div>
+			<div class="mt++" flex-container="row" flex-gutter="24">
+				<div flex-item>
+					<lx-select class="ml+" ng-model="vm.parqueEditado.check_park" placeholder="Permite cheque"
+						choices="vm.permite" floating-label> <lx-select-selected>
+					{{ $selected}} </lx-select-selected> <lx-select-choices> {{ $choice
+					}} </lx-select-choices> </lx-select>
+
+				</div>
+			</div>
+			<div class="mt++" flex-container="row" flex-gutter="24">
+				<div flex-item>
+					<lx-select class="ml+" ng-model="vm.parqueEditado.kind_park" placeholder="Tipo"
+						choices="vm.tipo_parque" floating-label> <lx-select-selected>
+					{{ $selected}} </lx-select-selected> <lx-select-choices> {{ $choice
+					}} </lx-select-choices> </lx-select>
+
+				</div>
+			</div>
+			<div class="mt++" flex-container="row" flex-gutter="24">				
+				<div class="dialog__actions">				
+					<button	class="ml+ btn btn--m btn--black btn--flat botonCategoria bgc-green-300" ng-click="vm.editarParque()" lx-ripple lx-dialog-close>Aceptar datos</button>
+					<button	class="btn btn--m btn--black btn--flat botonCategoria bgc-red-300" lx-ripple lx-dialog-close>Cerrar</button>
+				</div>				
+			</div>				
+			</p>
+			
+			</lx-tab> 
+		</lx-tabs>
+	</div>
+	</div>
+	</lx-dialog>
+
+<!-- Siguente categoria editar -->
+<lx-dialog class="dialog dialog--l" id="editarLocal" auto-close="true"
+		onclose="vm.closingDialog()" onscrollend="scrollEndDialog()">
+	<div class="dialog__header">
+		<div class="bgc-blue-grey-500 pl++ pt++ pb++">
+			<span class="fs-display-2 display-block tc-white">EDITAR</span>
+		</div>
+	</div>
+<div class="dialog__content">
+		<div class="card">
+			<lx-tabs> <lx-tab heading="{{vm.localEditado.name}}">
+			<p class="p+">
+			<div flex-container="row" flex-gutter="24">
+				<div flex-item>
+					<lx-text-field class="mr+" label="Nombre"> <input
+						type="text" ng-model="vm.localEditado.name"> </lx-text-field>
+				</div>
+				<div flex-item>
+					<lx-text-field class="mr+" label="Estrellas"> <input
+						type="text" ng-model="vm.localEditado.star"> </lx-text-field>
+				</div>
+				<div flex-item>
+					<lx-text-field class="mr+" label="_______Apertura">
+					<input type="time" ng-model="vm.localEditado.open_time" /> </lx-text-field>
+				</div>
+				<div flex-item>
+					<lx-text-field class="mr+" label="_______Cierre"> <input
+						type="time" ng-model="vm.localEditado.close_time" /> </lx-text-field>
+				</div>
+				<div flex-item>
+					<lx-text-field class="mr+" label="Provincia"> <input
+						type="text" ng-model="vm.localEditado.province"> </lx-text-field>
+				</div>
+				<div flex-item>
+					<lx-text-field class="mr+" label="Precio medio"> <input
+						type="text" ng-model="vm.localEditado.price_medium"> </lx-text-field>
+				</div>
+				<div flex-item>
+					<lx-text-field class="mr+" label="Capacidad"> <input
+						type="text" ng-model="vm.localEditado.capacity"> </lx-text-field>
+				</div>
+
+
+			</div>
+
+			<div class="mt++" flex-container="row" flex-gutter="24">
+				<div flex-item>
+					<lx-text-field label="Descripcion" fixed-label="true" icon="web">
+					<input type="text" ng-model="vm.localEditado.description"> </lx-text-field>
+				</div>
+				<div flex-item>
+					<lx-text-field label="Direccion" fixed-label="true" icon="web">
+					<input type="text" ng-model="vm.localEditado.address"> </lx-text-field>
+				</div>
+			</div>
+			<div class="mt++" flex-container="row" flex-gutter="24">
+				<div flex-item>
+					<lx-select class="ml+" ng-model="vm.localEditado.local_type" placeholder="Tipo"
+						choices="vm.tipo_local" floating-label> <lx-select-selected>
+					{{ $selected}} </lx-select-selected> <lx-select-choices> {{ $choice
+					}} </lx-select-choices> </lx-select>
+
+				</div>
+			</div>
+			<div class="mt++" flex-container="row" flex-gutter="24">				
+				<div class="dialog__actions">				
+					<button	class="ml+ btn btn--m btn--black btn--flat botonCategoria bgc-green-300" ng-click="vm.editarLocal()" lx-ripple lx-dialog-close>Aceptar datos</button>
+					<button	class="btn btn--m btn--black btn--flat botonCategoria bgc-red-300" lx-ripple lx-dialog-close>Cerrar</button>
+				</div>				
+			</div>			
+			
+			</p>
+			</lx-tab> 
+		</lx-tabs>
+	</div>
+	</div>
+	</lx-dialog>
+
+	<!-- Siguente categoria editar -->
+<lx-dialog class="dialog dialog--l" id="editarActividad" auto-close="true"
+		onclose="vm.closingDialog()" onscrollend="scrollEndDialog()">
+	<div class="dialog__header">
+		<div class="bgc-blue-grey-500 pl++ pt++ pb++">
+			<span class="fs-display-2 display-block tc-white">EDITAR</span>
+		</div>
+	</div>
+<div class="dialog__content">
+		<div class="card">
+			<lx-tabs> <lx-tab heading="{{vm.actividadEditada.name}}">
+			<p class="p+">
+			<div flex-container="row" flex-gutter="24">
+				<div flex-item>
+					<lx-text-field class="mr+" label="Nombre"> <input
+						type="text" ng-model="vm.actividadEditada.name"> </lx-text-field>
+				</div>
+				<div flex-item>
+					<lx-text-field class="mr+" label="Edad"> <input
+						type="text" ng-model="vm.actividadEditada.age_recomended"> </lx-text-field>
+				</div>
+				<div flex-item>
+					<lx-text-field class="mr+" label="Provincia"> <input
+						type="text" ng-model="vm.actividadEditada.province"> </lx-text-field>
+				</div>
+				<div flex-item>
+					<lx-text-field class="mr+" label="Precio"> <input
+						type="text" ng-model="vm.actividadEditada.price"> </lx-text-field>
+				</div>
+				<div flex-item>
+					<lx-text-field class="mr+" label="Duracion(min)"> <input
+						type="text" ng-model="vm.actividadEditada.duration"> </lx-text-field>
+				</div>
+
+
+			</div>
+
+			<div class="mt++" flex-container="row" flex-gutter="24">
+				<div flex-item>
+					<lx-text-field label="Descripcion" fixed-label="true" icon="web">
+					<input type="text" ng-model="vm.actividadEditada.description"> </lx-text-field>
+				</div>
+				<div flex-item>
+					<lx-text-field label="Direccion" fixed-label="true" icon="web">
+					<input type="text" ng-model="vm.actividadEditada.address"> </lx-text-field>
+				</div>
+			</div>
+			<div class="mt++" flex-container="row" flex-gutter="24">
+				<div flex-item>
+					<lx-select class="ml+" ng-model="vm.actividadEditada.risk" placeholder="Tipo de riesgo"
+						choices="vm.tipo_riesgo" floating-label> <lx-select-selected>
+					{{ $selected}} </lx-select-selected> <lx-select-choices> {{ $choice
+					}} </lx-select-choices> </lx-select>
+
+				</div>
+			</div>
+			<div class="mt++" flex-container="row" flex-gutter="24">				
+				<div class="dialog__actions">				
+					<button	class="ml+ btn btn--m btn--black btn--flat botonCategoria bgc-green-300" ng-click="vm.editarActividad()" lx-ripple lx-dialog-close>Aceptar datos</button>
+					<button	class="btn btn--m btn--black btn--flat botonCategoria bgc-red-300" lx-ripple lx-dialog-close>Cerrar</button>
+				</div>				
+			</div>			
+			
+			</p>
+			</lx-tab> 
+		</lx-tabs>
+	</div>
+	</div>
+	</lx-dialog>
+		
+
+
+</div>

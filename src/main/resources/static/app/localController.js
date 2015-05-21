@@ -44,8 +44,24 @@ function localController(localService, $routeParams, $location, LxNotificationSe
 		vm.close = local.close_time;
 		vm.capac = local.capacity;
 		vm.type = local.local_type;
+		
+		vm.recomendado= local.recomendado;
+		vm.localAvotar=local;
+		
 	    LxDialogService.open(dialogId);
 	};
+	
+	vm.votarPositivo=function(){
+		
+		vm.localAvotar.recomendado=vm.localAvotar.recomendado+1;
+		localService.valorarLocal(vm.localAvotar);		
+	}
+	
+	vm.votarNegativo=function(){			
+		vm.localAvotar.recomendado=vm.localAvotar.recomendado-1;
+		localService.valorarLocal(vm.localAvotar);
+	}
+	
 
 	vm.closingDialog = function()
 	{

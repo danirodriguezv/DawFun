@@ -42,4 +42,11 @@ function localService($resource,$http,LxNotificationService) {
 			LxNotificationService.notify('Actualizado Correctamente', 'emoticon', false, 'green');			
 			
 		};
+		
+		this.valorarLocal=function(local){			
+			$http.put('/locals/valorar', local);
+			LxNotificationService.notify('Voto realizado', 'emoticon', false, 'green');			
+			
+		}
+		
 }

@@ -167,3 +167,21 @@
 	background-color:#e7fa01;
 	color:#474747;
 }
+
+.bVerde{
+	background-color:#95c602;
+	font-weight:bold;
+}
+
+.bVerde:hover{
+	background-color:#7ba402;
+}
+
+.bRojo{
+	background-color:#ff3e3e;
+	font-weight:bold;
+}
+
+.bRojo:hover{
+	background-color:#a60000;
+}

@@ -378,8 +378,7 @@ public class Controller implements CommandLineRunner {
 	}
 	
 	@RequestMapping(value = "/books/{idBook}", method = RequestMethod.GET)
-	public Book getBook(@PathVariable long idBook){
-		System.out.println("entra");
+	public Book getBook(@PathVariable long idBook){		
 		return serviceDawFun.getBook(idBook);
 	}
 	

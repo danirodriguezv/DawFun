@@ -354,7 +354,7 @@ public class Controller implements CommandLineRunner {
 		actividad.setImage_activity("globo.png");
 		actividad.setName("Viaje en globo");
 		actividad.setPrice(250);
-		actividad.setRisk("BAJO");
+		actividad.setRisk("MEDIO");
 		actividad.setAddress("Pradera de san isidro");
 		actividad.setClass_type("ACTIVIDAD");
 		serviceDawFun.setOutdoor(actividad);
@@ -371,7 +371,29 @@ public class Controller implements CommandLineRunner {
 		actividad2.setClass_type("ACTIVIDAD");
 		serviceDawFun.setOutdoor(actividad2);
 		
-			
+		Outdoor_activity actividad3 = new Outdoor_activity();
+		actividad3.setAge_recomended(12);
+		actividad3.setDescription("Libera adrenalina a solo dos horas de Madrid. Diversion, emocion y trabajo en equipo son las caracteristicas de esta actividad acuatica");
+		actividad3.setDuration(180);
+		actividad3.setImage_activity("rafting.jpg");
+		actividad3.setName("Rafting");
+		actividad3.setPrice(35);
+		actividad3.setRisk("ALTO");
+		actividad3.setAddress("Sierra de Gredos");
+		actividad3.setClass_type("ACTIVIDAD");
+		serviceDawFun.setOutdoor(actividad3);	
+		
+		Outdoor_activity actividad4 = new Outdoor_activity();
+		actividad4.setAge_recomended(12);
+		actividad4.setDescription("Una experiencia inolvidable que te hará repetir");
+		actividad4.setDuration(10);
+		actividad4.setImage_activity("karts.jpg");
+		actividad4.setName("Karts");
+		actividad4.setPrice(14);
+		actividad4.setRisk("BAJO");
+		actividad4.setAddress("Soto del Real");
+		actividad4.setClass_type("ACTIVIDAD");
+		serviceDawFun.setOutdoor(actividad4);
 		
 	}
 	

@@ -29,6 +29,17 @@
 	border-radius : 50%;
 }
 
+.fotoPersonal:hover{
+	-webkit-transform: scale(1.5);
+	transition: background-color .50s;
+    transform: scale(1.5);
+    
+}
+
+.texto{
+	padding-left : 4%;
+}
+
 .textete{
 	padding-left : 10%;
 }

@@ -216,6 +216,7 @@ function panelAdministracionController(adminService,bookService,movieService,loc
 		parkService.updateParque(vm.parqueEditado);		
 	}
 	
+<<<<<<< HEAD
 	vm.actualizar= function(){
 		vm.books = bookService.getBooks();
 		vm.movies = movieService.getMovies();
@@ -224,6 +225,20 @@ function panelAdministracionController(adminService,bookService,movieService,loc
 		vm.actividades = riesgoService.getActividades();
 		vm.videogames = videogameService.getVideogames();
 	};
+=======
+/****** EDITAR ACTIVIDAD*****/
+	
+	vm.editarActividad = function(activ){		
+		vm.actividadEditada=activ;
+		LxDialogService.open("editarActividad");
+	}
+	
+	vm.aniadirActividadEditada=function(){			
+		riesgoService.updateActividad(vm.actividadEditada);		
+	}
+	
+	
+>>>>>>> origin/master
 	
 	
 };

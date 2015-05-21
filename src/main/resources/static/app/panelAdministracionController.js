@@ -216,6 +216,17 @@ function panelAdministracionController(adminService,bookService,movieService,loc
 		parkService.updateParque(vm.parqueEditado);		
 	}
 	
+/****** EDITAR ACTIVIDAD*****/
+	
+	vm.editarActividad = function(activ){		
+		vm.actividadEditada=activ;
+		LxDialogService.open("editarActividad");
+	}
+	
+	vm.aniadirActividadEditada=function(){			
+		riesgoService.updateActividad(vm.actividadEditada);		
+	}
+	
 	
 	
 	

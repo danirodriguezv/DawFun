@@ -35,4 +35,10 @@ function riesgoService($resource,$http,LxNotificationService) {
 			});
 			
 		}
+		
+		this.updateActividad=function(activ){			
+			$http.put('/outdoors/', activ);
+			LxNotificationService.notify('Actualizado Correctamente', 'emoticon', false, 'green');			
+			
+		};
 }

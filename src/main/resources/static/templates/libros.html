@@ -11,10 +11,7 @@
                 <span class="toolbar__label fs-title tc-white-1 ml"><img src="/images/dawlogo.png" height=50></span>
 
                 <div class="toolbar__right">
-         
-					<button class="btn btn--l btn--white btn--icon" ng-click="vm.abrirDialogSugerencia('sugerencia')"lx-ripple>
-                        <i class="mdi mdi-lightbulb sobreIcono"></i>
-                    </button>
+         					
 					
                     <button class="btn btn--l btn--white btn--icon" ng-click="vm.volver()"lx-ripple>
                         <i class="mdi mdi-undo sobreIcono"></i>
@@ -127,71 +124,7 @@
     </div>
 </lx-dialog>
 
-<!-- DIALOG SUGERENCIA -->
 
-<lx-dialog class="dialog dialog--l" id="sugerencia" auto-close="true" onclose="vm.closingDialog()" onscrollend="scrollEndDialog()">
-    <div class="dialog__header" >
-        <div class="bgc-blue-grey-500 pl++ pt++ pb++">      	    
-          	<span class="fs-display-2 display-block tc-white">Sugerir un libro</span>			               
-        </div>         
-    </div>
-
-    <div class="dialog__content">
-    	<div flex-container="row" flex-gutter="24">
-		    <div flex-item>		    
-		        <lx-select class="ml+"ng-model="vm.sugerencia.categoria" placeholder="Categoria" choices="vm.categorias" floating-label>		            
-		            <lx-select-selected>		            
-		                {{ $selected}}
-		            </lx-select-selected>			            	
-		            <lx-select-choices>
-		                {{ $choice }}
-		            </lx-select-choices>
-		        </lx-select>
-		        
-		    </div>
-		    <div flex-item>
-		        <lx-text-field  class="mr+" label="Titulo del libro">
-		            <input type="text" ng-model="vm.sugerencia.titulo">
-		        </lx-text-field>
-		    </div>
-	    </div>   
-	    
-	    <div flex-item>        
-            <lx-text-field label="Autor" fixed-label="true" icon="account">
-                <input type="text" ng-model="vm.sugerencia.autor">
-            </lx-text-field>
-        </div>        
-        <div flex-item>        
-            <lx-text-field label="Editorial" fixed-label="true" icon="book">
-                <input type="text" ng-model="vm.sugerencia.editorial">
-            </lx-text-field>
-        </div>
-        
-         <div flex-item>        
-            <lx-text-field label="Sinopsis" fixed-label="true" icon="library-books">
-                
-                <textarea ng-model="vm.sugerencia.sinopsis"></textarea>
-            </lx-text-field>         
-        </div>
-        <div class="mt++" flex-container="row" flex-gutter="24">
-        	<div flex-item>
-        		<lx-text-field label="ISBN" fixed-label="true" icon="web">
-                	<input type="text" ng-model="vm.sugerencia.isbn">
-            	</lx-text-field>
-        	</div>
-        	<div flex-item>
-        		<lx-text-field label="Num paginas" fixed-label="true" icon="format-list-numbers">
-                	<input type="text" ng-model="vm.sugerencia.paginas">
-            	</lx-text-field>
-        	</div>
-        </div>
-       
-
-    <div class="dialog__actions">
-    	<button class="btn btn--m btn--black btn--flat botonCategoria " lx-ripple lx-dialog-close>Enviar</button>
-        <button class="btn btn--m btn--black btn--flat botonCategoria bgc-red-300" lx-ripple lx-dialog-close>Cerrar</button>       
-    </div>
-</lx-dialog> 
    
 </div>
 

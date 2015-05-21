@@ -61,11 +61,11 @@ public class Local{
 	public void setPrice_medium(long price_medium) {
 		this.price_medium = price_medium;
 	}
-	public String getAddress() {
+	public String getAddress_local() {
 		return address_local;
 	}
-	public void setAddress(String address) {
-		this.address_local = address;
+	public void setAddress_local(String address_local) {
+		this.address_local = address_local;
 	}
 	public String getDescripcion() {
 		return descripcion;

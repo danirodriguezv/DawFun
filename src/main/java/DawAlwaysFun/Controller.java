@@ -318,7 +318,7 @@ public class Controller implements CommandLineRunner {
 		serviceDawFun.setPark(park5);
 		
 		Local local = new Local();
-		local.setAddress("Calle arcipreste de Hita");
+		local.setAddress_local("Calle arcipreste de Hita");
 		local.setCapacity(100);
 		local.setClose_time("2:00");
 		local.setDescripcion("Comida rica");
@@ -333,7 +333,7 @@ public class Controller implements CommandLineRunner {
 		serviceDawFun.setLocal(local);
 		
 		Local local2 = new Local();
-		local2.setAddress("Calle mostoles");
+		local2.setAddress_local("Calle mostoles");
 		local2.setCapacity(250);
 		local2.setClose_time("2:00");
 		local2.setDescripcion("Comida sana");
@@ -348,7 +348,7 @@ public class Controller implements CommandLineRunner {
 		serviceDawFun.setLocal(local2);
 		
 		Local local3 = new Local();
-		local3.setAddress("Calle Santa Teresa");
+		local3.setAddress_local("Calle Santa Teresa");
 		local3.setCapacity(170);
 		local3.setClose_time("3:00");
 		local3.setDescripcion("Espacio que combina la música rock y pop actual con los grandes clásicos");
@@ -363,7 +363,7 @@ public class Controller implements CommandLineRunner {
 		serviceDawFun.setLocal(local3);
 		
 		Local local4 = new Local();
-		local4.setAddress("Plaza Angel Carbajo");
+		local4.setAddress_local("Plaza Angel Carbajo");
 		local4.setCapacity(250);
 		local4.setClose_time("13:30");
 		local4.setDescripcion("El Txistu de Madrid, el de la cocina vasca exquisita, el frecuentado por futbolistas, empresarios y famosos por su calidad; el que esta catalogado como uno de los mejores restaurantes de la ciudad");

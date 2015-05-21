@@ -295,13 +295,27 @@ public class Controller implements CommandLineRunner {
 		park4.setClose_park("22:00");
 		park4.setDescription_park("El parque zoologico de Madrid exhibe una coleccion de mas de 6000 animales de mas de 500 especies diferentes");
 		park4.setImage_park("zoo.jpg");
-		park4.setKind_park("Zoologico");
+		park4.setKind_park("Zoologicos");
 		park4.setName_park("Zoo Aquarium de Madrid");
 		park4.setOpen_park("10:30");
-		park4.setPrice_park(25);
+		park4.setPrice_park(23);
 		park4.setProvince_park("Madrid");
 		park4.setClass_type("PARQUE TEMATICO");
 		serviceDawFun.setPark(park4);
+		
+		Thepark park5 = new Thepark();
+		park5.setAddress_park("Aldea del Fresno");
+		park5.setCheck_park(false);
+		park5.setClose_park("19:00");
+		park5.setDescription_park("Africa queda muy lejos, pero a tan solo 50Km. de Madrid, Safari Madrid le ofrece la posibilidad de observar animales salvajes en libertad, desde su vehiculo");
+		park5.setImage_park("safari.png");
+		park5.setKind_park("Safaris");
+		park5.setName_park("Safari Madrid");
+		park5.setOpen_park("10:30");
+		park5.setPrice_park(17);
+		park5.setProvince_park("Madrid");
+		park5.setClass_type("PARQUE TEMATICO");
+		serviceDawFun.setPark(park5);
 		
 		Local local = new Local();
 		local.setAddress("Calle arcipreste de Hita");

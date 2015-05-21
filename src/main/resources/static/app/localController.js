@@ -27,6 +27,7 @@ function localController(localService, $routeParams, $location, LxNotificationSe
 	vm.close;
 	vm.capac;
 	vm.type;
+	vm.descrip;
 	
 	//Controller actions
 	
@@ -36,6 +37,7 @@ function localController(localService, $routeParams, $location, LxNotificationSe
 		vm.star = local.star;
 		vm.price = local.price_medium;
 		vm.direc = local.address_local;
+		vm.descrip = local.descripcion;
 		vm.prov = local.province;
 		vm.image = local.photo;
 		vm.open = local.open_time;

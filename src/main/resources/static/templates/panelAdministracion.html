@@ -84,7 +84,7 @@
 					<td><span>Plataforma: {{game.platform}}</span></td>
 					<td><span>Pegi: {{game.pegi_age}} </span></td>
 					<td>
-						<button class="btn btn--m btn--blue btn--raised" ng-click=""
+						<button class="btn btn--m btn--blue btn--raised" ng-click="vm.editar(game)"
 							lx-ripple>Editar</button>
 					</td>
 					<td>
@@ -573,7 +573,70 @@
 	
 	</lx-dialog>
 
+<!-- EDITAR JUEGO  -->
+<lx-dialog class="dialog dialog--l" id="editarJuego" auto-close="true"
+		onclose="vm.closingDialog()" onscrollend="scrollEndDialog()">
+	<div class="dialog__header">
+		<div class="bgc-blue-grey-500 pl++ pt++ pb++">
+			<span class="fs-display-2 display-block tc-white">EDITAR</span>
+		</div>
+	</div>
+<div class="dialog__content">
+		<div class="card">
+			<lx-tabs> <lx-tab heading="{{vm.juegoEditado.game}}">
+			<p class="p+">
+			<div flex-container="row" flex-gutter="24">
+				<div flex-item>
+					<lx-text-field class="mr+" label="Nombre del juego ">
+					<input type="text" ng-model="vm.juegoEditado.name"> </lx-text-field>
+				</div>
+				<div flex-item>
+					<lx-text-field class="mr+" label="Desarrollador"> <input
+						type="text" ng-model="vm.juegoEditado.development"> </lx-text-field>
+				</div>
+				<div flex-item>
+					<lx-text-field class="mr+" label="Plataforma"> <input
+						type="text" ng-model="vm.juegoEditado.platform"> </lx-text-field>
+				</div>
+				<div flex-item>
+					<lx-text-field class="mr+" label="Editor"> <input
+						type="text" ng-model="vm.juegoEditado.publisher"> </lx-text-field>
+				</div>
+				<div flex-item>
+					<lx-text-field class="mr+" label="Descripcion"> <input
+						type="text" ng-model="vm.juegoEditado.description"> </lx-text-field>
+				</div>
 
+			</div>
+			<div class="mt++" flex-container="row" flex-gutter="24">
+				<div flex-item>
+					<lx-select class="ml+" ng-model="vm.juegoEditado.category"
+						placeholder="Genero" choices="vm.generogame" floating-label>
+					<lx-select-selected> {{ $selected}} </lx-select-selected> <lx-select-choices>
+					{{ $choice }} </lx-select-choices> </lx-select>
+
+				</div>
+			</div>
+			<div class="mt++" flex-container="row" flex-gutter="24">
+				<div flex-item>
+					<lx-select class="ml+" ng-model="vm.juegoEditado.pegi_age" placeholder="Pegi"
+						choices="vm.pegi" floating-label> <lx-select-selected>
+					{{ $selected}} </lx-select-selected> <lx-select-choices> {{ $choice
+					}} </lx-select-choices> </lx-select>
+
+				</div>
+			</div>
+			<div class="mt++" flex-container="row" flex-gutter="24">				
+				<div class="dialog__actions">				
+					<button	class="ml+ btn btn--m btn--black btn--flat botonCategoria bgc-green-300" ng-click="vm.aniadirVideojuegoEditado()" lx-ripple lx-dialog-close>Aceptar datos</button>
+					<button	class="btn btn--m btn--black btn--flat botonCategoria bgc-red-300" lx-ripple lx-dialog-close>Cerrar</button>
+				</div>				
+			</div>
+			</p>
+			</lx-tab> 
+		</lx-tabs>
+	</div>
+	</lx-dialog>
 
 </div>
 

@@ -160,7 +160,7 @@ public class Controller implements CommandLineRunner {
 		movie.setDirector("Michael doogleas");
 		movie.setDuration(122);
 		movie.setLeading_actor("Jason Stazam");
-		movie.setMovie_trailer("De momento sin trailer");
+		movie.setMovie_trailer("iVpF6-zMtxY"); //<------------------- AQUI
 		movie.setPhoto("vengadores.png");
 		movie.setProduction("WarnerBros");
 		movie.setTitle("Los vengadores, la era de ultron");
@@ -556,6 +556,14 @@ public class Controller implements CommandLineRunner {
 	
 	@RequestMapping(value = "/videogames", method = RequestMethod.POST)
 	public ResponseEntity<Videogame> addVideogame(@RequestBody Videogame videogame){
+		if(user.isAdmin()){
+			serviceDawFun.setVideogame(videogame);
+		}		
+		return new ResponseEntity<>(videogame, HttpStatus.CREATED);
+	}
+	
+	@RequestMapping(value = "/videogames", method = RequestMethod.PUT)
+	public ResponseEntity<Videogame> updateVideogame(@RequestBody Videogame videogame){			
 		if(user.isAdmin()){
 			serviceDawFun.setVideogame(videogame);
 		}		

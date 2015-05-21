@@ -41,6 +41,8 @@ function panelAdministracionController(adminService,bookService,movieService,loc
 	vm.parks = parkService.getParks();
 	vm.actividades = riesgoService.getActividades();
 	vm.videogames = videogameService.getVideogames();
+	
+	
 		
 	//Controller logic
 	vm.aniadirLocal = function(){
@@ -146,5 +148,18 @@ function panelAdministracionController(adminService,bookService,movieService,loc
 	vm.volver= function(){
 		$location.path("/");
 	};
+	
+	
+	
+	/****** EDITAR *****/
+	
+	vm.editar = function(cosa){		
+		vm.juegoEditado=cosa;
+		LxDialogService.open("editarJuego");
+	}
+	
+	vm.aniadirVideojuegoEditado=function(){			
+		videogameService.updateVideogame(vm.juegoEditado);		
+	}
 	
 };

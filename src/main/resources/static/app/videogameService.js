@@ -40,6 +40,12 @@ function videogameService($resource,$http,LxNotificationService) {
 			
 		}
 		
+		this.updateVideogame=function(video){			
+			$http.put('/videogames/', video);
+			LxNotificationService.notify('Actualizado Correctamente', 'emoticon', false, 'green');			
+			
+		}
+		
 		
 		
 		

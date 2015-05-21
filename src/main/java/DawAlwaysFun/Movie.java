@@ -23,6 +23,7 @@ public class Movie{
 	private String photo;
 	private String type;
 	private String class_type;
+	private int recomendado;
 	
 	public String getClass_type() {
 		return class_type;
@@ -90,10 +91,10 @@ public class Movie{
 	public void setPhoto(String photo) {
 		this.photo = photo;
 	}
-	
-	
-	
-	
-
-
+	public int getRecomendado() {
+		return recomendado;
+	}
+	public void setRecomendado(int recomendado) {
+		this.recomendado = recomendado;
+	}
 }

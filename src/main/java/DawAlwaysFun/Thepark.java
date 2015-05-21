@@ -23,6 +23,8 @@ public class Thepark{
 	private String image_park;
 	private String kind_park;
 	private String class_type;
+	private int recomendado;
+	
 	
 	public long getId() {
 		return id;
@@ -95,6 +97,12 @@ public class Thepark{
 	}
 	public void setKind_park(String kind) {
 		this.kind_park = kind;
+	}
+	public int getRecomendado() {
+		return recomendado;
+	}
+	public void setRecomendado(int recomendado) {
+		this.recomendado = recomendado;
 	}
 	
 }

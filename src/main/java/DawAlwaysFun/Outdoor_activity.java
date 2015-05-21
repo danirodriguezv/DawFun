@@ -24,6 +24,7 @@ public class Outdoor_activity{
 	private int duration;
 	private String province;
 	private String class_type;
+	private int recomendado;
 	
 	public String getClass_type() {
 		return class_type;
@@ -91,6 +92,11 @@ public class Outdoor_activity{
 	public void setProvince(String province) {
 		this.province = province;
 	}
-	
+	public int getRecomendado() {
+		return recomendado;
+	}
+	public void setRecomendado(int recomendado) {
+		this.recomendado = recomendado;
+	}
 	
 }

@@ -277,3 +277,10 @@
     transform: scale(1.5);    
 }
 
+.footer{
+	background: #f9f8ba;
+  min-height: 5em;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}

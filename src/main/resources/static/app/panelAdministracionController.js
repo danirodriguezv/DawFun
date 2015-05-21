@@ -162,4 +162,16 @@ function panelAdministracionController(adminService,bookService,movieService,loc
 		videogameService.updateVideogame(vm.juegoEditado);		
 	}
 	
+/****** EDITAR LIBRO*****/
+	
+	vm.editarLibro = function(cosa){		
+		vm.libroEditado=cosa;
+		LxDialogService.open("editarLibro");
+	}
+	
+	vm.aniadirLibroEditado=function(){			
+		bookService.updateLibro(vm.libroEditado);		
+	}
+	
+	
 };

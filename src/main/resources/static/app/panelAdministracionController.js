@@ -20,6 +20,7 @@ function panelAdministracionController(adminService,bookService,movieService,loc
 	vm.nuevoVideojuego={};
 	vm.nuevoLibro = {};
 	vm.nuevaPeli = {};
+	vm.nuevoParque = {};
 	vm.objetivoBusqueda = 'Todos';
 	
 	vm.tipos = ["VIDEOGAME","LIBRO","PELICULA","PARQUE TEMATICO","LOCAL","ACTIVIDAD"];
@@ -40,6 +41,12 @@ function panelAdministracionController(adminService,bookService,movieService,loc
 	vm.videogames = videogameService.getVideogames();
 		
 	//Controller logic
+	vm.aniadirParque = function(){
+		vm.nuevoParque.class_type="PARQUE TEMATICO";
+		vm.nuevoParque.image_park="parqueDefault.jpg";
+		parkService.addParque(vm.nuevoParque);
+	}
+	
 	vm.aniadirPelicula = function(){
 		vm.nuevaPeli.class_type="PELICULA";
 		vm.nuevaPeli.photo ="peliculaDefault.jpg";

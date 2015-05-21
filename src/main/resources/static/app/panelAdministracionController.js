@@ -58,8 +58,7 @@ function panelAdministracionController(adminService,bookService,movieService,loc
 		vm.nuevoLocal.class_type = "LOCAL";
 		vm.nuevoLocal.photo = "localDefault.jpg";
 	
-		vm.nuevoLocal.open_time=vm.nuevoLocal.open_time.toString();
-		vm.nuevoLocal.close_time=vm.nuevoLocal.close_time.toString();
+	
 	
 		localService.addLocal(vm.nuevoLocal);
 	}
@@ -69,8 +68,7 @@ function panelAdministracionController(adminService,bookService,movieService,loc
 		vm.nuevoParque.class_type="PARQUE TEMATICO";
 		vm.nuevoParque.image_park="parqueDefault.jpg";
 		
-		vm.nuevoParque.open_park=vm.nuevoParque.open_park.toString();
-		vm.nuevoParque.clase_park=vm.nuevoParque.clase_park.toString();
+		
 		
 		parkService.addPark(vm.nuevoParque);
 	}

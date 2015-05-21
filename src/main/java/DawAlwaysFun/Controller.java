@@ -502,7 +502,9 @@ public class Controller implements CommandLineRunner {
 	
 	@RequestMapping(value = "/videogames", method = RequestMethod.POST)
 	public ResponseEntity<Videogame> addVideogame(@RequestBody Videogame videogame){
-		serviceDawFun.setVideogame(videogame);
+		if(user.isAdmin()){
+			serviceDawFun.setVideogame(videogame);
+		}		
 		return new ResponseEntity<>(videogame, HttpStatus.CREATED);
 	}
 		

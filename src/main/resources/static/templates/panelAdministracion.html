@@ -141,7 +141,7 @@
 					<td><span>Director: {{movie.director}}</span></td>
 					<td><span>Duracion: {{movie.duration}} minutos</span></td>
 					<td>
-						<button class="btn btn--m btn--blue btn--raised" ng-click="vm.editarPelicula()"
+						<button class="btn btn--m btn--blue btn--raised" ng-click="vm.editarPelicula(movie)"
 							lx-ripple>Editar</button>
 					</td>
 					<td>
@@ -166,7 +166,7 @@
 					<td><span>Tipo: {{park.kind_park}}</span></td>
 					<td><span>Precio: {{park.price_park}} euros</span></td>
 					<td>
-						<button class="btn btn--m btn--blue btn--raised" ng-click="vm.editarParque()"
+						<button class="btn btn--m btn--blue btn--raised" ng-click="vm.editarParque(park)"
 							lx-ripple>Editar</button>
 					</td>
 					<td>
@@ -192,7 +192,7 @@
 					<td><span>Tipo local: {{local.local_type}}</span></td>
 					<td><span>Precio medio: {{local.price_medium}} euros</span></td>
 					<td>
-						<button class="btn btn--m btn--blue btn--raised" ng-click="vm.editarLocal()"
+						<button class="btn btn--m btn--blue btn--raised" ng-click="vm.editarLocal(local)"
 							lx-ripple>Editar</button>
 					</td>
 					<td>
@@ -219,7 +219,7 @@
 					<td><span>Riesgo de la actividad: {{actividad.risk}}</span></td>
 					<td><span>Precio: {{actividad.price}} euros</span></td>
 					<td>
-						<button class="btn btn--m btn--blue btn--raised" ng-click="vm.editarActividad()"
+						<button class="btn btn--m btn--blue btn--raised" ng-click="vm.editarActividad(actividad)"
 							lx-ripple>Editar</button>
 					</td>
 					<td>

@@ -437,6 +437,15 @@ public class Controller implements CommandLineRunner {
 		return new ResponseEntity<>(book, HttpStatus.CREATED);
 	}
 	
+	@RequestMapping(value = "/books/valorar", method = RequestMethod.PUT)
+	public ResponseEntity<Book> valorarBooks(@RequestBody Book book){			
+		serviceDawFun.setBook(book);
+			
+		return new ResponseEntity<>(book, HttpStatus.CREATED);
+	}
+		
+	
+	
 	@RequestMapping(value = "/books", method = RequestMethod.PUT)
 	public ResponseEntity<Book> updateBook(@RequestBody Book book){
 		if(user.isAdmin()){
@@ -480,6 +489,14 @@ public class Controller implements CommandLineRunner {
 		return new ResponseEntity<>(movie, HttpStatus.CREATED);
 	}
 	
+	@RequestMapping(value = "/movies/valorar", method = RequestMethod.PUT)
+	public ResponseEntity<Movie> valorarMovies(@RequestBody Movie movie){			
+		serviceDawFun.setMovie(movie);
+			
+		return new ResponseEntity<>(movie, HttpStatus.CREATED);
+	}
+		
+	
 	@RequestMapping(value = "/movies", method = RequestMethod.PUT)
 	public ResponseEntity<Movie> updateMovie(@RequestBody Movie movie){
 		if(user.isAdmin()){
@@ -519,6 +536,15 @@ public class Controller implements CommandLineRunner {
 		return new ResponseEntity<>(activity, HttpStatus.CREATED);
 	}
 	
+	@RequestMapping(value = "/outdoors/valorar", method = RequestMethod.PUT)
+	public ResponseEntity<Outdoor_activity> valorarOutdoors(@RequestBody Outdoor_activity activity){			
+		serviceDawFun.setOutdoor(activity);
+			
+		return new ResponseEntity<>(activity, HttpStatus.CREATED);
+	}
+		
+	
+	
 	@RequestMapping(value = "/outdoors", method = RequestMethod.PUT)
 	public ResponseEntity<Outdoor_activity> updateOutdoor(@RequestBody Outdoor_activity activity){
 		if(user.isAdmin()){
@@ -557,6 +583,14 @@ public class Controller implements CommandLineRunner {
 		}
 		return new ResponseEntity<>(park, HttpStatus.CREATED);
 	}
+	
+	@RequestMapping(value = "/parks/valorar", method = RequestMethod.PUT)
+	public ResponseEntity<Thepark> valorarParks(@RequestBody Thepark park){			
+		serviceDawFun.setPark(park);
+			
+		return new ResponseEntity<>(park, HttpStatus.CREATED);
+	}
+		
 	
 	@RequestMapping(value = "/parks", method = RequestMethod.PUT)
 	public ResponseEntity<Thepark> updatePark(@RequestBody Thepark park){
@@ -648,6 +682,14 @@ public class Controller implements CommandLineRunner {
 			}		
 			return new ResponseEntity<>(local, HttpStatus.CREATED);
 	}
+	
+	@RequestMapping(value = "/locals/valorar", method = RequestMethod.PUT)
+	public ResponseEntity<Local> valorarLocals(@RequestBody Local local ){			
+		serviceDawFun.setLocal(local);
+			
+		return new ResponseEntity<>(local, HttpStatus.CREATED);
+	}
+		
 	
 	@RequestMapping(value = "/locals", method = RequestMethod.PUT)
 	public ResponseEntity<Local> updateLocal(@RequestBody Local local){			

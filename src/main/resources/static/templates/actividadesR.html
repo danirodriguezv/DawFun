@@ -1,9 +1,6 @@
 <div ng-controller="riesgoController as vm" layout="column" layout-fill>
 
 
-
-
-
 	<!-- BARRA SUPERIOR -->
 	<div flex-item>
 		<div class="card bgc-indigo-500">
@@ -25,104 +22,102 @@
 
 
 	<!-- BARRA INFERIOR -->
-	<div
-		style="box-shadow: 0px 4px 6px 1px rgba(119, 119, 119, 0.17); background-color: white-silver;">
-		<lx-dropdown>
-		<button class="btn btn--m btn--black btn--flat botonCategoria"
-			lx-ripple lx-dropdown-toggle>RIESGO {{vm.objetivoBusqueda}}</button>
-		<lx-dropdown-menu>
-		<ul>
-			<li><a class="dropdown-link" ng-click="vm.busqueda('Todos')">Todos</a></li>
-			<li class="dropdown-divider"></li>
-			<li><a class="dropdown-link" ng-click="vm.busqueda('ALTO')">ALTO RIESGO</a></li>
-			<li><a class="dropdown-link" ng-click="vm.busqueda('MEDIO')">RIESGO MEDIO</a></li>
-			<li><a class="dropdown-link" ng-click="vm.busqueda('BAJO')">RIESGO BAJO</a></li>
-		</ul>
-		</lx-dropdown-menu> </lx-dropdown>
-
+	<div style="box-shadow: 0px 4px 6px 1px rgba(119, 119, 119, 0.07);background-color:white-silver;">	
+			<lx-dropdown>
+			    <button class="btn btn--m btn--black btn--flat botonCategoria" lx-ripple lx-dropdown-toggle>
+			        <span style="font-weight:bold">Riesgo: </span>{{vm.objetivoBusqueda}}
+			    </button>		
+			    <lx-dropdown-menu>
+			        <ul>
+			        	<li><a class="dropdown-link" ng-click="vm.busqueda('Todos')">Todos</a></li> 
+			        	<li class="dropdown-divider"></li>
+			            <li><a class="dropdown-link" ng-click="vm.busqueda('ALTO')">ALTO RIESGO</a></li>
+			            <li><a class="dropdown-link" ng-click="vm.busqueda('MEDIO')">RIESGO MEDIO</a></li> 
+			            <li><a class="dropdown-link" ng-click="vm.busqueda('BAJO')">RIESGO BAJO</a></li>
+			            <li class="dropdown-divider"></li>
+			            <li><span class="dropdown-link dropdown-link--is-header">Otras categorias</span></li>
+			            <li><a class="dropdown-link" ng-click="vm.busqueda('Otros')">Otros</a></li>
+			        </ul>
+			    </lx-dropdown-menu>
+			</lx-dropdown>
 	</div>
 
-
+	
 	<!-- TABLA -->
+	<div flex-item>
+       	<div class="card cards" ng-repeat="riesgo in vm.riesgos | orderBy:vm.ordenadoPor"
+				 ng-click="vm.opendDialog('test'riesgo)" ng-show="riesgo.risk == vm.objetivoBusqueda || vm.objetivoBusqueda == 'Todos'">
+        	<div class="card__img card__img--left photocard" style="height: 160px;width:100%">
+                   <img src="/images/{{riesgo.image_activity}}">
+               </div>
+           	<div flex-container="row">
+               
+                <div flex-item flex-container="column">
+                    <div flex-item>
+                        <div class="p+">
+                        	<span class="fs-headline tc-silver-1 display-block">{{riesgo.name}}</span>
+                            	<span class="fs-subhead tc-black-2 display-block">Riesgo: {{riesgo.risk}}</span>	          
+                        </div>
+                    </div>
 
-	<div flex-container="row" flex-gutter="24">
+                    <div class="paragraph fs-body-1">
+                   
+                	</div>
+                </div>
+           	</div>
+       	</div>
+   	</div>	
 
-		<div flex-item ng-repeat="riesgo in vm.riesgos | orderBy:vm.ordenadoPor"
-			ng-click="vm.opendDialog('test',riesgo)" ng-show="riesgo.risk == vm.objetivoBusqueda || vm.objetivoBusqueda == 'Todos'">
-			<div class="card">
-				<div flex-container="row">
-					<div class="card__img card__img--left" style="height: 160px">
-						<img src="/images/{{riesgo.image_activity}}">
-					</div>
 
-					<div flex-item flex-container="column">
-						<div flex-item>
-							<div class="p++">
-								<strong class="fs-headline display-block">{{riesgo.name}}</strong>
-								<strong class="fs-headline display-block">Riesgo {{riesgo.risk}}</strong>
-							</div>
-						</div>
-					</div>
-				</div>
+	<!-- DIALOG -->	
+	<lx-dialog class="dialog dialog--l" id="test" auto-close="true" onclose="vm.closingDialog()" onscrollend="scrollEndDialog()">
+	    <div class="dialog__header" >
+	        <div class="bgc-blue-grey-500 pl pt pb">      	    
+	          	<span class="fs-display-2 display-block tc-white">{{vm.name_activity}}</span>             
+	        </div>         
+	    </div>
+	
+	    <div class="dialog__content">
+	    	<div class="tc-white-1" flex-container="row">
+			    <div flex-item="4" flex-item-order="1">
+			    	<div class="p">
+			    		<img ng-src="/images/{{vm.image_activity}}" width=100% height=100%>
+			    	</div>
+			    </div>
+			    <div flex-item="8" flex-item-order="2">
+			    	<div class="p+ bgc-blue-grey-300">
+			    		<span class="fs-subhead display-block">Descripcion</span>
+			    		<span class="fs-display-0.2 display-block">{{vm.descrip_activity}}</span>
+			    	</div>
+			    	<div class="p+ bgc-blue-grey-300">
+			    		<span class="fs-subhead display-block">Direccion</span>
+			    		<span class="fs-display-0.2 display-block">{{vm.direc_activity}}</span>
+			    	</div>
+			    	<div class="p+ bgc-blue-grey-300">
+			    		<span class="fs-subhead display-block">Riesgo</span>
+			    		<span class="fs-display-0.5 display-block">{{vm.show_activity}}</span>
+			    	</div>
+			    	<div class="p+ bgc-blue-grey-300">
+			    		<span class="fs-subhead display-block">Duracion de la actividad</span>
+			    		<span class="fs-display-0.5 display-block">{{vm.dur_activity}}</span>
+			    	</div>
+			    	<div class="p+ bgc-red-300">
+			    		<span class="fs-subhead display-block">Precio del servicio</span>
+			    		<span class="fs-display-0.5 display-block">{{vm.price_activity}}</span>
+			    	</div>
+			    	<div class="p+ bgc-red-300">
+			    		<span class="fs-subhead display-block">Edad minima</span>
+			    		<span class="fs-display-0.5 display-block">{{vm.age_activity}}</span>
+			    	</div>		    	
+			    </div>		    
 			</div>
-		</div>
-
-		<!-- DIALOG -->
-		<lx-dialog class="dialog dialog--l" id="test" auto-close="true"
-			onclose="vm.closingDialog()" onscrollend="scrollEndDialog()">
-		<div class="dialog__header">
-			<div class="bgc-blue-grey-500 pl pt pb">
-				<span class="fs-display-2 display-block tc-white">{{vm.name_activity}}</span>
-			</div>
-		</div>
-
-		<div class="dialog__content">
-			<div class="tc-white-1" flex-container="row">
-				<div flex-item="4" flex-item-order="1">
-					<div class="p">
-						<img ng-src="/images/{{vm.image_activity}}" width=100% height=100%>
-					</div>
-				</div>
-				<div flex-item="8" flex-item-order="2">
-					<div class="p+ bgc-blue-grey-300">
-						<span class="fs-subhead display-block">Descripcion</span> <span
-							class="fs-display-0.2 display-block">{{vm.descrip_activity}}</span>
-					</div>
-					<div class="p+ bgc-blue-grey-300">
-						<span class="fs-subhead display-block">Direccion</span> <span
-							class="fs-display-0.2 display-block">{{vm.direc_activity}}</span>
-					</div>
-					<div class="p+ bgc-blue-grey-300">
-						<span class="fs-subhead display-block">Riesgo</span> <span
-							class="fs-display-0.5 display-block">{{vm.show_activity}}</span>
-					</div>
-					<div class="p+ bgc-blue-grey-300">
-						<span class="fs-subhead display-block">Duracion de la
-							actividad</span> <span class="fs-display-0.5 display-block">{{vm.dur_activity}}</span>
-					</div>
-					<div class="p+ bgc-red-300">
-						<span class="fs-subhead display-block">Precio del servicio</span>
-						<span class="fs-display-0.5 display-block">{{vm.price_activity}}
-							euros</span>
-					</div>
-					<div class="p+ bgc-red-400">
-						<span class="fs-subhead display-block">Edad minima</span> <span
-							class="fs-display-0.2 display-block">{{vm.age_activity}}</span>
-					</div>
-				</div>
-			</div>
+	        
+	    </div>
+	
+	    <div class="dialog__actions">
+	        <button class="btn btn--m btn--black btn--flat" lx-ripple lx-dialog-close>Cerrar</button>
+	    </div>
+	</lx-dialog>
 
 
-
-
-
-		</div>
-
-		<div class="dialog__actions">
-			<button class="btn btn--m btn--black btn--flat" lx-ripple
-				lx-dialog-close>Cancel</button>
-		</div>
-		</lx-dialog>
-
-
-	</div>
+</div>

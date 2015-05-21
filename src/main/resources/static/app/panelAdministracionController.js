@@ -17,6 +17,7 @@ function panelAdministracionController(adminService,bookService,movieService,loc
 		adminService.desconect();
 	}
 	
+	vm.nuevaActividad={};
 	vm.nuevoVideojuego={};
 	vm.nuevoLibro = {};
 	vm.nuevaPeli = {};
@@ -72,6 +73,12 @@ function panelAdministracionController(adminService,bookService,movieService,loc
 		vm.nuevoVideojuego.image="videojuegoDefault.jpg";		
 		videogameService.addVideogame(vm.nuevoVideojuego);
 	};
+	
+	vm.aniadirActividad = function(){
+		vm.nuevaActividad.class_type="ACTIVIDAD";
+		vm.nuevaActividad.image="actividadDefault.jpg";
+		riesgoService.addActividad(vm.nuevaActividad);
+	}
 	
 	
 	

@@ -28,4 +28,11 @@ function riesgoService($resource,$http,LxNotificationService) {
 			});	
 				
 		}
+		this.addActividad=function(actividad) {			
+			new RiesgoResource(actividad).$save(function(post) {
+				this.riesgos.push(post);
+				LxNotificationService.notify('Añadido Correctamente', 'emoticon', false, 'green');
+			});
+			
+		}
 }

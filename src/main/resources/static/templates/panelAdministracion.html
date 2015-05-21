@@ -516,23 +516,23 @@
 			<div flex-container="row" flex-gutter="24">
 				<div flex-item>
 					<lx-text-field class="mr+" label="Nombre"> <input
-						type="text" ng-model="vm.actividad_nombre"> </lx-text-field>
+						type="text" ng-model="vm.nuevaActividad.name"> </lx-text-field>
 				</div>
 				<div flex-item>
 					<lx-text-field class="mr+" label="Edad"> <input
-						type="text" ng-model="vm.actividad_edad"> </lx-text-field>
+						type="text" ng-model="vm.nuevaActividad.age_recomended"> </lx-text-field>
 				</div>
 				<div flex-item>
 					<lx-text-field class="mr+" label="Provincia"> <input
-						type="text" ng-model="vm.actividad_provincia"> </lx-text-field>
+						type="text" ng-model="vm.nuevaActividad.province"> </lx-text-field>
 				</div>
 				<div flex-item>
 					<lx-text-field class="mr+" label="Precio"> <input
-						type="text" ng-model="vm.actividad_precio"> </lx-text-field>
+						type="text" ng-model="vm.nuevaActividad.price"> </lx-text-field>
 				</div>
 				<div flex-item>
 					<lx-text-field class="mr+" label="Duracion(min)"> <input
-						type="text" ng-model="vm.actividad_duracion"> </lx-text-field>
+						type="text" ng-model="vm.nuevaActividad.duration"> </lx-text-field>
 				</div>
 
 
@@ -541,16 +541,16 @@
 			<div class="mt++" flex-container="row" flex-gutter="24">
 				<div flex-item>
 					<lx-text-field label="Descripcion" fixed-label="true" icon="web">
-					<input type="text" ng-model="vm.actividad_descripcion"> </lx-text-field>
+					<input type="text" ng-model="vm.nuevaActividad.description"> </lx-text-field>
 				</div>
 				<div flex-item>
 					<lx-text-field label="Direccion" fixed-label="true" icon="web">
-					<input type="text" ng-model="vm.actividad_direccion"> </lx-text-field>
+					<input type="text" ng-model="vm.nuevaActividad.address"> </lx-text-field>
 				</div>
 			</div>
 			<div class="mt++" flex-container="row" flex-gutter="24">
 				<div flex-item>
-					<lx-select class="ml+" ng-model="vm.riesgo_tipo" placeholder="Tipo de riesgo"
+					<lx-select class="ml+" ng-model="vm.nuevaActividad.risk" placeholder="Tipo de riesgo"
 						choices="vm.tipo_riesgo" floating-label> <lx-select-selected>
 					{{ $selected}} </lx-select-selected> <lx-select-choices> {{ $choice
 					}} </lx-select-choices> </lx-select>

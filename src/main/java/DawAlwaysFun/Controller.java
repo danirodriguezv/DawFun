@@ -494,7 +494,9 @@ public class Controller implements CommandLineRunner {
 	//Metodos del controlador de outdoors
 	@RequestMapping(value = "/outdoors", method = RequestMethod.POST)
 	public ResponseEntity<Outdoor_activity> addOutdoor(@RequestBody Outdoor_activity activity){
-		serviceDawFun.setOutdoor(activity);
+		if(user.isAdmin()){
+			serviceDawFun.setOutdoor(activity);
+		}		
 		return new ResponseEntity<>(activity, HttpStatus.CREATED);
 	}
 	

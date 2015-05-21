@@ -431,8 +431,17 @@ public class Controller implements CommandLineRunner {
 	
 	@RequestMapping(value = "/books", method = RequestMethod.POST)
 	public ResponseEntity<Book> addBook(@RequestBody Book book){
+		if(user.isAdmin()){
 		serviceDawFun.setBook(book);
+		}
+		return new ResponseEntity<>(book, HttpStatus.CREATED);
+	}
 	
+	@RequestMapping(value = "/books", method = RequestMethod.PUT)
+	public ResponseEntity<Book> updateBook(@RequestBody Book book){
+		if(user.isAdmin()){
+		serviceDawFun.setBook(book);
+		}
 		return new ResponseEntity<>(book, HttpStatus.CREATED);
 	}
 	
@@ -465,7 +474,17 @@ public class Controller implements CommandLineRunner {
 	//Metodos del controlador de las peliculas
 	@RequestMapping(value = "/movies", method = RequestMethod.POST)
 	public ResponseEntity<Movie> addMovie(@RequestBody Movie movie){
+		if(user.isAdmin()){
 		serviceDawFun.setMovie(movie);
+		}
+		return new ResponseEntity<>(movie, HttpStatus.CREATED);
+	}
+	
+	@RequestMapping(value = "/movies", method = RequestMethod.PUT)
+	public ResponseEntity<Movie> updateMovie(@RequestBody Movie movie){
+		if(user.isAdmin()){
+		serviceDawFun.setMovie(movie);
+		}
 		return new ResponseEntity<>(movie, HttpStatus.CREATED);
 	}
 	
@@ -500,6 +519,14 @@ public class Controller implements CommandLineRunner {
 		return new ResponseEntity<>(activity, HttpStatus.CREATED);
 	}
 	
+	@RequestMapping(value = "/outdoors", method = RequestMethod.PUT)
+	public ResponseEntity<Outdoor_activity> updateOutdoor(@RequestBody Outdoor_activity activity){
+		if(user.isAdmin()){
+			serviceDawFun.setOutdoor(activity);
+		}		
+		return new ResponseEntity<>(activity, HttpStatus.CREATED);
+	}
+	
 
 	@RequestMapping(value = "/outdoors", method = RequestMethod.GET)
 	public List<Outdoor_activity> getOutdoors(){
@@ -525,7 +552,17 @@ public class Controller implements CommandLineRunner {
 	
 	@RequestMapping(value = "/parks", method = RequestMethod.POST)
 	public ResponseEntity<Thepark> addPark(@RequestBody Thepark park){
+		if(user.isAdmin()){
 		serviceDawFun.setPark(park);
+		}
+		return new ResponseEntity<>(park, HttpStatus.CREATED);
+	}
+	
+	@RequestMapping(value = "/parks", method = RequestMethod.PUT)
+	public ResponseEntity<Thepark> updatePark(@RequestBody Thepark park){
+		if(user.isAdmin()){
+		serviceDawFun.setPark(park);
+		}
 		return new ResponseEntity<>(park, HttpStatus.CREATED);
 	}
 	

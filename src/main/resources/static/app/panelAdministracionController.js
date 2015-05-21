@@ -174,4 +174,16 @@ function panelAdministracionController(adminService,bookService,movieService,loc
 	}
 	
 	
+/****** EDITAR PELICULA*****/
+	
+	vm.editarPelicula = function(cosa){		
+		vm.peliculaEditada=cosa;
+		LxDialogService.open("editarLibro");
+	}
+	
+	vm.aniadirLibroEditado=function(){			
+		bookService.updateLibro(vm.libroEditado);		
+	}
+	
+	
 };

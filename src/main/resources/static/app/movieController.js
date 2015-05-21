@@ -1,8 +1,24 @@
 angular.module("app").controller("movieController", movieController);
 
-movieController.$inject = ["movieService", "$routeParams", "$location", "LxNotificationService","LxDialogService"];
+angular.module("app").config(function($sceDelegateProvider) {
+	  $sceDelegateProvider.resourceUrlWhitelist([
+	    // Allow same origin resource loads.
+	    'self',
+	    // Allow loading from our assets domain.  Notice the difference between * and **.
+	    "https://www.youtube.com/embed/**"
+	  ]);
 
-function movieController(movieService, $routeParams, $location, LxNotificationService,LxDialogService) {
+	  // The blacklist overrides the whitelist so the open redirect here is blocked.
+	  $sceDelegateProvider.resourceUrlBlacklist([
+	    'http://myapp.example.com/clickThru**'
+	  ]);
+	});
+
+
+
+movieController.$inject = ["movieService", "$routeParams", "$location", "LxNotificationService","LxDialogService","$sce","$sceDelegate"];
+
+function movieController(movieService, $routeParams, $location, LxNotificationService,LxDialogService,$sce, $sceDelegate) {
 
 	var vm = this;
 	
@@ -46,7 +62,9 @@ function movieController(movieService, $routeParams, $location, LxNotificationSe
 		vm.product = movie.production;
 		vm.dur = movie.duration;
 		vm.description = movie.description;
-		vm.trailer = movie.movie_trailer;
+		
+		
+		vm.trailer= "https://www.youtube.com/embed/"+movie.movie_trailer;
 		vm.movieimage = movie.photo;
 	    LxDialogService.open(dialogId);
 	};
@@ -58,5 +76,7 @@ function movieController(movieService, $routeParams, $location, LxNotificationSe
 	vm.volver= function(){
 		$location.path("/");
 	}
+	
+	
 	
 };

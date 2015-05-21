@@ -341,8 +341,16 @@
 				</div>				
 			</div>			
 			</p>
-			</lx-tab> <lx-tab heading="{{vm.pelicula}}">
-			<p class="p+">
+			</lx-tab> <lx-tab heading="{{vm.pelicula}}">			
+			<div class="mt++" flex-container="row" flex-gutter="24">
+				<div flex-item>
+					<lx-select class="ml+" ng-model="vm.nuevaPeli.type"
+						placeholder="Tipo" choices="vm.tipo_pelis" floating-label>
+					<lx-select-selected> {{ $selected}} </lx-select-selected> <lx-select-choices>
+					{{ $choice }} </lx-select-choices> </lx-select>
+
+				</div>
+			</div>
 			<div flex-container="row" flex-gutter="24">
 				<div flex-item>
 					<lx-text-field class="mr+" label="Titulo"> <input
@@ -372,23 +380,19 @@
 					<lx-text-field label="Descripcion" fixed-label="true" icon="web">
 					<input type="text" ng-model="vm.nuevaPeli.description"> </lx-text-field>
 				</div>
-			</div>
-			<div class="mt++" flex-container="row" flex-gutter="24">
 				<div flex-item>
-					<lx-select class="ml+" ng-model="vm.nuevaPeli.type"
-						placeholder="Tipo" choices="vm.tipo_pelis" floating-label>
-					<lx-select-selected> {{ $selected}} </lx-select-selected> <lx-select-choices>
-					{{ $choice }} </lx-select-choices> </lx-select>
-
+					<lx-text-field label="Link trailer (meter el final)" fixed-label="true" icon="web">
+					<input type="text" ng-model="vm.nuevaPeli.movie_trailer"> </lx-text-field>
 				</div>
 			</div>
+			
 			<div class="mt++" flex-container="row" flex-gutter="24">				
 				<div class="dialog__actions">				
 					<button	class="ml+ btn btn--m btn--black btn--flat botonCategoria bgc-green-300" ng-click="vm.aniadirPelicula()" lx-ripple lx-dialog-close>Aceptar datos</button>
 					<button	class="btn btn--m btn--black btn--flat botonCategoria bgc-red-300" lx-ripple lx-dialog-close>Cerrar</button>
 				</div>				
 			</div>	
-			</p>
+			
 			</lx-tab> <lx-tab heading="{{vm.parque}}">
 			<p class="p+">
 			<div flex-container="row" flex-gutter="24">

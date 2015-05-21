@@ -158,6 +158,15 @@ function panelAdministracionController(adminService,bookService,movieService,loc
 		$location.path("/");
 	};
 	
+	vm.actualizar= function(){
+		vm.books = bookService.getBooks();
+		vm.movies = movieService.getMovies();
+		vm.locals = localService.getLocals();
+		vm.parks = parkService.getParks();
+		vm.actividades = riesgoService.getActividades();
+		vm.videogames = videogameService.getVideogames();
+	};
+	
 	
 	
 	/****** EDITAR *****/
@@ -216,16 +225,9 @@ function panelAdministracionController(adminService,bookService,movieService,loc
 		parkService.updateParque(vm.parqueEditado);		
 	}
 	
-<<<<<<< HEAD
-	vm.actualizar= function(){
-		vm.books = bookService.getBooks();
-		vm.movies = movieService.getMovies();
-		vm.locals = localService.getLocals();
-		vm.parks = parkService.getParks();
-		vm.actividades = riesgoService.getActividades();
-		vm.videogames = videogameService.getVideogames();
-	};
-=======
+
+
+
 /****** EDITAR ACTIVIDAD*****/
 	
 	vm.editarActividad = function(activ){		
@@ -238,7 +240,7 @@ function panelAdministracionController(adminService,bookService,movieService,loc
 	}
 	
 	
->>>>>>> origin/master
+
 	
 	
 };

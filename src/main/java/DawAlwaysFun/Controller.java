@@ -213,7 +213,7 @@ public class Controller implements CommandLineRunner {
 		movie5.setDirector("William Wyler");
 		movie5.setDuration(212);
 		movie5.setLeading_actor("Charlton Heston");
-		movie5.setMovie_trailer("De momento sin trailer");
+		movie5.setMovie_trailer("Ql0c4JD-93c");
 		movie5.setPhoto("benHur.jpg");
 		movie5.setProduction("Metro-Goldwyn-Mayer");
 		movie5.setTitle("Ben-Hur");
@@ -226,9 +226,9 @@ public class Controller implements CommandLineRunner {
 		movie6.setDirector("Stanley Kubrick");
 		movie6.setDuration(136);
 		movie6.setLeading_actor("Malcolm McDowell");
-		movie6.setMovie_trailer("De momento sin trailer");
+		movie6.setMovie_trailer("A1eC4pG8rC0");
 		movie6.setPhoto("narMecanica.jpg");
-		movie6.setProduction("WarnerBros");
+		movie6.setProduction("Warner Bros");
 		movie6.setTitle("La naranja mecanica");
 		movie6.setType("DRAMA");
 		movie6.setClass_type("PELICULA");
@@ -239,7 +239,7 @@ public class Controller implements CommandLineRunner {
 		movie7.setDirector("Santiago Segura");
 		movie7.setDuration(105);
 		movie7.setLeading_actor("Santiago Segura");
-		movie7.setMovie_trailer("De momento sin trailer");
+		movie7.setMovie_trailer("TEH4G2Qsk2U");
 		movie7.setPhoto("torrenteV.jpg");
 		movie7.setProduction("Amiguetes Entertainment");
 		movie7.setTitle("Torrente V: Operacion Eurovegas");

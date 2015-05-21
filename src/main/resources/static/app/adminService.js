@@ -48,6 +48,17 @@ function adminService($resource,$http,$location,LxNotificationService) {
 			})*/						
 		}
 		
+		this.comprobarAdministrador = function(){
+			$http.post('/comprobarAdmin').success(function (d) { 					
+				if(d===true){
+					LxNotificationService.notify('Validado Correctamente', 'emoticon', false, 'green');
+					
+				}else{
+					LxNotificationService.notify('¿Donde vas pillin?', 'emoticon', false, 'red');
+					$location.path("/"); //largo 
+				}});	
+			
+		}
 
 		
 		

@@ -711,6 +711,11 @@ public class Controller implements CommandLineRunner {
 		
 	}
 	
+	@RequestMapping(value = "/comprobarAdmin", method = RequestMethod.POST) 
+	public @ResponseBody boolean comprobarAdmin(){		
+		return user.isAdmin();		
+		
+	}
 	
 	
 	

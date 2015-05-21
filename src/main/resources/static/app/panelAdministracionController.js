@@ -11,7 +11,16 @@ function panelAdministracionController(adminService,bookService,movieService,loc
 
 	var vm = this;
 	
-	//View model properties
+	//View model properties	
+	
+	vm.comprobarAdmin= function(){
+		
+		adminService.comprobarAdministrador();
+	}
+	
+	vm.comprobarAdmin();
+	
+	
 	
 	vm.desconectar = function(){
 		adminService.desconect();

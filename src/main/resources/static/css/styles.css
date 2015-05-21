@@ -155,3 +155,15 @@
 .barraMostrando span{
 	color:#d7d7d7;
 }
+
+.botonAniadir{
+	background-color:#f3e370;
+	-webkit-transition:all 0.1s ;
+	-moz-transition:all 0.1s ;
+	-o-transition:all 0.1s ;
+	transition:all 0.1s ; 
+}
+.botonAniadir:hover{
+	background-color:#e7fa01;
+	color:#474747;
+}

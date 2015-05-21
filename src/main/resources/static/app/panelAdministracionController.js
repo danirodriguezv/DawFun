@@ -178,11 +178,11 @@ function panelAdministracionController(adminService,bookService,movieService,loc
 	
 	vm.editarPelicula = function(cosa){		
 		vm.peliculaEditada=cosa;
-		LxDialogService.open("editarLibro");
+		LxDialogService.open("editarPelicula");
 	}
 	
-	vm.aniadirLibroEditado=function(){			
-		bookService.updateLibro(vm.libroEditado);		
+	vm.aniadirPeliculaEditada=function(){			
+		movieService.updatePelicula(vm.peliculaEditada);		
 	}
 	
 	

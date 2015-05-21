@@ -37,8 +37,24 @@ function bookController(bookService, $routeParams, $location, LxNotificationServ
 		vm.resumenSelec=book.synopsis;
 		vm.isbn=book.isbn;
 		vm.pageNumberSelec=book.pageNumber;
+		
+		vm.recomendado= book.recomendado;
+		vm.libroAvotar=book;
+		
 	    LxDialogService.open(dialogId);
 	};
+	
+	vm.votarPositivo=function(){
+		
+		vm.libroAvotar.recomendado=vm.libroAvotar.recomendado+1;
+		bookService.valorarBook(vm.libroAvotar);		
+	}
+	
+	vm.votarNegativo=function(){			
+		vm.libroAvotar.recomendado=vm.libroAvotar.recomendado-1;
+		bookService.valorarBook(vm.libroAvotar);
+	}
+	
 
 	vm.closingDialog = function()
 	{		

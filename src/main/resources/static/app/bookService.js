@@ -50,6 +50,11 @@ function bookService($resource,$http,LxNotificationService) {
 			
 		}
 
+		this.valorarBook=function(book){			
+			$http.put('/books/valorar', book);
+			LxNotificationService.notify('Voto realizado', 'emoticon', false, 'green');			
+			
+		}
 		
 		
 		

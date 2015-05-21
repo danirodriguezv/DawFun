@@ -107,6 +107,14 @@
 		    	<div class="p+">
 		    		<img ng-src="/images/{{vm.imagenSelec}}" width=100% height=100%>
 		    	</div>
+		    	<div id="positivo" class="p+ tc-green-200 tituloTablaAdmin" ng-hide="{{vm.recomendado}} < 0" >
+		    	<img ng-src="/images/recomendado.png" width=200 height=200 style="margin:auto;">
+		    		<span class="fs-subhead display-block ">RECOMENDADO</span>		    		
+		    	</div>
+		    	<div id="negativo" class="p+ tc-red-300 tituloTablaAdmin"  ng-hide="{{vm.recomendado}} >= 0">	
+		    	<img ng-src="/images/norecomendado.png" width=200 height=200 style="margin:auto;">	    		
+		    		<span class="fs-subhead display-block">NO RECOMENDADO</span>		    		
+		    	</div>	
 		    </div>
 		    <div flex-item="8" flex-item-order="2">
 		    	<div class="p+ tc-black">
@@ -120,7 +128,9 @@
     </div>
 
     <div class="dialog__actions">
-        <button class="btn btn--m btn--black btn--flat botonCategoria bgc-red-300" lx-ripple lx-dialog-close>Cerrar</button>       
+    	<button class="btn btn--m btn--black btn--flat botonCategoria bVerde" ng-click="vm.votarPositivo()" lx-ripple lx-dialog-close>Recomendado <i class="mdi mdi-thumb-up sobreIcono" style="margin-top:5px;"></i></button>
+    	<button class="btn btn--m btn--black btn--flat botonCategoria bRojo" ng-click="vm.votarNegativo()" lx-ripple lx-dialog-close>No Recomendado <i class="mdi mdi-thumb-down sobreIcono" style="margin-top:5px;"></i></button>
+        <button class="btn btn--m btn--black btn--flat botonCategoria " lx-ripple lx-dialog-close>Cerrar</button>       
     </div>
 </lx-dialog>
 

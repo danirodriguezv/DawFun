@@ -205,5 +205,18 @@ function panelAdministracionController(adminService,bookService,movieService,loc
 		localService.updateLocal(vm.localEditado);		
 	}
 	
+/****** EDITAR PARQUE*****/
+	
+	vm.editarParque = function(park){		
+		vm.parqueEditado=park;
+		LxDialogService.open("editarParque");
+	}
+	
+	vm.aniadirParqueEditado=function(){			
+		parkService.updateParque(vm.parqueEditado);		
+	}
+	
+	
+	
 	
 };

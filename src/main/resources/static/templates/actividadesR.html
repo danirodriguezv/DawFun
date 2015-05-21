@@ -46,7 +46,7 @@
 	<!-- TABLA -->
 	<div flex-item>
        	<div class="card cards" ng-repeat="riesgo in vm.riesgos | orderBy:vm.ordenadoPor"
-				 ng-click="vm.opendDialog('test'riesgo)" ng-show="riesgo.risk == vm.objetivoBusqueda || vm.objetivoBusqueda == 'Todos'">
+				 ng-click="vm.opendDialog('test',riesgo)" ng-show="riesgo.risk == vm.objetivoBusqueda || vm.objetivoBusqueda == 'Todos'">
         	<div class="card__img card__img--left photocard" style="height: 160px;width:100%">
                    <img src="/images/{{riesgo.image_activity}}">
                </div>

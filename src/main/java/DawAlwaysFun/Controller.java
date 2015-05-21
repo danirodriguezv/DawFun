@@ -347,6 +347,36 @@ public class Controller implements CommandLineRunner {
 		local2.setClass_type("LOCAL");
 		serviceDawFun.setLocal(local2);
 		
+		Local local3 = new Local();
+		local3.setAddress("Calle Santa Teresa");
+		local3.setCapacity(170);
+		local3.setClose_time("3:00");
+		local3.setDescripcion("Espacio que combina la música rock y pop actual con los grandes clásicos");
+		local3.setLocal_type("PUB");
+		local3.setName("Chatarra Cocktail Bar");
+		local3.setOpen_time("17:00");
+		local3.setPhoto("chatarra.jpg");
+		local3.setPrice_medium(8);
+		local3.setProvince("Madrid");
+		local3.setStar(20);
+		local3.setClass_type("LOCAL");
+		serviceDawFun.setLocal(local3);
+		
+		Local local4 = new Local();
+		local4.setAddress("Plaza Angel Carbajo");
+		local4.setCapacity(250);
+		local4.setClose_time("13:30");
+		local4.setDescripcion("El Txistu de Madrid, el de la cocina vasca exquisita, el frecuentado por futbolistas, empresarios y famosos por su calidad; el que esta catalogado como uno de los mejores restaurantes de la ciudad");
+		local4.setLocal_type("RESTAURANTE");
+		local4.setName("Meson Txistu");
+		local4.setOpen_time("23:30");
+		local4.setPhoto("txistu.jpg");
+		local4.setPrice_medium(63);
+		local4.setProvince("Madrid");
+		local4.setStar(50);
+		local4.setClass_type("LOCAL");
+		serviceDawFun.setLocal(local4);
+		
 		Outdoor_activity actividad = new Outdoor_activity();
 		actividad.setAge_recomended(18);
 		actividad.setDescription("Un viaje en globo apasionante");

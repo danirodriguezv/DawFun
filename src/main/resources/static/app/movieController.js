@@ -66,8 +66,27 @@ function movieController(movieService, $routeParams, $location, LxNotificationSe
 		
 		vm.trailer= "https://www.youtube.com/embed/"+movie.movie_trailer;
 		vm.movieimage = movie.photo;
+		
+		vm.recomendado= movie.recomendado;
+		vm.peliAvotar=movie;
+		
 	    LxDialogService.open(dialogId);
 	};
+	
+	vm.votarPositivo=function(){
+		
+		vm.peliAvotar.recomendado=vm.peliAvotar.recomendado+1;
+		movieService.valorarMovie(vm.peliAvotar);
+		
+	}
+	
+	vm.votarNegativo=function(){	
+		
+		vm.peliAvotar.recomendado=vm.peliAvotar.recomendado-1;
+		movieService.valorarMovie(vm.peliAvotar);
+		
+	}
+	
 
 	vm.closingDialog = function()
 	{

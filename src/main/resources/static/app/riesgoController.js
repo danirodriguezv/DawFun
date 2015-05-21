@@ -47,8 +47,26 @@ function riesgoController(riesgoService, $routeParams, $location, LxNotification
 		vm.image_activity = riesgo.image_activity;
 		vm.dur_activity = riesgo.duration;
 		vm.province_activity = riesgo.province;
+		
+		vm.recomendado= riesgo.recomendado;
+		vm.actividadAvotar=riesgo;
+		
 	    LxDialogService.open(dialogId);
 	};
+	
+	vm.votarPositivo=function(){
+		
+		vm.actividadAvotar.recomendado=vm.actividadAvotar.recomendado+1;
+		riesgoService.valorarActividad(vm.actividadAvotar);
+		
+	}
+	
+	vm.votarNegativo=function(){	
+		
+		vm.actividadAvotar.recomendado=vm.actividadAvotar.recomendado-1;
+		riesgoService.valorarActividad(vm.actividadAvotar);
+		
+	}
 
 	vm.closingDialog = function()
 	{

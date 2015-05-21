@@ -64,25 +64,15 @@ function videogameController(videogameService, $routeParams, $location, LxNotifi
 
 	vm.votarPositivo=function(){
 		
-		
-		//vm.videoclub[vm.indice].recomendado=vm.videoclub[vm.indice].recomendado+1;
-		
-		
-		
 		vm.juegoAvotar.recomendado=vm.juegoAvotar.recomendado+1;
 		videogameService.valorarVideogame(vm.juegoAvotar);
 		
-		//LxDialogService.close("test");
-		 //$route.reload();
 	}
 	
 	vm.votarNegativo=function(){	
 		
 		vm.juegoAvotar.recomendado=vm.juegoAvotar.recomendado-1;
 		videogameService.valorarVideogame(vm.juegoAvotar);
-		
-		//LxDialogService.close("test");
-		// $route.reload();
 		
 	}
 	

@@ -40,4 +40,10 @@ function parkService($resource,$http,LxNotificationService) {
 			LxNotificationService.notify('Actualizado Correctamente', 'emoticon', false, 'green');			
 			
 		};
+		
+		this.valorarPark=function(park){			
+			$http.put('/parks/valorar', park);
+			LxNotificationService.notify('Voto realizado', 'emoticon', false, 'green');			
+			
+		}
 }

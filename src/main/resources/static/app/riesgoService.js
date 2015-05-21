@@ -41,4 +41,10 @@ function riesgoService($resource,$http,LxNotificationService) {
 			LxNotificationService.notify('Actualizado Correctamente', 'emoticon', false, 'green');			
 			
 		};
+		
+		this.valorarActividad=function(activ){			
+			$http.put('/outdoors/valorar', activ);
+			LxNotificationService.notify('Voto realizado', 'emoticon', false, 'green');			
+			
+		}
 }

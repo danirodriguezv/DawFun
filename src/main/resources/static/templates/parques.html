@@ -53,10 +53,10 @@
 	<!-- TABLA -->
 	
 		<div flex-container="row" flex-gutter="24">
-	     <div flex-item   ng-repeat="park in vm.parks | orderBy: vm.ordenadoPor"  ng-click="vm.opendDialog('test',park)" ng-show="park.kind_park==vm.objetivoBusqueda || vm.objetivoBusqueda=='Todos'" class="cards">
-	        <div class="card">
-	            <div flex-container="row">
-	                <div class="card__img card__img--left" style="height: 160px">
+	     <div flex-item  class="cartitas" ng-repeat="park in vm.parks | orderBy: vm.ordenadoPor"  ng-click="vm.opendDialog('test',park)" ng-show="park.kind_park==vm.objetivoBusqueda || vm.objetivoBusqueda=='Todos'">
+	        <div class="card ">
+	            <div flex-container="row" >
+	                <div class="card__img card__img--left photocartitas" style="height: 160px">
 	                    <img src="/images/{{park.image_park}}">
 	                </div>
 	

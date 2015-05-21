@@ -76,7 +76,7 @@ function panelAdministracionController(adminService,bookService,movieService,loc
 	
 	vm.aniadirActividad = function(){
 		vm.nuevaActividad.class_type="ACTIVIDAD";
-		vm.nuevaActividad.image="actividadDefault.jpg";
+		vm.nuevaActividad.image_activity="actividadDefault.jpg";
 		riesgoService.addActividad(vm.nuevaActividad);
 	}
 	

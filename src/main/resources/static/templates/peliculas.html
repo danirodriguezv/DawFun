@@ -27,8 +27,9 @@
 	<div
 		style="box-shadow: 0px 4px 6px 1px rgba(119, 119, 119, 0.17); background-color: white-silver;">
 		<lx-dropdown>
-		<button class="btn btn--m btn--black btn--flat botonCategoria" lx-ripple
-			lx-dropdown-toggle>Categoria</button>
+		<button class="btn btn--m btn--black btn--flat botonCategoria" lx-ripple lx-dropdown-toggle>
+			        <span style="font-weight:bold">Categoria: </span>{{vm.objetivoBusqueda}}
+			    </button>
 		<lx-dropdown-menu>
 		<ul>
 			<li><a class="dropdown-link" ng-click="vm.busqueda('Todos')">Todos</a></li>

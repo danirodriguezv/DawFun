@@ -173,8 +173,8 @@ function panelAdministracionController(adminService,bookService,movieService,loc
 	
 /****** EDITAR LIBRO*****/
 	
-	vm.editarLibro = function(cosa){		
-		vm.libroEditado=cosa;
+	vm.editarLibro = function(lib){		
+		vm.libroEditado=lib;
 		LxDialogService.open("editarLibro");
 	}
 	

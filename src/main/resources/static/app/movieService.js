@@ -38,4 +38,11 @@ function movieService($resource,$http,LxNotificationService) {
 			});
 			
 		};
+		
+		this.updatePelicula=function(peli){			
+			$http.put('/movies/', peli);
+			LxNotificationService.notify('Actualizado Correctamente', 'emoticon', false, 'green');			
+			
+		};
+
 }

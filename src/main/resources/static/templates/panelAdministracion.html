@@ -326,12 +326,12 @@
 				<div flex-item>
 					<lx-text-field label="Num paginas" fixed-label="true"
 						icon="format-list-numbers"> <input type="text"
-						ng-model="vm.libro_paginas"> </lx-text-field>
+						ng-model="vm.nuevoLibro.pageNumber"> </lx-text-field>
 				</div>
 			</div>
 			<div class="mt++" flex-container="row" flex-gutter="24">
 				<div flex-item>
-					<lx-select class="ml+" ng-model="vm.genero" placeholder="Genero"
+					<lx-select class="ml+" ng-model="vm.nuevoLibro.genre" placeholder="Genero"
 						choices="vm.categorias" floating-label> <lx-select-selected>
 					{{ $selected}} </lx-select-selected> <lx-select-choices> {{ $choice
 					}} </lx-select-choices> </lx-select>
@@ -342,7 +342,7 @@
 				<div flex-item>
 					<button
 			class="btn btn--m btn--black btn--flat botonCategoria bgc-blue-300"
-			lx-ripple lx-dialog-close>Aceptar datos</button>
+			lx-ripple lx-dialog-close ng-click="vm.aniadirLibro()">Aceptar datos</button>
 
 				</div>
 			</div>

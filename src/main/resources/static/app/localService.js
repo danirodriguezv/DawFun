@@ -28,4 +28,12 @@ function localService($resource,$http,LxNotificationService) {
 			});	
 				
 		}
+		
+		this.addLocal=function(loc) {			
+			new localResource(loc).$save(function(post) {
+				this.locals.push(post);
+				LxNotificationService.notify('Añadido Correctamente', 'emoticon', false, 'green');
+			});
+			
+		};
 }

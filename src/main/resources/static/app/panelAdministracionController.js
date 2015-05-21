@@ -42,6 +42,11 @@ function panelAdministracionController(adminService,bookService,movieService,loc
 	vm.videogames = videogameService.getVideogames();
 		
 	//Controller logic
+	vm.aniadirLocal = function(){
+		vm.nuevoLocal.class_type = "LOCAL";
+		vm.nuevoLocal.photo = "localDefault.jpg";
+		localService.addLocal(vm.nuevoLocal);
+	}
 	
 	
 	vm.aniadirParque = function(){

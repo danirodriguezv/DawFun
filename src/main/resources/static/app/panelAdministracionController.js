@@ -44,7 +44,7 @@ function panelAdministracionController(adminService,bookService,movieService,loc
 	vm.aniadirParque = function(){
 		vm.nuevoParque.class_type="PARQUE TEMATICO";
 		vm.nuevoParque.image_park="parqueDefault.jpg";
-		parkService.addParque(vm.nuevoParque);
+		parkService.addPark(vm.nuevoParque);
 	}
 	
 	vm.aniadirPelicula = function(){

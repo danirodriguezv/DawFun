@@ -43,15 +43,32 @@
 
 .textete{
 	padding-left : 10%;
+	
+	-webkit-transition:all 0.3s ;
+	-moz-transition:all 0.3s ;
+	-o-transition:all 0.3s ;
+	transition:all 0.3s ; 
 }
 .textete2{
 	padding-left : 20%;
+		-webkit-transition:all 0.3s ;
+	-moz-transition:all 0.3s ;
+	-o-transition:all 0.3s ;
+	transition:all 0.3s ;
 }
 .textete3{
 	padding-left : 30%;
+		-webkit-transition:all 0.3s ;
+	-moz-transition:all 0.3s ;
+	-o-transition:all 0.3s ;
+	transition:all 0.3s ;
 }
 .textete4{
 	padding-left : 40%;
+		-webkit-transition:all 0.3s ;
+	-moz-transition:all 0.3s ;
+	-o-transition:all 0.3s ;
+	transition:all 0.3s ;
 }
 
 .cartitas{
@@ -214,3 +231,49 @@
 .bRojo:hover{
 	background-color:#a60000;
 }
+
+.textete:hover{
+	
+	background-color:rgba(147, 147, 147, 0.19);
+}
+.textete:hover .fotoPersonal{
+	-webkit-transform: scale(1.5);
+	-webkit-transition-duration: 300ms;
+    -webkit-transition-timing-function: ease-out;
+    transform: scale(1.5);    
+}
+
+.textete2:hover{
+	background-color:rgba(109, 151, 159, 0.18);
+}
+
+.textete2:hover .fotoPersonal{
+	-webkit-transform: scale(1.5);
+	-webkit-transition-duration: 300ms;
+    -webkit-transition-timing-function: ease-out;
+    transform: scale(1.5);    
+}
+
+
+.textete3:hover{
+	background-color:rgba(55, 137, 152, 0.18);
+}
+
+.textete3:hover .fotoPersonal{
+	-webkit-transform: scale(1.5);
+	-webkit-transition-duration: 300ms;
+    -webkit-transition-timing-function: ease-out;
+    transform: scale(1.5);    
+}
+
+.textete4:hover{
+	background-color:rgba(33, 172, 198, 0.18);
+}
+
+.textete4:hover .fotoPersonal{
+	-webkit-transform: scale(1.5);
+	-webkit-transition-duration: 300ms;
+    -webkit-transition-timing-function: ease-out;
+    transform: scale(1.5);    
+}
+

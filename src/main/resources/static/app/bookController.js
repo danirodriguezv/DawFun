@@ -22,7 +22,7 @@ function bookController(bookService, $routeParams, $location, LxNotificationServ
 	vm.objetivoBusqueda='Todos';
 	vm.ordenadoPor="title";
 	vm.categorias=["Terror","Fantastico","Ciencia Ficcion","Juvenil","Humanistico","Romantica","Poesia","Novela Negra","Otros"];
-	vm.sugerencia;
+	vm.sugerencia = {};
 	
 	
 	

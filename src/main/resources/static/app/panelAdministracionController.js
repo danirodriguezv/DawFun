@@ -216,7 +216,14 @@ function panelAdministracionController(adminService,bookService,movieService,loc
 		parkService.updateParque(vm.parqueEditado);		
 	}
 	
-	
+	vm.actualizar= function(){
+		vm.books = bookService.getBooks();
+		vm.movies = movieService.getMovies();
+		vm.locals = localService.getLocals();
+		vm.parks = parkService.getParks();
+		vm.actividades = riesgoService.getActividades();
+		vm.videogames = videogameService.getVideogames();
+	};
 	
 	
 };

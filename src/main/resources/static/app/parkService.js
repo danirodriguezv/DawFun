@@ -34,4 +34,10 @@ function parkService($resource,$http,LxNotificationService) {
 			});
 			
 		};
+		
+		this.updateParque=function(park){			
+			$http.put('/parks/', park);
+			LxNotificationService.notify('Actualizado Correctamente', 'emoticon', false, 'green');			
+			
+		};
 }

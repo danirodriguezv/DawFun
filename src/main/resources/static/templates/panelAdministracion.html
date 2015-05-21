@@ -645,7 +645,7 @@
 	</lx-dialog>
 	
 	
-	<!-- Siguente categoria editar -->
+	<!-- Editar libro-->
 <lx-dialog class="dialog dialog--l" id="editarLibro" auto-close="true"
 		onclose="vm.closingDialog()" onscrollend="scrollEndDialog()">
 	<div class="dialog__header">
@@ -710,7 +710,7 @@
 	</div>
 	</lx-dialog>
 
-<!-- Siguente categoria editar -->
+<!-- Editar Pelicula -->
 <lx-dialog class="dialog dialog--l" id="editarPelicula" auto-close="true"
 		onclose="vm.closingDialog()" onscrollend="scrollEndDialog()">
 	<div class="dialog__header">
@@ -722,7 +722,15 @@
 		<div class="card">
 			<lx-tabs> <lx-tab heading="{{vm.peliculaEditada.title}}">
 			<p class="p+">
-			
+			<div class="mt++" flex-container="row" flex-gutter="24">
+				<div flex-item>
+					<lx-select class="ml+" ng-model="vm.peliculaEditada.type"
+						placeholder="Genero" choices="vm.tipo_pelis" floating-label>
+					<lx-select-selected> {{ $selected}} </lx-select-selected> <lx-select-choices>
+					{{ $choice }} </lx-select-choices> </lx-select>
+
+				</div>
+			</div>
 			<div flex-container="row" flex-gutter="24">
 				<div flex-item>
 					<lx-text-field class="mr+" label="Titulo"> <input

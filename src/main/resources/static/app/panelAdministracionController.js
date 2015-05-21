@@ -201,6 +201,8 @@ function panelAdministracionController(adminService,bookService,movieService,loc
 		LxDialogService.open("editarLocal");
 	}
 	
+	vm.aniadirLocalEditado=function(){			
+		localService.updateLocal(vm.localEditado);		
 	}
 	
 	

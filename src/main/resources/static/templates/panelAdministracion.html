@@ -301,19 +301,19 @@
 			<div flex-container="row" flex-gutter="24">
 				<div flex-item>
 					<lx-text-field class="mr+" label="Titulo del libro ">
-					<input type="text" ng-model="vm.libro_title"> </lx-text-field>
+					<input type="text" ng-model="vm.nuevoLibro.title"> </lx-text-field>
 				</div>
 				<div flex-item>
 					<lx-text-field class="mr+" label="Escritor"> <input
-						type="text" ng-model="vm.libro_escritor"> </lx-text-field>
+						type="text" ng-model="vm.nuevoLibro.writer"> </lx-text-field>
 				</div>
 				<div flex-item>
 					<lx-text-field class="mr+" label="Editorial"> <input
-						type="text" ng-model="vm.libro_editorial"> </lx-text-field>
+						type="text" ng-model="vm.nuevoLibro.publisher"> </lx-text-field>
 				</div>
 				<div flex-item>
 					<lx-text-field class="mr+" label="Sinopsis"> <input
-						type="text" ng-model="vm.libro_sinopsis"> </lx-text-field>
+						type="text" ng-model="vm.nuevoLibro.synopsis"> </lx-text-field>
 				</div>
 
 			</div>
@@ -321,7 +321,7 @@
 			<div class="mt++" flex-container="row" flex-gutter="24">
 				<div flex-item>
 					<lx-text-field label="ISBN" fixed-label="true" icon="web">
-					<input type="text" ng-model="vm.libro_isbn"> </lx-text-field>
+					<input type="text" ng-model="vm.nuevoLibro.isbn"> </lx-text-field>
 				</div>
 				<div flex-item>
 					<lx-text-field label="Num paginas" fixed-label="true"

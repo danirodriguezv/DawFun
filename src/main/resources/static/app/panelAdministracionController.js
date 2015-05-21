@@ -18,6 +18,7 @@ function panelAdministracionController(adminService,bookService,movieService,loc
 	}
 	
 	vm.nuevoVideojuego={};
+	vm.sugerencia = {};
 	vm.objetivoBusqueda = 'Todos';
 	
 	vm.tipos = ["VIDEOGAME","LIBRO","PELICULA","PARQUE TEMATICO","LOCAL","ACTIVIDAD"];

@@ -606,6 +606,13 @@ public class Controller implements CommandLineRunner {
 		}		
 		return new ResponseEntity<>(videogame, HttpStatus.CREATED);
 	}
+	
+	@RequestMapping(value = "/videogames/valorar", method = RequestMethod.PUT)
+	public ResponseEntity<Videogame> valorarVideogame(@RequestBody Videogame videogame){			
+		serviceDawFun.setVideogame(videogame);
+			
+		return new ResponseEntity<>(videogame, HttpStatus.CREATED);
+	}
 		
 	
 

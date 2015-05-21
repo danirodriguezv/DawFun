@@ -1,8 +1,8 @@
 angular.module("app").controller("videogameController", videogameController);
 
-videogameController.$inject = ["videogameService", "$routeParams", "$location", "LxNotificationService","LxDialogService"];
+videogameController.$inject = ["videogameService", "$routeParams", "$location", "LxNotificationService","LxDialogService","$route"];
 
-function videogameController(videogameService, $routeParams, $location, LxNotificationService,LxDialogService) {
+function videogameController(videogameService, $routeParams, $location, LxNotificationService,LxDialogService,$route) {
 
 	var vm = this;
 	
@@ -43,6 +43,8 @@ function videogameController(videogameService, $routeParams, $location, LxNotifi
 	
 	vm.opendDialog = function(dialogId,game)
 	{
+		
+		
 		vm.namegame = game.name;
 		vm.develop = game.development;
 		vm.plat = game.platform;
@@ -51,13 +53,42 @@ function videogameController(videogameService, $routeParams, $location, LxNotifi
 		vm.categ = game.category;
 		vm.desc = game.description;
 		vm.gameimage = game.image;
+		
 		vm.recomendado= game.recomendado;
+		vm.juegoAvotar=game;
+		
+		
+		
 	    LxDialogService.open(dialogId);
 	};
 
+	vm.votarPositivo=function(){
+		
+		
+		//vm.videoclub[vm.indice].recomendado=vm.videoclub[vm.indice].recomendado+1;
+		
+		
+		
+		vm.juegoAvotar.recomendado=vm.juegoAvotar.recomendado+1;
+		videogameService.valorarVideogame(vm.juegoAvotar);
+		
+		//LxDialogService.close("test");
+		 //$route.reload();
+	}
+	
+	vm.votarNegativo=function(){	
+		
+		vm.juegoAvotar.recomendado=vm.juegoAvotar.recomendado-1;
+		videogameService.valorarVideogame(vm.juegoAvotar);
+		
+		//LxDialogService.close("test");
+		// $route.reload();
+		
+	}
+	
 	vm.closingDialog = function()
 	{
-	    LxNotificationService.info('Cerrado PopUp');
+	    LxNotificationService.info('Visto');
 	};
 	vm.volver= function(){
 		$location.path("/");

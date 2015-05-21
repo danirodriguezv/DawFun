@@ -589,8 +589,10 @@ public class Controller implements CommandLineRunner {
 	
 	@RequestMapping(value = "/locals", method = RequestMethod.POST)
 	public ResponseEntity<Local> addLocal(@RequestBody Local local){
-		serviceDawFun.setLocal(local);
-		return new ResponseEntity<>(local, HttpStatus.CREATED);
+			if(user.isAdmin()){
+				serviceDawFun.setLocal(local);
+			}		
+			return new ResponseEntity<>(local, HttpStatus.CREATED);
 	}
 	
 	@RequestMapping(value = "/locals", method = RequestMethod.GET)

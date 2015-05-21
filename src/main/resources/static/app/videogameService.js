@@ -46,6 +46,12 @@ function videogameService($resource,$http,LxNotificationService) {
 			
 		}
 		
+		this.valorarVideogame=function(video){			
+			$http.put('/videogames/valorar', video);
+			LxNotificationService.notify('Voto realizado', 'emoticon', false, 'green');			
+			
+		}
+		
 		
 		
 		

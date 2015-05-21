@@ -17,10 +17,10 @@ function bookService($resource,$http,LxNotificationService) {
 			return books;
 		}
 		
-		this.getBooks = function(id){
-			book = BookResource.query(id);
+		/*this.getBooks = function(id){
+			book = BookResource.query();
 			return book;
-		}
+		}*/
 		
 		this.deleteBook=function(book) {				
 			//$http.delete('/videogames/'+ video.id);
